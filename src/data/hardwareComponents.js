@@ -1,0 +1,66 @@
+/**
+ * Path immagini: file in public/components/ → URL /components/nomefile.jpg
+ * Per cambiare un'immagine, modifica il campo `image` qui sotto.
+ */
+export const hardwareComponents = [
+  {
+    id: "cpu",
+    name: "CPU",
+    image: "/components/processor.jpg",
+    short: "Il cervello del computer.",
+    what: "La CPU è il processore del computer.",
+    function: "Esegue calcoli, comandi e istruzioni dei programmi.",
+    importance: "È fondamentale perché coordina molte operazioni del PC.",
+    curiosity: "Una CPU moderna può contenere miliardi di transistor.",
+  },
+  {
+    id: "ram",
+    name: "RAM",
+    image: "/components/ram.jpg",
+    short: "Il tavolo da lavoro del PC.",
+    what: "La RAM è la memoria temporanea del computer.",
+    function: "Tiene aperti programmi, giochi e file mentre li usi.",
+    importance: "Più RAM hai, più cose puoi fare insieme senza rallentamenti.",
+    curiosity: "Quando spegni il computer, la RAM si svuota.",
+  },
+  {
+    id: "ssd",
+    name: "SSD",
+    image: "/components/ssd-nvme.jpg",
+    short: "La memoria veloce dove salvi i file.",
+    what: "L'SSD è un dispositivo di archiviazione.",
+    function: "Salva sistema operativo, programmi, giochi, foto e documenti.",
+    importance: "Rende il PC molto più veloce ad accendersi e aprire programmi.",
+    curiosity: "Un SSD non ha parti meccaniche in movimento.",
+  },
+  {
+    id: "hdd",
+    name: "HDD",
+    image: "/components/ssdsata.jpg",
+    short: "Il vecchio archivio del computer.",
+    what: "L'HDD è un disco rigido tradizionale.",
+    function: "Salva dati usando dischi magnetici che girano.",
+    importance: "È utile per conservare tanti file a costo più basso.",
+    curiosity: "Dentro ha piccoli dischi che girano molto velocemente.",
+  },
+  {
+    id: "motherboard",
+    name: "Scheda Madre",
+    image: "/components/motherboard.jpg",
+    short: "La base dove tutto si collega.",
+    what: "La scheda madre è la piattaforma principale del PC.",
+    function: "Collega CPU, RAM, SSD, GPU, alimentatore e porte.",
+    importance: "Senza scheda madre i componenti non possono comunicare.",
+    curiosity: "È come una città piena di strade e collegamenti.",
+  },
+  {
+    id: "psu",
+    name: "Alimentatore",
+    image: "/components/powersupply1.jpg",
+    short: "Porta energia a tutto il PC.",
+    what: "L'alimentatore trasforma la corrente della presa in energia usabile dal computer.",
+    function: "Fornisce energia a scheda madre, CPU, GPU, dischi e ventole.",
+    importance: "Un buon alimentatore rende il PC più stabile e sicuro.",
+    curiosity: "Ha tanti cavi diversi perché ogni componente ha bisogno della sua energia.",
+  },
+];

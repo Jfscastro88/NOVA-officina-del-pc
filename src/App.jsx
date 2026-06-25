@@ -4,11 +4,11 @@ import Activities from './components/Activities'
 import Program from './components/Program'
 import Hardware from './components/Hardware'
 import Footer from './components/Footer'
-import './App.css'
+import PlaceholderSection from './components/PlaceholderSection'
 
 function App() {
   return (
-    <div className="landing">
+    <div className="overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
@@ -16,29 +16,26 @@ function App() {
         <Program />
         <Hardware />
 
-        <section id="glossario" className="section placeholder-section">
-          <div className="placeholder-card">
-            <span className="section-tag">Prossimamente</span>
-            <h2 className="section-title">Glossario</h2>
-            <p>Termini tech spiegati in modo semplice e divertente.</p>
-          </div>
-        </section>
-
-        <section id="quiz" className="section placeholder-section">
-          <div className="placeholder-card">
-            <span className="section-tag">Prossimamente</span>
-            <h2 className="section-title">Quiz</h2>
-            <p>Metti alla prova quello che hai imparato nel laboratorio.</p>
-          </div>
-        </section>
-
-        <section id="galleria" className="section placeholder-section">
-          <div className="placeholder-card">
-            <span className="section-tag">Prossimamente</span>
-            <h2 className="section-title">Galleria</h2>
-            <p>Foto e momenti delle sessioni del workshop.</p>
-          </div>
-        </section>
+        <div className="bg-gradient-to-b from-dark-purple to-primary">
+          <PlaceholderSection
+            id="glossario"
+            tag="Prossimamente"
+            title="Glossario"
+            text="Termini tech spiegati in modo semplice e divertente."
+          />
+          <PlaceholderSection
+            id="quiz"
+            tag="Prossimamente"
+            title="Quiz"
+            text="Metti alla prova quello che hai imparato nel laboratorio."
+          />
+          <PlaceholderSection
+            id="galleria"
+            tag="Prossimamente"
+            title="Galleria"
+            text="Foto e momenti delle sessioni del workshop."
+          />
+        </div>
       </main>
       <Footer />
     </div>

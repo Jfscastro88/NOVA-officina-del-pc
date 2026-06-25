@@ -1,28 +1,32 @@
-export function Star({ className = '', style = {} }) {
+export function Star({ className = '' }) {
   return (
     <svg
-      className={`doodle doodle-star ${className}`}
-      style={style}
-      viewBox="0 0 24 24"
+      className={className}
+      viewBox="0 0 32 32"
       fill="currentColor"
       aria-hidden="true"
     >
-      <path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6L5.7 21l2.3-7-6-4.6h7.6L12 2z" />
+      <path d="M16 2l3.2 9.8H29l-8 5.8 3.1 9.6L16 24.4 7.9 27.2l3.1-9.6-8-5.8h9.8L16 2z" />
     </svg>
   )
 }
 
-export function Arrow({ className = '', style = {} }) {
+export function ArrowScribble({ className = '' }) {
   return (
     <svg
-      className={`doodle doodle-arrow ${className}`}
-      style={style}
-      viewBox="0 0 80 40"
+      className={className}
+      viewBox="0 0 100 50"
       fill="none"
       aria-hidden="true"
     >
       <path
-        d="M4 20h60M52 8l16 12-16 12"
+        d="M5 25c20-18 40 18 60 0 8-6 16-8 24-6"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <path
+        d="M78 12l18 13-18 13"
         stroke="currentColor"
         strokeWidth="4"
         strokeLinecap="round"
@@ -32,38 +36,71 @@ export function Arrow({ className = '', style = {} }) {
   )
 }
 
-export function Squiggle({ className = '', style = {} }) {
+export function Squiggle({ className = '' }) {
   return (
     <svg
-      className={`doodle doodle-squiggle ${className}`}
-      style={style}
-      viewBox="0 0 120 30"
+      className={className}
+      viewBox="0 0 140 40"
       fill="none"
       aria-hidden="true"
     >
       <path
-        d="M4 18c16-20 32 20 48 0s32 20 48 0"
+        d="M8 28C32 4 56 36 80 12s48 20 52 4"
         stroke="currentColor"
-        strokeWidth="4"
+        strokeWidth="5"
         strokeLinecap="round"
       />
     </svg>
   )
 }
 
-export function Spark({ className = '', style = {} }) {
+export function Spark({ className = '' }) {
   return (
     <svg
-      className={`doodle doodle-spark ${className}`}
-      style={style}
-      viewBox="0 0 24 24"
+      className={className}
+      viewBox="0 0 28 28"
       fill="none"
       aria-hidden="true"
     >
       <path
-        d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"
+        d="M14 2v24M2 14h24M5 5l18 18M23 5L5 23"
         stroke="currentColor"
         strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function BrushStroke({ className = '' }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 200 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        d="M4 14c30-8 60 8 90 0s60-8 96 4c4 1 8 2 10 4-2-2-6-3-10-4-36-12-66 4-96 4S34 6 4 14z"
+        opacity="0.85"
+      />
+    </svg>
+  )
+}
+
+export function CircleDoodle({ className = '' }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 60 60"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M30 6c14 0 24 10 24 24S44 54 30 54 6 44 6 30 16 6 30 6"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeDasharray="6 4"
         strokeLinecap="round"
       />
     </svg>

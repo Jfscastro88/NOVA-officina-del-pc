@@ -1,130 +1,111 @@
-import { Cpu, HardDrive, MemoryStick, Wrench, Gpu } from 'lucide-react'
-
 const floatingParts = [
   {
     label: 'CPU',
-    Icon: Cpu,
-    className: 'top-[2%] -left-[4%] animate-float [--rot:-6deg]',
-    color: 'from-accent to-primary',
+    image: '/components/processor1.jpg',
+    className: 'top-[4%] -left-[2%] animate-float [--rot:-4deg]',
+    ring: 'ring-accent/60',
   },
   {
     label: 'RAM',
-    Icon: MemoryStick,
-    className: 'top-[8%] -right-[2%] animate-float-delayed [--rot:4deg]',
-    color: 'from-yellow to-amber-400',
+    image: '/components/ramddr5.jpg',
+    className: 'top-[2%] -right-[2%] animate-float-delayed [--rot:3deg]',
+    ring: 'ring-yellow/70',
   },
   {
     label: 'SSD',
-    Icon: HardDrive,
-    className: 'bottom-[28%] -left-[8%] animate-float [--rot:5deg]',
-    color: 'from-violet-400 to-accent',
+    image: '/components/ssd-nvme.jpg',
+    className: 'bottom-[22%] -left-[6%] animate-float [--rot:5deg]',
+    ring: 'ring-violet-400/60',
   },
   {
     label: 'GPU',
-    Icon: Gpu,
-    className: 'bottom-[12%] -right-[4%] animate-float-delayed [--rot:-4deg]',
-    color: 'from-fuchsia-500 to-accent',
+    image: '/components/gpu1.jpg',
+    className: 'bottom-[10%] -right-[4%] animate-float-delayed [--rot:-3deg]',
+    ring: 'ring-fuchsia-400/60',
   },
   {
-    label: 'Tool',
-    Icon: Wrench,
-    className: 'top-[42%] -right-[10%] animate-wiggle [--rot:12deg]',
-    color: 'from-yellow to-yellow-dark',
+    label: 'Tools',
+    image: '/components/tools.jpg',
+    className: 'top-[38%] -right-[8%] animate-wiggle [--rot:8deg]',
+    ring: 'ring-yellow/60',
   },
 ]
 
 export default function GamingPcVisual() {
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[520px]" aria-hidden="true">
-      {/* Glow backdrop */}
-      <div className="absolute inset-[8%] rounded-full bg-accent/40 blur-[60px] animate-pulse-glow" />
-      <div className="absolute inset-[15%] rounded-full bg-primary/60 blur-[40px]" />
+    <div
+      className="relative mx-auto w-full max-w-[520px] sm:max-w-[560px] lg:max-w-[640px] xl:max-w-[760px] 2xl:max-w-[860px]"
+      aria-hidden="true"
+    >
+      {/* Ambient glow */}
+      <div className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-accent/30 blur-[50px] animate-pulse-glow" />
+      <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-accent/20 via-transparent to-yellow/10 blur-2xl" />
 
-      {/* Open gaming PC case */}
-      <div className="absolute inset-[10%] flex items-center justify-center">
-        <div className="relative h-full w-full max-w-[340px]">
-          {/* Case shell */}
-          <div className="absolute inset-0 rounded-3xl border-4 border-accent/60 bg-gradient-to-br from-[#2a1055] via-dark-purple to-[#0d0420] shadow-[inset_0_0_60px_rgba(124,58,237,0.25),0_0_80px_rgba(124,58,237,0.3)]">
-            {/* Glass side panel */}
-            <div className="absolute inset-3 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm">
-              {/* RGB strip top */}
-              <div className="absolute left-4 right-4 top-3 h-1.5 rounded-full bg-gradient-to-r from-accent via-fuchsia-400 to-yellow animate-rgb opacity-90" />
+      {/* Main photo frame */}
+      <div className="relative overflow-hidden rounded-3xl border-[3px] border-white/15 shadow-[0_24px_80px_rgba(26,8,61,0.55),0_0_0_1px_rgba(124,58,237,0.25)]">
+        {/* Tempered glass edge highlight */}
+        <div className="pointer-events-none absolute inset-0 z-20 rounded-3xl border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)]" />
 
-              {/* Motherboard area */}
-              <div className="absolute bottom-8 left-6 right-6 top-10 rounded-xl border border-accent/20 bg-[#1a083d]/80 p-4">
-                {/* CPU cooler */}
-                <div className="absolute left-1/2 top-6 h-16 w-16 -translate-x-1/2 rounded-full border-2 border-accent/50 bg-gradient-to-b from-accent/30 to-primary shadow-[0_0_20px_rgba(124,58,237,0.6)]">
-                  <div className="absolute inset-2 rounded-full border border-white/20" />
-                  <div className="absolute inset-0 animate-spin rounded-full border-t-2 border-yellow/60" style={{ animationDuration: '3s' }} />
-                </div>
+        <img
+          src="/images/hero/caseopen.jpg"
+          alt=""
+          className="aspect-[4/3] w-full object-cover object-center"
+          loading="eager"
+          decoding="async"
+        />
 
-                {/* RAM sticks */}
-                <div className="absolute left-8 top-[42%] flex gap-1.5">
-                  {[0, 1].map((i) => (
-                    <div
-                      key={i}
-                      className="h-14 w-3 rounded-sm bg-gradient-to-b from-accent to-primary shadow-[0_0_12px_rgba(124,58,237,0.5)]"
-                    />
-                  ))}
-                </div>
+        {/* Theme tint — blends photo with site palette */}
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-tr from-dark-purple/50 via-transparent to-accent/20 mix-blend-multiply" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-dark-purple/70 via-transparent to-transparent" />
 
-                {/* GPU */}
-                <div className="absolute bottom-4 left-4 right-4 h-12 rounded-lg border border-fuchsia-400/40 bg-gradient-to-r from-fuchsia-900/80 via-primary to-accent/60 shadow-[0_0_24px_rgba(168,85,247,0.4)]">
-                  <div className="absolute bottom-1 left-3 right-3 flex justify-between">
-                    {[0, 1, 2].map((i) => (
-                      <div key={i} className="h-6 w-1 rounded-full bg-accent/80" />
-                    ))}
-                  </div>
-                  <div className="absolute right-3 top-1/2 h-2 w-8 -translate-y-1/2 rounded bg-yellow/70" />
-                </div>
+        {/* Glass reflection */}
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-60" />
 
-                {/* RGB fans */}
-                <div className="absolute bottom-2 left-2 flex gap-2">
-                  {[0, 1].map((i) => (
-                    <div
-                      key={i}
-                      className="h-8 w-8 rounded-full border-2 border-accent/40 bg-gradient-to-br from-accent/20 to-transparent"
-                    >
-                      <div
-                        className="absolute inset-1 rounded-full border border-accent/30 animate-spin"
-                        style={{ animationDuration: `${2 + i}s` }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
+        {/* RGB accent strip */}
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-10 h-1 bg-gradient-to-r from-accent via-fuchsia-400 to-yellow opacity-80" />
 
-              {/* Cable doodle */}
-              <svg className="absolute bottom-16 right-6 h-12 w-16 text-accent/40" viewBox="0 0 64 48" fill="none">
-                <path d="M4 40c16-20 32 0 48-12 8-6 12-4 12-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-            </div>
+        {/* Subtle scan line */}
+        <div
+          className="pointer-events-none absolute inset-0 z-10 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 3px)',
+          }}
+        />
 
-            {/* RGB edge glow */}
-            <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-accent/50 via-transparent to-yellow/30 opacity-60 blur-sm" />
-          </div>
-
-          {/* Monitor hint */}
-          <div className="absolute -top-6 left-1/2 h-3 w-24 -translate-x-1/2 rounded-t-lg bg-accent/80" />
+        {/* Desk mat label */}
+        <div className="pointer-events-none absolute bottom-4 left-4 z-10 rounded-full border border-white/20 bg-dark-purple/60 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-white/80 backdrop-blur-sm">
+          Setup reale
         </div>
       </div>
 
-      {/* Floating component cards */}
-      {floatingParts.map(({ label, Icon, className, color }) => (
+      {/* RGB edge glow */}
+      <div className="pointer-events-none absolute -inset-px rounded-3xl bg-gradient-to-br from-accent/40 via-transparent to-yellow/25 opacity-70 blur-md" />
+
+      {/* Floating component cards with real photos */}
+      {floatingParts.map(({ label, image, className, ring }) => (
         <div
           key={label}
-          className={`absolute z-10 flex flex-col items-center gap-1 rounded-2xl border-2 border-white/20 bg-white px-3 py-2.5 card-depth transition-transform hover:scale-110 ${className}`}
+          className={`absolute z-30 flex items-center gap-2 rounded-2xl border-2 border-white/25 bg-white/95 p-1.5 pr-3 card-depth backdrop-blur-sm transition-transform hover:scale-105 ${className}`}
         >
           <div
-            className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${color} text-white shadow-lg`}
+            className={`h-11 w-11 shrink-0 overflow-hidden rounded-xl ring-2 ${ring}`}
           >
-            <Icon size={20} strokeWidth={2.5} />
+            <img
+              src={image}
+              alt=""
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
           </div>
           <span className="text-[10px] font-extrabold uppercase tracking-wider text-dark-purple">
             {label}
           </span>
         </div>
       ))}
+
+      {/* Monitor light bar hint */}
+      <div className="pointer-events-none absolute -top-3 left-1/2 z-20 h-2 w-28 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-white/40 to-transparent shadow-[0_0_12px_rgba(255,255,255,0.3)]" />
     </div>
   )
 }

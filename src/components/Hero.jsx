@@ -19,7 +19,8 @@ export default function Hero() {
       <Squiggle className="pointer-events-none absolute right-[6%] top-[55%] h-8 w-28 text-accent/60" />
       <Spark className="pointer-events-none absolute left-[18%] bottom-[30%] h-8 w-8 text-yellow/50 animate-pulse-glow" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-2 lg:gap-6 lg:px-8 lg:py-24">
+      <div className="relative mx-auto flex min-h-[calc(92vh-5rem)] max-w-7xl items-center px-5 py-16 xl:max-w-[90rem] lg:px-10 lg:py-20">
+        <div className="grid w-full items-center gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-10 xl:gap-14">
         {/* Left */}
         <div className="animate-fade-up z-10 text-center lg:text-left">
           <span className="inline-block rounded-full border-2 border-yellow/30 bg-yellow px-4 py-1.5 text-xs font-extrabold tracking-widest text-dark-purple shadow-[0_3px_0_#e6bf00]">
@@ -57,8 +58,9 @@ export default function Hero() {
         </div>
 
         {/* Right */}
-        <div className="animate-fade-up relative z-10 [animation-delay:150ms]">
+        <div className="animate-fade-up relative z-10 flex items-center justify-center [animation-delay:150ms] lg:px-4 xl:px-6">
           <GamingPcVisual />
+        </div>
         </div>
       </div>
     </section>

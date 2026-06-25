@@ -5,6 +5,7 @@ import Program from './components/Program'
 import Hardware from './components/Hardware'
 import Footer from './components/Footer'
 import PlaceholderSection from './components/PlaceholderSection'
+import BackToTopButton from './components/workshop/BackToTopButton'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         </div>
       </main>
       <Footer />
+      <BackToTopButton />
     </div>
   )
 }

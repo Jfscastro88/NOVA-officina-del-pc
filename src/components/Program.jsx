@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { CalendarDays } from 'lucide-react'
 import { CircleDoodle, Squiggle } from './Doodles'
 
@@ -7,6 +8,7 @@ const sessions = [
     title: 'Dentro il PC',
     text: 'Componenti e funzioni',
     accent: 'border-accent',
+    link: '/workshop/27-giugno',
   },
   {
     date: '4 LUG',
@@ -52,20 +54,43 @@ export default function Program() {
 
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_auto]">
           <div className="grid gap-5 sm:grid-cols-2">
-            {sessions.map((session, i) => (
-              <article
-                key={session.date}
-                className={`group card-depth rounded-3xl border-l-[6px] ${session.accent} bg-white/10 p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/15 animate-fade-up`}
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/30 px-3 py-1 text-xs font-extrabold text-yellow">
-                  <CalendarDays size={14} />
-                  {session.date}
-                </span>
-                <h3 className="mt-3 font-display text-xl text-white">{session.title}</h3>
-                <p className="mt-1 text-sm text-white/70">{session.text}</p>
-              </article>
-            ))}
+            {sessions.map((session, i) => {
+              const cardClass = `group card-depth rounded-3xl border-l-[6px] ${session.accent} bg-white/10 p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/15 animate-fade-up`
+              const cardContent = (
+                <>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/30 px-3 py-1 text-xs font-extrabold text-yellow">
+                    <CalendarDays size={14} />
+                    {session.date}
+                  </span>
+                  <h3 className="mt-3 font-display text-xl text-white">{session.title}</h3>
+                  <p className="mt-1 text-sm text-white/70">{session.text}</p>
+                  {session.link && (
+                    <span className="mt-3 inline-block text-[11px] font-extrabold uppercase tracking-wide text-yellow opacity-70 transition-all group-hover:opacity-100">
+                      Apri presentazione →
+                    </span>
+                  )}
+                </>
+              )
+
+              return session.link ? (
+                <Link
+                  key={session.date}
+                  to={session.link}
+                  className={`${cardClass} block cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow`}
+                  style={{ animationDelay: `${i * 100}ms` }}
+                >
+                  {cardContent}
+                </Link>
+              ) : (
+                <article
+                  key={session.date}
+                  className={cardClass}
+                  style={{ animationDelay: `${i * 100}ms` }}
+                >
+                  {cardContent}
+                </article>
+              )
+            })}
           </div>
 
           <aside

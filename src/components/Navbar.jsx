@@ -2,6 +2,7 @@ const links = [
   { label: 'Home', href: '#home' },
   { label: 'Incontri', href: '#incontri' },
   { label: 'Hardware', href: '#hardware' },
+  { label: 'Workshop', href: '/workshop-hardware', isRoute: true },
   { label: 'Glossario', href: '#glossario' },
   { label: 'Quiz', href: '#quiz' },
   { label: 'Galleria', href: '#galleria' },
@@ -26,7 +27,9 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold text-white/70 transition-colors hover:text-yellow"
+              className={`text-sm font-semibold transition-colors hover:text-yellow ${
+                link.isRoute ? 'text-[#FACC15]' : 'text-white/70'
+              }`}
             >
               {link.label}
             </a>

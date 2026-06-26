@@ -12,7 +12,7 @@ export const workshop27Slides = [
     images: ['/images/hardware/hero.jpeg', '/images/hardware/pcview.jpeg'],
     emoji: '👋',
     explanation: 'Conosciamoci e scopriamo cosa sapete già sui computer.',
-    points: ['Nome ed età', 'Videogioco preferito', 'Hai mai aperto un PC?'],
+    points: ['Presentazioni', 'Videogioco preferito', 'Hai mai aperto un PC?'],
     curiosity: 'Un computer non è una scatola magica: è fatto da pezzi che lavorano insieme.',
   },
   {

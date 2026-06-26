@@ -10,8 +10,7 @@ export const workshopSlides = [
     title: 'Rompighiaccio',
     explanation: 'Iniziamo conoscendoci e rompendo il ghiaccio.',
     points: [
-      'Nome',
-      'Età',
+      'Presentazioni',
       'Videogioco preferito',
       'Hai mai aperto un PC?',
       'Cosa vuoi imparare oggi?',

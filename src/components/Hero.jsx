@@ -24,7 +24,7 @@ export default function Hero() {
         {/* Left */}
         <div className="animate-fade-up z-10 text-center lg:text-left">
           <span className="inline-block rounded-full border-2 border-yellow/30 bg-yellow px-4 py-1.5 text-xs font-extrabold tracking-widest text-dark-purple shadow-[0_3px_0_#e6bf00]">
-            LABORATORIO 12–17 ANNI
+            Laboratorio per Piccoli Apprendisti Informatici
           </span>
 
           <h1 className="mt-6 font-display text-[clamp(2.8rem,10vw,5.5rem)] leading-[0.95] tracking-tight poster-shadow">
@@ -32,10 +32,14 @@ export default function Hero() {
             <span className="block text-yellow">DEL PC</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/80 md:text-lg lg:mx-0">
+          <p className="mx-auto mt-4 max-w-lg text-lg font-semibold leading-snug text-yellow/95 md:text-xl lg:mx-0">
+            Scopri come funziona un computer, un componente alla volta.
+          </p>
+
+          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/80 md:text-lg lg:mx-0">
             Smontare, esplorare e ricostruire il PC:
             <br className="hidden sm:block" />
-            laboratorio pratico su hardware e sistemi operativi.
+            adatto a chi vuole imparare, nessuna esperienza richiesta.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">

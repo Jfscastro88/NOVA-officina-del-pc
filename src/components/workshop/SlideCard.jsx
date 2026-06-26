@@ -32,20 +32,54 @@ export default function SlideCard({ slide, slideKey }) {
         <div className="mb-3 flex items-center gap-2">
           <ListChecks size={18} className="text-accent" />
           <h3 className="text-sm font-extrabold uppercase tracking-wider text-accent">
-            Punti principali
+            {slide.components?.length ? "Componenti da riconoscere" : "Punti principali"}
           </h3>
         </div>
-        <ul className="space-y-2">
-          {slide.points.map((point) => (
-            <li
-              key={point}
-              className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-white/5 px-4 py-2.5 text-sm text-white/90"
-            >
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FACC15]" />
-              {point}
-            </li>
-          ))}
-        </ul>
+        {slide.components?.length ? (
+          <ul className="space-y-3">
+            {slide.components.map((component) => (
+              <li
+                key={component.name}
+                className="rounded-xl border border-white/5 bg-white/5 px-4 py-3 text-sm text-white/90"
+              >
+                <p className="font-bold text-white">{component.name}</p>
+                <p className="mt-2">
+                  <span className="font-semibold text-accent">Funzione: </span>
+                  {component.funzione}
+                </p>
+                <p className="mt-1">
+                  <span className="font-semibold text-accent">Posizione: </span>
+                  {component.posizione}
+                </p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <ul className="space-y-2">
+            {slide.points.map((point) => (
+              <li
+                key={point}
+                className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-white/5 px-4 py-2.5 text-sm text-white/90"
+              >
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FACC15]" />
+                {point}
+              </li>
+            ))}
+          </ul>
+        )}
+        {slide.components?.length && slide.points?.length ? (
+          <ul className="mt-4 space-y-2">
+            {slide.points.map((point) => (
+              <li
+                key={point}
+                className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-white/5 px-4 py-2.5 text-sm text-white/90"
+              >
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FACC15]" />
+                {point}
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
 
       <div className="mt-6 rounded-2xl border border-[#FACC15]/20 bg-[#FACC15]/5 p-4">

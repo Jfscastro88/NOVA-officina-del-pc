@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Home } from 'lucide-react'
 import { workshop27Meta, workshop27Slides } from '../data/workshop27GiugnoSlides'
@@ -9,6 +9,7 @@ import HardwareTopicCard from '../components/workshop/HardwareTopicCard'
 
 export default function Workshop27Giugno() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const topicsRef = useRef(null)
   const total = workshop27Slides.length
   const currentSlide = workshop27Slides[currentIndex]
 
@@ -29,6 +30,33 @@ export default function Workshop27Giugno() {
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
   }, [total])
+
+  useEffect(() => {
+    const el = topicsRef.current
+    if (!el) return
+
+    const onWheel = (e) => {
+      if (el.scrollWidth <= el.clientWidth) return
+
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY
+      if (delta === 0) return
+
+      const atStart = el.scrollLeft <= 0 && delta < 0
+      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1 && delta > 0
+      if (atStart || atEnd) return
+
+      e.preventDefault()
+      el.scrollLeft += delta
+    }
+
+    el.addEventListener('wheel', onWheel, { passive: false })
+    return () => el.removeEventListener('wheel', onWheel)
+  }, [])
+
+  useEffect(() => {
+    const active = topicsRef.current?.children[currentIndex]
+    active?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+  }, [currentIndex])
 
   return (
     <div className="min-h-screen bg-[#0B1020] text-white noise-bg">
@@ -79,13 +107,16 @@ export default function Workshop27Giugno() {
         </main>
 
         <nav
-          className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-md"
+          className="mt-10 overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-md"
           aria-label="Argomenti del workshop"
         >
           <h2 className="mb-3 text-center text-xs font-extrabold uppercase tracking-[0.2em] text-[#FACC15]">
             Argomenti
           </h2>
-          <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div
+            ref={topicsRef}
+            className="flex w-full min-w-0 touch-pan-x gap-2 overflow-x-scroll overscroll-x-contain pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.25)_transparent] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/25 [&::-webkit-scrollbar-track]:bg-transparent"
+          >
             {workshop27Slides.map((slide, index) => (
               <HardwareTopicCard
                 key={slide.id}

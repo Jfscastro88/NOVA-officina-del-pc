@@ -49,8 +49,8 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
         key={slideKey}
         className="animate-fade-up overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_8px_32px_rgba(124,58,237,0.15)] backdrop-blur-md"
       >
-        <div className="grid gap-0 lg:grid-cols-2">
-          <div className="relative p-5 sm:p-6 lg:p-8">
+        <div className="grid min-w-0 gap-0 lg:grid-cols-2">
+          <div className="relative min-w-0 p-5 sm:p-6 lg:p-8">
             <div className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-accent/20 blur-3xl" />
             <SlideImage
               src={slide.image}
@@ -61,8 +61,8 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
             />
           </div>
 
-          <div className="flex flex-col p-6 sm:p-8">
-            <div className="mb-5 flex flex-wrap items-center gap-3">
+          <div className="flex min-w-0 flex-col p-6 sm:p-8">
+            <div className="mb-5 flex flex-wrap items-start gap-3">
               <span
                 className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/20 text-2xl"
                 role="img"
@@ -74,7 +74,7 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
                 {showTime && slide.time && (
                   <p className="text-sm font-semibold text-[#FACC15]">{slide.time}</p>
                 )}
-                <h2 className="font-display text-2xl text-white sm:text-3xl lg:text-4xl">
+                <h2 className="text-balance break-words font-display text-2xl leading-tight text-white sm:text-3xl lg:text-[1.75rem] xl:text-3xl">
                   {slide.title}
                 </h2>
               </div>
@@ -88,20 +88,54 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
               <div className="mb-3 flex items-center gap-2">
                 <ListChecks size={18} className="text-accent" />
                 <h3 className="text-sm font-extrabold uppercase tracking-wider text-accent">
-                  Punti principali
+                  {slide.components?.length ? "Componenti da riconoscere" : "Punti principali"}
                 </h3>
               </div>
-              <ul className="space-y-2">
-                {slide.points.map((point) => (
-                  <li
-                    key={point}
-                    className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-white/5 px-4 py-2.5 text-sm text-white/90 transition-colors hover:border-accent/30 hover:bg-white/10"
-                  >
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FACC15]" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              {slide.components?.length ? (
+                <ul className="space-y-3">
+                  {slide.components.map((component) => (
+                    <li
+                      key={component.name}
+                      className="rounded-xl border border-white/5 bg-white/5 px-4 py-3 text-sm text-white/90 transition-colors hover:border-accent/30 hover:bg-white/10"
+                    >
+                      <p className="font-bold text-white">{component.name}</p>
+                      <p className="mt-2">
+                        <span className="font-semibold text-accent">Funzione: </span>
+                        {component.funzione}
+                      </p>
+                      <p className="mt-1">
+                        <span className="font-semibold text-accent">Posizione: </span>
+                        {component.posizione}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="space-y-2">
+                  {slide.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-white/5 px-4 py-2.5 text-sm text-white/90 transition-colors hover:border-accent/30 hover:bg-white/10"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FACC15]" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {slide.components?.length && slide.points?.length ? (
+                <ul className="mt-4 space-y-2">
+                  {slide.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-white/5 px-4 py-2.5 text-sm text-white/90"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FACC15]" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
 
             <div className="mt-6 rounded-2xl border border-[#FACC15]/20 bg-[#FACC15]/5 p-4">

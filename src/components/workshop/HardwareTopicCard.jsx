@@ -3,8 +3,8 @@ export default function HardwareTopicCard({ slide, index, isActive, onClick, sho
     <button
       type="button"
       onClick={onClick}
-      className={`group flex shrink-0 items-center gap-2 rounded-2xl border text-left transition-all duration-200 ${
-        compact ? 'px-3 py-2' : 'w-full gap-3 px-3 py-2.5'
+      className={`group flex shrink-0 items-center gap-2 overflow-hidden rounded-2xl border text-left transition-all duration-200 ${
+        compact ? 'max-w-40 px-3 py-2 sm:max-w-44' : 'w-full gap-3 px-3 py-2.5'
       } ${
         isActive
           ? 'border-[#FACC15]/50 bg-[#FACC15]/15 shadow-[0_0_20px_rgba(250,204,21,0.15)]'
@@ -23,8 +23,14 @@ export default function HardwareTopicCard({ slide, index, isActive, onClick, sho
       >
         {index + 1}
       </span>
-      <div className={`min-w-0 ${compact ? 'max-w-[120px] sm:max-w-[140px]' : 'flex-1'}`}>
-        <p className={`truncate font-bold text-white/90 ${compact ? 'text-[11px]' : 'text-xs'}`}>
+      <div className="min-w-0 flex-1">
+        <p
+          className={`font-bold text-white/90 ${
+            compact
+              ? 'line-clamp-2 text-[11px] leading-snug break-words'
+              : 'truncate text-xs'
+          }`}
+        >
           {slide.title}
         </p>
         {showTime && slide.time && (

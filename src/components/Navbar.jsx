@@ -6,9 +6,6 @@ const anchorLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Incontri', href: '#incontri' },
   { label: 'Hardware', href: '#hardware' },
-  { label: 'Glossario', href: '#glossario' },
-  { label: 'Quiz', href: '#quiz' },
-  { label: 'Galleria', href: '#galleria' },
 ]
 
 export default function Navbar() {
@@ -33,7 +30,7 @@ export default function Navbar() {
           className="order-3 flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-2 lg:order-none lg:w-auto lg:flex-1 lg:justify-center"
           aria-label="Navigazione principale"
         >
-          {anchorLinks.slice(0, 3).map((link) => (
+          {anchorLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -51,16 +48,6 @@ export default function Navbar() {
             onClose={() => setWorkshopOpen(false)}
             items={workshopItems}
           />
-
-          {anchorLinks.slice(3).map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-semibold text-white/70 transition-colors hover:text-yellow"
-            >
-              {link.label}
-            </a>
-          ))}
         </nav>
 
         <a

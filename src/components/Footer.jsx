@@ -5,12 +5,6 @@ import NavDropdown from './NavDropdown'
 
 const badges = ['Pratico', 'Divertente', 'Istruttivo', 'Collaborativo']
 
-const footerLinks = [
-  { label: 'Glossario', href: '#glossario' },
-  { label: 'Quiz', href: '#quiz' },
-  { label: 'Galleria', href: '#galleria' },
-]
-
 export default function Footer() {
   const [docentiOpen, setDocentiOpen] = useState(false)
 
@@ -56,15 +50,6 @@ export default function Footer() {
           OFFICINA DEL PC
         </span>
         <nav className="flex flex-wrap items-center justify-center gap-6" aria-label="Collegamenti rapidi">
-          {footerLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-semibold text-white/60 transition-colors hover:text-yellow"
-            >
-              {link.label}
-            </a>
-          ))}
           <NavDropdown
             label="Docenti"
             variant="footer"

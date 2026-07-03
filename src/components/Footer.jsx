@@ -1,8 +1,24 @@
+import { useState } from 'react'
 import { Star, Squiggle, BrushStroke } from './Doodles'
+import { workshopDays } from '../data/workshops'
+import NavDropdown from './NavDropdown'
 
 const badges = ['Pratico', 'Divertente', 'Istruttivo', 'Collaborativo']
 
+const footerLinks = [
+  { label: 'Glossario', href: '#glossario' },
+  { label: 'Quiz', href: '#quiz' },
+  { label: 'Galleria', href: '#galleria' },
+]
+
 export default function Footer() {
+  const [docentiOpen, setDocentiOpen] = useState(false)
+
+  const docentiItems = workshopDays.map((day) => ({
+    label: day.label,
+    href: day.teacherPath,
+  }))
+
   return (
     <footer className="relative overflow-hidden bg-gradient-to-b from-primary via-dark-purple to-[#0d0420] px-5 pb-8 pt-20 noise-bg lg:px-8">
       <div className="pointer-events-none absolute -left-32 bottom-0 h-96 w-96 rounded-full bg-accent/25 blur-[100px]" />
@@ -39,16 +55,24 @@ export default function Footer() {
         <span className="font-display text-sm tracking-wide text-white">
           OFFICINA DEL PC
         </span>
-        <nav className="flex gap-6" aria-label="Collegamenti rapidi">
-          {['Glossario', 'Quiz', 'Galleria'].map((label) => (
+        <nav className="flex flex-wrap items-center justify-center gap-6" aria-label="Collegamenti rapidi">
+          {footerLinks.map((link) => (
             <a
-              key={label}
-              href={`#${label.toLowerCase()}`}
+              key={link.href}
+              href={link.href}
               className="text-sm font-semibold text-white/60 transition-colors hover:text-yellow"
             >
-              {label}
+              {link.label}
             </a>
           ))}
+          <NavDropdown
+            label="Docenti"
+            variant="footer"
+            isOpen={docentiOpen}
+            onToggle={() => setDocentiOpen((open) => !open)}
+            onClose={() => setDocentiOpen(false)}
+            items={docentiItems}
+          />
         </nav>
       </div>
     </footer>

@@ -8,7 +8,7 @@ const sessions = [
     title: 'Dentro il PC',
     text: 'Componenti e funzioni',
     accent: 'border-accent',
-    link: '/workshop/27-giugno',
+    link: '/workshop/2026-06-27',
   },
   {
     date: '4 LUG',

@@ -1,17 +1,19 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
-import { Home } from 'lucide-react'
-import { workshop27Meta, workshop27Slides } from '../data/workshop27GiugnoSlides'
+import { Link, Navigate, useParams } from 'react-router-dom'
+import { Home, Presentation } from 'lucide-react'
+import { getWorkshopDay, getStudentWorkshop } from '../data/workshops'
 import WorkshopSlides from '../components/workshop/WorkshopSlides'
 import SlideProgress from '../components/workshop/SlideProgress'
 import SlideNavigation from '../components/workshop/SlideNavigation'
 import HardwareTopicCard from '../components/workshop/HardwareTopicCard'
+import WorkshopComingSoon from '../components/workshop/WorkshopComingSoon'
 
-export default function Workshop27Giugno() {
+function StudentPresentation({ day, workshop }) {
+  const { meta, slides } = workshop
   const [currentIndex, setCurrentIndex] = useState(0)
   const topicsRef = useRef(null)
-  const total = workshop27Slides.length
-  const currentSlide = workshop27Slides[currentIndex]
+  const total = slides.length
+  const currentSlide = slides[currentIndex]
 
   const goTo = (index) => {
     setCurrentIndex(Math.max(0, Math.min(index, total - 1)))
@@ -76,12 +78,13 @@ export default function Workshop27Giugno() {
           </Link>
 
           <div className="flex-1 text-center">
-            <h1 className="font-display text-sm tracking-wide text-white sm:text-base">
-              {workshop27Meta.title}
-            </h1>
-            <p className="text-xs font-semibold text-accent sm:text-sm">
-              {workshop27Meta.subtitle}
+            <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#FACC15]">
+              Presentazione Ragazzi
             </p>
+            <h1 className="font-display text-sm tracking-wide text-white sm:text-base">
+              {meta.title}
+            </h1>
+            <p className="text-xs font-semibold text-accent sm:text-sm">{meta.subtitle}</p>
           </div>
 
           <div className="w-[72px]" aria-hidden="true" />
@@ -89,6 +92,13 @@ export default function Workshop27Giugno() {
       </header>
 
       <div className="relative mx-auto max-w-4xl px-5 py-6 lg:px-8 lg:py-8">
+        <div className="mb-6 flex items-center gap-3 rounded-2xl border border-accent/20 bg-accent/10 px-4 py-3">
+          <Presentation size={18} className="shrink-0 text-[#FACC15]" />
+          <p className="text-sm font-semibold text-white/80">
+            {day.label} — presentazione visibile agli studenti
+          </p>
+        </div>
+
         <div className="mb-6">
           <SlideProgress current={currentIndex + 1} total={total} />
         </div>
@@ -117,7 +127,7 @@ export default function Workshop27Giugno() {
             ref={topicsRef}
             className="flex w-full min-w-0 touch-pan-x gap-2 overflow-x-scroll overscroll-x-contain pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.25)_transparent] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/25 [&::-webkit-scrollbar-track]:bg-transparent"
           >
-            {workshop27Slides.map((slide, index) => (
+            {slides.map((slide, index) => (
               <HardwareTopicCard
                 key={slide.id}
                 slide={slide}
@@ -133,4 +143,20 @@ export default function Workshop27Giugno() {
       </div>
     </div>
   )
+}
+
+export default function WorkshopDay() {
+  const { workshopId } = useParams()
+  const day = getWorkshopDay(workshopId)
+  const workshop = getStudentWorkshop(workshopId)
+
+  if (!day) {
+    return <Navigate to="/" replace />
+  }
+
+  if (!workshop) {
+    return <WorkshopComingSoon day={day} audience="student" />
+  }
+
+  return <StudentPresentation day={day} workshop={workshop} />
 }

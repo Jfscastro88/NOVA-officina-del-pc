@@ -1,18 +1,20 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
-import WorkshopHardware from './pages/WorkshopHardware.jsx'
-import Workshop27Giugno from './pages/Workshop27Giugno.jsx'
+import WorkshopDay from './pages/WorkshopDay.jsx'
+import TeacherDay from './pages/TeacherDay.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/workshop-hardware" element={<WorkshopHardware />} />
-        <Route path="/workshop/27-giugno" element={<Workshop27Giugno />} />
+        <Route path="/workshop/:workshopId" element={<WorkshopDay />} />
+        <Route path="/docenti/:workshopId" element={<TeacherDay />} />
+        <Route path="/workshop-hardware" element={<Navigate to="/docenti/2026-06-27" replace />} />
+        <Route path="/workshop/27-giugno" element={<Navigate to="/workshop/2026-06-27" replace />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

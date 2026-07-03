@@ -4,7 +4,7 @@ import { X, Lightbulb, Zap, Info, Target } from 'lucide-react'
 const detailSections = [
   { key: 'what', label: "Cos'è", Icon: Info },
   { key: 'function', label: 'A cosa serve', Icon: Target },
-  { key: 'importance', label: 'Perché è importante', Icon: Zap },
+  { key: 'importance', label: 'Dove si monta', Icon: Zap },
   { key: 'curiosity', label: 'Curiosità', Icon: Lightbulb },
 ]
 

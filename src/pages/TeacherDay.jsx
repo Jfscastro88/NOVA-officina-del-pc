@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { ChevronLeft, ChevronRight, Home, Menu, X } from 'lucide-react'
-import { workshopMeta, workshopSlides } from '../data/workshopHardware'
+import { Link, Navigate, useParams } from 'react-router-dom'
+import { ChevronLeft, ChevronRight, Home, Menu, Presentation, X } from 'lucide-react'
+import { getWorkshopDay, getTeacherWorkshop } from '../data/workshops'
 import SlideCard from '../components/workshop/SlideCard'
 import WorkshopProgress from '../components/workshop/WorkshopProgress'
 import HardwareTopicCard from '../components/workshop/HardwareTopicCard'
+import WorkshopComingSoon from '../components/workshop/WorkshopComingSoon'
 
-export default function WorkshopHardware() {
+function TeacherPresentation({ day, workshop }) {
+  const { meta, slides } = workshop
   const [currentIndex, setCurrentIndex] = useState(0)
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const total = workshopSlides.length
-  const currentSlide = workshopSlides[currentIndex]
+  const total = slides.length
+  const currentSlide = slides[currentIndex]
 
   const goTo = (index) => {
     setCurrentIndex(Math.max(0, Math.min(index, total - 1)))
@@ -43,12 +45,13 @@ export default function WorkshopHardware() {
           </Link>
 
           <div className="flex-1 text-center">
-            <h1 className="font-display text-sm tracking-wide text-white sm:text-base">
-              {workshopMeta.title}
-            </h1>
-            <p className="text-xs font-semibold text-accent sm:text-sm">
-              {workshopMeta.subtitle}
+            <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#FACC15]">
+              Area Docenti
             </p>
+            <h1 className="font-display text-sm tracking-wide text-white sm:text-base">
+              {meta.title}
+            </h1>
+            <p className="text-xs font-semibold text-accent sm:text-sm">{meta.subtitle}</p>
           </div>
 
           <button
@@ -63,6 +66,17 @@ export default function WorkshopHardware() {
       </header>
 
       <div className="mx-auto max-w-7xl px-5 py-6 lg:px-8 lg:py-8">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm font-semibold text-white/60">{day.label}</p>
+          <Link
+            to={day.studentPath}
+            className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-extrabold text-[#FACC15] transition-colors hover:border-accent hover:bg-accent/20"
+          >
+            <Presentation size={16} />
+            Presentazione ragazzi
+          </Link>
+        </div>
+
         <div className="mb-6">
           <WorkshopProgress
             current={currentIndex + 1}
@@ -94,7 +108,7 @@ export default function WorkshopHardware() {
               <h2 className="mb-2 px-1 text-xs font-extrabold uppercase tracking-[0.2em] text-[#FACC15]">
                 Argomenti
               </h2>
-              {workshopSlides.map((slide, index) => (
+              {slides.map((slide, index) => (
                 <HardwareTopicCard
                   key={slide.id}
                   slide={slide}
@@ -139,4 +153,20 @@ export default function WorkshopHardware() {
       </div>
     </div>
   )
+}
+
+export default function TeacherDay() {
+  const { workshopId } = useParams()
+  const day = getWorkshopDay(workshopId)
+  const workshop = getTeacherWorkshop(workshopId)
+
+  if (!day) {
+    return <Navigate to="/" replace />
+  }
+
+  if (!workshop) {
+    return <WorkshopComingSoon day={day} audience="teacher" />
+  }
+
+  return <TeacherPresentation day={day} workshop={workshop} />
 }

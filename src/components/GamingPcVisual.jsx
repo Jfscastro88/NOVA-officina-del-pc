@@ -1,35 +1,53 @@
 const floatingParts = [
   {
-    label: 'CPU',
-    image: '/components/processor1.jpg',
-    className: 'top-[4%] -left-[2%] animate-float [--rot:-4deg]',
-    ring: 'ring-accent/60',
+    label: "PROCESSORE",
+    image: "/components/processor2.jpg",
+    className: "flex top-[5%] -left-[14%] animate-float [--rot:-4deg]",
+    ring: "ring-accent/60",
   },
   {
-    label: 'RAM',
-    image: '/components/ramddr5.jpg',
-    className: 'top-[2%] -right-[2%] animate-float-delayed [--rot:3deg]',
-    ring: 'ring-yellow/70',
+    label: "MEMORIA RAM",
+    image: "/components/ram.jpg",
+    className: "flex top-[3%] -right-[14%] animate-float-delayed [--rot:3deg]",
+    ring: "ring-yellow/70",
   },
   {
-    label: 'SSD',
-    image: '/components/ssd-nvme.jpg',
-    className: 'bottom-[22%] -left-[6%] animate-float [--rot:5deg]',
-    ring: 'ring-violet-400/60',
+    label: "SCHEDA MADRE",
+    image: "/components/motherboard.jpg",
+    className: "hidden sm:flex top-[28%] -left-[18%] animate-float-delayed [--rot:-6deg]",
+    ring: "ring-emerald-400/60",
   },
   {
-    label: 'GPU',
-    image: '/components/gpu1.jpg',
-    className: 'bottom-[10%] -right-[4%] animate-float-delayed [--rot:-3deg]',
-    ring: 'ring-fuchsia-400/60',
+    label: "DISSIPATORI",
+    image: "/components/wathercooler.jpg",
+    className: "hidden sm:flex top-[26%] -right-[18%] animate-wiggle [--rot:7deg]",
+    ring: "ring-cyan-400/60",
   },
   {
-    label: 'Tools',
-    image: '/components/tools.jpg',
-    className: 'top-[38%] -right-[8%] animate-wiggle [--rot:8deg]',
-    ring: 'ring-yellow/60',
+    label: "HARD DISK / SSD",
+    image: "/components/ssd-nvme.jpg",
+    className: "hidden sm:flex top-[51%] -left-[14%] animate-float [--rot:5deg]",
+    ring: "ring-violet-400/60",
   },
-]
+  {
+    label: "ALIMENTATORI",
+    image: "/components/powersupply1.jpg",
+    className: "hidden sm:flex top-[49%] -right-[14%] animate-float [--rot:4deg]",
+    ring: "ring-orange-400/60",
+  },
+  {
+    label: "STRUMENTI",
+    image: "/components/tools.jpg",
+    className: "hidden sm:flex top-[74%] -left-[16%] animate-wiggle [--rot:8deg]",
+    ring: "ring-yellow/60",
+  },
+  {
+    label: "SCHEDE VIDEO",
+    image: "/components/gpu.jpg",
+    className: "flex top-[72%] -right-[12%] animate-float-delayed [--rot:-3deg] max-sm:top-[78%]",
+    ring: "ring-fuchsia-400/60",
+  },
+];
 
 export default function GamingPcVisual() {
   return (
@@ -69,7 +87,7 @@ export default function GamingPcVisual() {
           className="pointer-events-none absolute inset-0 z-10 opacity-[0.04]"
           style={{
             backgroundImage:
-              'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 3px)',
+              "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 3px)",
           }}
         />
 
@@ -86,19 +104,12 @@ export default function GamingPcVisual() {
       {floatingParts.map(({ label, image, className, ring }) => (
         <div
           key={label}
-          className={`absolute z-30 flex items-center gap-2 rounded-2xl border-2 border-white/25 bg-white/95 p-1.5 pr-3 card-depth backdrop-blur-sm transition-transform hover:scale-105 ${className}`}
+          className={`absolute z-30 items-center gap-2.5 rounded-2xl border-2 border-white/25 bg-white/95 p-2 pr-3.5 card-depth backdrop-blur-sm transition-transform hover:scale-105 ${className}`}
         >
-          <div
-            className={`h-11 w-11 shrink-0 overflow-hidden rounded-xl ring-2 ${ring}`}
-          >
-            <img
-              src={image}
-              alt=""
-              className="h-full w-full object-cover"
-              loading="lazy"
-            />
+          <div className={`h-14 w-14 shrink-0 overflow-hidden rounded-xl ring-2 ${ring}`}>
+            <img src={image} alt="" className="h-full w-full object-cover" loading="lazy" />
           </div>
-          <span className="text-[10px] font-extrabold uppercase tracking-wider text-dark-purple">
+          <span className="text-[11px] font-extrabold uppercase tracking-wider text-dark-purple">
             {label}
           </span>
         </div>
@@ -107,5 +118,5 @@ export default function GamingPcVisual() {
       {/* Monitor light bar hint */}
       <div className="pointer-events-none absolute -top-3 left-1/2 z-20 h-2 w-28 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-white/40 to-transparent shadow-[0_0_12px_rgba(255,255,255,0.3)]" />
     </div>
-  )
+  );
 }

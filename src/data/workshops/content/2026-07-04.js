@@ -386,7 +386,7 @@ export default {
       gallery: [
         "/images/hardware/cavo.jpg",
         "/images/hardware/ram5.jpg",
-        "/images/hardware/blockgpu.jpg",
+        "/images/hardware/error.png",
       ],
     },
     {

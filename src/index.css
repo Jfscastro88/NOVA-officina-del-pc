@@ -122,4 +122,25 @@
   .noise-bg {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   }
+
+  /* Presentazione studenti — layout wide tipo slide deck */
+  .workshop-student-shell {
+    width: 95%;
+    max-width: 1720px;
+    margin-inline: auto;
+    padding-inline: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .workshop-student-shell {
+      padding-inline: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .workshop-student-shell {
+      width: 90%;
+      padding-inline: 1.25rem;
+    }
+  }
 }

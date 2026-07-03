@@ -15,6 +15,7 @@ const sessions = [
     title: 'Assemblaggio',
     text: 'Montiamo e manuteniamo',
     accent: 'border-yellow',
+    link: '/workshop/2026-07-04',
   },
   {
     date: '11 LUG',

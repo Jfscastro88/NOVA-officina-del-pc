@@ -68,7 +68,7 @@ function StudentPresentation({ day, workshop }) {
       </div>
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0B1020]/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-4xl items-center gap-4 px-5 py-4 lg:px-8">
+        <div className="workshop-student-shell flex items-center gap-4 py-4">
           <Link
             to="/"
             className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white/70 transition-colors hover:border-accent hover:text-[#FACC15]"
@@ -91,7 +91,7 @@ function StudentPresentation({ day, workshop }) {
         </div>
       </header>
 
-      <div className="relative mx-auto max-w-4xl px-5 py-6 lg:px-8 lg:py-8">
+      <div className="workshop-student-shell relative py-6 lg:py-8">
         <div className="mb-6 flex items-center gap-3 rounded-2xl border border-accent/20 bg-accent/10 px-4 py-3">
           <Presentation size={18} className="shrink-0 text-[#FACC15]" />
           <p className="text-sm font-semibold text-white/80">

@@ -1,13 +1,18 @@
 import student20260627 from './students/2026-06-27'
 import teacher20260627 from './teachers/2026-06-27'
+import content20260704 from './content/2026-07-04'
+import { toStudentWorkshop, toTeacherWorkshop } from './adapters'
 
 /**
  * Calendario centrale dei workshop.
+ *
  * Per aggiungere un nuovo incontro:
  * 1. Aggiungi l'entry in workshopDays
- * 2. Crea src/data/workshops/students/YYYY-MM-DD.js (se disponibile)
- * 3. Crea src/data/workshops/teachers/YYYY-MM-DD.js (se disponibile)
- * 4. Registra i moduli negli oggetti studentWorkshops e teacherWorkshops
+ * 2. Crea src/data/workshops/content/YYYY-MM-DD.js (dati condivisi)
+ * 3. Registra il modulo in workshopContent
+ *
+ * I workshop precedenti (es. 2026-06-27) usano file separati
+ * students/ e teachers/ per retrocompatibilità.
  */
 export const workshopDays = [
   {
@@ -36,12 +41,22 @@ export const workshopDays = [
   },
 ]
 
+const workshopContent = {
+  '2026-07-04': content20260704,
+}
+
 const studentWorkshops = {
   '2026-06-27': student20260627,
+  ...Object.fromEntries(
+    Object.entries(workshopContent).map(([id, content]) => [id, toStudentWorkshop(content)])
+  ),
 }
 
 const teacherWorkshops = {
   '2026-06-27': teacher20260627,
+  ...Object.fromEntries(
+    Object.entries(workshopContent).map(([id, content]) => [id, toTeacherWorkshop(content)])
+  ),
 }
 
 export function getWorkshopDay(id) {

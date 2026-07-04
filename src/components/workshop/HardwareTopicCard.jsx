@@ -3,8 +3,10 @@ export default function HardwareTopicCard({ slide, index, isActive, onClick, sho
     <button
       type="button"
       onClick={onClick}
-      className={`group flex shrink-0 items-center gap-2 overflow-hidden rounded-2xl border text-left transition-all duration-200 ${
-        compact ? 'max-w-40 px-3 py-2 sm:max-w-44' : 'w-full gap-3 px-3 py-2.5'
+      className={`group flex shrink-0 items-center gap-2 overflow-hidden rounded-xl border text-left transition-all duration-200 sm:rounded-2xl ${
+        compact
+          ? 'min-h-11 max-w-[9.5rem] px-2.5 py-2 sm:max-w-44 sm:px-3'
+          : 'min-h-11 w-full gap-3 px-3 py-2.5'
       } ${
         isActive
           ? 'border-[#FACC15]/50 bg-[#FACC15]/15 shadow-[0_0_20px_rgba(250,204,21,0.15)]'
@@ -13,7 +15,7 @@ export default function HardwareTopicCard({ slide, index, isActive, onClick, sho
       aria-current={isActive ? 'true' : undefined}
     >
       <span
-        className={`flex shrink-0 items-center justify-center rounded-xl font-extrabold transition-colors ${
+        className={`flex shrink-0 items-center justify-center rounded-lg font-extrabold transition-colors sm:rounded-xl ${
           compact ? 'h-7 w-7 text-xs' : 'h-8 w-8 text-sm'
         } ${
           isActive
@@ -27,7 +29,7 @@ export default function HardwareTopicCard({ slide, index, isActive, onClick, sho
         <p
           className={`font-bold text-white/90 ${
             compact
-              ? 'line-clamp-2 text-[11px] leading-snug break-words'
+              ? 'line-clamp-2 text-[10px] leading-snug break-words sm:text-[11px]'
               : 'truncate text-xs'
           }`}
         >
@@ -37,7 +39,7 @@ export default function HardwareTopicCard({ slide, index, isActive, onClick, sho
           <p className="truncate text-[10px] text-white/40">{slide.time}</p>
         )}
       </div>
-      <span className="shrink-0 text-base" role="img" aria-hidden="true">
+      <span className="shrink-0 text-sm sm:text-base" role="img" aria-hidden="true">
         {slide.emoji}
       </span>
     </button>

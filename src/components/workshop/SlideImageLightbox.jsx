@@ -51,20 +51,20 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
       <button
         type="button"
         onClick={onClose}
-        className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
+        className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-4 sm:top-4"
         aria-label="Chiudi"
       >
         <X size={20} />
       </button>
 
-      <div className="absolute left-4 top-4 z-10 flex gap-2">
+      <div className="absolute left-3 top-3 z-10 flex gap-2 sm:left-4 sm:top-4">
         <button
           type="button"
           onClick={(e) => {
             e.stopPropagation()
             setZoom((z) => Math.min(z + 0.25, 2.5))
           }}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
           aria-label="Zoom avanti"
         >
           <ZoomIn size={18} />
@@ -76,7 +76,7 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
             setZoom((z) => Math.max(z - 0.25, 1))
           }}
           disabled={zoom <= 1}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20 disabled:opacity-30"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20 disabled:opacity-30"
           aria-label="Zoom indietro"
         >
           <ZoomOut size={18} />
@@ -97,7 +97,7 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
               e.stopPropagation()
               goPrev()
             }}
-            className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-accent/80 sm:left-6"
+            className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-accent/80 sm:left-6 sm:h-12 sm:w-12"
             aria-label="Immagine precedente"
           >
             <ChevronLeft size={24} />
@@ -108,7 +108,7 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
               e.stopPropagation()
               goNext()
             }}
-            className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-accent/80 sm:right-6"
+            className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-accent/80 sm:right-6 sm:h-12 sm:w-12"
             aria-label="Immagine successiva"
           >
             <ChevronRight size={24} />

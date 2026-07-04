@@ -125,13 +125,20 @@
 
   /* Presentazione studenti — layout wide tipo slide deck */
   .workshop-student-shell {
-    width: 95%;
+    width: calc(100% - 0.75rem);
     max-width: 1720px;
     margin-inline: auto;
-    padding-inline: 0.75rem;
+    padding-inline: 0.375rem;
   }
 
   @media (min-width: 640px) {
+    .workshop-student-shell {
+      width: 95%;
+      padding-inline: 0.75rem;
+    }
+  }
+
+  @media (min-width: 768px) {
     .workshop-student-shell {
       padding-inline: 1rem;
     }

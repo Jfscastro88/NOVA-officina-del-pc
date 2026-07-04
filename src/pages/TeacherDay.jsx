@@ -33,31 +33,31 @@ function TeacherPresentation({ day, workshop }) {
   }, [total])
 
   return (
-    <div className="min-h-screen bg-[#0B1020] text-white noise-bg">
+    <div className="min-h-screen overflow-x-hidden bg-[#0B1020] text-white noise-bg">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0B1020]/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center gap-4 px-5 py-4 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center gap-2 px-3 py-2.5 sm:gap-4 sm:px-5 sm:py-4 lg:px-8">
           <Link
             to="/"
-            className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white/70 transition-colors hover:border-accent hover:text-[#FACC15]"
+            className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white/70 transition-colors hover:border-accent hover:text-[#FACC15]"
           >
-            <Home size={16} />
+            <Home size={18} />
             <span className="hidden sm:inline">Home</span>
           </Link>
 
-          <div className="flex-1 text-center">
-            <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#FACC15]">
+          <div className="min-w-0 flex-1 text-center">
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#FACC15] sm:text-xs sm:tracking-[0.2em]">
               Area Docenti
             </p>
-            <h1 className="font-display text-sm tracking-wide text-white sm:text-base">
+            <h1 className="truncate font-display text-xs tracking-wide text-white sm:text-base">
               {meta.title}
             </h1>
-            <p className="text-xs font-semibold text-accent sm:text-sm">{meta.subtitle}</p>
+            <p className="truncate text-[11px] font-semibold text-accent sm:text-sm">{meta.subtitle}</p>
           </div>
 
           <button
             type="button"
             onClick={() => setSidebarOpen((open) => !open)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:border-accent lg:hidden"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:border-accent lg:hidden"
             aria-label={sidebarOpen ? 'Chiudi menu argomenti' : 'Apri menu argomenti'}
           >
             {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
@@ -65,19 +65,20 @@ function TeacherPresentation({ day, workshop }) {
         </div>
       </header>
 
-      <div className="mx-auto max-w-7xl px-5 py-6 lg:px-8 lg:py-8">
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm font-semibold text-white/60">{day.label}</p>
+      <div className="mx-auto max-w-7xl px-3 py-3 sm:px-5 sm:py-6 lg:px-8 lg:py-8">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-2 sm:mb-5 sm:gap-3 lg:mb-6">
+          <p className="text-xs font-semibold text-white/60 sm:text-sm">{day.label}</p>
           <Link
             to={day.studentPath}
-            className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-extrabold text-[#FACC15] transition-colors hover:border-accent hover:bg-accent/20"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-2 text-xs font-extrabold text-[#FACC15] transition-colors hover:border-accent hover:bg-accent/20 sm:gap-2 sm:px-4 sm:text-sm"
           >
-            <Presentation size={16} />
-            Presentazione ragazzi
+            <Presentation size={15} className="sm:h-4 sm:w-4" />
+            <span className="hidden sm:inline">Presentazione ragazzi</span>
+            <span className="sm:hidden">Ragazzi</span>
           </Link>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-3 sm:mb-5 lg:mb-6">
           <WorkshopProgress
             current={currentIndex + 1}
             total={total}
@@ -123,18 +124,19 @@ function TeacherPresentation({ day, workshop }) {
           <main className="min-w-0 flex-1">
             <SlideCard slide={currentSlide} slideKey={currentSlide.id} />
 
-            <div className="mt-6 flex items-center justify-between gap-4">
+            <div className="mt-3 flex items-center justify-between gap-2 sm:mt-5 sm:gap-4 lg:mt-6">
               <button
                 type="button"
                 onClick={goPrev}
                 disabled={currentIndex === 0}
-                className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-extrabold text-white transition-all hover:border-accent hover:bg-accent/20 disabled:cursor-not-allowed disabled:opacity-30"
+                aria-label="Slide precedente"
+                className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 text-sm font-extrabold text-white transition-all hover:border-accent hover:bg-accent/20 disabled:cursor-not-allowed disabled:opacity-30 sm:gap-2 sm:px-5 sm:py-3"
               >
-                <ChevronLeft size={18} />
-                Indietro
+                <ChevronLeft size={20} />
+                <span className="hidden sm:inline">Indietro</span>
               </button>
 
-              <span className="text-sm font-semibold text-white/50">
+              <span className="min-w-[3.5rem] text-center text-xs font-semibold text-white/50 sm:text-sm">
                 Slide {currentIndex + 1} di {total}
               </span>
 
@@ -142,10 +144,11 @@ function TeacherPresentation({ day, workshop }) {
                 type="button"
                 onClick={goNext}
                 disabled={currentIndex === total - 1}
-                className="flex items-center gap-2 rounded-full bg-[#FACC15] px-5 py-3 text-sm font-extrabold text-[#0B1020] btn-gaming transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-30"
+                aria-label="Slide successiva"
+                className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-1.5 rounded-full bg-[#FACC15] px-3 text-sm font-extrabold text-[#0B1020] btn-gaming transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-30 sm:gap-2 sm:px-5 sm:py-3"
               >
-                Avanti
-                <ChevronRight size={18} />
+                <span className="hidden sm:inline">Avanti</span>
+                <ChevronRight size={20} />
               </button>
             </div>
           </main>

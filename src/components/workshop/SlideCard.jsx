@@ -18,10 +18,10 @@ import QuickQuizReveal from './QuickQuizReveal'
 
 function TeacherSection({ icon: Icon, title, color, children }) {
   return (
-    <div className={`mt-6 rounded-2xl border p-4 ${color}`}>
-      <div className="mb-3 flex items-center gap-2">
-        <Icon size={18} />
-        <h3 className="text-sm font-extrabold uppercase tracking-wider">{title}</h3>
+    <div className={`mt-4 rounded-xl border p-3 sm:mt-6 sm:rounded-2xl sm:p-4 ${color}`}>
+      <div className="mb-2 flex items-center gap-2 sm:mb-3">
+        <Icon size={16} className="sm:h-[18px] sm:w-[18px]" />
+        <h3 className="text-xs font-extrabold uppercase tracking-wider sm:text-sm">{title}</h3>
       </div>
       {children}
     </div>
@@ -30,14 +30,14 @@ function TeacherSection({ icon: Icon, title, color, children }) {
 
 function BulletList({ items, bulletColor = 'bg-[#FACC15]' }) {
   return (
-    <ul className="space-y-2">
+    <ul className="space-y-1.5 sm:space-y-2">
       {items.map((item) => (
         <li
           key={item}
-          className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-white/5 px-4 py-2.5 text-sm text-white/90"
+          className="flex items-start gap-2 rounded-lg border border-white/5 bg-white/5 px-3 py-2 text-xs text-white/90 sm:gap-2.5 sm:rounded-xl sm:px-4 sm:py-2.5 sm:text-sm"
         >
           <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${bulletColor}`} />
-          {item}
+          <span className="min-w-0 break-words">{item}</span>
         </li>
       ))}
     </ul>
@@ -48,30 +48,32 @@ export default function SlideCard({ slide, slideKey }) {
   return (
     <article
       key={slideKey}
-      className="animate-fade-up rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md sm:p-8"
+      className="animate-fade-up overflow-x-hidden rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-md sm:rounded-3xl sm:p-6 md:p-8"
     >
-      <div className="mb-6 flex flex-wrap items-center gap-3">
+      <div className="mb-4 flex flex-wrap items-center gap-2.5 sm:mb-6 sm:gap-3">
         <span
-          className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/20 text-3xl"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/20 text-2xl sm:h-14 sm:w-14 sm:rounded-2xl sm:text-3xl"
           role="img"
           aria-hidden="true"
         >
           {slide.emoji}
         </span>
         <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-[#FACC15]">
-            <span className="flex items-center gap-2">
-              <Clock size={15} />
+          <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-[#FACC15] sm:gap-3 sm:text-sm">
+            <span className="flex items-center gap-1.5 sm:gap-2">
+              <Clock size={14} className="sm:h-[15px] sm:w-[15px]" />
               {slide.time}
             </span>
             {slide.duration && (
-              <span className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-white/60">
-                <Timer size={13} />
+              <span className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] text-white/60 sm:gap-1.5 sm:px-2.5 sm:text-xs">
+                <Timer size={12} className="sm:h-[13px] sm:w-[13px]" />
                 {slide.duration}
               </span>
             )}
           </div>
-          <h2 className="mt-1 font-display text-2xl text-white sm:text-3xl">{slide.title}</h2>
+          <h2 className="mt-0.5 break-words font-display text-xl text-white sm:mt-1 sm:text-2xl md:text-3xl">
+            {slide.title}
+          </h2>
         </div>
       </div>
 

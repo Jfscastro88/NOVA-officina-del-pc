@@ -2,13 +2,15 @@ const floatingParts = [
   {
     label: "PROCESSORE",
     image: "/components/processor2.jpg",
-    className: "flex top-[5%] -left-[14%] animate-float [--rot:-4deg]",
+    className:
+      "flex left-2 top-[8%] sm:-left-[14%] sm:top-[5%] animate-float [--rot:-4deg]",
     ring: "ring-accent/60",
   },
   {
     label: "MEMORIA RAM",
     image: "/components/ram.jpg",
-    className: "flex top-[3%] -right-[14%] animate-float-delayed [--rot:3deg]",
+    className:
+      "flex right-2 top-[8%] sm:-right-[14%] sm:top-[3%] animate-float-delayed [--rot:3deg]",
     ring: "ring-yellow/70",
   },
   {
@@ -44,7 +46,8 @@ const floatingParts = [
   {
     label: "SCHEDE VIDEO",
     image: "/components/gpu.jpg",
-    className: "flex top-[72%] -right-[12%] animate-float-delayed [--rot:-3deg] max-sm:top-[78%]",
+    className:
+      "flex bottom-12 right-2 top-auto left-auto sm:bottom-auto sm:left-auto sm:-right-[12%] sm:top-[72%] animate-float-delayed [--rot:-3deg]",
     ring: "ring-fuchsia-400/60",
   },
 ];
@@ -104,12 +107,14 @@ export default function GamingPcVisual() {
       {floatingParts.map(({ label, image, className, ring }) => (
         <div
           key={label}
-          className={`absolute z-30 items-center gap-2.5 rounded-2xl border-2 border-white/25 bg-white/95 p-2 pr-3.5 card-depth backdrop-blur-sm transition-transform hover:scale-105 ${className}`}
+          className={`absolute z-30 max-w-[calc(100%-1rem)] items-center gap-2.5 rounded-2xl border-2 border-white/25 bg-white/95 p-2 pr-3.5 card-depth backdrop-blur-sm transition-transform hover:scale-105 max-sm:gap-1.5 max-sm:p-1.5 max-sm:pr-2.5 sm:max-w-none ${className}`}
         >
-          <div className={`h-14 w-14 shrink-0 overflow-hidden rounded-xl ring-2 ${ring}`}>
+          <div
+            className={`h-14 w-14 shrink-0 overflow-hidden rounded-xl ring-2 max-sm:h-10 max-sm:w-10 ${ring}`}
+          >
             <img src={image} alt="" className="h-full w-full object-cover" loading="lazy" />
           </div>
-          <span className="text-[11px] font-extrabold uppercase tracking-wider text-dark-purple">
+          <span className="text-[11px] font-extrabold uppercase tracking-wider text-dark-purple max-sm:text-[8px] max-sm:leading-tight max-sm:tracking-wide">
             {label}
           </span>
         </div>

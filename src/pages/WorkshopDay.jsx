@@ -1,64 +1,64 @@
-import { useState, useEffect, useRef } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
-import { Home, Presentation } from 'lucide-react'
-import { getWorkshopDay, getStudentWorkshop } from '../data/workshops'
-import WorkshopSlides from '../components/workshop/WorkshopSlides'
-import SlideProgress from '../components/workshop/SlideProgress'
-import SlideNavigation from '../components/workshop/SlideNavigation'
-import HardwareTopicCard from '../components/workshop/HardwareTopicCard'
-import WorkshopComingSoon from '../components/workshop/WorkshopComingSoon'
+import { useState, useEffect, useRef } from "react";
+import { Link, Navigate, useParams } from "react-router-dom";
+import { Home, Presentation } from "lucide-react";
+import { getWorkshopDay, getStudentWorkshop } from "../data/workshops";
+import WorkshopSlides from "../components/workshop/WorkshopSlides";
+import SlideProgress from "../components/workshop/SlideProgress";
+import SlideNavigation from "../components/workshop/SlideNavigation";
+import HardwareTopicCard from "../components/workshop/HardwareTopicCard";
+import WorkshopComingSoon from "../components/workshop/WorkshopComingSoon";
 
 function StudentPresentation({ day, workshop }) {
-  const { meta, slides } = workshop
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const topicsRef = useRef(null)
-  const total = slides.length
-  const currentSlide = slides[currentIndex]
+  const { meta, slides } = workshop;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const topicsRef = useRef(null);
+  const total = slides.length;
+  const currentSlide = slides[currentIndex];
 
   const goTo = (index) => {
-    setCurrentIndex(Math.max(0, Math.min(index, total - 1)))
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+    setCurrentIndex(Math.max(0, Math.min(index, total - 1)));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-  const goPrev = () => goTo(currentIndex - 1)
-  const goNext = () => goTo(currentIndex + 1)
+  const goPrev = () => goTo(currentIndex - 1);
+  const goNext = () => goTo(currentIndex + 1);
 
   useEffect(() => {
     const handleKey = (e) => {
-      if (document.querySelector('[role="dialog"]')) return
-      if (e.key === 'ArrowLeft') setCurrentIndex((i) => Math.max(0, i - 1))
-      if (e.key === 'ArrowRight') setCurrentIndex((i) => Math.min(total - 1, i + 1))
-    }
-    window.addEventListener('keydown', handleKey)
-    return () => window.removeEventListener('keydown', handleKey)
-  }, [total])
+      if (document.querySelector('[role="dialog"]')) return;
+      if (e.key === "ArrowLeft") setCurrentIndex((i) => Math.max(0, i - 1));
+      if (e.key === "ArrowRight") setCurrentIndex((i) => Math.min(total - 1, i + 1));
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [total]);
 
   useEffect(() => {
-    const el = topicsRef.current
-    if (!el) return
+    const el = topicsRef.current;
+    if (!el) return;
 
     const onWheel = (e) => {
-      if (el.scrollWidth <= el.clientWidth) return
+      if (el.scrollWidth <= el.clientWidth) return;
 
-      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY
-      if (delta === 0) return
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (delta === 0) return;
 
-      const atStart = el.scrollLeft <= 0 && delta < 0
-      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1 && delta > 0
-      if (atStart || atEnd) return
+      const atStart = el.scrollLeft <= 0 && delta < 0;
+      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1 && delta > 0;
+      if (atStart || atEnd) return;
 
-      e.preventDefault()
-      el.scrollLeft += delta
-    }
+      e.preventDefault();
+      el.scrollLeft += delta;
+    };
 
-    el.addEventListener('wheel', onWheel, { passive: false })
-    return () => el.removeEventListener('wheel', onWheel)
-  }, [])
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
 
   useEffect(() => {
-    const active = topicsRef.current?.children[currentIndex]
-    active?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
-  }, [currentIndex])
+    const active = topicsRef.current?.children[currentIndex];
+    active?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }, [currentIndex]);
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#0B1020] text-white noise-bg">
@@ -79,12 +79,14 @@ function StudentPresentation({ day, workshop }) {
 
           <div className="min-w-0 flex-1 text-center">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#FACC15] sm:text-xs sm:tracking-[0.2em]">
-              Presentazione Ragazzi
+              Presentazione
             </p>
             <h1 className="truncate font-display text-xs tracking-wide text-white sm:text-base">
               {meta.title}
             </h1>
-            <p className="truncate text-[11px] font-semibold text-accent sm:text-sm">{meta.subtitle}</p>
+            <p className="truncate text-[11px] font-semibold text-accent sm:text-sm">
+              {meta.subtitle}
+            </p>
           </div>
 
           <div className="w-11 shrink-0 sm:w-[72px]" aria-hidden="true" />
@@ -107,12 +109,7 @@ function StudentPresentation({ day, workshop }) {
           <WorkshopSlides slide={currentSlide} slideKey={currentSlide.id} />
 
           <div className="mt-3 sm:mt-5 lg:mt-6">
-            <SlideNavigation
-              current={currentIndex}
-              total={total}
-              onPrev={goPrev}
-              onNext={goNext}
-            />
+            <SlideNavigation current={currentIndex} total={total} onPrev={goPrev} onNext={goNext} />
           </div>
         </main>
 
@@ -142,21 +139,21 @@ function StudentPresentation({ day, workshop }) {
         </nav>
       </div>
     </div>
-  )
+  );
 }
 
 export default function WorkshopDay() {
-  const { workshopId } = useParams()
-  const day = getWorkshopDay(workshopId)
-  const workshop = getStudentWorkshop(workshopId)
+  const { workshopId } = useParams();
+  const day = getWorkshopDay(workshopId);
+  const workshop = getStudentWorkshop(workshopId);
 
   if (!day) {
-    return <Navigate to="/" replace />
+    return <Navigate to="/" replace />;
   }
 
   if (!workshop) {
-    return <WorkshopComingSoon day={day} audience="student" />
+    return <WorkshopComingSoon day={day} audience="student" />;
   }
 
-  return <StudentPresentation day={day} workshop={workshop} />
+  return <StudentPresentation day={day} workshop={workshop} />;
 }

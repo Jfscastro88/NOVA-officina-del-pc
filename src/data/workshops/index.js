@@ -1,6 +1,7 @@
 import student20260627 from './students/2026-06-27'
 import teacher20260627 from './teachers/2026-06-27'
 import content20260704 from './content/2026-07-04'
+import content20260711 from './content/2026-07-11'
 import { toStudentWorkshop, toTeacherWorkshop } from './adapters'
 
 /**
@@ -45,6 +46,10 @@ const workshopContent = {
   '2026-07-04': content20260704,
 }
 
+const interactiveWorkshops = {
+  '2026-07-11': content20260711,
+}
+
 const studentWorkshops = {
   '2026-06-27': student20260627,
   ...Object.fromEntries(
@@ -69,4 +74,12 @@ export function getStudentWorkshop(id) {
 
 export function getTeacherWorkshop(id) {
   return teacherWorkshops[id] ?? null
+}
+
+export function getInteractiveWorkshop(id) {
+  return interactiveWorkshops[id] ?? null
+}
+
+export function isInteractiveWorkshop(id) {
+  return id in interactiveWorkshops
 }

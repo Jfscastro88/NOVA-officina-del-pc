@@ -22,6 +22,7 @@ const sessions = [
     title: 'Sistema Operativo',
     text: 'Installazione e esplorazione',
     accent: 'border-fuchsia-400',
+    link: '/workshop/2026-07-11',
   },
   {
     date: '18 LUG',

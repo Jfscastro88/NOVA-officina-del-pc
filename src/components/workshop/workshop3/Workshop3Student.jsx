@@ -1,65 +1,60 @@
-import { useState, useEffect, useRef } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
-import { Home, Presentation } from "lucide-react";
-import { getWorkshopDay, getStudentWorkshop, getInteractiveWorkshop, isInteractiveWorkshop } from "../data/workshops";
-import Workshop3Student from "../components/workshop/workshop3/Workshop3Student";
-import WorkshopSlides from "../components/workshop/WorkshopSlides";
-import SlideProgress from "../components/workshop/SlideProgress";
-import SlideNavigation from "../components/workshop/SlideNavigation";
-import HardwareTopicCard from "../components/workshop/HardwareTopicCard";
-import WorkshopComingSoon from "../components/workshop/WorkshopComingSoon";
+import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { Home, Presentation } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import HardwareTopicCard from '../HardwareTopicCard'
+import SlideProgress from '../SlideProgress'
+import SlideNavigation from '../SlideNavigation'
+import SectionRenderer from './SectionRenderer'
 
-function StudentPresentation({ day, workshop }) {
-  const { meta, slides } = workshop;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const topicsRef = useRef(null);
-  const total = slides.length;
-  const currentSlide = slides[currentIndex];
+export default function Workshop3Student({ day, workshop }) {
+  const { meta, sections } = workshop
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const topicsRef = useRef(null)
+  const total = sections.length
+  const currentSection = sections[currentIndex]
 
   const goTo = (index) => {
-    setCurrentIndex(Math.max(0, Math.min(index, total - 1)));
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    setCurrentIndex(Math.max(0, Math.min(index, total - 1)))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
-  const goPrev = () => goTo(currentIndex - 1);
-  const goNext = () => goTo(currentIndex + 1);
+  const goPrev = () => goTo(currentIndex - 1)
+  const goNext = () => goTo(currentIndex + 1)
 
   useEffect(() => {
     const handleKey = (e) => {
-      if (document.querySelector('[role="dialog"]')) return;
-      if (e.key === "ArrowLeft") setCurrentIndex((i) => Math.max(0, i - 1));
-      if (e.key === "ArrowRight") setCurrentIndex((i) => Math.min(total - 1, i + 1));
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [total]);
+      if (document.querySelector('[role="dialog"]')) return
+      if (e.key === 'ArrowLeft') setCurrentIndex((i) => Math.max(0, i - 1))
+      if (e.key === 'ArrowRight') setCurrentIndex((i) => Math.min(total - 1, i + 1))
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [total])
 
   useEffect(() => {
-    const el = topicsRef.current;
-    if (!el) return;
+    const el = topicsRef.current
+    if (!el) return
 
     const onWheel = (e) => {
-      if (el.scrollWidth <= el.clientWidth) return;
+      if (el.scrollWidth <= el.clientWidth) return
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY
+      if (delta === 0) return
+      const atStart = el.scrollLeft <= 0 && delta < 0
+      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1 && delta > 0
+      if (atStart || atEnd) return
+      e.preventDefault()
+      el.scrollLeft += delta
+    }
 
-      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-      if (delta === 0) return;
-
-      const atStart = el.scrollLeft <= 0 && delta < 0;
-      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1 && delta > 0;
-      if (atStart || atEnd) return;
-
-      e.preventDefault();
-      el.scrollLeft += delta;
-    };
-
-    el.addEventListener("wheel", onWheel, { passive: false });
-    return () => el.removeEventListener("wheel", onWheel);
-  }, []);
+    el.addEventListener('wheel', onWheel, { passive: false })
+    return () => el.removeEventListener('wheel', onWheel)
+  }, [])
 
   useEffect(() => {
-    const active = topicsRef.current?.children[currentIndex];
-    active?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-  }, [currentIndex]);
+    const active = topicsRef.current?.children[currentIndex]
+    active?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+  }, [currentIndex])
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#0B1020] text-white noise-bg">
@@ -107,10 +102,25 @@ function StudentPresentation({ day, workshop }) {
         </div>
 
         <main className="min-w-0">
-          <WorkshopSlides slide={currentSlide} slideKey={currentSlide.id} />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSection.id}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.3 }}
+            >
+              <SectionRenderer section={currentSection} />
+            </motion.div>
+          </AnimatePresence>
 
           <div className="mt-3 sm:mt-5 lg:mt-6">
-            <SlideNavigation current={currentIndex} total={total} onPrev={goPrev} onNext={goNext} />
+            <SlideNavigation
+              current={currentIndex}
+              total={total}
+              onPrev={goPrev}
+              onNext={goNext}
+            />
           </div>
         </main>
 
@@ -125,10 +135,10 @@ function StudentPresentation({ day, workshop }) {
             ref={topicsRef}
             className="flex w-full min-w-0 touch-pan-x gap-1.5 overflow-x-auto overscroll-x-contain pb-1 [-webkit-overflow-scrolling:touch] [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.25)_transparent] sm:gap-2 sm:overflow-x-scroll sm:pb-2 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/25 [&::-webkit-scrollbar-track]:bg-transparent"
           >
-            {slides.map((slide, index) => (
+            {sections.map((section, index) => (
               <HardwareTopicCard
-                key={slide.id}
-                slide={slide}
+                key={section.id}
+                slide={section}
                 index={index}
                 isActive={index === currentIndex}
                 onClick={() => goTo(index)}
@@ -140,26 +150,5 @@ function StudentPresentation({ day, workshop }) {
         </nav>
       </div>
     </div>
-  );
-}
-
-export default function WorkshopDay() {
-  const { workshopId } = useParams();
-  const day = getWorkshopDay(workshopId);
-  const workshop = getStudentWorkshop(workshopId);
-
-  if (!day) {
-    return <Navigate to="/" replace />;
-  }
-
-  if (isInteractiveWorkshop(workshopId)) {
-    const interactive = getInteractiveWorkshop(workshopId);
-    return <Workshop3Student day={day} workshop={interactive} />;
-  }
-
-  if (!workshop) {
-    return <WorkshopComingSoon day={day} audience="student" />;
-  }
-
-  return <StudentPresentation day={day} workshop={workshop} />;
+  )
 }

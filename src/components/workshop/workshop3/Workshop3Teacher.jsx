@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Home, Menu, Presentation, X } from 'lucide-react'
-import { getWorkshopDay, getTeacherWorkshop, getInteractiveWorkshop, isInteractiveWorkshop } from '../data/workshops'
-import Workshop3Teacher from '../components/workshop/workshop3/Workshop3Teacher'
-import SlideCard from '../components/workshop/SlideCard'
-import WorkshopProgress from '../components/workshop/WorkshopProgress'
-import HardwareTopicCard from '../components/workshop/HardwareTopicCard'
-import WorkshopComingSoon from '../components/workshop/WorkshopComingSoon'
+import { AnimatePresence, motion } from 'framer-motion'
+import HardwareTopicCard from '../HardwareTopicCard'
+import WorkshopProgress from '../WorkshopProgress'
+import TeacherSlideRenderer from './TeacherSlideRenderer'
+import { buildTeacherSlides } from './buildTeacherSlides'
 
-function TeacherPresentation({ day, workshop }) {
-  const { meta, slides } = workshop
+export default function Workshop3Teacher({ day, workshop }) {
+  const { meta } = workshop
+  const slides = buildTeacherSlides(workshop)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const total = slides.length
@@ -26,6 +26,7 @@ function TeacherPresentation({ day, workshop }) {
 
   useEffect(() => {
     const handleKey = (e) => {
+      if (document.querySelector('[role="dialog"]')) return
       if (e.key === 'ArrowLeft') setCurrentIndex((i) => Math.max(0, i - 1))
       if (e.key === 'ArrowRight') setCurrentIndex((i) => Math.min(total - 1, i + 1))
     }
@@ -35,6 +36,11 @@ function TeacherPresentation({ day, workshop }) {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#0B1020] text-white noise-bg">
+      <div className="pointer-events-none fixed inset-0 overflow-hidden">
+        <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-accent/10 blur-[100px]" />
+        <div className="absolute -right-32 bottom-20 h-96 w-96 rounded-full bg-[#FACC15]/5 blur-[100px]" />
+      </div>
+
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0B1020]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center gap-2 px-3 py-2.5 sm:gap-4 sm:px-5 sm:py-4 lg:px-8">
           <Link
@@ -52,7 +58,9 @@ function TeacherPresentation({ day, workshop }) {
             <h1 className="truncate font-display text-xs tracking-wide text-white sm:text-base">
               {meta.title}
             </h1>
-            <p className="truncate text-[11px] font-semibold text-accent sm:text-sm">{meta.subtitle}</p>
+            <p className="truncate text-[11px] font-semibold text-accent sm:text-sm">
+              {meta.subtitle}
+            </p>
           </div>
 
           <button
@@ -123,7 +131,17 @@ function TeacherPresentation({ day, workshop }) {
           </aside>
 
           <main className="min-w-0 flex-1">
-            <SlideCard slide={currentSlide} slideKey={currentSlide.id} />
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide.id}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.3 }}
+              >
+                <TeacherSlideRenderer slide={currentSlide} />
+              </motion.div>
+            </AnimatePresence>
 
             <div className="mt-3 flex items-center justify-between gap-2 sm:mt-5 sm:gap-4 lg:mt-6">
               <button
@@ -157,25 +175,4 @@ function TeacherPresentation({ day, workshop }) {
       </div>
     </div>
   )
-}
-
-export default function TeacherDay() {
-  const { workshopId } = useParams()
-  const day = getWorkshopDay(workshopId)
-  const workshop = getTeacherWorkshop(workshopId)
-
-  if (!day) {
-    return <Navigate to="/" replace />
-  }
-
-  if (isInteractiveWorkshop(workshopId)) {
-    const interactive = getInteractiveWorkshop(workshopId)
-    return <Workshop3Teacher day={day} workshop={interactive} />
-  }
-
-  if (!workshop) {
-    return <WorkshopComingSoon day={day} audience="teacher" />
-  }
-
-  return <TeacherPresentation day={day} workshop={workshop} />
 }

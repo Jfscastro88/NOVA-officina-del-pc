@@ -15,12 +15,8 @@ export default {
       title: "Il Sistema Operativo",
       emoji: "💻",
       time: "10:00",
-      image: "/images/system/boot.png",
-      gallery: [
-        "/images/system/boot.png",
-        "/images/system/hardware.png",
-        "/images/system/windowsvslinux.png",
-      ],
+      image: "/images/system/operativesystem.png",
+      gallery: ["/images/system/operativesystem.png"],
       tagline: "Cosa succede quando premi il pulsante di accensione?",
     },
     {
@@ -153,7 +149,7 @@ export default {
       emoji: "⚔️",
       time: "10:40",
       image: "/images/system/windowsvslinux.png",
-      gallery: ["/images/system/windowsvslinux.png", "/images/system/linuxusage.png"],
+      gallery: ["/images/system/windowsvslinux.png"],
       systems: [
         {
           id: "windows",
@@ -242,7 +238,7 @@ export default {
       emoji: "📊",
       time: "11:00",
       image: "/images/system/linux.png",
-      gallery: ["/images/system/windows.png", "/images/system/linuxusage2.png"],
+      gallery: ["/images/system/windows.png"],
       comparison: [
         {
           topic: "Facile da usare",

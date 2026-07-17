@@ -7,8 +7,9 @@ import { resolveSlideImages } from './slideImages'
 
 export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
   const [lightboxOpen, setLightboxOpen] = useState(false)
-  const { primary, gallery } = resolveSlideImages(slide)
+  const { primary, gallery, placeholder } = resolveSlideImages(slide)
   const isMinimal = Boolean(slide.important)
+  const showMedia = Boolean(primary || placeholder)
 
   return (
     <>
@@ -18,10 +19,10 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
       >
         <div
           className={`grid min-w-0 gap-0 ${
-            primary ? 'lg:grid-cols-2 lg:items-stretch xl:grid-cols-[1.15fr_1fr]' : ''
+            showMedia ? 'lg:grid-cols-2 lg:items-stretch xl:grid-cols-[1.15fr_1fr]' : ''
           }`}
         >
-          {primary && (
+          {showMedia && (
             <div className="relative flex min-w-0 items-center p-3 sm:p-6 lg:p-10 xl:p-12">
               <div className="pointer-events-none absolute -left-10 -top-10 hidden h-40 w-40 rounded-full bg-accent/20 blur-3xl sm:block" />
               <div className="w-full min-w-0">
@@ -30,7 +31,8 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
                   alt={slide.title}
                   emoji={slide.emoji}
                   galleryCount={gallery.length}
-                  onOpen={() => setLightboxOpen(true)}
+                  placeholder={placeholder}
+                  onOpen={primary ? () => setLightboxOpen(true) : undefined}
                 />
               </div>
             </div>
@@ -134,9 +136,9 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
         </div>
       </article>
 
-      {lightboxOpen && gallery.length > 0 && (
+      {lightboxOpen && (gallery.length > 0 || primary) && (
         <SlideImageLightbox
-          images={gallery}
+          images={gallery.length > 0 ? gallery : [primary]}
           alt={slide.title}
           emoji={slide.emoji}
           onClose={() => setLightboxOpen(false)}

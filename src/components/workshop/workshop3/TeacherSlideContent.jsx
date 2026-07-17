@@ -4,7 +4,9 @@ import {
   Clock,
   Lightbulb,
   MessageCircle,
+  Package,
   Target,
+  Users,
   Wrench,
   ListChecks,
 } from 'lucide-react'
@@ -194,6 +196,30 @@ export default function TeacherSlideContent({ section }) {
         </InfoBox>
       )}
 
+      {(section.material?.length > 0 || section.materials?.length > 0) && (
+        <InfoBox icon={Package} title="Materiali necessari" color="border-accent/30 bg-accent/10 text-accent">
+          <BulletList items={section.material ?? section.materials} bulletColor="bg-accent" />
+        </InfoBox>
+      )}
+
+      {section.difficulties?.length > 0 && (
+        <InfoBox icon={AlertTriangle} title="Possibili difficoltà" color="border-orange-400/20 bg-orange-500/5 text-orange-300">
+          <BulletList items={section.difficulties} bulletColor="bg-orange-400" />
+        </InfoBox>
+      )}
+
+      {section.tips?.length > 0 && (
+        <InfoBox icon={Users} title="Gestione del gruppo" color="border-green-400/20 bg-green-500/5 text-green-400">
+          <BulletList items={section.tips} bulletColor="bg-green-400" />
+        </InfoBox>
+      )}
+
+      {section.safety?.length > 0 && (
+        <InfoBox icon={AlertTriangle} title="Sicurezza" color="border-red-400/20 bg-red-500/5 text-red-400">
+          <BulletList items={section.safety} bulletColor="bg-red-400" />
+        </InfoBox>
+      )}
+
       {section.commonErrors?.length > 0 && (
         <InfoBox icon={AlertTriangle} title="Errori comuni" color="border-red-400/20 bg-red-500/5 text-red-400">
           <BulletList items={section.commonErrors} bulletColor="bg-red-400" />
@@ -209,6 +235,12 @@ export default function TeacherSlideContent({ section }) {
       {section.demo && (
         <InfoBox icon={Wrench} title="Dimostrazione pratica" color="border-green-400/20 bg-green-500/5 text-green-400">
           <p className="text-sm text-white/85">{section.demo}</p>
+        </InfoBox>
+      )}
+
+      {section.closing && (
+        <InfoBox icon={Lightbulb} title="Conclusione suggerita" color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]">
+          <p className="text-sm leading-relaxed text-white/85">{section.closing}</p>
         </InfoBox>
       )}
 

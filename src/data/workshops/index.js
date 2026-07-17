@@ -2,6 +2,7 @@ import student20260627 from './students/2026-06-27'
 import teacher20260627 from './teachers/2026-06-27'
 import content20260704 from './content/2026-07-04'
 import content20260711 from './content/2026-07-11'
+import content20260718 from './content/2026-07-18'
 import { toStudentWorkshop, toTeacherWorkshop } from './adapters'
 
 /**
@@ -48,6 +49,7 @@ const workshopContent = {
 
 const interactiveWorkshops = {
   '2026-07-11': content20260711,
+  '2026-07-18': content20260718,
 }
 
 const studentWorkshops = {

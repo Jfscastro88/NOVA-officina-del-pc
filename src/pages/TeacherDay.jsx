@@ -6,6 +6,7 @@ import Workshop3Teacher from '../components/workshop/workshop3/Workshop3Teacher'
 import SlideCard from '../components/workshop/SlideCard'
 import WorkshopProgress from '../components/workshop/WorkshopProgress'
 import HardwareTopicCard from '../components/workshop/HardwareTopicCard'
+import PresentationMenu from '../components/workshop/PresentationMenu'
 import WorkshopComingSoon from '../components/workshop/WorkshopComingSoon'
 
 function TeacherPresentation({ day, workshop }) {
@@ -55,14 +56,22 @@ function TeacherPresentation({ day, workshop }) {
             <p className="truncate text-[11px] font-semibold text-accent sm:text-sm">{meta.subtitle}</p>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setSidebarOpen((open) => !open)}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:border-accent lg:hidden"
-            aria-label={sidebarOpen ? 'Chiudi menu argomenti' : 'Apri menu argomenti'}
-          >
-            {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex shrink-0 items-center gap-2">
+            <PresentationMenu
+              audience="teacher"
+              currentDayId={day.id}
+              onGoToFirst={() => goTo(0)}
+              studentPath={day.studentPath}
+            />
+            <button
+              type="button"
+              onClick={() => setSidebarOpen((open) => !open)}
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:border-accent lg:hidden"
+              aria-label={sidebarOpen ? 'Chiudi menu argomenti' : 'Apri menu argomenti'}
+            >
+              {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </header>
 

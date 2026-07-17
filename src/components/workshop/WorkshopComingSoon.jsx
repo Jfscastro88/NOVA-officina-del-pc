@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Home } from 'lucide-react'
+import PresentationMenu from './PresentationMenu'
 
 export default function WorkshopComingSoon({ day, audience }) {
   const audienceLabel = audience === 'teacher' ? 'Area Docenti' : 'Presentazione Ragazzi'
@@ -31,7 +32,11 @@ export default function WorkshopComingSoon({ day, audience }) {
             </h1>
           </div>
 
-          <div className="w-[72px]" aria-hidden="true" />
+          <PresentationMenu
+            audience={audience === 'teacher' ? 'teacher' : 'student'}
+            currentDayId={day.id}
+            studentPath={audience === 'teacher' ? day.studentPath : undefined}
+          />
         </div>
       </header>
 

@@ -6,17 +6,18 @@ import { resolveSlideImages } from '../slideImages'
 
 export default function SlideSectionFrame({ section, children, subtitle }) {
   const [lightboxOpen, setLightboxOpen] = useState(false)
-  const { primary, gallery } = resolveSlideImages(section)
+  const { primary, gallery, placeholder } = resolveSlideImages(section)
+  const showMedia = Boolean(primary || placeholder)
 
   return (
     <>
       <article className="animate-fade-up overflow-x-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[0_8px_32px_rgba(124,58,237,0.15)] backdrop-blur-md sm:rounded-3xl">
         <div
           className={`grid min-w-0 gap-0 ${
-            primary ? 'lg:grid-cols-2 lg:items-stretch xl:grid-cols-[1.15fr_1fr]' : ''
+            showMedia ? 'lg:grid-cols-2 lg:items-stretch xl:grid-cols-[1.15fr_1fr]' : ''
           }`}
         >
-          {primary && (
+          {showMedia && (
             <div className="relative flex min-w-0 items-center p-3 sm:p-6 lg:p-10 xl:p-12">
               <div className="pointer-events-none absolute -left-10 -top-10 hidden h-40 w-40 rounded-full bg-accent/20 blur-3xl sm:block" />
               <div className="w-full min-w-0">
@@ -25,7 +26,8 @@ export default function SlideSectionFrame({ section, children, subtitle }) {
                   alt={section.title}
                   emoji={section.emoji}
                   galleryCount={gallery.length}
-                  onOpen={() => setLightboxOpen(true)}
+                  placeholder={placeholder}
+                  onOpen={primary ? () => setLightboxOpen(true) : undefined}
                 />
               </div>
             </div>
@@ -78,9 +80,9 @@ export default function SlideSectionFrame({ section, children, subtitle }) {
         </div>
       </article>
 
-      {lightboxOpen && gallery.length > 0 && (
+      {lightboxOpen && (gallery.length > 0 || primary) && (
         <SlideImageLightbox
-          images={gallery}
+          images={gallery.length > 0 ? gallery : primary ? [primary] : []}
           alt={section.title}
           emoji={section.emoji}
           onClose={() => setLightboxOpen(false)}

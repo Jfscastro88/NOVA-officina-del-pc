@@ -7,6 +7,7 @@ import WorkshopSlides from "../components/workshop/WorkshopSlides";
 import SlideProgress from "../components/workshop/SlideProgress";
 import SlideNavigation from "../components/workshop/SlideNavigation";
 import HardwareTopicCard from "../components/workshop/HardwareTopicCard";
+import PresentationMenu from "../components/workshop/PresentationMenu";
 import WorkshopComingSoon from "../components/workshop/WorkshopComingSoon";
 
 function StudentPresentation({ day, workshop }) {
@@ -90,7 +91,11 @@ function StudentPresentation({ day, workshop }) {
             </p>
           </div>
 
-          <div className="w-11 shrink-0 sm:w-[72px]" aria-hidden="true" />
+          <PresentationMenu
+            audience="student"
+            currentDayId={day.id}
+            onGoToFirst={() => goTo(0)}
+          />
         </div>
       </header>
 

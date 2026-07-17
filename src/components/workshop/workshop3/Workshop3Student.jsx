@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Home, Presentation } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import HardwareTopicCard from '../HardwareTopicCard'
+import PresentationMenu from '../PresentationMenu'
 import SlideProgress from '../SlideProgress'
 import SlideNavigation from '../SlideNavigation'
 import SectionRenderer from './SectionRenderer'
@@ -85,7 +86,11 @@ export default function Workshop3Student({ day, workshop }) {
             </p>
           </div>
 
-          <div className="w-11 shrink-0 sm:w-[72px]" aria-hidden="true" />
+          <PresentationMenu
+            audience="student"
+            currentDayId={day.id}
+            onGoToFirst={() => goTo(0)}
+          />
         </div>
       </header>
 

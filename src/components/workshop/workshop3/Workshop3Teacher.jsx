@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Home, Menu, Presentation, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import HardwareTopicCard from '../HardwareTopicCard'
+import PresentationMenu from '../PresentationMenu'
 import WorkshopProgress from '../WorkshopProgress'
 import TeacherSlideRenderer from './TeacherSlideRenderer'
 import { buildTeacherSlides } from './buildTeacherSlides'
@@ -63,14 +64,22 @@ export default function Workshop3Teacher({ day, workshop }) {
             </p>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setSidebarOpen((open) => !open)}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:border-accent lg:hidden"
-            aria-label={sidebarOpen ? 'Chiudi menu argomenti' : 'Apri menu argomenti'}
-          >
-            {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex shrink-0 items-center gap-2">
+            <PresentationMenu
+              audience="teacher"
+              currentDayId={day.id}
+              onGoToFirst={() => goTo(0)}
+              studentPath={day.studentPath}
+            />
+            <button
+              type="button"
+              onClick={() => setSidebarOpen((open) => !open)}
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:border-accent lg:hidden"
+              aria-label={sidebarOpen ? 'Chiudi menu argomenti' : 'Apri menu argomenti'}
+            >
+              {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </header>
 

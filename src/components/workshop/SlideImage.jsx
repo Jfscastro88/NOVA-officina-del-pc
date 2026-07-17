@@ -1,17 +1,35 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ZoomIn } from 'lucide-react'
+import ImagePlaceholder from './ImagePlaceholder'
 
-const frameClass =
-  'flex min-h-[140px] max-h-[min(45vh,240px)] w-full items-center justify-center overflow-hidden rounded-xl border border-white/10 sm:min-h-[220px] sm:max-h-none sm:rounded-2xl lg:min-h-[380px] xl:min-h-[440px]'
-
-export default function SlideImage({ src, alt, emoji, galleryCount, onOpen }) {
+export default function SlideImage({ src, alt, emoji, galleryCount, onOpen, placeholder }) {
   const [failed, setFailed] = useState(false)
+  const [loaded, setLoaded] = useState(false)
   const hasGallery = galleryCount > 1
+  const showPlaceholder = failed || !src
 
-  if (failed || !src) {
+  useEffect(() => {
+    setFailed(false)
+    setLoaded(false)
+  }, [src])
+
+  if (showPlaceholder && placeholder) {
+    return (
+      <ImagePlaceholder
+        id={placeholder.id}
+        label={placeholder.label}
+        aspectRatio={placeholder.aspectRatio ?? '16 / 9'}
+        futureSrc={placeholder.futureSrc}
+        emoji={emoji}
+        onOpen={hasGallery || onOpen ? onOpen : undefined}
+      />
+    )
+  }
+
+  if (showPlaceholder) {
     return (
       <div
-        className={`${frameClass} bg-gradient-to-br from-accent/20 to-primary/40 text-5xl sm:text-7xl`}
+        className="flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl border border-accent/20 bg-gradient-to-br from-accent/20 to-primary/40 text-5xl shadow-[0_8px_24px_rgba(124,58,237,0.15)] sm:text-7xl"
         role="img"
         aria-label={alt}
       >
@@ -24,22 +42,34 @@ export default function SlideImage({ src, alt, emoji, galleryCount, onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="group relative w-full cursor-zoom-in text-left shadow-2xl transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FACC15] hover:shadow-[0_0_32px_rgba(124,58,237,0.3)]"
+      className="group relative w-full cursor-pointer text-left transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FACC15] hover:shadow-[0_12px_36px_rgba(124,58,237,0.28)]"
       aria-label={`Ingrandisci immagine: ${alt}${hasGallery ? ` (${galleryCount} foto)` : ''}`}
     >
-      <div
-        className={`${frameClass} bg-black/20 transition-colors group-hover:border-accent/40 group-focus-visible:border-accent/40`}
-      >
+      <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-accent/25 bg-black/20 shadow-[0_8px_24px_rgba(124,58,237,0.15)] transition-colors duration-300 group-hover:border-accent/45 group-focus-visible:border-accent/45">
+        {!loaded && (
+          <div
+            className="absolute inset-0 animate-pulse bg-gradient-to-br from-accent/25 via-white/5 to-primary/30"
+            aria-hidden="true"
+          />
+        )}
         <img
           src={src}
           alt={alt}
-          onError={() => setFailed(true)}
-          className="max-h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
+          onLoad={() => setLoaded(true)}
+          onError={() => {
+            setFailed(true)
+            setLoaded(true)
+          }}
+          className={`h-full w-full object-contain transition-all duration-300 group-hover:scale-[1.02] ${
+            loaded ? 'opacity-100' : 'opacity-0'
+          }`}
         />
       </div>
-      <span className="absolute bottom-2 right-2 flex min-h-8 items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur-sm sm:bottom-3 sm:right-3 sm:min-h-0 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs">
+      <span className="absolute bottom-2 right-2 flex min-h-8 items-center gap-1 rounded-full border border-white/15 bg-black/65 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur-sm transition-colors group-hover:border-[#FACC15]/40 group-hover:bg-black/75 sm:bottom-3 sm:right-3 sm:min-h-0 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs">
         <ZoomIn size={14} />
-        {hasGallery ? `${galleryCount} foto` : 'Zoom'}
+        {hasGallery ? `${galleryCount} foto` : 'Ingrandisci'}
       </span>
     </button>
   )

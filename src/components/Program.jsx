@@ -26,9 +26,10 @@ const sessions = [
   },
   {
     date: '18 LUG',
-    title: 'Tecnico per un giorno',
-    text: 'Diagnosi, problemi e curiosità',
+    title: 'Il PC prende vita',
+    text: 'Ripasso, assemblaggio e uso del PC',
     accent: 'border-accent',
+    link: '/workshop/2026-07-18',
   },
 ]
 

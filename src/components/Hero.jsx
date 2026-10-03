@@ -1,5 +1,5 @@
-import GamingPcVisual from './GamingPcVisual'
-import { ArrowScribble, Spark, Squiggle, Star } from './Doodles'
+import GamingPcVisual from "./GamingPcVisual";
+import { ArrowScribble, Spark, Squiggle, Star } from "./Doodles";
 
 export default function Hero() {
   return (
@@ -21,52 +21,52 @@ export default function Hero() {
 
       <div className="relative mx-auto flex min-h-[calc(92vh-5rem)] max-w-7xl items-center px-5 py-16 xl:max-w-[90rem] lg:px-10 lg:py-20">
         <div className="grid w-full items-center gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-10 xl:gap-14">
-        {/* Left */}
-        <div className="animate-fade-up z-10 text-center lg:text-left">
-          <span className="inline-block rounded-full border-2 border-yellow/30 bg-yellow px-4 py-1.5 text-xs font-extrabold tracking-widest text-dark-purple shadow-[0_3px_0_#e6bf00]">
-            Laboratorio per Piccoli Apprendisti Informatici
-          </span>
+          {/* Left */}
+          <div className="animate-fade-up z-10 text-center lg:text-left">
+            <span className="inline-block rounded-full border-2 border-yellow/30 bg-yellow px-4 py-1.5 text-xs font-extrabold tracking-widest text-dark-purple shadow-[0_3px_0_#e6bf00]">
+              Laboratorio per Piccoli Apprendisti Informatici
+            </span>
 
-          <h1 className="mt-6 font-display text-[clamp(2.8rem,10vw,5.5rem)] leading-[0.95] tracking-tight poster-shadow">
-            <span className="block text-white text-stroke">OFFICINA</span>
-            <span className="block text-yellow">DEL PC</span>
-          </h1>
+            <h1 className="mt-6 font-display text-[clamp(2.8rem,10vw,5.5rem)] leading-[0.95] tracking-tight poster-shadow">
+              <span className="block text-white text-stroke">OFFICINA</span>
+              <span className="block text-yellow">DEL PC</span>
+            </h1>
 
-          <p className="mx-auto mt-4 max-w-lg text-lg font-semibold leading-snug text-yellow/95 md:text-xl lg:mx-0">
-            Scopri come funziona un computer, un componente alla volta.
-          </p>
+            <p className="mx-auto mt-4 max-w-lg text-lg font-semibold leading-snug text-yellow/95 md:text-xl lg:mx-0">
+              Scopri come funziona un computer, un componente alla volta.
+            </p>
 
-          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/80 md:text-lg lg:mx-0">
-            Smontare, esplorare e ricostruire il PC:
-            <br className="hidden sm:block" />
-            adatto a chi vuole imparare, nessuna esperienza richiesta.
-          </p>
+            <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/80 md:text-lg lg:mx-0">
+              Smontare, esplorare e ricostruire il PC:
+              <br className="hidden sm:block" />
+              adatto a chi vuole imparare, nessuna esperienza richiesta.
+            </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
-            <a
-              href="#cosa-faremo"
-              className="rounded-full bg-yellow px-7 py-3.5 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-1 hover:scale-105"
-            >
-              Scopri il laboratorio
-            </a>
-            <a
-              href="#incontri"
-              className="rounded-full border-2 border-white/40 bg-white/5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-yellow hover:bg-white/10 hover:scale-105"
-            >
-              Il programma
-            </a>
+            <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+              <a
+                href="#cosa-faremo"
+                className="rounded-full bg-yellow px-7 py-3.5 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-1 hover:scale-105"
+              >
+                Scopri il laboratorio
+              </a>
+              <a
+                href="#incontri"
+                className="rounded-full border-2 border-white/40 bg-white/5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-yellow hover:bg-white/10 hover:scale-105"
+              >
+                Il programma
+              </a>
+            </div>
+
+            {/* Yellow highlight scribble under title area */}
+            <div className="mx-auto mt-6 h-2 w-48 rounded-full bg-gradient-to-r from-transparent via-yellow/60 to-transparent lg:mx-0" />
           </div>
 
-          {/* Yellow highlight scribble under title area */}
-          <div className="mx-auto mt-6 h-2 w-48 rounded-full bg-gradient-to-r from-transparent via-yellow/60 to-transparent lg:mx-0" />
-        </div>
-
-        {/* Right */}
-        <div className="animate-fade-up relative z-10 flex items-center justify-center [animation-delay:150ms] lg:px-4 xl:px-6">
-          <GamingPcVisual />
-        </div>
+          {/* Right */}
+          <div className="animate-fade-up relative z-10 flex items-center justify-center [animation-delay:150ms] lg:px-4 xl:px-6">
+            <GamingPcVisual />
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

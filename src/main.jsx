@@ -6,6 +6,7 @@ import './index.css'
 import Layout from './components/Layout.jsx'
 import App from './App.jsx'
 import Privacy from './pages/Privacy.jsx'
+import OpenDay from './pages/OpenDay.jsx'
 import WorkshopDay from './pages/WorkshopDay.jsx'
 import TeacherDay from './pages/TeacherDay.jsx'
 
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/open-day" element={<OpenDay />} />
           <Route path="/workshop/:workshopId" element={<WorkshopDay />} />
           <Route path="/docenti/:workshopId" element={<TeacherDay />} />
           <Route path="/workshop-hardware" element={<Navigate to="/docenti/2026-06-27" replace />} />

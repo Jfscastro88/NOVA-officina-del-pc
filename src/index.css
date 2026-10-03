@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-primary: #4f1d95;
@@ -7,8 +7,8 @@
   --color-yellow: #ffd400;
   --color-yellow-dark: #e6bf00;
 
-  --font-display: 'Bungee', system-ui, sans-serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: "Bungee", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
 
   --animate-float: float 5s ease-in-out infinite;
   --animate-float-delayed: float 6s ease-in-out 1s infinite;

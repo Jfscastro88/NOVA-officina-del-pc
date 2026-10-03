@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import { Star, Squiggle, BrushStroke } from './Doodles'
-import { workshopDays } from '../data/workshops'
-import NavDropdown from './NavDropdown'
+import { useState } from "react";
+import { Star, Squiggle, BrushStroke } from "./Doodles";
+import { workshopDays } from "../data/workshops";
+import NavDropdown from "./NavDropdown";
 
-const badges = ['Pratico', 'Divertente', 'Istruttivo', 'Collaborativo']
+const badges = ["Pratico", "Divertente", "Istruttivo", "Collaborativo"];
 
 export default function Footer() {
-  const [docentiOpen, setDocentiOpen] = useState(false)
+  const [docentiOpen, setDocentiOpen] = useState(false);
 
   const docentiItems = workshopDays.map((day) => ({
     label: day.label,
     href: day.teacherPath,
-  }))
+  }));
 
   return (
     <footer className="relative overflow-hidden bg-gradient-to-b from-primary via-dark-purple to-[#0d0420] px-5 pb-8 pt-20 noise-bg lg:px-8">
@@ -23,8 +23,7 @@ export default function Footer() {
 
       <div className="relative mx-auto max-w-3xl text-center animate-fade-up">
         <h2 className="font-display text-4xl text-white poster-shadow md:text-5xl lg:text-6xl">
-          Pronto a metterti{' '}
-          <span className="text-yellow">all&apos;opera?</span>
+          Pronto a metterti <span className="text-yellow">all&apos;opera?</span>
         </h2>
 
         <BrushStroke className="mx-auto mt-4 h-4 w-48 text-accent/60" />
@@ -46,10 +45,11 @@ export default function Footer() {
       </div>
 
       <div className="relative mx-auto mt-16 flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
-        <span className="font-display text-sm tracking-wide text-white">
-          OFFICINA DEL PC
-        </span>
-        <nav className="flex flex-wrap items-center justify-center gap-6" aria-label="Collegamenti rapidi">
+        <span className="font-display text-sm tracking-wide text-white">OFFICINA DEL PC</span>
+        <nav
+          className="flex flex-wrap items-center justify-center gap-6"
+          aria-label="Collegamenti rapidi"
+        >
           <NavDropdown
             label="Docenti"
             variant="footer"
@@ -61,5 +61,5 @@ export default function Footer() {
         </nav>
       </div>
     </footer>
-  )
+  );
 }

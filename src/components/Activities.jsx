@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { ArrowScribble, BrushStroke, Star } from './Doodles'
-import WaveDivider from './WaveDivider'
-import ActivityModal from './ActivityModal'
-import { workshopActivities } from '../data/workshopActivities'
+import { useState } from "react";
+import { ArrowScribble, BrushStroke, Star } from "./Doodles";
+import WaveDivider from "./WaveDivider";
+import ActivityModal from "./ActivityModal";
+import { workshopActivities } from "../data/workshopActivities";
 
 export default function Activities() {
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState(null);
 
   return (
     <>
@@ -24,8 +24,7 @@ export default function Activities() {
               Il laboratorio
             </span>
             <h2 className="mt-3 font-display text-4xl text-dark-purple md:text-5xl lg:text-6xl">
-              Cosa{' '}
-              <span className="highlight-brush text-primary">faremo?</span>
+              Cosa <span className="highlight-brush text-primary">faremo?</span>
             </h2>
             <BrushStroke className="mx-auto mt-2 h-4 w-40 text-yellow" />
           </div>
@@ -59,9 +58,7 @@ export default function Activities() {
 
       <WaveDivider flip className="text-[#f0eaff]" />
 
-      {selected && (
-        <ActivityModal activity={selected} onClose={() => setSelected(null)} />
-      )}
+      {selected && <ActivityModal activity={selected} onClose={() => setSelected(null)} />}
     </>
-  )
+  );
 }

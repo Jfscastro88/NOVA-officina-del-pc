@@ -1,20 +1,17 @@
-import { useState } from 'react'
-import { Spark, Star } from './Doodles'
-import WaveDivider from './WaveDivider'
-import HardwareModal from './HardwareModal'
-import { hardwareComponents } from '../data/hardwareComponents'
+import { useState } from "react";
+import { Spark, Star } from "./Doodles";
+import WaveDivider from "./WaveDivider";
+import HardwareModal from "./HardwareModal";
+import { hardwareComponents } from "../data/hardwareComponents";
 
 export default function Hardware() {
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState(null);
 
   return (
     <>
       <WaveDivider className="text-white" />
 
-      <section
-        id="hardware"
-        className="relative overflow-hidden bg-white px-5 py-20 lg:px-8"
-      >
+      <section id="hardware" className="relative overflow-hidden bg-white px-5 py-20 lg:px-8">
         <Spark className="pointer-events-none absolute right-[10%] top-14 h-8 w-8 text-accent animate-pulse-glow" />
         <Star className="pointer-events-none absolute left-[6%] bottom-20 h-5 w-5 text-yellow animate-float" />
 
@@ -24,8 +21,7 @@ export default function Hardware() {
               Componenti
             </span>
             <h2 className="mt-3 font-display text-3xl text-dark-purple md:text-5xl">
-              Alcuni componenti che{' '}
-              <span className="highlight-brush text-primary">scopriremo</span>
+              Alcuni componenti che <span className="highlight-brush text-primary">scopriremo</span>
             </h2>
             <p className="mx-auto mt-4 max-w-md text-sm text-primary/70">
               Clicca su una card per scoprire di più
@@ -62,9 +58,7 @@ export default function Hardware() {
 
       <WaveDivider flip className="text-white" />
 
-      {selected && (
-        <HardwareModal component={selected} onClose={() => setSelected(null)} />
-      )}
+      {selected && <HardwareModal component={selected} onClose={() => setSelected(null)} />}
     </>
-  )
+  );
 }

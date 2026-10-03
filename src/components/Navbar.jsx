@@ -29,7 +29,9 @@ function SectionLink({ href, className, children }) {
 
 export default function Navbar() {
   const [workshopOpen, setWorkshopOpen] = useState(false)
-  const isHome = useLocation().pathname === '/'
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
+  const onOpenDay = pathname === '/open-day'
 
   const workshopItems = workshopDays.map((day) => ({
     label: day.label,
@@ -77,6 +79,16 @@ export default function Navbar() {
             onClose={() => setWorkshopOpen(false)}
             items={workshopItems}
           />
+
+          <Link
+            to="/open-day"
+            aria-current={onOpenDay ? 'page' : undefined}
+            className={`text-sm font-semibold transition-colors hover:text-yellow ${
+              onOpenDay ? 'text-yellow' : 'text-white/70'
+            }`}
+          >
+            Open Day
+          </Link>
         </nav>
 
         <SectionLink

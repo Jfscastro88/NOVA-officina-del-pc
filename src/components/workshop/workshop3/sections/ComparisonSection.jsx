@@ -1,17 +1,20 @@
 import { motion } from 'framer-motion'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 export default function ComparisonSection({ section }) {
+  const { ui } = useLanguage()
+
   return (
     <SlideSectionFrame
       section={section}
-      subtitle="Nessuno è perfetto in tutto. Ecco un confronto onesto."
+      subtitle={ui.slides.compareSubtitle}
     >
       <div className="overflow-x-auto rounded-xl border border-white/10">
         <table className="w-full min-w-[480px] text-left text-xs sm:text-sm">
           <thead>
             <tr className="border-b border-white/10 bg-accent/10">
-              <th className="px-3 py-2.5 font-extrabold text-[#FACC15] sm:px-4 sm:py-3">Argomento</th>
+              <th className="px-3 py-2.5 font-extrabold text-[#FACC15] sm:px-4 sm:py-3">{ui.slides.topic}</th>
               <th className="px-3 py-2.5 font-extrabold text-blue-300 sm:px-4 sm:py-3">🪟 Windows</th>
               <th className="px-3 py-2.5 font-extrabold text-green-300 sm:px-4 sm:py-3">🐧 Linux</th>
             </tr>

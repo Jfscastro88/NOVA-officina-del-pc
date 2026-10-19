@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 export default function WindowsLinuxSection({ section }) {
+  const { ui } = useLanguage()
   const [active, setActive] = useState(null)
 
   const [systemId, itemId] = active?.split(':') ?? []
@@ -12,7 +14,7 @@ export default function WindowsLinuxSection({ section }) {
   return (
     <SlideSectionFrame
       section={section}
-      subtitle="Due sistemi diversi, entrambi ottimi. Clicca le voci per scoprire le differenze."
+      subtitle={ui.slides.windowsSubtitle}
     >
       <div className="grid gap-3 sm:grid-cols-2">
         {section.systems.map((sys) => (

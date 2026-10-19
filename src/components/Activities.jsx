@@ -2,10 +2,11 @@ import { useState } from "react";
 import { ArrowScribble, BrushStroke, Star } from "./Doodles";
 import WaveDivider from "./WaveDivider";
 import ActivityModal from "./ActivityModal";
-import { workshopActivities } from "../data/workshopActivities";
+import { useLanguage } from "../i18n/useLanguage";
 
 export default function Activities() {
   const [selected, setSelected] = useState(null);
+  const { ui, activities } = useLanguage();
 
   return (
     <>
@@ -21,16 +22,17 @@ export default function Activities() {
         <div className="relative mx-auto max-w-7xl">
           <div className="mb-14 text-center animate-fade-up">
             <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-accent">
-              Il laboratorio
+              {ui.activities.kicker}
             </span>
             <h2 className="mt-3 font-display text-4xl text-dark-purple md:text-5xl lg:text-6xl">
-              Cosa <span className="highlight-brush text-primary">faremo?</span>
+              {ui.activities.titleBefore}{" "}
+              <span className="highlight-brush text-primary">{ui.activities.titleHighlight}</span>
             </h2>
             <BrushStroke className="mx-auto mt-2 h-4 w-40 text-yellow" />
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {workshopActivities.map((item, i) => (
+            {activities.map((item, i) => (
               <button
                 key={item.id}
                 type="button"
@@ -48,7 +50,7 @@ export default function Activities() {
                 <h3 className="font-display text-lg text-dark-purple">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-primary/80">{item.short}</p>
                 <span className="mt-3 inline-block text-[11px] font-extrabold uppercase tracking-wide text-accent opacity-70 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5">
-                  Clicca per scoprire →
+                  {ui.activities.click}
                 </span>
               </button>
             ))}

@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Lightbulb } from 'lucide-react'
+import { useLanguage } from '../../../i18n/useLanguage'
 import SlideImage from '../SlideImage'
 import SlideImageLightbox from '../SlideImageLightbox'
 import { resolveSlideImages } from '../slideImages'
 
 export default function SlideSectionFrame({ section, children, subtitle }) {
+  const { ui } = useLanguage()
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const { primary, gallery, placeholder } = resolveSlideImages(section)
   const showMedia = Boolean(primary || placeholder)
@@ -68,7 +70,7 @@ export default function SlideSectionFrame({ section, children, subtitle }) {
                 <div className="mb-1.5 flex items-center gap-2 sm:mb-2">
                   <Lightbulb size={16} className="text-[#FACC15] sm:h-[18px] sm:w-[18px]" />
                   <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#FACC15] sm:text-sm">
-                    Curiosità
+                    {ui.slides.curiosity}
                   </h3>
                 </div>
                 <p className="text-xs leading-relaxed text-white/75 sm:text-sm md:text-base">

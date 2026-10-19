@@ -541,7 +541,7 @@ export default {
           id: "prossimo",
           title: "Prossimo workshop",
           emoji: "🚀",
-          workshop: "18 Luglio — Linux nella pratica",
+          workshop: "Giorno 4 — Linux nella pratica",
           points: [
             "Esplorare il desktop Linux Mint sul PC",
             "Gestire file e cartelle come un vero utente",

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Home, Menu, Presentation, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useLanguage } from '../../../i18n/useLanguage'
+import LanguageMenu from '../../LanguageMenu'
 import HardwareTopicCard from '../HardwareTopicCard'
 import PresentationMenu from '../PresentationMenu'
 import WorkshopProgress from '../WorkshopProgress'
@@ -9,8 +11,10 @@ import TeacherSlideRenderer from './TeacherSlideRenderer'
 import { buildTeacherSlides } from './buildTeacherSlides'
 
 export default function Workshop3Teacher({ day, workshop }) {
+  const { ui } = useLanguage()
   const { meta } = workshop
-  const slides = buildTeacherSlides(workshop)
+  const dayLabel = ui.days[day.id] ?? day.label
+  const slides = buildTeacherSlides(workshop, ui.slides)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const total = slides.length
@@ -49,12 +53,12 @@ export default function Workshop3Teacher({ day, workshop }) {
             className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white/70 transition-colors hover:border-accent hover:text-[#FACC15]"
           >
             <Home size={18} />
-            <span className="hidden sm:inline">Home</span>
+            <span className="hidden sm:inline">{ui.slides.home}</span>
           </Link>
 
           <div className="min-w-0 flex-1 text-center">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#FACC15] sm:text-xs sm:tracking-[0.2em]">
-              Area Docenti
+              {ui.slides.teachers}
             </p>
             <h1 className="truncate font-display text-xs tracking-wide text-white sm:text-base">
               {meta.title}
@@ -65,6 +69,7 @@ export default function Workshop3Teacher({ day, workshop }) {
           </div>
 
           <div className="flex shrink-0 items-center gap-2">
+            <LanguageMenu />
             <PresentationMenu
               audience="teacher"
               currentDayId={day.id}
@@ -75,7 +80,7 @@ export default function Workshop3Teacher({ day, workshop }) {
               type="button"
               onClick={() => setSidebarOpen((open) => !open)}
               className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:border-accent lg:hidden"
-              aria-label={sidebarOpen ? 'Chiudi menu argomenti' : 'Apri menu argomenti'}
+              aria-label={sidebarOpen ? ui.slides.closeTopics : ui.slides.openTopics}
             >
               {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -85,14 +90,14 @@ export default function Workshop3Teacher({ day, workshop }) {
 
       <div className="mx-auto max-w-7xl px-3 py-3 sm:px-5 sm:py-6 lg:px-8 lg:py-8">
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2 sm:mb-5 sm:gap-3 lg:mb-6">
-          <p className="text-xs font-semibold text-white/60 sm:text-sm">{day.label}</p>
+          <p className="text-xs font-semibold text-white/60 sm:text-sm">{dayLabel}</p>
           <Link
             to={day.studentPath}
             className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-2 text-xs font-extrabold text-[#FACC15] transition-colors hover:border-accent hover:bg-accent/20 sm:gap-2 sm:px-4 sm:text-sm"
           >
             <Presentation size={15} className="sm:h-4 sm:w-4" />
-            <span className="hidden sm:inline">Presentazione ragazzi</span>
-            <span className="sm:hidden">Ragazzi</span>
+            <span className="hidden sm:inline">{ui.slides.studentView}</span>
+            <span className="sm:hidden">{ui.slides.studentViewShort}</span>
           </Link>
         </div>
 
@@ -116,16 +121,16 @@ export default function Workshop3Teacher({ day, workshop }) {
               <button
                 type="button"
                 className="fixed inset-0 -z-10 bg-black/50 lg:hidden"
-                aria-label="Chiudi menu"
+                aria-label={ui.slides.closeMenu}
                 onClick={() => setSidebarOpen(false)}
               />
             )}
             <nav
               className="relative z-10 flex max-h-[calc(100vh-120px)] flex-col gap-2 overflow-y-auto rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-md lg:sticky lg:top-24"
-              aria-label="Argomenti del workshop"
+              aria-label={ui.slides.topicsNav}
             >
               <h2 className="mb-2 px-1 text-xs font-extrabold uppercase tracking-[0.2em] text-[#FACC15]">
-                Argomenti
+                {ui.slides.topics}
               </h2>
               {slides.map((slide, index) => (
                 <HardwareTopicCard
@@ -157,26 +162,26 @@ export default function Workshop3Teacher({ day, workshop }) {
                 type="button"
                 onClick={goPrev}
                 disabled={currentIndex === 0}
-                aria-label="Slide precedente"
+                aria-label={ui.slides.prev}
                 className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 text-sm font-extrabold text-white transition-all hover:border-accent hover:bg-accent/20 disabled:cursor-not-allowed disabled:opacity-30 sm:gap-2 sm:px-5 sm:py-3"
               >
-                <ChevronLeft size={20} />
-                <span className="hidden sm:inline">Indietro</span>
+                <ChevronLeft size={20} className="rtl:rotate-180" />
+                <span className="hidden sm:inline">{ui.slides.back}</span>
               </button>
 
               <span className="min-w-[3.5rem] text-center text-xs font-semibold text-white/50 sm:text-sm">
-                Slide {currentIndex + 1} di {total}
+                {ui.slides.counter(currentIndex + 1, total)}
               </span>
 
               <button
                 type="button"
                 onClick={goNext}
                 disabled={currentIndex === total - 1}
-                aria-label="Slide successiva"
+                aria-label={ui.slides.next}
                 className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-1.5 rounded-full bg-[#FACC15] px-3 text-sm font-extrabold text-[#0B1020] btn-gaming transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-30 sm:gap-2 sm:px-5 sm:py-3"
               >
-                <span className="hidden sm:inline">Avanti</span>
-                <ChevronRight size={20} />
+                <span className="hidden sm:inline">{ui.slides.forward}</span>
+                <ChevronRight size={20} className="rtl:rotate-180" />
               </button>
             </div>
           </main>

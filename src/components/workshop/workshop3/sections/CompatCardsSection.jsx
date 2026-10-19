@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, HelpCircle } from 'lucide-react'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 /** Card compatibilità + domanda con risposta apribile */
 export default function CompatCardsSection({ section }) {
+  const { ui } = useLanguage()
   const [openId, setOpenId] = useState(null)
   const [answerOpen, setAnswerOpen] = useState(false)
 
@@ -82,7 +84,7 @@ export default function CompatCardsSection({ section }) {
                 onClick={() => setAnswerOpen((v) => !v)}
                 className="mt-2 text-xs font-extrabold uppercase tracking-wider text-[#FACC15] hover:underline sm:text-sm"
               >
-                {answerOpen ? 'Nascondi risposta' : 'Mostra risposta'}
+                {answerOpen ? ui.slides.hideAnswer : ui.slides.showAnswer}
               </button>
               {answerOpen && section.answer && (
                 <p className="mt-2 text-sm text-white/80 sm:text-base">{section.answer}</p>

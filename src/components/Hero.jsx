@@ -1,7 +1,10 @@
 import GamingPcVisual from "./GamingPcVisual";
 import { ArrowScribble, Spark, Squiggle, Star } from "./Doodles";
+import { useLanguage } from "../i18n/useLanguage";
 
 export default function Hero() {
+  const { ui } = useLanguage();
+
   return (
     <section
       id="home"
@@ -24,7 +27,7 @@ export default function Hero() {
           {/* Left */}
           <div className="animate-fade-up z-10 text-center lg:text-left">
             <span className="inline-block rounded-full border-2 border-yellow/30 bg-yellow px-4 py-1.5 text-xs font-extrabold tracking-widest text-dark-purple shadow-[0_3px_0_#e6bf00]">
-              Laboratorio per Piccoli Apprendisti Informatici
+              {ui.hero.badge}
             </span>
 
             <h1 className="mt-6 font-display text-[clamp(2.8rem,10vw,5.5rem)] leading-[0.95] tracking-tight poster-shadow">
@@ -33,13 +36,13 @@ export default function Hero() {
             </h1>
 
             <p className="mx-auto mt-4 max-w-lg text-lg font-semibold leading-snug text-yellow/95 md:text-xl lg:mx-0">
-              Scopri come funziona un computer, un componente alla volta.
+              {ui.hero.lead}
             </p>
 
             <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/80 md:text-lg lg:mx-0">
-              Smontare, esplorare e ricostruire il PC:
+              {ui.hero.body1}
               <br className="hidden sm:block" />
-              adatto a chi vuole imparare, nessuna esperienza richiesta.
+              {ui.hero.body2}
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
@@ -47,13 +50,13 @@ export default function Hero() {
                 href="#cosa-faremo"
                 className="rounded-full bg-yellow px-7 py-3.5 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-1 hover:scale-105"
               >
-                Scopri il laboratorio
+                {ui.hero.ctaLab}
               </a>
               <a
                 href="#incontri"
                 className="rounded-full border-2 border-white/40 bg-white/5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-yellow hover:bg-white/10 hover:scale-105"
               >
-                Il programma
+                {ui.hero.ctaProgram}
               </a>
             </div>
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../../../i18n/useLanguage'
 import {
   AlertTriangle,
   Clock,
@@ -40,6 +41,7 @@ function BulletList({ items, bulletColor = 'bg-[#FACC15]' }) {
 }
 
 function TeacherNotes({ notesKey }) {
+  const { ui } = useLanguage()
   const [notes, setNotes] = useState(() => localStorage.getItem(notesKey) ?? '')
 
   const save = (value) => {
@@ -48,11 +50,11 @@ function TeacherNotes({ notesKey }) {
   }
 
   return (
-    <InfoBox icon={ListChecks} title="Note personali" color="border-white/10 bg-white/5 text-white/70">
+    <InfoBox icon={ListChecks} title={ui.slides.notes} color="border-white/10 bg-white/5 text-white/70">
       <textarea
         value={notes}
         onChange={(e) => save(e.target.value)}
-        placeholder="Scrivi qui le tue note per questa sezione..."
+        placeholder={ui.slides.notesPlaceholder}
         rows={3}
         className="w-full resize-y rounded-xl border border-white/10 bg-[#0B1020]/50 px-3 py-2 text-sm text-white placeholder:text-white/30 focus:border-accent focus:outline-none"
       />
@@ -61,16 +63,18 @@ function TeacherNotes({ notesKey }) {
 }
 
 export default function TeacherSlideContent({ section }) {
+  const { ui } = useLanguage()
+
   return (
     <div className="space-y-3 sm:space-y-4">
       {section.objective && (
-        <InfoBox icon={Target} title="Obiettivo" color="border-accent/30 bg-accent/10 text-accent">
+        <InfoBox icon={Target} title={ui.slides.objective} color="border-accent/30 bg-accent/10 text-accent">
           <p className="text-sm text-white/90">{section.objective}</p>
         </InfoBox>
       )}
 
       {section.howToExplain && (
-        <InfoBox icon={MessageCircle} title="Come spiegarlo" color="border-white/10 bg-white/5 text-white/70">
+        <InfoBox icon={MessageCircle} title={ui.slides.howToExplain} color="border-white/10 bg-white/5 text-white/70">
           <p className="text-sm leading-relaxed text-white/85">{section.howToExplain}</p>
         </InfoBox>
       )}
@@ -78,7 +82,7 @@ export default function TeacherSlideContent({ section }) {
       {section.bootSteps?.length > 0 && (
         <div className="space-y-2">
           <h4 className="text-xs font-extrabold uppercase tracking-wider text-[#FACC15]">
-            Passaggi del boot
+            {ui.slides.bootSteps}
           </h4>
           {section.bootSteps.map((step) => (
             <div
@@ -87,11 +91,11 @@ export default function TeacherSlideContent({ section }) {
             >
               <p className="font-bold text-white">{step.title}</p>
               <p className="mt-2 text-sm text-white/80">
-                <span className="font-semibold text-accent">Semplice: </span>
+                <span className="font-semibold text-accent">{ui.slides.simple}: </span>
                 {step.simple}
               </p>
               <p className="mt-1 text-xs text-white/60">
-                <span className="font-semibold">Tecnico: </span>
+                <span className="font-semibold">{ui.slides.technical}: </span>
                 {step.technical}
               </p>
               <p className="mt-2 text-xs text-[#FACC15]/80">
@@ -105,7 +109,7 @@ export default function TeacherSlideContent({ section }) {
       )}
 
       {section.examples?.length > 0 && (
-        <InfoBox icon={Wrench} title="Esempi" color="border-green-400/20 bg-green-500/5 text-green-400">
+        <InfoBox icon={Wrench} title={ui.slides.examplesShort} color="border-green-400/20 bg-green-500/5 text-green-400">
           <BulletList items={section.examples} bulletColor="bg-green-400" />
         </InfoBox>
       )}
@@ -144,11 +148,11 @@ export default function TeacherSlideContent({ section }) {
           <table className="w-full min-w-[480px] text-left text-xs sm:text-sm">
             <thead>
               <tr className="border-b border-white/10 bg-accent/10">
-                <th className="px-3 py-2 font-extrabold text-[#FACC15]">Missione</th>
-                <th className="px-3 py-2 font-extrabold text-[#FACC15]">Tempo</th>
-                <th className="px-3 py-2 font-extrabold text-[#FACC15]">Obiettivo</th>
-                <th className="px-3 py-2 font-extrabold text-[#FACC15]">Materiale</th>
-                <th className="px-3 py-2 font-extrabold text-[#FACC15]">Difficoltà</th>
+                <th className="px-3 py-2 font-extrabold text-[#FACC15]">{ui.slides.mission}</th>
+                <th className="px-3 py-2 font-extrabold text-[#FACC15]">{ui.slides.time}</th>
+                <th className="px-3 py-2 font-extrabold text-[#FACC15]">{ui.slides.goal}</th>
+                <th className="px-3 py-2 font-extrabold text-[#FACC15]">{ui.slides.material}</th>
+                <th className="px-3 py-2 font-extrabold text-[#FACC15]">{ui.slides.difficulty}</th>
               </tr>
             </thead>
             <tbody>
@@ -191,55 +195,55 @@ export default function TeacherSlideContent({ section }) {
       )}
 
       {section.questions?.length > 0 && (
-        <InfoBox icon={MessageCircle} title="Domande da fare" color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]">
+        <InfoBox icon={MessageCircle} title={ui.slides.ask} color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]">
           <BulletList items={section.questions} />
         </InfoBox>
       )}
 
       {(section.material?.length > 0 || section.materials?.length > 0) && (
-        <InfoBox icon={Package} title="Materiali necessari" color="border-accent/30 bg-accent/10 text-accent">
+        <InfoBox icon={Package} title={ui.slides.needed} color="border-accent/30 bg-accent/10 text-accent">
           <BulletList items={section.material ?? section.materials} bulletColor="bg-accent" />
         </InfoBox>
       )}
 
       {section.difficulties?.length > 0 && (
-        <InfoBox icon={AlertTriangle} title="Possibili difficoltà" color="border-orange-400/20 bg-orange-500/5 text-orange-300">
+        <InfoBox icon={AlertTriangle} title={ui.slides.difficulties} color="border-orange-400/20 bg-orange-500/5 text-orange-300">
           <BulletList items={section.difficulties} bulletColor="bg-orange-400" />
         </InfoBox>
       )}
 
       {section.tips?.length > 0 && (
-        <InfoBox icon={Users} title="Gestione del gruppo" color="border-green-400/20 bg-green-500/5 text-green-400">
+        <InfoBox icon={Users} title={ui.slides.group} color="border-green-400/20 bg-green-500/5 text-green-400">
           <BulletList items={section.tips} bulletColor="bg-green-400" />
         </InfoBox>
       )}
 
       {section.safety?.length > 0 && (
-        <InfoBox icon={AlertTriangle} title="Sicurezza" color="border-red-400/20 bg-red-500/5 text-red-400">
+        <InfoBox icon={AlertTriangle} title={ui.slides.safety} color="border-red-400/20 bg-red-500/5 text-red-400">
           <BulletList items={section.safety} bulletColor="bg-red-400" />
         </InfoBox>
       )}
 
       {section.commonErrors?.length > 0 && (
-        <InfoBox icon={AlertTriangle} title="Errori comuni" color="border-red-400/20 bg-red-500/5 text-red-400">
+        <InfoBox icon={AlertTriangle} title={ui.slides.errors} color="border-red-400/20 bg-red-500/5 text-red-400">
           <BulletList items={section.commonErrors} bulletColor="bg-red-400" />
         </InfoBox>
       )}
 
       {section.curiosity && (
-        <InfoBox icon={Lightbulb} title="Curiosità" color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]">
+        <InfoBox icon={Lightbulb} title={ui.slides.curiosity} color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]">
           <p className="text-sm text-white/75">{section.curiosity}</p>
         </InfoBox>
       )}
 
       {section.demo && (
-        <InfoBox icon={Wrench} title="Dimostrazione pratica" color="border-green-400/20 bg-green-500/5 text-green-400">
+        <InfoBox icon={Wrench} title={ui.slides.demo} color="border-green-400/20 bg-green-500/5 text-green-400">
           <p className="text-sm text-white/85">{section.demo}</p>
         </InfoBox>
       )}
 
       {section.closing && (
-        <InfoBox icon={Lightbulb} title="Conclusione suggerita" color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]">
+        <InfoBox icon={Lightbulb} title={ui.slides.suggestedClose} color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]">
           <p className="text-sm leading-relaxed text-white/85">{section.closing}</p>
         </InfoBox>
       )}

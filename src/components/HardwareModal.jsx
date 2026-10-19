@@ -1,14 +1,16 @@
 import { useEffect } from 'react'
 import { X, Lightbulb, Zap, Info, Target } from 'lucide-react'
+import { useLanguage } from '../i18n/useLanguage'
 
 const detailSections = [
-  { key: 'what', label: "Cos'è", Icon: Info },
-  { key: 'function', label: 'A cosa serve', Icon: Target },
-  { key: 'importance', label: 'Dove si monta', Icon: Zap },
-  { key: 'curiosity', label: 'Curiosità', Icon: Lightbulb },
+  { key: 'what', labelKey: 'what', Icon: Info },
+  { key: 'function', labelKey: 'function', Icon: Target },
+  { key: 'importance', labelKey: 'importance', Icon: Zap },
+  { key: 'curiosity', labelKey: 'curiosity', Icon: Lightbulb },
 ]
 
 export default function HardwareModal({ component, onClose }) {
+  const { ui } = useLanguage()
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'Escape') onClose()
@@ -33,7 +35,7 @@ export default function HardwareModal({ component, onClose }) {
       <button
         type="button"
         className="absolute inset-0 bg-dark-purple/70 backdrop-blur-sm"
-        aria-label="Chiudi"
+        aria-label={ui.hardware.close}
         onClick={onClose}
       />
 
@@ -49,7 +51,7 @@ export default function HardwareModal({ component, onClose }) {
             type="button"
             onClick={onClose}
             className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-white/30 bg-dark-purple/60 text-white transition-colors hover:bg-yellow hover:text-dark-purple"
-            aria-label="Chiudi"
+            aria-label={ui.hardware.close}
           >
             <X size={18} strokeWidth={2.5} />
           </button>
@@ -57,7 +59,7 @@ export default function HardwareModal({ component, onClose }) {
 
         <div className="overflow-y-auto px-5 py-5 sm:px-7 sm:py-6">
           <span className="inline-block rounded-full bg-yellow px-3 py-0.5 text-[10px] font-extrabold uppercase tracking-widest text-dark-purple">
-            Componente
+            {ui.hardware.badge}
           </span>
           <h2
             id="hardware-modal-title"
@@ -68,7 +70,7 @@ export default function HardwareModal({ component, onClose }) {
           <p className="mt-1 text-base font-semibold text-accent">{component.short}</p>
 
           <div className="mt-5 space-y-3">
-            {detailSections.map(({ key, label, Icon }) => (
+            {detailSections.map(({ key, labelKey, Icon }) => (
               <div
                 key={key}
                 className="rounded-2xl border border-primary/10 bg-white p-4 shadow-sm"
@@ -78,7 +80,7 @@ export default function HardwareModal({ component, onClose }) {
                     <Icon size={15} strokeWidth={2.5} />
                   </span>
                   <h3 className="text-xs font-extrabold uppercase tracking-wider text-primary">
-                    {label}
+                    {ui.hardware[labelKey]}
                   </h3>
                 </div>
                 <p className="text-sm leading-relaxed text-primary/80">{component[key]}</p>
@@ -91,7 +93,7 @@ export default function HardwareModal({ component, onClose }) {
             onClick={onClose}
             className="mt-6 w-full rounded-full bg-yellow py-3 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-0.5 hover:scale-[1.02]"
           >
-            Chiudi
+            {ui.hardware.close}
           </button>
         </div>
       </div>

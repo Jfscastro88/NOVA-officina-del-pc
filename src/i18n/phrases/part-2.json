@@ -1,0 +1,1242 @@
+{
+  "Quiz Finale": {
+    "en": "Final quiz",
+    "ar": "الاختبار النهائي"
+  },
+  "Cosa fa il sistema operativo?": {
+    "en": "What does the operating system do?",
+    "ar": "ماذا يفعل نظام التشغيل؟"
+  },
+  "Gioca ai videogiochi": {
+    "en": "It plays video games",
+    "ar": "يلعب ألعاب الفيديو"
+  },
+  "Coordina hardware e programmi": {
+    "en": "It keeps the hardware and the programs working together",
+    "ar": "ينسّق بين الهاردوير والبرامج"
+  },
+  "È la tastiera del PC": {
+    "en": "It is the PC keyboard",
+    "ar": "هي لوحة مفاتيح الكمبيوتر"
+  },
+  "Il SO è il direttore d'orchestra tra te, i programmi e l'hardware.": {
+    "en": "The OS is the conductor between you, the programs, and the hardware.",
+    "ar": "نظام التشغيل هو قائد الفرقة بينك وبين البرامج والهاردوير."
+  },
+  "Cosa controlla il BIOS/UEFI all'avvio?": {
+    "en": "What does the BIOS/UEFI check at startup?",
+    "ar": "ماذا يفحص البيوس (BIOS)/UEFI عند بدء التشغيل؟"
+  },
+  "Solo il mouse": {
+    "en": "Only the mouse",
+    "ar": "الماوس فقط"
+  },
+  "Che l'hardware funzioni": {
+    "en": "That the hardware works",
+    "ar": "أن الهاردوير يعمل"
+  },
+  "I giochi installati": {
+    "en": "The games that are installed",
+    "ar": "الألعاب المثبّتة"
+  },
+  "Il BIOS fa un controllo (POST) prima di caricare il sistema operativo.": {
+    "en": "The BIOS does a check (POST) before it loads the operating system.",
+    "ar": "البيوس (BIOS) يعمل فحصاً (POST) قبل تحميل نظام التشغيل."
+  },
+  "A cosa servono i driver?": {
+    "en": "What are drivers for?",
+    "ar": "ما فائدة الدرايفرات؟"
+  },
+  "A guidare la macchina": {
+    "en": "To drive the car",
+    "ar": "لقيادة السيارة"
+  },
+  "A far comunicare hardware e SO": {
+    "en": "To let the hardware and the OS talk to each other",
+    "ar": "لجعل الهاردوير ونظام التشغيل يتواصلان"
+  },
+  "A spegnere il PC": {
+    "en": "To turn off the PC",
+    "ar": "لإطفاء الكمبيوتر"
+  },
+  "Senza driver, stampante e scheda video non funzionerebbero.": {
+    "en": "Without drivers, the printer and the graphics card would not work.",
+    "ar": "من دون الدرايفرات، الطابعة وكرت الشاشة لا يعملان."
+  },
+  "Quale sistema è Open Source?": {
+    "en": "Which system is open source?",
+    "ar": "أي نظام مفتوح المصدر (open source)؟"
+  },
+  "Linux è gratuito e il codice è aperto. Chiunque può studiarlo e modificarlo.": {
+    "en": "Linux is free and the code is open. Anyone can study it and change it.",
+    "ar": "لينكس (Linux) مجاني والكود مفتوح. أي شخص يستطيع أن يدرسه ويغيّره."
+  },
+  "Cosa succede per primo quando premi il pulsante di accensione?": {
+    "en": "What happens first when you press the power button?",
+    "ar": "ماذا يحدث أولاً عندما تضغط زر التشغيل؟"
+  },
+  "Si apre il browser": {
+    "en": "The browser opens",
+    "ar": "يفتح المتصفح"
+  },
+  "Parte un gioco": {
+    "en": "A game starts",
+    "ar": "تبدأ لعبة"
+  },
+  "Prima l'energia, poi CPU, BIOS, bootloader e infine il desktop.": {
+    "en": "First the power, then the CPU, the BIOS, the bootloader, and finally the desktop.",
+    "ar": "أولاً الطاقة، ثم المعالج (CPU)، ثم البيوس (BIOS)، ثم البوت لودر، وأخيراً سطح المكتب."
+  },
+  "Quale sistema operativo sceglieresti?": {
+    "en": "Which operating system would you choose?",
+    "ar": "أي نظام تشغيل تختار؟"
+  },
+  "Cosa abbiamo visto oggi, e cosa ci aspetta.": {
+    "en": "What we saw today, and what comes next.",
+    "ar": "ماذا رأينا اليوم، وماذا ينتظرنا بعد ذلك."
+  },
+  "Punti principali di oggi": {
+    "en": "Main points from today",
+    "ar": "أهم نقاط اليوم"
+  },
+  "Il sistema operativo coordina hardware, programmi e utente": {
+    "en": "The operating system keeps the hardware, the programs, and the user working together",
+    "ar": "نظام التشغيل ينسّق بين الهاردوير والبرامج والمستخدم"
+  },
+  "Windows e Linux: due modi diversi di usare il PC": {
+    "en": "Windows and Linux: two different ways to use a PC",
+    "ar": "ويندوز (Windows) ولينكس (Linux): طريقتان مختلفتان لاستخدام الكمبيوتر"
+  },
+  "Boot — dall'accensione al desktop in più passaggi": {
+    "en": "Boot — from pressing power to the desktop, in several steps",
+    "ar": "البوت — من الضغط على التشغيل حتى سطح المكتب، في عدة خطوات"
+  },
+  "BIOS/UEFI controlla l'hardware prima di avviare il SO": {
+    "en": "The BIOS/UEFI checks the hardware before it starts the OS",
+    "ar": "البيوس (BIOS)/UEFI يفحص الهاردوير قبل بدء نظام التشغيل"
+  },
+  "I driver fanno comunicare hardware e sistema operativo": {
+    "en": "Drivers let the hardware and the operating system talk to each other",
+    "ar": "الدرايفرات تجعل الهاردوير ونظام التشغيل يتواصلان"
+  },
+  "Installare un SO: ISO, USB bootabile, BIOS e installer": {
+    "en": "Installing an OS: an ISO, a bootable USB, the BIOS, and the installer",
+    "ar": "تثبيت نظام التشغيل: ملف ISO، وفلاشة USB للبوت، والبيوس (BIOS)، وبرنامج التثبيت"
+  },
+  "Prossimo workshop": {
+    "en": "Next workshop",
+    "ar": "الورشة التالية"
+  },
+  "Giorno 4 — Linux nella pratica": {
+    "en": "Day 4 — Linux in practice",
+    "ar": "اليوم 4 — لينكس (Linux) بشكل عملي"
+  },
+  "Esplorare il desktop Linux Mint sul PC": {
+    "en": "Explore the Linux Mint desktop on the PC",
+    "ar": "استكشاف سطح مكتب Linux Mint على الكمبيوتر"
+  },
+  "Gestire file e cartelle come un vero utente": {
+    "en": "Manage files and folders like a real user",
+    "ar": "إدارة الملفات والمجلدات مثل مستخدم حقيقي"
+  },
+  "Installare programmi dal Software Manager": {
+    "en": "Install programs from the Software Manager",
+    "ar": "تثبيت برامج من Software Manager"
+  },
+  "Comandi base e risoluzione di problemi semplici": {
+    "en": "Basic commands and how to fix simple problems",
+    "ar": "أوامر أساسية وحل مشاكل بسيطة"
+  },
+  "cos'è un sistema operativo": {
+    "en": "what an operating system is",
+    "ar": "ما هو نظام التشغيل"
+  },
+  "perché esistono Windows e Linux": {
+    "en": "why Windows and Linux exist",
+    "ar": "لماذا يوجد ويندوز (Windows) ولينكس (Linux)"
+  },
+  "cosa succede quando si accende un PC": {
+    "en": "what happens when a PC turns on",
+    "ar": "ماذا يحدث عندما يعمل الكمبيوتر"
+  },
+  "cosa sono BIOS, Bootloader e Driver": {
+    "en": "what the BIOS, the bootloader, and drivers are",
+    "ar": "ما هو البيوس (BIOS) والبوت لودر والدرايفر"
+  },
+  "come viene installato un sistema operativo": {
+    "en": "how an operating system is installed",
+    "ar": "كيف يتم تثبيت نظام التشغيل"
+  },
+  "circa 2 ore": {
+    "en": "about 2 hours",
+    "ar": "حوالي ساعتين"
+  },
+  "Far capire che il SO coordina hardware, programmi e utente.": {
+    "en": "Help them see that the OS keeps the hardware, the programs, and the user working together.",
+    "ar": "ساعدهم على فهم أن نظام التشغيل ينسّق بين الهاردوير والبرامج والمستخدم."
+  },
+  "Il sistema operativo è come il direttore di un'orchestra. Ogni componente sa fare una cosa. Il sistema operativo coordina tutti. Senza direttore, i musicisti suonerebbero a caso.": {
+    "en": "The operating system is like the conductor of an orchestra. Each part knows how to do one thing. The operating system keeps them all together. Without a conductor, the musicians would play at random.",
+    "ar": "نظام التشغيل مثل قائد الفرقة. كل قطعة تعرف أن تفعل شيئاً واحداً. نظام التشغيل ينسّق الجميع. من دون قائد، يعزف الموسيقيون بشكل عشوائي."
+  },
+  "Avete mai visto la scritta Windows o Linux sul PC?": {
+    "en": "Have you ever seen the word Windows or Linux on a PC?",
+    "ar": "هل رأيتم يوماً كلمة ويندوز (Windows) أو لينكس (Linux) على الكمبيوتر؟"
+  },
+  "Cosa pensate succeda quando accendete il computer?": {
+    "en": "What do you think happens when you turn the computer on?",
+    "ar": "ماذا تظنون أنه يحدث عندما تشغّلون الكمبيوتر؟"
+  },
+  "Senza sistema operativo, potreste aprire Chrome?": {
+    "en": "Without an operating system, could you open Chrome?",
+    "ar": "من دون نظام تشغيل، هل تستطيعون فتح Chrome؟"
+  },
+  "Confondere il SO con un programma qualsiasi (es. \"Chrome è il sistema operativo\")": {
+    "en": "Mixing up the OS with any ordinary program (for example, \"Chrome is the operating system\")",
+    "ar": "الخلط بين نظام التشغيل وأي برنامج عادي (مثلاً: \"Chrome هو نظام التشغيل\")"
+  },
+  "Pensare che Windows sia l'unico sistema esistente": {
+    "en": "Thinking Windows is the only system that exists",
+    "ar": "الاعتقاد أن ويندوز (Windows) هو النظام الوحيد الموجود"
+  },
+  "Credere che il SO sia un pezzo di hardware fisico": {
+    "en": "Believing the OS is a physical piece of hardware",
+    "ar": "الاعتقاد أن نظام التشغيل قطعة هاردوير نستطيع لمسها"
+  },
+  "Il primo sistema operativo moderno, UNIX, nasce negli anni '70. Linux è suo \"parente spirituale\".": {
+    "en": "The first modern operating system, UNIX, was born in the 1970s. Linux is its \"spiritual relative\".",
+    "ar": "أول نظام تشغيل حديث، UNIX، وُلد في السبعينات (1970). لينكس (Linux) هو \"قريبه الروحي\"."
+  },
+  "Mostra Task Manager (Windows) o Monitor di sistema (Linux) mentre apri un programma.": {
+    "en": "Show Task Manager on Windows, or System Monitor on Linux, while you open a program.",
+    "ar": "اعرض Task Manager على ويندوز (Windows)، أو مراقب النظام على لينكس (Linux)، وأنت تفتح برنامجاً."
+  },
+  "Boot del PC": {
+    "en": "PC boot",
+    "ar": "بوت الكمبيوتر"
+  },
+  "25 min": {
+    "en": "25 min",
+    "ar": "25 دقيقة"
+  },
+  "Ricostruire passo passo cosa succede dall'accensione al desktop.": {
+    "en": "Rebuild, step by step, what happens from the power button to the desktop.",
+    "ar": "نعيد بناء ما يحدث خطوة بخطوة، من زر التشغيل حتى سطح المكتب."
+  },
+  "Usa la simulazione interattiva con i ragazzi. Fai cliccare ogni step uno alla volta e chiedi cosa pensano succeda prima di rivelare la spiegazione.": {
+    "en": "Use the interactive simulation with the students. Let them click one step at a time, and ask what they think happens before you show the explanation.",
+    "ar": "استخدم المحاكاة التفاعلية مع الطلاب. اطلب منهم الضغط على كل خطوة واحدة واحدة، واسألهم ماذا يظنون أنه يحدث قبل أن تكشف الشرح."
+  },
+  "Premo il pulsante": {
+    "en": "I press the button",
+    "ar": "أضغط الزر"
+  },
+  "Il pulsante manda corrente all'alimentatore.": {
+    "en": "The button sends electricity to the power supply.",
+    "ar": "الزر يرسل الكهرباء إلى مزوّد الطاقة."
+  },
+  "Il circuito PWR_SW sulla scheda madre attiva il segnale PS_ON dell'alimentatore ATX.": {
+    "en": "The PWR_SW circuit on the motherboard turns on the PS_ON signal of the ATX power supply.",
+    "ar": "دائرة PWR_SW على اللوحة الأم تنشّط إشارة PS_ON في مزوّد الطاقة ATX."
+  },
+  "Su laptop il pulsante è collegato al controller EC che gestisce anche batteria.": {
+    "en": "On a laptop, the button is connected to the EC controller, which also looks after the battery.",
+    "ar": "في اللابتوب، الزر موصول بمتحكم EC الذي يدير البطارية أيضاً."
+  },
+  "Cosa pensate succeda nel primo millisecondo?": {
+    "en": "What do you think happens in the first millisecond?",
+    "ar": "ماذا تظنون أنه يحدث في أول ميلي ثانية؟"
+  },
+  "Trasforma 220V in 12V, 5V e 3.3V per i componenti.": {
+    "en": "It changes 220V into 12V, 5V, and 3.3V for the parts.",
+    "ar": "يحوّل 220V إلى 12V و5V و3.3V من أجل القطع."
+  },
+  "L'PSU fornisce rail multipli con protezioni OVP/UVP. Il standby 5VSB alimenta il tasto accensione.": {
+    "en": "The PSU gives several power lines, with OVP/UVP protection. Standby power 5VSB feeds the power button.",
+    "ar": "مزوّد الطاقة (PSU) يعطي عدة خطوط طاقة، مع حماية OVP/UVP. طاقة الانتظار 5VSB تغذّي زر التشغيل."
+  },
+  "Un PSU da 750W non consuma sempre 750W: eroga solo quello che serve.": {
+    "en": "A 750W PSU does not always use 750W. It only gives what is needed.",
+    "ar": "مزوّد طاقة (PSU) بقوة 750W لا يستهلك دائماً 750W. يعطي فقط ما هو مطلوب."
+  },
+  "Perché serve trasformare la corrente?": {
+    "en": "Why do we need to change the electricity?",
+    "ar": "لماذا نحتاج إلى تغيير الكهرباء؟"
+  },
+  "Il processore inizia a eseguire codice dalla memoria.": {
+    "en": "The processor starts running code from memory.",
+    "ar": "المعالج يبدأ تنفيذ الكود من الذاكرة."
+  },
+  "La CPU parte dall'indirizzo 0xFFFFFFF0 (x86) e legge il primo istruzione dal firmware.": {
+    "en": "The CPU starts at address 0xFFFFFFF0 (x86) and reads the first instruction from the firmware.",
+    "ar": "المعالج (CPU) يبدأ من العنوان 0xFFFFFFF0 (x86) ويقرأ أول تعليمة من الفيرموير."
+  },
+  "Una CPU moderna ha miliardi di transistor, più di tutte le case di un paese.": {
+    "en": "A modern CPU has billions of transistors, more than all the houses in a country.",
+    "ar": "المعالج (CPU) الحديث فيه مليارات الترانزستورات، أكثر من كل البيوت في بلد واحد."
+  },
+  "La CPU è accesa ma non c'è ancora Windows. Cosa esegue?": {
+    "en": "The CPU is on, but Windows is not there yet. What is it running?",
+    "ar": "المعالج (CPU) يعمل، لكن ويندوز (Windows) لم يبدأ بعد. ماذا ينفّذ؟"
+  },
+  "BIOS / UEFI": {
+    "en": "BIOS / UEFI",
+    "ar": "البيوس (BIOS) / UEFI"
+  },
+  "Firmware che controlla RAM, disco, tastiera.": {
+    "en": "Firmware that checks the RAM, the disk, and the keyboard.",
+    "ar": "فيرموير يفحص الرام (RAM) والقرص ولوحة المفاتيح."
+  },
+  "Esegue il POST (Power-On Self Test), inizializza controller e cerca dispositivi boot.": {
+    "en": "It runs the POST (Power-On Self Test), starts the controllers, and looks for a device to boot from.",
+    "ar": "ينفّذ POST (Power-On Self Test)، ويجهّز المتحكمات، ويبحث عن جهاز للبوت."
+  },
+  "UEFI supporta mouse, rete e dischi grandi oltre 2 TB.": {
+    "en": "UEFI supports a mouse, a network, and disks bigger than 2 TB.",
+    "ar": "UEFI يدعم الماوس والشبكة والأقراص الأكبر من 2 TB."
+  },
+  "Cosa significa \"firmware\"?": {
+    "en": "What does \"firmware\" mean?",
+    "ar": "ماذا تعني كلمة \"firmware\"؟"
+  },
+  "Test automatico: beep o LED se qualcosa non va.": {
+    "en": "An automatic test: a beep or an LED if something is wrong.",
+    "ar": "فحص تلقائي: صفارة أو ضوء LED إذا كان هناك خطأ."
+  },
+  "Verifica presenza RAM, CPU, GPU. Codici beep o Q-code LED indicano errori.": {
+    "en": "It checks that the RAM, CPU, and GPU are there. Beep codes or Q-code LEDs show what is wrong.",
+    "ar": "يتأكد من وجود الرام (RAM) والمعالج (CPU) وكرت الشاشة (GPU). رموز الصفارة أو أضواء Q-code تبيّن الخطأ."
+  },
+  "Un PC che fa beep-beep-beep spesso ha RAM non inserita bene.": {
+    "en": "A PC that goes beep-beep-beep often has RAM that is not pushed in properly.",
+    "ar": "الكمبيوتر الذي يصدر beep-beep-beep غالباً الرام (RAM) فيه غير مثبتة جيداً."
+  },
+  "Avete mai sentito beep strani all'accensione?": {
+    "en": "Have you ever heard strange beeps when the PC turns on?",
+    "ar": "هل سمعتم صفارات غريبة عند تشغيل الكمبيوتر؟"
+  },
+  "Piccolo programma che carica il sistema operativo.": {
+    "en": "A small program that loads the operating system.",
+    "ar": "برنامج صغير يحمّل نظام التشغيل."
+  },
+  "GRUB (Linux) o Windows Boot Manager leggono il kernel dal disco e lo passano alla RAM.": {
+    "en": "GRUB (Linux) or Windows Boot Manager reads the kernel from the disk and puts it into RAM.",
+    "ar": "GRUB (Linux) أو Windows Boot Manager يقرأ الكيرنل من القرص ويضعه في الرام (RAM)."
+  },
+  "Il bootloader può mostrare un menu per scegliere tra Windows e Linux (dual boot).": {
+    "en": "The bootloader can show a menu so you can choose Windows or Linux (dual boot).",
+    "ar": "البوت لودر يستطيع إظهار قائمة للاختيار بين ويندوز (Windows) ولينكس (Linux) (dual boot)."
+  },
+  "Chi decide quale sistema avviare?": {
+    "en": "Who decides which system starts?",
+    "ar": "من يقرر أي نظام يبدأ؟"
+  },
+  "Windows o Linux si caricano: driver, servizi, desktop.": {
+    "en": "Windows or Linux loads: drivers, services, and the desktop.",
+    "ar": "يتم تحميل ويندوز (Windows) أو لينكس (Linux): الدرايفرات والخدمات وسطح المكتب."
+  },
+  "Il kernel inizializza scheduler, memoria virtuale, filesystem e driver hardware.": {
+    "en": "The kernel gets ready: the scheduler (what runs next), virtual memory, the file system, and the hardware drivers.",
+    "ar": "الكيرنل يجهّز منظّم المهام (ما الذي يعمل الآن)، والذاكرة الافتراضية، ونظام الملفات، ودرايفرات الهاردوير."
+  },
+  "Durante il boot vedi il logo: sotto girano centinaia di processi.": {
+    "en": "During startup you see the logo. Under it, hundreds of tasks are running.",
+    "ar": "أثناء البوت ترى الشعار. وخلفه تعمل مئات المهام."
+  },
+  "Perché il boot con SSD è più veloce?": {
+    "en": "Why is startup faster with an SSD?",
+    "ar": "لماذا يكون البوت أسرع مع SSD؟"
+  },
+  "Icone, sfondo, barra. Il PC è pronto.": {
+    "en": "Icons, wallpaper, and the bar. The PC is ready.",
+    "ar": "أيقونات وخلفية وشريط. الكمبيوتر جاهز."
+  },
+  "Shell (Explorer.exe o Cinnamon) carica icone, pannello e servizi utente.": {
+    "en": "The shell (Explorer.exe or Cinnamon) loads the icons, the bar, and the user services.",
+    "ar": "الواجهة (Explorer.exe أو Cinnamon) تحمّل الأيقونات والشريط وخدمات المستخدم."
+  },
+  "Anche con desktop visibile, antivirus e aggiornamenti lavorano in background.": {
+    "en": "Even when you can see the desktop, antivirus and updates keep working in the background.",
+    "ar": "حتى عندما يظهر سطح المكتب، برنامج الحماية والتحديثات يبقيان يعملان في الخلفية."
+  },
+  "Qual è la prima cosa che fate quando il PC è acceso?": {
+    "en": "What is the first thing you do when the PC is on?",
+    "ar": "ما أول شيء تفعلونه عندما يعمل الكمبيوتر؟"
+  },
+  "Pensare che Windows sia già attivo appena si preme il pulsante": {
+    "en": "Thinking Windows is already on as soon as you press the button",
+    "ar": "الاعتقاد أن ويندوز (Windows) يعمل فور الضغط على الزر"
+  },
+  "Confondere BIOS con sistema operativo": {
+    "en": "Mixing up the BIOS with the operating system",
+    "ar": "الخلط بين البيوس (BIOS) ونظام التشغيل"
+  },
+  "Non sapere che si può avviare da USB": {
+    "en": "Not knowing the PC can start from a USB stick",
+    "ar": "عدم معرفة أن الكمبيوتر يستطيع البدء من فلاشة USB"
+  },
+  "Il boot completo può richiedere da 10 secondi (SSD + UEFI fast boot) a diversi minuti (HDD vecchio).": {
+    "en": "A full start can take from 10 seconds (SSD + UEFI fast boot) to several minutes (an old HDD).",
+    "ar": "البوت الكامل قد يأخذ من 10 ثوانٍ (SSD + UEFI fast boot) إلى عدة دقائق (HDD قديم)."
+  },
+  "Mostra il boot di una VM con pausa su ogni step. Oppure entra nel BIOS live.": {
+    "en": "Show a VM starting up, and pause on each step. Or open the BIOS live in front of them.",
+    "ar": "اعرض تشغيل جهاز VM، وتوقف عند كل خطوة. أو ادخل إلى البيوس (BIOS) مباشرة أمامهم."
+  },
+  "Far capire differenze e somiglianze senza prendere posizione.": {
+    "en": "Help them see what is different and what is the same, without picking a side.",
+    "ar": "ساعدهم على رؤية الفروقات والتشابهات من دون الانحياز لطرف."
+  },
+  "Entrambi sono ottimi. Windows è familiare e ottimo per gaming. Linux è gratis, personalizzabile e domina server e cloud. Mostra le due VM affiancate.": {
+    "en": "Both are great. Windows feels familiar and is excellent for games. Linux is free, you can change it, and it runs most servers and the cloud. Show the two VMs side by side.",
+    "ar": "الاثنان ممتازان. ويندوز (Windows) مألوف وممتاز للألعاب. لينكس (Linux) مجاني وتستطيع تغييره، وهو الأكثر استخداماً في السيرفرات والسحابة. اعرض جهازي VM جنباً إلى جنب."
+  },
+  "Quale usate a casa? A scuola?": {
+    "en": "Which one do you use at home? And at school?",
+    "ar": "أي واحد تستخدمون في البيت؟ وفي المدرسة؟"
+  },
+  "Vi sembrano simili o diversi?": {
+    "en": "Do they look the same to you, or different?",
+    "ar": "هل يبدوان متشابهين أم مختلفين؟"
+  },
+  "Perché secondo voi esistono due sistemi?": {
+    "en": "Why do you think there are two systems?",
+    "ar": "لماذا برأيكم يوجد نظامان؟"
+  },
+  "Dire che Linux è \"difficile\" senza averlo provato (Mint è molto intuitivo)": {
+    "en": "Saying Linux is \"hard\" without trying it (Mint is very easy to use)",
+    "ar": "قول إن لينكس (Linux) \"صعب\" من دون تجربته (Mint سهل جداً)"
+  },
+  "Pensare che Linux non faccia gaming (Steam Deck, Proton)": {
+    "en": "Thinking Linux cannot play games (Steam Deck, Proton)",
+    "ar": "الاعتقاد أن لينكس (Linux) لا يشغّل الألعاب (Steam Deck و Proton)"
+  },
+  "Credere che Windows sia gratis (è incluso nel prezzo del PC)": {
+    "en": "Believing Windows is free (its price is already inside the price of the PC)",
+    "ar": "الاعتقاد أن ويندوز (Windows) مجاني (سعره داخل سعر الكمبيوتر)"
+  },
+  "macOS è un altro sistema, basato su UNIX come Linux. È il terzo grande player.": {
+    "en": "macOS is another system, built on UNIX like Linux. It is the third big one.",
+    "ar": "macOS نظام آخر، مبني على UNIX مثل لينكس (Linux). هو النظام الكبير الثالث."
+  },
+  "Affianca VM Windows e Linux Mint. Fai aprire browser, file manager e terminale su entrambi.": {
+    "en": "Put a Windows VM and a Linux Mint VM side by side. Open the browser, the file manager, and the terminal on both.",
+    "ar": "ضع جهاز VM بنظام ويندوز (Windows) وجهاز VM بنظام Linux Mint جنباً إلى جنب. افتح المتصفح ومدير الملفات والطرفية على الاثنين."
+  },
+  "Spiegare i driver con esempi concreti e semplici.": {
+    "en": "Explain drivers with simple, real examples.",
+    "ar": "اشرح الدرايفرات بأمثلة حقيقية وبسيطة."
+  },
+  "Il driver è un traduttore. La stampante parla \"stampante\", Windows parla \"Windows\". Il driver traduce. Senza driver: hardware muto.": {
+    "en": "A driver is a translator. The printer speaks \"printer\", and Windows speaks \"Windows\". The driver translates. With no driver, the hardware stays silent.",
+    "ar": "الدرايفر مترجم. الطابعة تتكلم \"طابعة\"، وويندوز (Windows) يتكلم \"Windows\". الدرايفر يترجم بينهما. من دون درايفر يبقى الهاردوير صامتاً."
+  },
+  "Scheda video — senza driver NVIDIA/AMD, risoluzione bassa e niente giochi 3D": {
+    "en": "Graphics card — without an NVIDIA or AMD driver, the resolution stays low and 3D games do not run",
+    "ar": "كرت الشاشة — من دون درايفر NVIDIA أو AMD، تبقى الدقة منخفضة وألعاب 3D لا تعمل"
+  },
+  "Stampante — Windows non la vede senza driver del produttore": {
+    "en": "Printer — Windows cannot see it without the maker's driver",
+    "ar": "الطابعة — ويندوز (Windows) لا يراها من دون درايفر الشركة المصنّعة"
+  },
+  "Mouse — driver generico funziona, quello del produttore sblocca tasti extra": {
+    "en": "Mouse — a basic driver works; the maker's driver unlocks extra buttons",
+    "ar": "الماوس — الدرايفر العادي يعمل، ودرايفر الشركة يفتح الأزرار الإضافية"
+  },
+  "Wi-Fi — spesso serve driver specifico per chip Intel/Realtek": {
+    "en": "Wi-Fi — you often need a special driver for Intel or Realtek chips",
+    "ar": "الواي فاي — غالباً تحتاج درايفر خاصاً لشرائح Intel أو Realtek"
+  },
+  "Audio — senza driver Realtek, niente suono dalle casse": {
+    "en": "Audio — with no Realtek driver, no sound from the speakers",
+    "ar": "الصوت — من دون درايفر Realtek، لا يوجد صوت من السماعات"
+  },
+  "Cosa succede se colleghi una stampante senza driver?": {
+    "en": "What happens if you plug in a printer with no driver?",
+    "ar": "ماذا يحدث إذا وصلت طابعة من دون درايفر؟"
+  },
+  "Windows trova da solo i driver?": {
+    "en": "Does Windows find the drivers by itself?",
+    "ar": "هل يجد ويندوز (Windows) الدرايفرات وحده؟"
+  },
+  "Su Linux servono driver?": {
+    "en": "Does Linux need drivers?",
+    "ar": "هل لينكس (Linux) يحتاج درايفرات؟"
+  },
+  "Pensare che i driver siano virus": {
+    "en": "Thinking that drivers are viruses",
+    "ar": "الاعتقاد أن الدرايفرات فيروسات"
+  },
+  "Installare driver da siti sospetti invece che dal produttore": {
+    "en": "Installing drivers from suspicious websites instead of from the maker",
+    "ar": "تثبيت الدرايفرات من مواقع مشبوهة بدل موقع الشركة المصنّعة"
+  },
+  "Non aggiornare driver della scheda video per i giochi": {
+    "en": "Not updating the graphics card driver for games",
+    "ar": "عدم تحديث درايفر كرت الشاشة من أجل الألعاب"
+  },
+  "Linux include molti driver nel kernel: spesso funziona tutto senza installare nulla.": {
+    "en": "Linux includes many drivers in the kernel. Often everything works and you install nothing.",
+    "ar": "لينكس (Linux) يضم كثيراً من الدرايفرات داخل الكيرنل. غالباً كل شيء يعمل من دون تثبيت أي شيء."
+  },
+  "Gestione dispositivi Windows vs lspci su Linux. Mostra driver mancante (punto esclamativo giallo).": {
+    "en": "Windows Device Manager versus lspci on Linux. Show a missing driver (a yellow exclamation mark).",
+    "ar": "إدارة الأجهزة في ويندوز (Windows) مقابل الأمر lspci في لينكس (Linux). أظهر الدرايفر الناقص (علامة تعجب صفراء)."
+  },
+  "Descrivere il processo di installazione senza farlo live (troppo lungo).": {
+    "en": "Describe how installation works, without doing it live (it takes too long).",
+    "ar": "اشرح خطوات التثبيت من دون تنفيذها مباشرة (تأخذ وقتاً طويلاً)."
+  },
+  "ISO = copia digitale del SO. USB bootabile = chiavetta che il PC legge come disco. BIOS = imposti da dove avviare. Poi installer guidato.": {
+    "en": "An ISO is a digital copy of the OS. A bootable USB is a stick the PC reads like a disk. In the BIOS you choose where to start from. Then a guided installer helps you.",
+    "ar": "ملف ISO هو نسخة رقمية من نظام التشغيل. فلاشة USB للبوت هي فلاشة يقرأها الكمبيوتر كأنها قرص. في البيوس (BIOS) تختار من أين يبدأ التشغيل. ثم يساعدك برنامج التثبيت خطوة بخطوة."
+  },
+  "Scarichi il file immagine dal sito ufficiale.": {
+    "en": "You download the image file from the official website.",
+    "ar": "تنزّل ملف الصورة من الموقع الرسمي."
+  },
+  "5 min": {
+    "en": "5 min",
+    "ar": "5 دقائق"
+  },
+  "È legale scaricare Linux?": {
+    "en": "Is it legal to download Linux?",
+    "ar": "هل تنزيل لينكس (Linux) قانوني؟"
+  },
+  "Quanto pesa un ISO?": {
+    "en": "How big is an ISO file?",
+    "ar": "كم حجم ملف ISO؟"
+  },
+  "USB Boot": {
+    "en": "USB boot",
+    "ar": "البوت من USB"
+  },
+  "Rufus scrive l'ISO sulla chiavetta.": {
+    "en": "Rufus writes the ISO onto the USB stick.",
+    "ar": "برنامج Rufus يكتب ملف ISO على الفلاشة."
+  },
+  "Perché serve una chiavetta?": {
+    "en": "Why do we need a USB stick?",
+    "ar": "لماذا نحتاج فلاشة؟"
+  },
+  "Si può usare un DVD?": {
+    "en": "Can you use a DVD?",
+    "ar": "هل يمكن استخدام DVD؟"
+  },
+  "F2 o DEL all'avvio, boot order su USB.": {
+    "en": "Press F2 or DEL at startup, and set the boot order to USB.",
+    "ar": "اضغط F2 أو DEL عند التشغيل، واجعل ترتيب البوت على USB."
+  },
+  "Cosa succede se sbagli ordine?": {
+    "en": "What happens if you get the order wrong?",
+    "ar": "ماذا يحدث إذا أخطأت الترتيب؟"
+  },
+  "UEFI vs BIOS?": {
+    "en": "UEFI vs BIOS?",
+    "ar": "UEFI أم البيوس (BIOS)؟"
+  },
+  "Lingua, disco, utente, password. Attesa.": {
+    "en": "Language, disk, user, password. Then you wait.",
+    "ar": "اللغة، والقرص، والمستخدم، وكلمة السر. ثم الانتظار."
+  },
+  "15-30 min": {
+    "en": "15-30 min",
+    "ar": "15-30 دقيقة"
+  },
+  "Si perde tutto sul disco?": {
+    "en": "Do you lose everything on the disk?",
+    "ar": "هل نفقد كل شيء على القرص؟"
+  },
+  "Dual boot?": {
+    "en": "Dual boot?",
+    "ar": "نظامان معاً (dual boot)؟"
+  },
+  "Dopo install, driver Wi-Fi e GPU.": {
+    "en": "After the install, the Wi-Fi and GPU drivers.",
+    "ar": "بعد التثبيت، درايفر الواي فاي وكرت الشاشة (GPU)."
+  },
+  "Windows li trova da solo?": {
+    "en": "Does Windows find them by itself?",
+    "ar": "هل يجدها ويندوز (Windows) وحده؟"
+  },
+  "Patch sicurezza fondamentali.": {
+    "en": "Important security fixes.",
+    "ar": "تحديثات الأمان المهمة."
+  },
+  "Perché aggiornare?": {
+    "en": "Why do we update?",
+    "ar": "لماذا نحدّث؟"
+  },
+  "Installa programmi e personalizza.": {
+    "en": "Install programs and make it your own.",
+    "ar": "ثبّت البرامج وعدّل الشكل كما تحب."
+  },
+  "Cosa installate per primo?": {
+    "en": "What do you install first?",
+    "ar": "ماذا تثبّتون أولاً؟"
+  },
+  "Formattare il disco sbagliato durante install": {
+    "en": "Formatting the wrong disk during the install",
+    "ar": "عمل فورمات للقرص الخطأ أثناء التثبيت"
+  },
+  "Non fare backup prima di installare": {
+    "en": "Not making a backup before you install",
+    "ar": "عدم عمل نسخة احتياطية قبل التثبيت"
+  },
+  "Scaricare ISO da siti non ufficiali": {
+    "en": "Downloading the ISO from websites that are not official",
+    "ar": "تنزيل ملف ISO من مواقع غير رسمية"
+  },
+  "Linux Mint si installa in circa 20 minuti su SSD con connessione veloce.": {
+    "en": "Linux Mint installs in about 20 minutes on an SSD with a fast connection.",
+    "ar": "Linux Mint يتثبّت في حوالي 20 دقيقة على SSD مع اتصال سريع."
+  },
+  "Mostra video time-lapse installazione o VM già pronta. NON installare live (troppo lungo).": {
+    "en": "Show a sped-up video of an install, or a VM that is already ready. Do NOT install it live (it takes too long).",
+    "ar": "اعرض فيديو سريعاً للتثبيت، أو VM جاهزة. لا تثبّت مباشرة أمام الطلاب (الوقت طويل)."
+  },
+  "Far capire che Linux è ovunque, spesso invisibile.": {
+    "en": "Help them see that Linux is everywhere, even when we do not notice it.",
+    "ar": "ساعدهم على أن يروا أن لينكس (Linux) موجود في كل مكان، حتى عندما لا نلاحظه."
+  },
+  "Ogni volta che usi Google, guardi YouTube, compri su Amazon o usi il telefono Android, stai usando Linux (direttamente o sui server).": {
+    "en": "Every time you use Google, watch YouTube, buy something on Amazon, or use an Android phone, you are using Linux (on the device or on the servers).",
+    "ar": "في كل مرة تستخدم Google أو تشاهد YouTube أو تشتري من Amazon أو تستخدم هاتف Android، أنت تستخدم لينكس (Linux)، على الجهاز أو على السيرفرات."
+  },
+  "Sapevate che il telefono usa Linux?": {
+    "en": "Did you know the phone uses Linux?",
+    "ar": "هل كنتم تعرفون أن الهاتف يستخدم لينكس (Linux)؟"
+  },
+  "Perché i server usano Linux e non Windows?": {
+    "en": "Why do servers use Linux and not Windows?",
+    "ar": "لماذا تستخدم السيرفرات لينكس (Linux) وليس ويندوز (Windows)؟"
+  },
+  "Conoscete qualcuno che usa Linux sul PC?": {
+    "en": "Do you know anyone who uses Linux on a PC?",
+    "ar": "هل تعرفون أحداً يستخدم لينكس (Linux) على الكمبيوتر؟"
+  },
+  "Pensare che Linux sia solo per hacker": {
+    "en": "Thinking Linux is only for hackers",
+    "ar": "الاعتقاد أن لينكس (Linux) للهاكر فقط"
+  },
+  "Non sapere che Android è Linux": {
+    "en": "Not knowing that Android is Linux",
+    "ar": "عدم معرفة أن Android هو لينكس (Linux)"
+  },
+  "Credere che nessuno usi Linux nella vita reale": {
+    "en": "Believing that nobody uses Linux in real life",
+    "ar": "الاعتقاد أن لا أحد يستخدم لينكس (Linux) في الحياة الحقيقية"
+  },
+  "Il 96% dei supercomputer TOP500 usa Linux. Il 100% dei 500 più veloci? Linux.": {
+    "en": "96% of the TOP500 supercomputers use Linux. And 100% of the 500 fastest? Linux.",
+    "ar": "96% من أقوى الحواسيب في قائمة TOP500 تستخدم لينكس (Linux). و100% من أسرع 500 حاسوب؟ لينكس (Linux)."
+  },
+  "Mostra slide curiosità interattive. Apri whatismybrowser.com su server Linux.": {
+    "en": "Show the interactive fun-fact slides. Open whatismybrowser.com on a Linux server.",
+    "ar": "اعرض شرائح المعلومات اللطيفة التفاعلية. افتح whatismybrowser.com على سيرفر لينكس (Linux)."
+  },
+  "Attività pratica": {
+    "en": "Hands-on activity",
+    "ar": "نشاط عملي"
+  },
+  "Far esplorare Windows o Linux Mint in autonomia guidata.": {
+    "en": "Let them explore Windows or Linux Mint on their own, with you guiding them.",
+    "ar": "دعهم يستكشفون ويندوز (Windows) أو Linux Mint بأنفسهم، مع توجيهك."
+  },
+  "Ogni ragazzo (o coppia) ha una checklist. Primo che finisce tutto vince, ma l'obiettivo è imparare, non correre.": {
+    "en": "Each student (or pair) has a checklist. The first to finish everything wins, but the goal is to learn, not to rush.",
+    "ar": "كل طالب (أو ثنائي) عنده قائمة مهام. أول من ينهي كل شيء يفوز، لكن الهدف هو التعلّم وليس السرعة."
+  },
+  "Trovare il browser": {
+    "en": "Find the browser",
+    "ar": "إيجاد المتصفح"
+  },
+  "3 min": {
+    "en": "3 min",
+    "ar": "3 دقائق"
+  },
+  "Aprire Chrome/Firefox": {
+    "en": "Open Chrome or Firefox",
+    "ar": "فتح Chrome أو Firefox"
+  },
+  "VM o PC": {
+    "en": "VM or PC",
+    "ar": "VM أو كمبيوتر"
+  },
+  "Aprire una cartella": {
+    "en": "Open a folder",
+    "ar": "فتح مجلد"
+  },
+  "Navigare in Documenti": {
+    "en": "Look around in Documents",
+    "ar": "التصفح داخل المستندات"
+  },
+  "Cambiare sfondo": {
+    "en": "Change the wallpaper",
+    "ar": "تغيير الخلفية"
+  },
+  "Impostazioni → Sfondo": {
+    "en": "Settings → Wallpaper",
+    "ar": "الإعدادات → الخلفية"
+  },
+  "Aprire il terminale": {
+    "en": "Open the terminal",
+    "ar": "فتح الطرفية"
+  },
+  "Trovare CMD/PowerShell o Bash": {
+    "en": "Find CMD, PowerShell, or Bash",
+    "ar": "إيجاد CMD أو PowerShell أو Bash"
+  },
+  "Installare un programma": {
+    "en": "Install a program",
+    "ar": "تثبيت برنامج"
+  },
+  "7 min": {
+    "en": "7 min",
+    "ar": "7 دقائق"
+  },
+  "Store o Software Manager": {
+    "en": "Store or Software Manager",
+    "ar": "المتجر أو Software Manager"
+  },
+  "VM + internet": {
+    "en": "VM + internet",
+    "ar": "VM + إنترنت"
+  },
+  "Spegnere il PC": {
+    "en": "Turn off the PC",
+    "ar": "إطفاء الكمبيوتر"
+  },
+  "2 min": {
+    "en": "2 min",
+    "ar": "دقيقتان"
+  },
+  "Menu → Spegni correttamente": {
+    "en": "Menu → Shut down the right way",
+    "ar": "القائمة → إطفاء بالطريقة الصحيحة"
+  },
+  "È più facile su Windows o Linux?": {
+    "en": "Is it easier on Windows or on Linux?",
+    "ar": "هل هو أسهل على ويندوز (Windows) أم على لينكس (Linux)؟"
+  },
+  "Avete trovato tutto al primo tentativo?": {
+    "en": "Did you find everything on the first try?",
+    "ar": "هل وجدتم كل شيء من أول محاولة؟"
+  },
+  "Spegnere staccando la corrente (rischio corruzione dati)": {
+    "en": "Turning it off by pulling the power (this can damage your files)",
+    "ar": "الإطفاء بفصل الكهرباء (قد تتلف الملفات)"
+  },
+  "Installare programmi da siti non attendibili": {
+    "en": "Installing programs from websites you cannot trust",
+    "ar": "تثبيت برامج من مواقع غير موثوقة"
+  },
+  "Il tasto Windows + E apre Esplora file istantaneamente.": {
+    "en": "The Windows key + E opens File Explorer right away.",
+    "ar": "زر ويندوز (Windows) + E يفتح مستكشف الملفات فوراً."
+  },
+  "Circola in classe e aiuta. Premia chi completa la checklist.": {
+    "en": "Walk around the room and help. Give a prize to whoever finishes the checklist.",
+    "ar": "تجوّل بين الطلاب وساعدهم. كافئ من يكمل قائمة المهام."
+  },
+  "Verificare comprensione con quiz interattivo.": {
+    "en": "Check what they understood with an interactive quiz.",
+    "ar": "تأكد من الفهم باختبار تفاعلي."
+  },
+  "Usa il quiz della presentazione studenti. Discuti ogni risposta sbagliata.": {
+    "en": "Use the quiz from the student slides. Talk about every wrong answer.",
+    "ar": "استخدم اختبار عرض الطلاب. ناقش كل إجابة خاطئة."
+  },
+  "Il SO gestisce memoria, file, dispositivi e fa girare i programmi.": {
+    "en": "The OS looks after memory, files, and devices, and it runs the programs.",
+    "ar": "نظام التشغيل يدير الذاكرة والملفات والأجهزة، ويشغّل البرامج."
+  },
+  "Gioca ai videogiochi — quello lo fanno i giochi": {
+    "en": "It plays video games — the games do that",
+    "ar": "يلعب ألعاب الفيديو — هذا ما تفعله الألعاب"
+  },
+  "È la tastiera — la tastiera è hardware": {
+    "en": "It is the keyboard — the keyboard is hardware",
+    "ar": "هي لوحة المفاتيح — ولوحة المفاتيح هاردوير"
+  },
+  "Cosa controlla il BIOS/UEFI?": {
+    "en": "What does the BIOS/UEFI check?",
+    "ar": "ماذا يفحص البيوس (BIOS)/UEFI؟"
+  },
+  "Il POST verifica componenti prima di caricare il SO.": {
+    "en": "The POST checks the parts before it loads the OS.",
+    "ar": "فحص POST يتأكد من القطع قبل تحميل نظام التشغيل."
+  },
+  "Solo il mouse — controlla tutto": {
+    "en": "Only the mouse — it checks everything",
+    "ar": "الماوس فقط — هو يفحص كل شيء"
+  },
+  "I giochi — non sono ancora caricati": {
+    "en": "The games — they are not loaded yet",
+    "ar": "الألعاب — لم تُحمَّل بعد"
+  },
+  "Traduttori tra dispositivo fisico e sistema operativo.": {
+    "en": "Translators between the real device and the operating system.",
+    "ar": "مترجمون بين الجهاز الحقيقي ونظام التشغيل."
+  },
+  "A guidare — battuta!": {
+    "en": "To drive — that is a joke!",
+    "ar": "للقيادة — هذه نكتة!"
+  },
+  "A spegnere — quello è il menu spegnimento": {
+    "en": "To turn it off — that is the shutdown menu",
+    "ar": "للإطفاء — هذه هي قائمة الإطفاء"
+  },
+  "Codice aperto e gratuito. Windows è proprietario Microsoft.": {
+    "en": "Open code, and it is free. Windows belongs to Microsoft.",
+    "ar": "كود مفتوح ومجاني. ويندوز (Windows) ملك شركة Microsoft."
+  },
+  "Windows — codice chiuso": {
+    "en": "Windows — the code is closed",
+    "ar": "ويندوز (Windows) — الكود مغلق"
+  },
+  "Entrambi — solo Linux è open source": {
+    "en": "Both — only Linux is open source",
+    "ar": "الاثنان — لينكس (Linux) فقط هو المفتوح المصدر"
+  },
+  "Cosa succede per primo all'accensione?": {
+    "en": "What happens first when the PC turns on?",
+    "ar": "ماذا يحدث أولاً عند التشغيل؟"
+  },
+  "Sequenza: PSU → CPU → BIOS → bootloader → SO → desktop.": {
+    "en": "The order: PSU → CPU → BIOS → bootloader → OS → desktop.",
+    "ar": "الترتيب: PSU → CPU → BIOS → bootloader → نظام التشغيل → سطح المكتب."
+  },
+  "Browser — troppo presto": {
+    "en": "The browser — too early",
+    "ar": "المتصفح — مبكر جداً"
+  },
+  "Gioco — ancora più presto": {
+    "en": "A game — even earlier",
+    "ar": "لعبة — أبكر من ذلك"
+  },
+  "Riflessione finale senza giudizio.": {
+    "en": "A final reflection, with no judging.",
+    "ar": "تفكير أخير من دون أن نحكم على أحد."
+  },
+  "Chiedi ai ragazzi quale SO sceglierebbero e perché. Non esiste risposta giusta. Windows per gaming e familiarità, Linux per curiosità e programmazione.": {
+    "en": "Ask the students which OS they would choose and why. There is no right answer. Windows for games and because it feels familiar. Linux for curiosity and programming.",
+    "ar": "اسأل الطلاب أي نظام تشغيل يختارون ولماذا. لا توجد إجابة صحيحة واحدة. ويندوز (Windows) للألعاب ولأنه مألوف. لينكس (Linux) للفضول والبرمجة."
+  },
+  "Quale sistema operativo useresti e perché?": {
+    "en": "Which operating system would you use, and why?",
+    "ar": "أي نظام تشغيل تستخدم، ولماذا؟"
+  },
+  "Cosa vi ha sorpreso di più oggi?": {
+    "en": "What surprised you the most today?",
+    "ar": "ما أكثر شيء فاجأكم اليوم؟"
+  },
+  "Provereste Linux sul vostro PC?": {
+    "en": "Would you try Linux on your own PC?",
+    "ar": "هل تجرّبون لينكس (Linux) على كمبيوتركم؟"
+  },
+  "Giudicare chi sceglie diversamente da te": {
+    "en": "Judging someone who chooses something different from you",
+    "ar": "الحكم على من يختار غير اختيارك"
+  },
+  "Pensare che un SO sia \"migliore\" in assoluto": {
+    "en": "Thinking one OS is \"better\" for everything",
+    "ar": "الاعتقاد أن نظام تشغيل واحد \"أفضل\" في كل شيء"
+  },
+  "Molti programmatori usano entrambi: Windows per gaming, Linux per sviluppo.": {
+    "en": "Many programmers use both: Windows for games, Linux for coding.",
+    "ar": "كثير من المبرمجين يستخدمون الاثنين: ويندوز (Windows) للألعاب، ولينكس (Linux) للبرمجة."
+  },
+  "Mostra i risultati del sondaggio locale (scelta salvata nella presentazione studenti).": {
+    "en": "Show the results of the class poll (the choice saved in the student presentation).",
+    "ar": "اعرض نتائج الاستطلاع في الصف (الاختيار المحفوظ في عرض الطلاب)."
+  },
+  "Chiudere con un recap visibile agli studenti: punti di oggi, pre-assunti, ultimo e prossimo incontro.": {
+    "en": "End with a recap the students can see: today's points, ideas from before, the last meeting, and the next one.",
+    "ar": "اختم بملخص يراه الطلاب: نقاط اليوم، والأفكار السابقة، واللقاء الأخير، واللقاء التالي."
+  },
+  "Mostra la slide riepilogo agli studenti. Ripassa i punti principali, collega al workshop precedente (assemblaggio) e anticipa il quarto incontro pratico su Linux.": {
+    "en": "Show the summary slide to the students. Go over the main points, link them to the previous workshop (building the PC), and preview the fourth hands-on meeting about Linux.",
+    "ar": "اعرض شريحة الملخص على الطلاب. راجع النقاط الأساسية، واربطها بالورشة السابقة (التجميع)، ومهد للقاء الرابع العملي عن لينكس (Linux)."
+  },
+  "Quale concetto di oggi vi è rimasto più impresso?": {
+    "en": "Which idea from today do you remember the most?",
+    "ar": "أي فكرة من اليوم بقيت في بالكم أكثر؟"
+  },
+  "Cosa ricordate dell'ultimo incontro sull'assemblaggio?": {
+    "en": "What do you remember from the last meeting about building the PC?",
+    "ar": "ماذا تتذكرون من اللقاء السابق عن التجميع؟"
+  },
+  "Cosa vorreste provare sul Linux la prossima volta?": {
+    "en": "What would you like to try on Linux next time?",
+    "ar": "ماذا تحبون أن تجرّبوا على لينكس (Linux) في المرة القادمة؟"
+  },
+  "Confondere hardware (pezzi fisici) con software (sistema operativo)": {
+    "en": "Mixing up hardware (parts you can touch) with software (the operating system)",
+    "ar": "الخلط بين الهاردوير (قطع تُلمَس) والسوفتوير (نظام التشغيل)"
+  },
+  "Dimenticare che senza SO un PC montato non è ancora utilizzabile": {
+    "en": "Forgetting that a built PC still cannot be used without an OS",
+    "ar": "نسيان أن الكمبيوتر بعد تركيبه لا يمكن استخدامه من دون نظام تشغيل"
+  },
+  "In 4 incontri passate dall'aprire un PC al capire come funziona il software che lo fa vivere.": {
+    "en": "In 4 meetings you go from opening a PC to understanding the software that makes it come alive.",
+    "ar": "في 4 لقاءات تنتقلون من فتح الكمبيوتر إلى فهم السوفتوير الذي يجعله يعمل."
+  },
+  "Lascia la slide riepilogo aperta mentre rispondi alle domande finali.": {
+    "en": "Leave the summary slide open while you answer the last questions.",
+    "ar": "اترك شريحة الملخص مفتوحة وأنت تجيب عن الأسئلة الأخيرة."
+  },
+  "Computer pronto": {
+    "en": "Computer ready",
+    "ar": "الكمبيوتر جاهز"
+  },
+  "VM Windows": {
+    "en": "Windows VM",
+    "ar": "جهاز VM بنظام ويندوز (Windows)"
+  },
+  "VM Linux Mint": {
+    "en": "Linux Mint VM",
+    "ar": "جهاز VM بنظام Linux Mint"
+  },
+  "ISO Linux Mint": {
+    "en": "Linux Mint ISO",
+    "ar": "ملف ISO لنظام Linux Mint"
+  },
+  "USB Bootabile (opzionale demo)": {
+    "en": "Bootable USB (optional demo)",
+    "ar": "فلاشة USB للبوت (عرض اختياري)"
+  },
+  "Backup delle VM": {
+    "en": "Backups of the VMs",
+    "ar": "نسخ احتياطية لأجهزة VM"
+  },
+  "Quarto incontro — Il PC prende vita": {
+    "en": "Fourth meeting — The PC comes to life",
+    "ar": "اللقاء الرابع — الكمبيوتر يبدأ الحياة"
+  },
+  "Workshop 4": {
+    "en": "Workshop 4",
+    "ar": "الورشة 4"
+  },
+  "Il PC prende vita": {
+    "en": "The PC comes to life",
+    "ar": "الكمبيوتر يبدأ الحياة"
+  },
+  "Ripassiamo, assembliamo e impariamo a usare meglio il computer.": {
+    "en": "We review, we build, and we learn to use the computer better.",
+    "ar": "نراجع، ونركّب، ونتعلّم أن نستخدم الكمبيوتر بشكل أفضل."
+  },
+  "Oggi mettiamo insieme tutto ciò che abbiamo imparato nei workshop precedenti.": {
+    "en": "Today we put together everything we learned in the earlier workshops.",
+    "ar": "اليوم نجمع كل ما تعلمناه في الورش السابقة."
+  },
+  "BIOS e avvio": {
+    "en": "BIOS and startup",
+    "ar": "البيوس (BIOS) والتشغيل"
+  },
+  "Windows e Linux": {
+    "en": "Windows and Linux",
+    "ar": "ويندوز (Windows) ولينكس (Linux)"
+  },
+  "Problemi comuni": {
+    "en": "Common problems",
+    "ar": "مشاكل شائعة"
+  },
+  "File, cartelle e comandi utili": {
+    "en": "Files, folders, and useful commands",
+    "ar": "ملفات ومجلدات وأوامر مفيدة"
+  },
+  "Immagine futura: PC completo con componenti, Windows e Linux": {
+    "en": "Future image: a full PC with its parts, Windows, and Linux",
+    "ar": "صورة مستقبلية: كمبيوتر كامل مع القطع وويندوز (Windows) ولينكس (Linux)"
+  },
+  "Hardware o software?": {
+    "en": "Hardware or software?",
+    "ar": "هاردوير أم سوفتوير؟"
+  },
+  "L’hardware è tutto ciò che possiamo toccare: CPU, RAM, scheda madre, SSD, GPU e monitor. Il software è formato dai programmi e dai sistemi operativi che permettono all’hardware di funzionare.": {
+    "en": "Hardware is everything we can touch: the CPU, RAM, motherboard, SSD, GPU, and monitor. Software is the programs and operating systems that let the hardware work.",
+    "ar": "الهاردوير هو كل ما نستطيع لمسه: المعالج (CPU)، والرام (RAM)، واللوحة الأم، وقرص SSD، وكرت الشاشة (GPU)، والشاشة. السوفتوير هو البرامج وأنظمة التشغيل التي تجعل الهاردوير يعمل."
+  },
+  "Componenti fisici": {
+    "en": "Physical parts",
+    "ar": "قطع ملموسة"
+  },
+  "Si possono toccare": {
+    "en": "You can touch them",
+    "ar": "نستطيع لمسها"
+  },
+  "Eseguono il lavoro del computer": {
+    "en": "They do the computer's work",
+    "ar": "تنفّذ عمل الكمبيوتر"
+  },
+  "Programmi e istruzioni": {
+    "en": "Programs and instructions",
+    "ar": "برامج وتعليمات"
+  },
+  "Non si possono toccare": {
+    "en": "You cannot touch them",
+    "ar": "لا نستطيع لمسها"
+  },
+  "Controllano l’hardware": {
+    "en": "They control the hardware",
+    "ar": "تتحكم في الهاردوير"
+  },
+  "Una tastiera è hardware o software?": {
+    "en": "Is a keyboard hardware or software?",
+    "ar": "هل لوحة المفاتيح هاردوير أم سوفتوير؟"
+  },
+  "Hardware: è un componente fisico che puoi toccare.": {
+    "en": "Hardware: it is a physical part you can touch.",
+    "ar": "هاردوير: هي قطعة ملموسة تستطيع لمسها."
+  },
+  "Immagine futura: confronto hardware e software": {
+    "en": "Future image: hardware and software side by side",
+    "ar": "صورة مستقبلية: مقارنة الهاردوير والسوفتوير"
+  },
+  "Cosa c’è dentro un PC?": {
+    "en": "What is inside a PC?",
+    "ar": "ماذا يوجد داخل الكمبيوتر؟"
+  },
+  "Immagine futura: componenti del PC": {
+    "en": "Future image: the parts of a PC",
+    "ar": "صورة مستقبلية: قطع الكمبيوتر"
+  },
+  "Tocca ogni componente per vedere funzione, montaggio e cosa succede se manca. Clicca l’immagine per scorrere le foto.": {
+    "en": "Tap each part to see what it does, how to fit it, and what happens if it is missing. Click the picture to move through the photos.",
+    "ar": "اضغط كل قطعة لترى ماذا تفعل، وكيف تُركَّب، وماذا يحدث إذا نقصت. اضغط الصورة لتمرير الصور."
+  },
+  "Collega tutti i componenti.": {
+    "en": "It connects all the parts.",
+    "ar": "تربط كل القطع."
+  },
+  "Collega tutti i componenti del computer.": {
+    "en": "It connects all the parts of the computer.",
+    "ar": "تربط كل قطع الكمبيوتر."
+  },
+  "Dentro il case.": {
+    "en": "Inside the case.",
+    "ar": "داخل الصندوق."
+  },
+  "I componenti non possono comunicare tra loro.": {
+    "en": "The parts cannot talk to each other.",
+    "ar": "القطع لا تستطيع أن تتكلم مع بعضها."
+  },
+  "Esegue calcoli e istruzioni.": {
+    "en": "It runs calculations and instructions.",
+    "ar": "ينفّذ حسابات وتعليمات."
+  },
+  "Esegue i calcoli e le istruzioni.": {
+    "en": "It runs the calculations and the instructions.",
+    "ar": "ينفّذ الحسابات والتعليمات."
+  },
+  "Nel socket della scheda madre.": {
+    "en": "In the socket on the motherboard.",
+    "ar": "في السوكت على اللوحة الأم."
+  },
+  "Il computer non può avviarsi.": {
+    "en": "The computer cannot start.",
+    "ar": "الكمبيوتر لا يستطيع أن يبدأ."
+  },
+  "Memoria temporanea dei programmi.": {
+    "en": "Short-term memory for the programs.",
+    "ar": "ذاكرة مؤقتة للبرامج."
+  },
+  "Conserva temporaneamente i dati usati dai programmi.": {
+    "en": "It keeps, for a short time, the data the programs are using.",
+    "ar": "تحفظ لفترة قصيرة البيانات التي تستخدمها البرامج."
+  },
+  "Negli slot RAM della scheda madre.": {
+    "en": "In the RAM slots on the motherboard.",
+    "ar": "في فتحات الرام (RAM) على اللوحة الأم."
+  },
+  "Il computer non riesce ad avviare correttamente il sistema.": {
+    "en": "The computer cannot start the system properly.",
+    "ar": "الكمبيوتر لا يستطيع تشغيل النظام بشكل صحيح."
+  },
+  "Conserva sistemi, programmi e file.": {
+    "en": "It stores systems, programs, and files.",
+    "ar": "يحفظ الأنظمة والبرامج والملفات."
+  },
+  "Conserva Windows, Linux, programmi e file.": {
+    "en": "It stores Windows, Linux, programs, and files.",
+    "ar": "يحفظ ويندوز (Windows) ولينكس (Linux) والبرامج والملفات."
+  },
+  "Nel connettore M.2 oppure tramite cavo SATA.": {
+    "en": "In the M.2 connector, or with a SATA cable.",
+    "ar": "في وصلة M.2، أو عن طريق كابل SATA."
+  },
+  "Il computer può accendersi, ma non trova il sistema operativo.": {
+    "en": "The computer can turn on, but it cannot find the operating system.",
+    "ar": "الكمبيوتر يستطيع أن يعمل، لكنه لا يجد نظام التشغيل."
+  },
+  "Crea immagini e grafica 3D.": {
+    "en": "It creates pictures and 3D graphics.",
+    "ar": "يصنع الصور ورسوم 3D."
+  },
+  "Crea immagini, video, animazioni e grafica 3D.": {
+    "en": "It creates pictures, video, animations, and 3D graphics.",
+    "ar": "يصنع الصور والفيديو والرسوم المتحركة ورسوم 3D."
+  },
+  "Nello slot PCI Express della scheda madre.": {
+    "en": "In the PCI Express slot on the motherboard.",
+    "ar": "في فتحة PCI Express على اللوحة الأم."
+  },
+  "Il PC può usare la grafica integrata, se disponibile.": {
+    "en": "The PC can use the built-in graphics, if it has them.",
+    "ar": "الكمبيوتر يستطيع استخدام كرت الشاشة المدمج، إذا كان موجوداً."
+  },
+  "Porta energia a tutti i pezzi.": {
+    "en": "It brings power to all the pieces.",
+    "ar": "يوصل الطاقة إلى كل القطع."
+  },
+  "Porta energia a tutti i componenti.": {
+    "en": "It brings power to all the parts.",
+    "ar": "يوصل الطاقة إلى كل المكوّنات."
+  },
+  "Il computer non si accende.": {
+    "en": "The computer does not turn on.",
+    "ar": "الكمبيوتر لا يعمل."
+  },
+  "Mantiene fresca la CPU.": {
+    "en": "It keeps the CPU cool.",
+    "ar": "يبقي المعالج (CPU) بارداً."
+  },
+  "Sopra la CPU.": {
+    "en": "On top of the CPU.",
+    "ar": "فوق المعالج (CPU)."
+  },
+  "La CPU può diventare troppo calda.": {
+    "en": "The CPU can get too hot.",
+    "ar": "المعالج (CPU) قد يسخن كثيراً."
+  },
+  "Fanno circolare l’aria nel case.": {
+    "en": "They move the air around inside the case.",
+    "ar": "تحرّك الهواء داخل الصندوق."
+  },
+  "Sulle aperture del case.": {
+    "en": "On the openings of the case.",
+    "ar": "على فتحات الصندوق."
+  },
+  "Le temperature possono aumentare.": {
+    "en": "The temperatures can go up.",
+    "ar": "الحرارة قد ترتفع."
+  },
+  "Contiene e protegge tutto.": {
+    "en": "It holds and protects everything.",
+    "ar": "يحتوي كل شيء ويحميه."
+  },
+  "Contiene e protegge tutti i componenti.": {
+    "en": "It holds and protects all the parts.",
+    "ar": "يحتوي كل القطع ويحميها."
+  },
+  "È la struttura esterna del computer.": {
+    "en": "It is the outside body of the computer.",
+    "ar": "هو الهيكل الخارجي للكمبيوتر."
+  },
+  "I componenti restano scoperti e più fragili.": {
+    "en": "The parts stay uncovered and easier to break.",
+    "ar": "القطع تبقى مكشوفة وأسهل أن تنكسر."
+  },
+  "Non tutti i componenti funzionano insieme": {
+    "en": "Not all parts work together",
+    "ar": "ليست كل القطع تعمل معاً"
+  },
+  "Prima di assemblare un computer dobbiamo controllare che tutti i componenti siano compatibili.": {
+    "en": "Before we build a computer, we need to check that all the parts work together.",
+    "ar": "قبل تجميع الكمبيوتر علينا أن نتأكد أن كل القطع متوافقة مع بعضها."
+  },
+  "CPU e scheda madre": {
+    "en": "CPU and motherboard",
+    "ar": "المعالج (CPU) واللوحة الأم"
+  },
+  "La CPU deve utilizzare lo stesso socket supportato dalla scheda madre.": {
+    "en": "The CPU must use the same socket that the motherboard supports.",
+    "ar": "المعالج (CPU) يجب أن يستخدم نفس السوكت الذي تدعمه اللوحة الأم."
+  },
+  "Una CPU Intel non può essere inserita in qualsiasi scheda madre AMD.": {
+    "en": "An Intel CPU cannot go into just any AMD motherboard.",
+    "ar": "معالج Intel (CPU) لا يدخل في أي لوحة أم من AMD."
+  },
+  "RAM e scheda madre": {
+    "en": "RAM and motherboard",
+    "ar": "الرام (RAM) واللوحة الأم"
+  },
+  "La scheda madre deve supportare il tipo di RAM utilizzato.": {
+    "en": "The motherboard must support the type of RAM you are using.",
+    "ar": "اللوحة الأم يجب أن تدعم نوع الرام (RAM) المستخدم."
+  },
+  "GPU e case": {
+    "en": "GPU and case",
+    "ar": "كرت الشاشة (GPU) والصندوق"
+  },
+  "La scheda video deve entrare fisicamente nel case.": {
+    "en": "The graphics card has to physically fit inside the case.",
+    "ar": "كرت الشاشة يجب أن يدخل فعلياً داخل الصندوق."
+  },
+  "Una GPU molto lunga può non entrare in un case piccolo.": {
+    "en": "A very long GPU may not fit in a small case.",
+    "ar": "كرت شاشة (GPU) طويل جداً قد لا يدخل في صندوق صغير."
+  },
+  "L’alimentatore deve avere abbastanza potenza e i connettori corretti.": {
+    "en": "The power supply must have enough power and the right connectors.",
+    "ar": "مزوّد الطاقة يجب أن تكون قدرته كافية ووصلاته صحيحة."
+  },
+  "CPU + GPU richiedono watt e cavi adeguati.": {
+    "en": "The CPU and the GPU need enough watts and the right cables.",
+    "ar": "المعالج (CPU) وكرت الشاشة (GPU) يحتاجان إلى واط كافٍ وكابلات مناسبة."
+  },
+  "Una RAM DDR4 può essere inserita in uno slot DDR5?": {
+    "en": "Can DDR4 RAM fit in a DDR5 slot?",
+    "ar": "هل يمكن إدخال RAM من نوع DDR4 في فتحة DDR5؟"
+  },
+  "No. Lo slot e il tipo di memoria sono differenti.": {
+    "en": "No. The slot and the type of memory are different.",
+    "ar": "لا. الفتحة ونوع الذاكرة مختلفان."
+  },
+  "Immagine futura: esempi di componenti compatibili e incompatibili": {
+    "en": "Future image: examples of parts that fit together and parts that do not",
+    "ar": "صورة مستقبلية: أمثلة لقطع متوافقة وقطع غير متوافقة"
+  },
+  "Costruiamo il computer passo dopo passo": {
+    "en": "We build the computer step by step",
+    "ar": "نبني الكمبيوتر خطوة بخطوة"
+  },
+  "L’assemblaggio deve essere fatto con calma, controllando ogni componente e ogni collegamento.": {
+    "en": "Build the PC calmly. Check every part and every connection.",
+    "ar": "التجميع يجب أن يتم بهدوء، مع فحص كل قطعة وكل توصيل."
+  },
+  "Preparare il case": {
+    "en": "Prepare the case",
+    "ar": "تجهيز الصندوق"
+  },
+  "Apri il case, togli i pannelli e prepara lo spazio di lavoro.": {
+    "en": "Open the case, take off the side panels, and get your workspace ready.",
+    "ar": "افتح الصندوق، انزع الألواح الجانبية، وجهّز مكان العمل."
+  },
+  "Montare la CPU sulla scheda madre": {
+    "en": "Fit the CPU on the motherboard",
+    "ar": "تركيب المعالج (CPU) على اللوحة الأم"
+  },
+  "Allinea il triangolo della CPU con quello del socket e abbassa la leva.": {
+    "en": "Line up the triangle on the CPU with the triangle on the socket, then lower the lever.",
+    "ar": "طابق المثلث على المعالج (CPU) مع المثلث على السوكت، ثم أنزل الذراع."
+  },
+  "Applicare la pasta termica, se necessaria": {
+    "en": "Put on thermal paste, if it is needed",
+    "ar": "وضع المعجون الحراري، إذا كان مطلوباً"
+  },
+  "Una piccola quantità al centro della CPU basta. Alcuni dissipatori ce l’hanno già.": {
+    "en": "A small amount in the middle of the CPU is enough. Some coolers already have it.",
+    "ar": "كمية صغيرة في وسط المعالج (CPU) تكفي. بعض المبرّدات فيها المعجون من قبل."
+  },
+  "Montare il dissipatore": {
+    "en": "Fit the cooler",
+    "ar": "تركيب المبرّد"
+  },
+  "Fissa il dissipatore sopra la CPU e collega la ventola a CPU_FAN.": {
+    "en": "Attach the cooler on top of the CPU and plug the fan into CPU_FAN.",
+    "ar": "ثبّت المبرّد فوق المعالج (CPU) ووصّل المروحة في CPU_FAN."
+  }
+}

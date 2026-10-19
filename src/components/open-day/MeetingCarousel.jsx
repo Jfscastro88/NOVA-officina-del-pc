@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal, flushSync } from 'react-dom'
 import { CalendarDays, ChevronLeft, ChevronRight, Pause, Play, Presentation, X } from 'lucide-react'
-import { openDayMeetings } from '../../data/openDay'
+import { useLanguage } from '../../i18n/useLanguage'
 
 const SWIPE_THRESHOLD = 48
 const SLIDE_MS = 5000
@@ -88,7 +88,8 @@ function exitStageFullscreen() {
 }
 
 export default function MeetingCarousel() {
-  const meetings = openDayMeetings
+  const { ui, meetings, dir } = useLanguage()
+  const labels = ui.carousel
   const count = meetings.length
   const [index, setIndex] = useState(0)
   const [announcement, setAnnouncement] = useState('')
@@ -118,8 +119,8 @@ export default function MeetingCarousel() {
     setIndex(normalized)
     if (!announce) return
     const item = meetings[normalized]
-    setAnnouncement(`Incontro ${item.number} di 05, ${item.date}: ${item.title}`)
-  }, [count, meetings])
+    setAnnouncement(labels.announce(item.number, item.date, item.title))
+  }, [count, labels, meetings])
 
   const step = useCallback((direction, options) => {
     goTo(indexRef.current + direction, options)
@@ -333,7 +334,8 @@ export default function MeetingCarousel() {
         ref={stageRef}
         role="region"
         aria-roledescription="carousel"
-        aria-label="Presentazione Open Day"
+        dir="ltr"
+        aria-label={labels.presentationLabel}
         tabIndex={-1}
         className="fixed inset-0 z-[90] h-dvh w-screen overflow-hidden bg-[#0b0418] text-white outline-none"
         onPointerMove={(event) => {
@@ -342,8 +344,7 @@ export default function MeetingCarousel() {
         onPointerDown={onPointerDown}
       >
         <p className="sr-only">
-          Presentazione automatica. Ogni slide resta visibile per 5 secondi. Frecce per cambiare
-          slide, spazio per mettere in pausa, esc per uscire.
+          {labels.auto}
         </p>
         <p className="sr-only" aria-live="polite" aria-atomic="true">
           {announcement}
@@ -380,7 +381,7 @@ export default function MeetingCarousel() {
           <button
             type="button"
             onClick={() => step(-1)}
-            aria-label="Incontro precedente"
+            aria-label={labels.prev}
             onFocus={() => setControlsFocused(true)}
             onBlur={() => setControlsFocused(false)}
             className={`${iconButtonClass} absolute left-[clamp(0.75rem,2.5vw,2.5rem)] -translate-y-1/2`}
@@ -390,7 +391,7 @@ export default function MeetingCarousel() {
           <button
             type="button"
             onClick={() => step(1)}
-            aria-label="Incontro successivo"
+            aria-label={labels.next}
             onFocus={() => setControlsFocused(true)}
             onBlur={() => setControlsFocused(false)}
             className={`${iconButtonClass} absolute right-[clamp(0.75rem,2.5vw,2.5rem)] -translate-y-1/2`}
@@ -402,7 +403,7 @@ export default function MeetingCarousel() {
         <button
           type="button"
           onClick={exitPresentation}
-          aria-label="Esci dalla presentazione"
+          aria-label={labels.exit}
           onFocus={() => setControlsFocused(true)}
           onBlur={() => setControlsFocused(false)}
           className={`${iconButtonClass} absolute top-[clamp(0.75rem,2vw,1.75rem)] right-[clamp(0.75rem,2.5vw,2.5rem)] z-10 ${controlClass}`}
@@ -411,7 +412,7 @@ export default function MeetingCarousel() {
         </button>
 
         <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start gap-5 px-[clamp(1.15rem,4.5vw,6rem)] pt-28 pb-8 sm:flex-row sm:items-end sm:justify-between sm:pb-10">
-          <div key={meeting.slug} className={reducedMotion ? 'max-w-5xl' : 'open-day-caption max-w-5xl'}>
+          <div key={meeting.slug} dir={dir} className={reducedMotion ? 'max-w-5xl' : 'open-day-caption max-w-5xl'}>
             <p className="text-[clamp(0.95rem,1.2vw,1.6rem)] font-extrabold tracking-[0.18em] text-yellow">
               {meeting.date}
             </p>
@@ -433,7 +434,7 @@ export default function MeetingCarousel() {
             <button
               type="button"
               onClick={() => setPaused((value) => !value)}
-              aria-label={paused ? 'Riprendi la presentazione' : 'Metti in pausa la presentazione'}
+              aria-label={paused ? labels.resume : labels.pause}
               aria-pressed={paused}
               className={iconButtonClass}
             >
@@ -474,7 +475,7 @@ export default function MeetingCarousel() {
         ref={pageRootRef}
         role="region"
         aria-roledescription="carousel"
-        aria-label="I cinque incontri del workshop"
+        aria-label={labels.region}
         aria-hidden={presentation ? true : undefined}
         inert={presentation ? true : undefined}
         onKeyDown={onSlideKeyDown}
@@ -501,7 +502,7 @@ export default function MeetingCarousel() {
             className="inline-flex min-h-12 items-center gap-2 rounded-full bg-yellow px-6 py-3 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-1 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             <Presentation size={18} strokeWidth={2.5} aria-hidden="true" />
-            Presentazione
+            {labels.present}
           </button>
         </div>
 
@@ -509,6 +510,7 @@ export default function MeetingCarousel() {
           <div className="overflow-hidden">
             <div
               id="open-day-track"
+              dir="ltr"
               className="flex w-full"
               style={{
                 transform: `translate3d(-${index * 100}%, 0, 0)`,
@@ -523,7 +525,7 @@ export default function MeetingCarousel() {
                   id={`incontro-${item.slug}`}
                   className="w-full shrink-0 grow-0 basis-full"
                   aria-roledescription="slide"
-                  aria-label={`Incontro ${item.number} di 05: ${item.title}`}
+                  aria-label={labels.slide(item.number, item.title)}
                   aria-hidden={itemIndex === index ? undefined : true}
                   inert={itemIndex === index ? undefined : true}
                 >
@@ -546,7 +548,7 @@ export default function MeetingCarousel() {
                     />
                   </div>
 
-                  <div className="flex min-h-[18.5rem] flex-col px-4 py-5 sm:min-h-[16rem] sm:px-8 sm:py-7 md:min-h-[14.5rem] lg:min-h-[13.5rem] lg:px-10 lg:py-8">
+                  <div dir={dir} className="flex min-h-[18.5rem] flex-col px-4 py-5 sm:min-h-[16rem] sm:px-8 sm:py-7 md:min-h-[14.5rem] lg:min-h-[13.5rem] lg:px-10 lg:py-8">
                     <p className="inline-flex w-fit items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 text-xs font-extrabold tracking-wide text-primary">
                       <CalendarDays size={14} aria-hidden="true" />
                       {item.date}
@@ -573,7 +575,7 @@ export default function MeetingCarousel() {
             <button
               type="button"
               onClick={() => step(-1)}
-              aria-label="Incontro precedente"
+              aria-label={labels.prev}
               aria-controls="open-day-track"
               className="pointer-events-auto absolute top-1/2 left-2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-dark-purple shadow-[0_4px_0_rgba(26,8,61,0.28)] transition-transform hover:-translate-y-[calc(50%+2px)] hover:bg-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow sm:left-4"
             >
@@ -582,7 +584,7 @@ export default function MeetingCarousel() {
             <button
               type="button"
               onClick={() => step(1)}
-              aria-label="Incontro successivo"
+              aria-label={labels.next}
               aria-controls="open-day-track"
               className="pointer-events-auto absolute top-1/2 right-2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-dark-purple shadow-[0_4px_0_rgba(26,8,61,0.28)] transition-transform hover:-translate-y-[calc(50%+2px)] hover:bg-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow sm:right-4"
             >
@@ -593,7 +595,7 @@ export default function MeetingCarousel() {
           <div
             className="flex items-center justify-center gap-1 px-3 pt-1 pb-3 sm:pb-4"
             role="group"
-            aria-label="Seleziona incontro"
+            aria-label={labels.select}
           >
             {meetings.map((item, itemIndex) => {
               const selected = itemIndex === index
@@ -602,7 +604,7 @@ export default function MeetingCarousel() {
                   key={item.slug}
                   type="button"
                   onClick={() => goTo(itemIndex)}
-                  aria-label={`Vai all'incontro ${item.number}: ${item.title}`}
+                  aria-label={labels.goTo(item.number, item.title)}
                   aria-current={selected ? 'true' : undefined}
                   className="flex h-11 w-11 items-center justify-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >

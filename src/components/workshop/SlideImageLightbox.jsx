@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight, X, ZoomIn, ZoomOut } from 'lucide-react'
+import { useLanguage } from '../../i18n/useLanguage'
 
 export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0, onClose }) {
+  const { ui } = useLanguage()
   const [index, setIndex] = useState(startIndex)
   const [zoom, setZoom] = useState(1)
   const [failed, setFailed] = useState({})
@@ -45,14 +47,14 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
       role="dialog"
       aria-modal="true"
-      aria-label={`Immagine: ${alt}`}
+      aria-label={ui.slides.imageOf(alt)}
       onClick={onClose}
     >
       <button
         type="button"
         onClick={onClose}
         className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-4 sm:top-4"
-        aria-label="Chiudi"
+        aria-label={ui.slides.close}
       >
         <X size={20} />
       </button>
@@ -65,7 +67,7 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
             setZoom((z) => Math.min(z + 0.25, 2.5))
           }}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
-          aria-label="Zoom avanti"
+          aria-label={ui.slides.zoomIn}
         >
           <ZoomIn size={18} />
         </button>
@@ -77,7 +79,7 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
           }}
           disabled={zoom <= 1}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20 disabled:opacity-30"
-          aria-label="Zoom indietro"
+          aria-label={ui.slides.zoomOut}
         >
           <ZoomOut size={18} />
         </button>
@@ -98,7 +100,7 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
               goPrev()
             }}
             className="absolute left-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-accent/80 sm:left-6 sm:h-12 sm:w-12"
-            aria-label="Immagine precedente"
+            aria-label={ui.slides.prevImage}
           >
             <ChevronLeft size={24} />
           </button>
@@ -109,7 +111,7 @@ export default function SlideImageLightbox({ images, alt, emoji, startIndex = 0,
               goNext()
             }}
             className="absolute right-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-accent/80 sm:right-6 sm:h-12 sm:w-12"
-            aria-label="Immagine successiva"
+            aria-label={ui.slides.nextImage}
           >
             <ChevronRight size={24} />
           </button>

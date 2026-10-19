@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 export default function ConclusionSection({ section }) {
+  const { ui } = useLanguage()
   const [choice, setChoice] = useState(
     () => localStorage.getItem(section.storageKey) ?? null,
   )
@@ -26,7 +28,7 @@ export default function ConclusionSection({ section }) {
         <>
           <p className="text-base font-semibold text-white sm:text-lg">{section.question}</p>
           <p className="mt-2 text-xs text-white/60 sm:text-sm">
-            La tua scelta viene salvata solo sul tuo dispositivo.
+            {ui.slides.choiceSaved}
           </p>
         </>
       }
@@ -63,13 +65,12 @@ export default function ConclusionSection({ section }) {
           className="mt-4 flex items-center gap-2 text-xs text-green-300 sm:text-sm"
         >
           <CheckCircle2 size={16} />
-          Hai scelto <strong className="mx-1">{selectedOption.label}</strong> — ottima riflessione!
+          {ui.slides.youChose(selectedOption.label)}
         </motion.div>
       )}
 
       <p className="mt-4 text-xs leading-relaxed text-white/65 sm:text-sm">
-        Non esiste una risposta giusta. Windows è familiare, Linux è gratis e personalizzabile.
-        Molti usano <span className="text-[#FACC15]">entrambi</span>!
+        {ui.slides.noRightAnswer}
       </p>
     </SlideSectionFrame>
   )

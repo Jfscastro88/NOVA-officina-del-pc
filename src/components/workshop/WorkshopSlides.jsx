@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Lightbulb, Star } from 'lucide-react'
+import { useLanguage } from '../../i18n/useLanguage'
 import SlideImageLightbox from './SlideImageLightbox'
 import SlideImage from './SlideImage'
 import CompatibilityTable from './CompatibilityTable'
 import { resolveSlideImages } from './slideImages'
 
 export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
+  const { ui } = useLanguage()
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const { primary, gallery, placeholder } = resolveSlideImages(slide)
   const isMinimal = Boolean(slide.important)
@@ -94,7 +96,7 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
                 <div className="mb-1.5 flex items-center gap-2 sm:mb-2">
                   <Star size={18} className="fill-[#FACC15] text-[#FACC15] sm:h-5 sm:w-5" />
                   <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#FACC15] sm:text-sm">
-                    Importante
+                    {ui.slides.important}
                   </h3>
                 </div>
                 <p className="text-sm font-semibold leading-relaxed text-white sm:text-base md:text-lg">
@@ -124,7 +126,7 @@ export default function WorkshopSlides({ slide, slideKey, showTime = false }) {
                       isMinimal ? 'text-accent' : 'text-[#FACC15]'
                     }`}
                   >
-                    Curiosità
+                    {ui.slides.curiosity}
                   </h3>
                 </div>
                 <p className="text-xs leading-relaxed text-white/75 sm:text-sm md:text-base">

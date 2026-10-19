@@ -1,0 +1,1242 @@
+{
+  "NOVA Officina del PC": {
+    "en": "NOVA Officina del PC",
+    "ar": "NOVA Officina del PC"
+  },
+  "Secondo incontro — Assemblaggio e compatibilità": {
+    "en": "Second meeting — Building and compatibility",
+    "ar": "اللقاء الثاني — التجميع والتوافق"
+  },
+  "2 ore": {
+    "en": "2 hours",
+    "ar": "ساعتان"
+  },
+  "15 min": {
+    "en": "15 min",
+    "ar": "15 دقيقة"
+  },
+  "Verificare cosa ricordano dalla lezione precedente e riattivare le conoscenze sui componenti base.": {
+    "en": "Check what they remember from the last lesson and bring back what they know about the basic parts.",
+    "ar": "نتحقق ماذا يتذكرون من الدرس السابق ونعيد تنشيط ما يعرفونه عن القطع الأساسية."
+  },
+  "Prima di montare un PC è fondamentale conoscere i componenti principali. Facciamo un ripasso veloce con domande dirette ai ragazzi, poi richiamiamo ogni pezzo mostrando l'hardware reale. Collegare ogni domanda al componente fisico sulla scrivania.": {
+    "en": "Before you build a PC, you need to know the main parts. We do a quick review with direct questions, then we go over each piece by showing the real hardware. Link every question to the real part on the desk.",
+    "ar": "قبل تركيب الكمبيوتر من المهم أن نعرف القطع الرئيسية. نعمل مراجعة سريعة بأسئلة مباشرة للشباب، ثم نراجع كل قطعة بإظهار الهاردوير الحقيقي. اربط كل سؤال بالقطعة الموجودة على الطاولة."
+  },
+  "Scheda Madre — la base che collega tutto": {
+    "en": "Motherboard — the base that connects everything",
+    "ar": "اللوحة الأم — القاعدة التي تربط كل شيء"
+  },
+  "CPU — il cervello del computer": {
+    "en": "CPU — the brain of the computer",
+    "ar": "المعالج CPU — دماغ الكمبيوتر"
+  },
+  "RAM — memoria veloce temporanea": {
+    "en": "RAM — fast temporary memory",
+    "ar": "الرام RAM — ذاكرة سريعة مؤقتة"
+  },
+  "SSD — dove salviamo file e programmi": {
+    "en": "SSD — where we save files and programs",
+    "ar": "SSD — حيث نحفظ الملفات والبرامج"
+  },
+  "Alimentatore — porta energia a tutti i pezzi": {
+    "en": "Power supply — brings power to every part",
+    "ar": "مزوّد الطاقة — يوصل الطاقة لكل القطع"
+  },
+  "Case — la scatola che contiene tutto": {
+    "en": "Case — the box that holds everything",
+    "ar": "الكيس — الصندوق الذي يجمع كل شيء"
+  },
+  "Dissipatore — tiene fresca la CPU": {
+    "en": "Cooler — keeps the CPU cool",
+    "ar": "المبرّد — يُبقي المعالج CPU بارداً"
+  },
+  "Mostra ogni componente mentre lo nominano": {
+    "en": "Show each part while they name it",
+    "ar": "أظهر كل قطعة وهم يذكرون اسمها"
+  },
+  "Chiedi a un ragazzo di indicare lo slot RAM sulla scheda madre": {
+    "en": "Ask a student to point to the RAM slot on the motherboard",
+    "ar": "اطلب من أحد الشباب أن يشير إلى فتحة الرام RAM على اللوحة الأم"
+  },
+  "Confronta SSD e HDD: quale è più veloce?": {
+    "en": "Compare SSD and HDD: which one is faster?",
+    "ar": "قارن بين SSD وHDD: أيهما أسرع؟"
+  },
+  "Qual è il cervello del PC?": {
+    "en": "What is the brain of the PC?",
+    "ar": "ما هو دماغ الكمبيوتر؟"
+  },
+  "Dove si monta la RAM?": {
+    "en": "Where do you install the RAM?",
+    "ar": "أين نركّب الرام RAM؟"
+  },
+  "A cosa serve l'alimentatore?": {
+    "en": "What does the power supply do?",
+    "ar": "ماذا يفعل مزوّد الطاقة؟"
+  },
+  "Quale componente salva i file?": {
+    "en": "Which part saves the files?",
+    "ar": "أي قطعة تحفظ الملفات؟"
+  },
+  "Qual è la base del computer?": {
+    "en": "What is the base of the computer?",
+    "ar": "ما هي قاعدة الكمبيوتر؟"
+  },
+  "Un computer può avere oltre 2.000 componenti diversi, ma quelli fondamentali sono pochi.": {
+    "en": "A computer can have more than 2.000 different parts, but the important ones are only a few.",
+    "ar": "يمكن أن يحتوي الكمبيوتر على أكثر من 2.000 قطعة مختلفة، لكن القطع الأساسية قليلة."
+  },
+  "Scheda madre reale": {
+    "en": "Real motherboard",
+    "ar": "لوحة أم حقيقية"
+  },
+  "Conoscere i componenti è il primo passo per montare un PC.": {
+    "en": "Knowing the parts is the first step to building a PC.",
+    "ar": "معرفة القطع هي الخطوة الأولى لتركيب الكمبيوتر."
+  },
+  "20 min": {
+    "en": "20 min",
+    "ar": "20 دقيقة"
+  },
+  "GPU — Scheda video": {
+    "en": "GPU — Graphics card",
+    "ar": "GPU — كرت الشاشة"
+  },
+  "Presentare la GPU come nuovo componente: cos'è, a cosa serve, dove si monta e come collegare il monitor.": {
+    "en": "Introduce the GPU as a new part: what it is, what it does, where it goes, and how to connect the monitor.",
+    "ar": "نقدّم كرت الشاشة GPU كقطعة جديدة: ما هو، وماذا يفعل، وأين يُركَّب، وكيف نوصّل الشاشة."
+  },
+  "La GPU (Graphics Processing Unit) è il processore dedicato alla grafica. Mentre la CPU è un \"tuttofare\" bravo in tutto, la GPU è specializzata: calcola milioni di pixel e triangoli 3D in parallelo. Si monta nello slot PCIe x16, il primo slot lungo vicino alla CPU. La CPU gestisce la logica generale; la GPU gestisce video, giochi e grafica 3D. Quando serve una GPU dedicata? Per gaming, editing video, programmi 3D e IA. Se la CPU ha grafica integrata, il monitor può andare sulla scheda madre — ma con GPU dedicata installata, il monitor va SEMPRE sulla GPU.": {
+    "en": "The GPU (Graphics Processing Unit) is the processor made for graphics. The CPU is a \"do-everything\" chip that is good at many jobs, but the GPU is a specialist: it calculates millions of pixels and 3D triangles at the same time. It goes in the PCIe x16 slot, the first long slot near the CPU. The CPU handles the general work; the GPU handles video, games, and 3D graphics. When do you need a dedicated GPU? For games, video editing, 3D programs, and AI. If the CPU has built-in graphics, the monitor can go on the motherboard — but if a dedicated GPU is installed, the monitor ALWAYS goes on the GPU.",
+    "ar": "كرت الشاشة GPU (Graphics Processing Unit) هو المعالج المخصص للرسوم. المعالج CPU «يجيد أعمالاً كثيرة»، أما GPU فهو متخصص: يحسب ملايين البكسل والمثلثات ثلاثية الأبعاد في الوقت نفسه. يُركَّب في فتحة PCIe x16، وهي أول فتحة طويلة بجانب CPU. المعالج CPU يدير العمل العام، وكرت الشاشة GPU يدير الفيديو والألعاب والرسوم ثلاثية الأبعاد. متى نحتاج GPU مخصصاً؟ للألعاب، وتعديل الفيديو، وبرامج ثلاثية الأبعاد، والذكاء الاصطناعي. إذا كان في CPU رسوم مدمجة، يمكن توصيل الشاشة باللوحة الأم — لكن إذا رُكّب GPU المخصص، فالشاشة تذهب دائماً إلى GPU."
+  },
+  "Cos'è: processore dedicato alla grafica": {
+    "en": "What it is: a processor made for graphics",
+    "ar": "ما هو: معالج مخصص للرسوم"
+  },
+  "A cosa serve: giochi, video, programmi 3D": {
+    "en": "What it does: games, video, 3D programs",
+    "ar": "ماذا يفعل: ألعاب، وفيديو، وبرامج ثلاثية الأبعاد"
+  },
+  "CPU = logica generale / GPU = grafica e calcoli paralleli": {
+    "en": "CPU = general logic / GPU = graphics and many calculations at once",
+    "ar": "CPU = المنطق العام / GPU = الرسوم وحسابات كثيرة في الوقت نفسه"
+  },
+  "Si monta nello slot PCIe x16": {
+    "en": "It goes in the PCIe x16 slot",
+    "ar": "يُركَّب في فتحة PCIe x16"
+  },
+  "Quando serve: gaming, 3D, editing, IA": {
+    "en": "When you need it: games, 3D, editing, AI",
+    "ar": "متى نحتاجه: ألعاب، وثلاثي الأبعاد، وتعديل، وذكاء اصطناعي"
+  },
+  "Monitor collegato alla GPU (non alla scheda madre)": {
+    "en": "Monitor connected to the GPU (not to the motherboard)",
+    "ar": "الشاشة موصولة بكرت الشاشة GPU (وليس باللوحة الأم)"
+  },
+  "Mostra GPU reale: peso, ventole, connettori alimentazione": {
+    "en": "Show a real GPU: its weight, the fans, and the power connectors",
+    "ar": "أظهر GPU حقيقياً: الوزن، والمراوح، ووصلات الطاقة"
+  },
+  "Indica lo slot PCIe x16 sulla scheda madre": {
+    "en": "Point to the PCIe x16 slot on the motherboard",
+    "ar": "أشر إلى فتحة PCIe x16 على اللوحة الأم"
+  },
+  "Confronta porta HDMI della GPU vs scheda madre": {
+    "en": "Compare the HDMI port on the GPU with the one on the motherboard",
+    "ar": "قارن منفذ HDMI في GPU مع المنفذ في اللوحة الأم"
+  },
+  "Esempio: RTX 4060 in slot PCIe, monitor su HDMI GPU": {
+    "en": "Example: RTX 4060 in the PCIe slot, monitor on the GPU HDMI",
+    "ar": "مثال: RTX 4060 في فتحة PCIe، والشاشة على HDMI الخاص بـ GPU"
+  },
+  "A cosa serve la GPU?": {
+    "en": "What does the GPU do?",
+    "ar": "ماذا يفعل كرت الشاشة GPU؟"
+  },
+  "Qual è la differenza tra CPU e GPU?": {
+    "en": "What is the difference between the CPU and the GPU?",
+    "ar": "ما الفرق بين المعالج CPU وكرت الشاشة GPU؟"
+  },
+  "Dove si monta la scheda video?": {
+    "en": "Where do you install the graphics card?",
+    "ar": "أين يُركَّب كرت الشاشة؟"
+  },
+  "Dove collego il monitor se ho una GPU dedicata?": {
+    "en": "Where do I plug the monitor if I have a dedicated GPU?",
+    "ar": "أين أوصل الشاشة إذا كان عندي GPU مخصص؟"
+  },
+  "Quando posso usare la grafica integrata?": {
+    "en": "When can I use the built-in graphics?",
+    "ar": "متى يمكنني استخدام الرسوم المدمجة؟"
+  },
+  "Le GPU moderne possono eseguire migliaia di miliardi di operazioni al secondo.": {
+    "en": "Modern GPUs can do thousands of billions of operations every second.",
+    "ar": "كروت الشاشة GPU الحديثة تستطيع تنفيذ آلاف المليارات من العمليات في الثانية."
+  },
+  "GPU reale": {
+    "en": "Real GPU",
+    "ar": "GPU حقيقي"
+  },
+  "Scheda madre con slot PCIe": {
+    "en": "Motherboard with a PCIe slot",
+    "ar": "لوحة أم فيها فتحة PCIe"
+  },
+  "Cavo HDMI/DisplayPort": {
+    "en": "HDMI/DisplayPort cable",
+    "ar": "كابل HDMI/DisplayPort"
+  },
+  "Il monitor va collegato alla GPU, non alla scheda madre (se hai una scheda video dedicata).": {
+    "en": "Plug the monitor into the GPU, not into the motherboard (if you have a dedicated graphics card).",
+    "ar": "تُوصَّل الشاشة بكرت الشاشة GPU، وليس باللوحة الأم (إذا كان عندك كرت شاشة مخصص)."
+  },
+  "Compatibilità": {
+    "en": "Compatibility",
+    "ar": "التوافق"
+  },
+  "Capire che costruire un PC è come un puzzle: ogni componente deve essere compatibile con gli altri.": {
+    "en": "Understand that building a PC is like a puzzle: every part must fit with the others.",
+    "ar": "نفهم أن تركيب الكمبيوتر مثل بازل: كل قطعة يجب أن تتوافق مع القطع الأخرى."
+  },
+  "Costruire un PC è come completare un puzzle: ogni pezzo deve encastrare con gli altri. Non puoi mettere una CPU AMD su una scheda Intel, né DDR5 in uno slot DDR4. Prima di comprare qualsiasi componente, verifica sempre la compatibilità. Usa siti come PCPartPicker o il manuale della scheda madre. Spiega ogni riga della tabella con esempi reali e chiedi ai ragazzi di indovinare cosa non andrebbe bene.": {
+    "en": "Building a PC is like finishing a puzzle: every piece must fit with the others. You cannot put an AMD CPU on an Intel board, and you cannot put DDR5 in a DDR4 slot. Before you buy any part, always check that it fits. Use sites like PCPartPicker or the motherboard manual. Explain each row of the table with real examples, and ask the students to guess what would not work.",
+    "ar": "تركيب الكمبيوتر مثل إكمال بازل: كل قطعة يجب أن تدخل مع القطع الأخرى. لا يمكنك وضع معالج CPU من AMD على لوحة Intel، ولا وضع DDR5 في فتحة DDR4. قبل شراء أي قطعة، تحقق دائماً من التوافق. استخدم مواقع مثل PCPartPicker أو دليل اللوحة الأم. اشرح كل سطر في الجدول بأمثلة حقيقية، واطلب من الشباب أن يخمّنوا ما الذي لن يعمل."
+  },
+  "Ogni componente deve essere compatibile": {
+    "en": "Every part must be compatible",
+    "ar": "كل قطعة يجب أن تكون متوافقة"
+  },
+  "Come un puzzle: i pezzi devono encastrare": {
+    "en": "Like a puzzle: the pieces must fit together",
+    "ar": "مثل البازل: القطع يجب أن تدخل مع بعضها"
+  },
+  "Controllare sempre prima di comprare": {
+    "en": "Always check before you buy",
+    "ar": "تحقق دائماً قبل الشراء"
+  },
+  "Socket (AM5, LGA 1700…)": {
+    "en": "Socket (AM5, LGA 1700…)",
+    "ar": "السوكت (AM5، LGA 1700…)"
+  },
+  "AMD Ryzen 7600 → socket AM5": {
+    "en": "AMD Ryzen 7600 → socket AM5",
+    "ar": "AMD Ryzen 7600 → سوكت AM5"
+  },
+  "DDR4 / DDR5": {
+    "en": "DDR4 / DDR5",
+    "ar": "DDR4 / DDR5"
+  },
+  "Scheda DDR5 → solo moduli DDR5": {
+    "en": "DDR5 board → only DDR5 modules",
+    "ar": "لوحة DDR5 → وحدات DDR5 فقط"
+  },
+  "PCIe x16": {
+    "en": "PCIe x16",
+    "ar": "PCIe x16"
+  },
+  "RTX 4060 → slot PCIe lungo": {
+    "en": "RTX 4060 → long PCIe slot",
+    "ar": "RTX 4060 → فتحة PCIe الطويلة"
+  },
+  "SATA / M.2": {
+    "en": "SATA / M.2",
+    "ar": "SATA / M.2"
+  },
+  "SSD NVMe → slot M.2 sulla scheda": {
+    "en": "SSD NVMe → M.2 slot on the board",
+    "ar": "SSD NVMe → فتحة M.2 على اللوحة"
+  },
+  "Watt sufficienti": {
+    "en": "Enough Watt",
+    "ar": "Watt كافية"
+  },
+  "CPU 65W + GPU 200W → PSU 550W min.": {
+    "en": "CPU 65W + GPU 200W → power supply 550W min.",
+    "ar": "CPU 65W + GPU 200W → مزوّد الطاقة 550W كحد أدنى"
+  },
+  "Dimensioni scheda madre": {
+    "en": "Motherboard size",
+    "ar": "مقاس اللوحة الأم"
+  },
+  "Scheda ATX → case ATX": {
+    "en": "ATX board → ATX case",
+    "ar": "لوحة ATX → كيس ATX"
+  },
+  "Socket CPU": {
+    "en": "CPU socket",
+    "ar": "سوكت المعالج CPU"
+  },
+  "Dissipatore AM5 → CPU AMD AM5": {
+    "en": "AM5 cooler → AMD AM5 CPU",
+    "ar": "مبرّد AM5 → معالج CPU من AMD AM5"
+  },
+  "Esempio errore: CPU Intel su scheda AMD — non funziona": {
+    "en": "Wrong example: Intel CPU on an AMD board — it does not work",
+    "ar": "مثال خطأ: معالج CPU من Intel على لوحة AMD — لا يعمل"
+  },
+  "Esempio errore: DDR4 su scheda DDR5 — intaglio diverso": {
+    "en": "Wrong example: DDR4 on a DDR5 board — the notch is different",
+    "ar": "مثال خطأ: DDR4 على لوحة DDR5 — الحز مختلف"
+  },
+  "Esempio corretto: Ryzen 7600 + B650 + DDR5 + RTX 4060": {
+    "en": "Right example: Ryzen 7600 + B650 + DDR5 + RTX 4060",
+    "ar": "مثال صحيح: Ryzen 7600 + B650 + DDR5 + RTX 4060"
+  },
+  "Mostra PCPartPicker sul proiettore": {
+    "en": "Show PCPartPicker on the projector",
+    "ar": "أظهر PCPartPicker على جهاز العرض"
+  },
+  "Posso mettere una CPU AMD su scheda Intel?": {
+    "en": "Can I put an AMD CPU on an Intel board?",
+    "ar": "هل يمكنني وضع معالج CPU من AMD على لوحة Intel؟"
+  },
+  "Cosa succede se compro RAM DDR4 per una scheda DDR5?": {
+    "en": "What happens if I buy DDR4 RAM for a DDR5 board?",
+    "ar": "ماذا يحدث إذا اشتريت رام RAM من نوع DDR4 للوحة DDR5؟"
+  },
+  "Come scelgo la potenza dell'alimentatore?": {
+    "en": "How do I choose the power of the power supply?",
+    "ar": "كيف أختار قوة مزوّد الطاقة؟"
+  },
+  "La GPU entra in ogni case?": {
+    "en": "Does the GPU fit in every case?",
+    "ar": "هل يدخل كرت الشاشة GPU في كل كيس؟"
+  },
+  "Anche i tecnici esperti controllano sempre la compatibilità prima di ordinare i pezzi.": {
+    "en": "Even expert technicians always check compatibility before they order the parts.",
+    "ar": "حتى الفنيون الخبراء يتحققون دائماً من التوافق قبل طلب القطع."
+  },
+  "Scheda madre (socket visibile)": {
+    "en": "Motherboard (socket visible)",
+    "ar": "لوحة أم (السوكت ظاهر)"
+  },
+  "Moduli DDR4 e DDR5": {
+    "en": "DDR4 and DDR5 modules",
+    "ar": "وحدات DDR4 وDDR5"
+  },
+  "PCPartPicker o listino compatibilità": {
+    "en": "PCPartPicker or a compatibility list",
+    "ar": "PCPartPicker أو قائمة التوافق"
+  },
+  "Costruire un PC è come un puzzle: ogni pezzo deve essere compatibile.": {
+    "en": "Building a PC is like a puzzle: every piece must be compatible.",
+    "ar": "تركيب الكمبيوتر مثل بازل: كل قطعة يجب أن تكون متوافقة."
+  },
+  "Imparare l'ordine corretto di montaggio, passo dopo passo, dalla CPU al primo avvio.": {
+    "en": "Learn the right build order, step by step, from the CPU to the first start.",
+    "ar": "نتعلّم ترتيب التركيب الصحيح، خطوة بعد خطوة، من المعالج CPU حتى أول تشغيل."
+  },
+  "Montare un PC seguendo l'ordine giusto evita errori e danni. Si lavora prima sulla scheda madre fuori dal case, poi si installa nel case e si collegano cavi e GPU. Mostra ogni passaggio con immagini e frecce (indicare fisicamente dove va ogni componente). La GPU va per ultima perché è grande e ingombra. Dopo il primo avvio si entra nel BIOS per verificare che tutto sia riconosciuto, poi si installa il Sistema Operativo.": {
+    "en": "Building a PC in the right order avoids mistakes and damage. First you work on the motherboard outside the case, then you put it in the case and connect the cables and the GPU. Show each step with pictures and arrows (point with your hand to where each part goes). The GPU goes last because it is big and gets in the way. After the first start you enter the BIOS to check that everything is recognized, then you install the operating system.",
+    "ar": "تركيب الكمبيوتر بالترتيب الصحيح يمنع الأخطاء والضرر. نعمل أولاً على اللوحة الأم خارج الكيس، ثم نركّبها داخل الكيس ونوصّل الكابلات وكرت الشاشة GPU. أظهر كل خطوة بالصور والأسهم (أشر بيدك إلى مكان كل قطعة). يُركَّب GPU في الآخر لأنه كبير ويأخذ مكاناً واسعاً. بعد أول تشغيل ندخل BIOS لنتحقق أن كل شيء معروف، ثم نثبّت نظام التشغيل."
+  },
+  "1. CPU nel socket": {
+    "en": "1. CPU in the socket",
+    "ar": "1. المعالج CPU في السوكت"
+  },
+  "2. Pasta termica": {
+    "en": "2. Thermal paste",
+    "ar": "2. المعجون الحراري"
+  },
+  "3. Dissipatore": {
+    "en": "3. Cooler",
+    "ar": "3. المبرّد"
+  },
+  "4. RAM": {
+    "en": "4. RAM",
+    "ar": "4. الرام RAM"
+  },
+  "5. SSD": {
+    "en": "5. SSD",
+    "ar": "5. SSD"
+  },
+  "6. Scheda Madre nel case": {
+    "en": "6. Motherboard in the case",
+    "ar": "6. اللوحة الأم داخل الكيس"
+  },
+  "7. Alimentatore": {
+    "en": "7. Power supply",
+    "ar": "7. مزوّد الطاقة"
+  },
+  "8. Collegamento cavi": {
+    "en": "8. Connecting the cables",
+    "ar": "8. توصيل الكابلات"
+  },
+  "9. GPU": {
+    "en": "9. GPU",
+    "ar": "9. كرت الشاشة GPU"
+  },
+  "10. Collegamento GPU": {
+    "en": "10. Connecting the GPU",
+    "ar": "10. توصيل كرت الشاشة GPU"
+  },
+  "11. Controllo finale": {
+    "en": "11. Final check",
+    "ar": "11. الفحص الأخير"
+  },
+  "12. Primo avvio": {
+    "en": "12. First start",
+    "ar": "12. أول تشغيل"
+  },
+  "13. BIOS": {
+    "en": "13. BIOS",
+    "ar": "13. BIOS"
+  },
+  "14. Sistema Operativo": {
+    "en": "14. Operating system",
+    "ar": "14. نظام التشغيل"
+  },
+  "Demo: applicare pasta termica (grano di riso)": {
+    "en": "Demo: apply thermal paste (the size of a grain of rice)",
+    "ar": "تجربة: نضع المعجون الحراري (بحجم حبة أرز)"
+  },
+  "Mostra standoff nel case prima di montare la scheda": {
+    "en": "Show the standoffs in the case before you mount the board",
+    "ar": "أظهر المسامير المباعدة (standoff) في الكيس قبل تركيب اللوحة"
+  },
+  "Collegare front panel: power, reset, LED": {
+    "en": "Connect the front panel: power, reset, LED",
+    "ar": "وصّل اللوحة الأمامية: power، وreset، وLED"
+  },
+  "Primo avvio: cosa controllare nel BIOS": {
+    "en": "First start: what to check in the BIOS",
+    "ar": "أول تشغيل: ماذا نفحص في BIOS"
+  },
+  "Perché montiamo CPU e RAM prima di mettere la scheda nel case?": {
+    "en": "Why do we install the CPU and the RAM before we put the board in the case?",
+    "ar": "لماذا نركّب المعالج CPU والرام RAM قبل وضع اللوحة في الكيس؟"
+  },
+  "Quando si applica la pasta termica?": {
+    "en": "When do you apply the thermal paste?",
+    "ar": "متى نضع المعجون الحراري؟"
+  },
+  "Cosa controlliamo nel BIOS al primo avvio?": {
+    "en": "What do we check in the BIOS on the first start?",
+    "ar": "ماذا نفحص في BIOS عند أول تشغيل؟"
+  },
+  "Perché la GPU va montata per ultima?": {
+    "en": "Why is the GPU installed last?",
+    "ar": "لماذا يُركَّب كرت الشاشة GPU في الآخر؟"
+  },
+  "La prima volta impieghi 1-2 ore; con la pratica, meno di 30 minuti!": {
+    "en": "The first time it takes 1-2 hours; with practice, less than 30 minutes!",
+    "ar": "في المرة الأولى تحتاج 1-2 ساعة؛ ومع التمرين، أقل من 30 دقيقة!"
+  },
+  "Scheda madre": {
+    "en": "Motherboard",
+    "ar": "اللوحة الأم"
+  },
+  "CPU + pasta termica": {
+    "en": "CPU + thermal paste",
+    "ar": "المعالج CPU + المعجون الحراري"
+  },
+  "SSD M.2": {
+    "en": "SSD M.2",
+    "ar": "SSD M.2"
+  },
+  "Cacciavite a croce": {
+    "en": "Phillips screwdriver",
+    "ar": "مفك صليبة"
+  },
+  "Monta CPU, RAM e SSD sulla scheda madre PRIMA di metterla nel case.": {
+    "en": "Install the CPU, the RAM, and the SSD on the motherboard BEFORE you put it in the case.",
+    "ar": "ركّب المعالج CPU والرام RAM وSSD على اللوحة الأم قبل وضعها في الكيس."
+  },
+  "1. CPU → 2. Pasta termica → 3. Dissipatore": {
+    "en": "1. CPU → 2. Thermal paste → 3. Cooler",
+    "ar": "1. المعالج CPU → 2. المعجون الحراري → 3. المبرّد"
+  },
+  "4. RAM → 5. SSD → 6. Scheda nel case": {
+    "en": "4. RAM → 5. SSD → 6. Board in the case",
+    "ar": "4. الرام RAM → 5. SSD → 6. اللوحة في الكيس"
+  },
+  "7. Alimentatore → 8. Cavi → 9. GPU": {
+    "en": "7. Power supply → 8. Cables → 9. GPU",
+    "ar": "7. مزوّد الطاقة → 8. الكابلات → 9. كرت الشاشة GPU"
+  },
+  "10. Controllo → 11. Avvio → 12. BIOS → 13. SO": {
+    "en": "10. Check → 11. Start → 12. BIOS → 13. OS",
+    "ar": "10. الفحص → 11. التشغيل → 12. BIOS → 13. نظام التشغيل"
+  },
+  "Parte pratica": {
+    "en": "Hands-on part",
+    "ar": "الجزء العملي"
+  },
+  "Far toccare e riconoscere i componenti reali. Mini gioco \"Trova il posto giusto\".": {
+    "en": "Let them touch and recognize the real parts. Mini game \"Find the right place\".",
+    "ar": "نجعلهم يلمسون القطع الحقيقية ويتعرّفون عليها. لعبة صغيرة «جد المكان الصحيح»."
+  },
+  "Momento hands-on: ogni ragazzo prende un componente e deve dire nome, funzione, dove si monta e cosa controllare. Mostrare CPU, socket, RAM, GPU, SSD, connettori alimentazione e ventole. Il mini gioco \"Trova il posto giusto\" rinforza l'apprendimento attivo. Dividere in piccoli gruppi se siete in tanti.": {
+    "en": "Hands-on time: each student takes a part and must say its name, its job, where it goes, and what to check. Show the CPU, the socket, the RAM, the GPU, the SSD, the power connectors, and the fans. The mini game \"Find the right place\" makes the learning active. Split into small groups if there are many of you.",
+    "ar": "وقت التطبيق: كل شاب يأخذ قطعة ويقول اسمها، ووظيفتها، وأين تُركَّب، وماذا نفحص. أظهر المعالج CPU والسوكت والرام RAM وكرت الشاشة GPU وSSD ووصلات الطاقة والمراوح. اللعبة الصغيرة «جد المكان الصحيح» تقوّي التعلّم بالممارسة. قسّموهم مجموعات صغيرة إذا كنتم كثيرين."
+  },
+  "CPU, socket, RAM, GPU, SSD": {
+    "en": "CPU, socket, RAM, GPU, SSD",
+    "ar": "المعالج CPU، السوكت، الرام RAM، كرت الشاشة GPU، SSD"
+  },
+  "Connettori alimentazione e ventole": {
+    "en": "Power connectors and fans",
+    "ar": "وصلات الطاقة والمراوح"
+  },
+  "Mini gioco: \"Trova il posto giusto\"": {
+    "en": "Mini game: \"Find the right place\"",
+    "ar": "لعبة صغيرة: «جد المكان الصحيح»"
+  },
+  "Obiettivo: nome, funzione, posizione, controlli": {
+    "en": "Goal: name, job, place, checks",
+    "ar": "الهدف: الاسم، والوظيفة، والمكان، والفحوصات"
+  },
+  "Cervello del PC — esegue calcoli e istruzioni.": {
+    "en": "Brain of the PC — it does the calculations and the instructions.",
+    "ar": "دماغ الكمبيوتر — ينفّذ الحسابات والتعليمات."
+  },
+  "Socket al centro della scheda madre.": {
+    "en": "Socket in the center of the motherboard.",
+    "ar": "السوكت في وسط اللوحة الأم."
+  },
+  "Memoria veloce temporanea per programmi aperti.": {
+    "en": "Fast temporary memory for open programs.",
+    "ar": "ذاكرة سريعة مؤقتة للبرامج المفتوحة."
+  },
+  "Slot DIMM accanto al socket CPU.": {
+    "en": "DIMM slot next to the CPU socket.",
+    "ar": "فتحة DIMM بجانب سوكت المعالج CPU."
+  },
+  "Elabora grafica, giochi e video 3D.": {
+    "en": "It handles graphics, games, and 3D video.",
+    "ar": "يعالج الرسوم والألعاب والفيديو ثلاثي الأبعاد."
+  },
+  "Slot PCIe x16 — il primo slot lungo.": {
+    "en": "PCIe x16 slot — the first long slot.",
+    "ar": "فتحة PCIe x16 — أول فتحة طويلة."
+  },
+  "Memoria veloce per sistema e file.": {
+    "en": "Fast storage for the system and the files.",
+    "ar": "تخزين سريع للنظام والملفات."
+  },
+  "Slot M.2 sulla scheda madre.": {
+    "en": "M.2 slot on the motherboard.",
+    "ar": "فتحة M.2 على اللوحة الأم."
+  },
+  "Porta energia elettrica a tutti i componenti.": {
+    "en": "It brings electricity to every part.",
+    "ar": "يوصل الكهرباء لكل القطع."
+  },
+  "Fissato in fondo al case.": {
+    "en": "Fixed at the bottom of the case.",
+    "ar": "مثبَّت في أسفل الكيس."
+  },
+  "Raffreddano il case e i componenti.": {
+    "en": "They cool the case and the parts.",
+    "ar": "تبرّد الكيس والقطع."
+  },
+  "Fronte, retro e top del case.": {
+    "en": "Front, back, and top of the case.",
+    "ar": "الأمام، والخلف، وأعلى الكيس."
+  },
+  "Un ragazzo tiene la GPU e indica lo slot PCIe": {
+    "en": "A student holds the GPU and points to the PCIe slot",
+    "ar": "أحد الشباب يمسك كرت الشاشة GPU ويشير إلى فتحة PCIe"
+  },
+  "Un ragazzo mostra dove va la RAM": {
+    "en": "A student shows where the RAM goes",
+    "ar": "أحد الشباب يُري أين تذهب الرام RAM"
+  },
+  "Cronometrare il gioco: chi trova tutto più velocemente?": {
+    "en": "Time the game: who finds everything the fastest?",
+    "ar": "احسبوا الوقت: من يجد كل شيء بسرعة أكبر؟"
+  },
+  "Come si chiama questo pezzo?": {
+    "en": "What is this part called?",
+    "ar": "ما اسم هذه القطعة؟"
+  },
+  "A cosa serve?": {
+    "en": "What does it do?",
+    "ar": "ماذا تفعل؟"
+  },
+  "Dove si monta?": {
+    "en": "Where does it go?",
+    "ar": "أين تُركَّب؟"
+  },
+  "Cosa bisogna controllare prima di montarlo?": {
+    "en": "What do you need to check before you install it?",
+    "ar": "ماذا يجب أن نفحص قبل تركيبها؟"
+  },
+  "Imparare toccando i componenti reali è 10 volte più efficace che solo leggere.": {
+    "en": "Learning by touching the real parts works 10 times better than only reading.",
+    "ar": "التعلّم بلمس القطع الحقيقية أقوى 10 مرات من القراءة فقط."
+  },
+  "CPU (in confezione)": {
+    "en": "CPU (in the box)",
+    "ar": "المعالج CPU (في العلبة)"
+  },
+  "Scheda madre con socket": {
+    "en": "Motherboard with a socket",
+    "ar": "لوحة أم فيها سوكت"
+  },
+  "Ogni componente ha un posto preciso — trovalo!": {
+    "en": "Every part has an exact place — find it!",
+    "ar": "كل قطعة لها مكان محدد — جِده!"
+  },
+  "Errori comuni": {
+    "en": "Common mistakes",
+    "ar": "أخطاء شائعة"
+  },
+  "Riconoscere gli errori più frequenti durante l'assemblaggio e imparare a evitarli.": {
+    "en": "Recognize the most common mistakes while building, and learn how to avoid them.",
+    "ar": "نتعرّف على أكثر الأخطاء أثناء التجميع، ونتعلّم كيف نتجنبها."
+  },
+  "Anche i tecnici esperti hanno sbagliato almeno una volta. Mostra ogni errore con un esempio visivo: cosa NON fare e cosa fare correttamente. Molti PC che \"non si accendono\" hanno solo un cavo scollegato o un componente mal montato. Enfatizza: toccare i pin dorati danneggia i componenti.": {
+    "en": "Even expert technicians have made a mistake at least once. Show each mistake with a clear example: what NOT to do, and what to do the right way. Many PCs that \"do not turn on\" only have a cable unplugged or a part installed wrong. Stress this: touching the gold pins damages the parts.",
+    "ar": "حتى الفنيون الخبراء أخطأوا مرة واحدة على الأقل. أظهر كل خطأ بمثال واضح: ماذا لا نفعل، وماذا نفعل بالطريقة الصحيحة. كثير من الكمبيوترات التي «لا تعمل» فيها فقط كابل مفصول أو قطعة مركَّبة بشكل خاطئ. أكّد هذا: لمس الأطراف الذهبية يُتلف القطع."
+  },
+  "Non toccare i pin dorati della CPU": {
+    "en": "Do not touch the gold pins on the CPU",
+    "ar": "لا تلمس الأطراف الذهبية للمعالج CPU"
+  },
+  "RAM montata al contrario → intaglio non allineato": {
+    "en": "RAM installed backwards → the notch is not lined up",
+    "ar": "الرام RAM مركَّبة بالمقلوب → الحز غير متطابق"
+  },
+  "GPU senza cavi di alimentazione": {
+    "en": "GPU without power cables",
+    "ar": "كرت الشاشة GPU من دون كابلات الطاقة"
+  },
+  "Monitor collegato alla motherboard con GPU installata": {
+    "en": "Monitor connected to the motherboard while a GPU is installed",
+    "ar": "الشاشة موصولة باللوحة الأم مع وجود GPU مركَّب"
+  },
+  "Troppa pasta termica → peggiora il raffreddamento": {
+    "en": "Too much thermal paste → cooling gets worse",
+    "ar": "معجون حراري كثير → التبريد يصبح أسوأ"
+  },
+  "Scheda madre senza distanziatori (standoff)": {
+    "en": "Motherboard without standoffs",
+    "ar": "لوحة أم من دون مسامير مباعدة (standoff)"
+  },
+  "Non toccare i pin della CPU": {
+    "en": "Do not touch the pins on the CPU",
+    "ar": "لا تلمس أطراف المعالج CPU"
+  },
+  "RAM montata al contrario": {
+    "en": "RAM installed the wrong way around",
+    "ar": "الرام RAM مركَّبة بالمقلوب"
+  },
+  "GPU senza alimentazione": {
+    "en": "GPU with no power",
+    "ar": "كرت الشاشة GPU من دون طاقة"
+  },
+  "Monitor collegato alla motherboard": {
+    "en": "Monitor connected to the motherboard",
+    "ar": "الشاشة موصولة باللوحة الأم"
+  },
+  "Troppa pasta termica": {
+    "en": "Too much thermal paste",
+    "ar": "معجون حراري كثير"
+  },
+  "Scheda Madre senza distanziatori": {
+    "en": "Motherboard with no standoffs",
+    "ar": "اللوحة الأم من دون مسامير مباعدة"
+  },
+  "CPU AMD su socket Intel": {
+    "en": "AMD CPU on an Intel socket",
+    "ar": "معالج CPU من AMD على سوكت Intel"
+  },
+  "RAM DDR5 su slot DDR4": {
+    "en": "DDR5 RAM in a DDR4 slot",
+    "ar": "رام RAM من نوع DDR5 في فتحة DDR4"
+  },
+  "GPU troppo lunga per il case": {
+    "en": "GPU too long for the case",
+    "ar": "كرت الشاشة GPU أطول من الكيس"
+  },
+  "Alimentatore troppo piccolo": {
+    "en": "Power supply too small",
+    "ar": "مزوّد الطاقة صغير جداً"
+  },
+  "Monitor sulla scheda madre": {
+    "en": "Monitor on the motherboard",
+    "ar": "الشاشة على اللوحة الأم"
+  },
+  "Monitor sulla GPU dedicata": {
+    "en": "Monitor on the dedicated GPU",
+    "ar": "الشاشة على كرت الشاشة GPU المخصص"
+  },
+  "RAM forzata al contrario": {
+    "en": "RAM forced in backwards",
+    "ar": "الرام RAM مضغوطة بالمقلوب"
+  },
+  "RAM con intaglio allineato al click": {
+    "en": "RAM with the notch lined up until it clicks",
+    "ar": "الرام RAM والحز متطابق حتى تسمع الطقة"
+  },
+  "GPU senza cavi PCIe": {
+    "en": "GPU without PCIe cables",
+    "ar": "كرت الشاشة GPU من دون كابلات PCIe"
+  },
+  "GPU con alimentazione 6/8 pin collegata": {
+    "en": "GPU with the 6/8 pin power connected",
+    "ar": "كرت الشاشة GPU مع طاقة 6/8 pin موصولة"
+  },
+  "Scheda madre appoggiata al case": {
+    "en": "Motherboard sitting directly on the case",
+    "ar": "اللوحة الأم ملامسة للكيس مباشرة"
+  },
+  "Scheda su distanziatori (standoff)": {
+    "en": "Board sitting on standoffs",
+    "ar": "اللوحة على مسامير مباعدة (standoff)"
+  },
+  "Mostra RAM non completamente inserita vs RAM con clip chiusi": {
+    "en": "Show RAM not fully pushed in, next to RAM with the clips closed",
+    "ar": "أظهر رام RAM غير داخلة بالكامل، بجانب رام RAM والمشابك مغلقة"
+  },
+  "Confronta pochissima pasta vs troppa pasta": {
+    "en": "Compare too little paste with too much paste",
+    "ar": "قارن معجوناً قليلاً جداً مع معجون كثير جداً"
+  },
+  "Calcolatore watt: CPU + GPU + 20% margine": {
+    "en": "Watt calculator: CPU + GPU + 20% extra",
+    "ar": "حاسبة Watt: CPU + GPU + 20% زيادة"
+  },
+  "Il PC non si accende: cosa controlli per primo?": {
+    "en": "The PC does not turn on: what do you check first?",
+    "ar": "الكمبيوتر لا يعمل: ماذا تفحص أولاً؟"
+  },
+  "Lo schermo è nero ma le ventole girano: cosa può essere?": {
+    "en": "The screen is black but the fans are spinning: what could it be?",
+    "ar": "الشاشة سوداء لكن المراوح تدور: ماذا يمكن أن يكون السبب؟"
+  },
+  "Perché non si deve toccare i pin della CPU?": {
+    "en": "Why should you not touch the pins on the CPU?",
+    "ar": "لماذا لا يجب لمس أطراف المعالج CPU؟"
+  },
+  "Il 90% dei \"PC rotti\" al primo montaggio ha solo un cavo scollegato o mal collegato.": {
+    "en": "90% of \"broken PCs\" on the first build only have a cable unplugged or plugged in the wrong way.",
+    "ar": "90% من «الكمبيوترات المعطلة» في أول تركيب فيها فقط كابل مفصول أو موصول بشكل خاطئ."
+  },
+  "Componenti reali": {
+    "en": "Real parts",
+    "ar": "قطع حقيقية"
+  },
+  "Esempi errore vs corretto": {
+    "en": "Wrong examples next to right examples",
+    "ar": "أمثلة الخطأ بجانب أمثلة الصحيح"
+  },
+  "Manuale scheda madre": {
+    "en": "Motherboard manual",
+    "ar": "دليل اللوحة الأم"
+  },
+  "Controlla sempre alimentazione e cavi prima di pensare che qualcosa sia rotto.": {
+    "en": "Always check the power and the cables before you think something is broken.",
+    "ar": "افحص دائماً الطاقة والكابلات قبل أن تظن أن شيئاً معطّلاً."
+  },
+  "RAM con intaglio allineato": {
+    "en": "RAM with the notch lined up",
+    "ar": "الرام RAM والحز متطابق"
+  },
+  "GPU con cavi alimentazione": {
+    "en": "GPU with power cables",
+    "ar": "كرت الشاشة GPU مع كابلات الطاقة"
+  },
+  "Monitor sulla GPU, non sulla scheda madre": {
+    "en": "Monitor on the GPU, not on the motherboard",
+    "ar": "الشاشة على كرت الشاشة GPU، وليس على اللوحة الأم"
+  },
+  "Pasta termica: poco ma bene": {
+    "en": "Thermal paste: a little, but done well",
+    "ar": "المعجون الحراري: قليل، لكن بشكل جيد"
+  },
+  "Scheda madre sui distanziatori": {
+    "en": "Motherboard on the standoffs",
+    "ar": "اللوحة الأم على المسامير المباعدة"
+  },
+  "10 min": {
+    "en": "10 min",
+    "ar": "10 دقائق"
+  },
+  "Domande e conclusione": {
+    "en": "Questions and closing",
+    "ar": "أسئلة وخاتمة"
+  },
+  "Raccogliere domande, fare il punto su quanto appreso e anticipare il prossimo incontro.": {
+    "en": "Collect questions, go over what we learned, and look ahead to the next meeting.",
+    "ar": "نجمع الأسئلة، ونراجع ما تعلّمناه، ونمهّد للقاء القادم."
+  },
+  "Momento di chiusura: lasciate spazio alle domande libere, fate un breve riepilogo di cosa abbiamo visto oggi (GPU, compatibilità, assemblaggio) e anticipate la prossima lezione sul Sistema Operativo.": {
+    "en": "Closing time: leave room for open questions, give a short recap of what we saw today (GPU, compatibility, building), and look ahead to the next lesson about the operating system.",
+    "ar": "وقت الختام: اتركوا مجالاً للأسئلة الحرة، وقدّموا ملخصاً قصيراً لما رأيناه اليوم (كرت الشاشة GPU، والتوافق، والتجميع)، ومهّدوا للدرس القادم عن نظام التشغيل."
+  },
+  "Cosa hai imparato oggi?": {
+    "en": "What did you learn today?",
+    "ar": "ماذا تعلّمت اليوم؟"
+  },
+  "Quale passo dell'assemblaggio ti è piaciuto di più?": {
+    "en": "Which building step did you like the most?",
+    "ar": "أي خطوة في التجميع أعجبتك أكثر؟"
+  },
+  "C'è qualcosa che vorresti rivedere?": {
+    "en": "Is there something you want to see again?",
+    "ar": "هل هناك شيء تريد أن نراجعه مرة أخرى؟"
+  },
+  "Prossima volta: Sistema Operativo": {
+    "en": "Next time: the operating system",
+    "ar": "المرة القادمة: نظام التشغيل"
+  },
+  "Avete domande su qualcosa che abbiamo visto?": {
+    "en": "Do you have questions about something we saw?",
+    "ar": "هل عندكم أسئلة عن شيء رأيناه؟"
+  },
+  "Quale componente vi sembra più difficile da montare?": {
+    "en": "Which part seems the hardest to install?",
+    "ar": "أي قطعة تبدو الأصعب في التركيب؟"
+  },
+  "Cosa vi aspettate dal prossimo incontro?": {
+    "en": "What do you expect from the next meeting?",
+    "ar": "ماذا تتوقعون من اللقاء القادم؟"
+  },
+  "Il modo migliore per imparare hardware è vedere, toccare e provare a montare i componenti reali.": {
+    "en": "The best way to learn hardware is to see the real parts, touch them, and try to install them.",
+    "ar": "أفضل طريقة لتعلّم الهاردوير هي أن ترى القطع الحقيقية، وتلمسها، وتجرّب تركيبها."
+  },
+  "Ottimo lavoro oggi! Al prossimo incontro installeremo il Sistema Operativo.": {
+    "en": "Great work today! At the next meeting we will install the operating system.",
+    "ar": "عمل ممتاز اليوم! في اللقاء القادم سنثبّت نظام التشغيل."
+  },
+  "Terzo incontro — Il Sistema Operativo": {
+    "en": "Third meeting — The operating system",
+    "ar": "اللقاء الثالث — نظام التشغيل"
+  },
+  "Workshop 3": {
+    "en": "Workshop 3",
+    "ar": "الورشة 3"
+  },
+  "Il Sistema Operativo": {
+    "en": "The operating system",
+    "ar": "نظام التشغيل"
+  },
+  "Cosa succede quando premi il pulsante di accensione?": {
+    "en": "What happens when you press the power button?",
+    "ar": "ماذا يحدث عندما تضغط زر التشغيل؟"
+  },
+  "Cos'è un Sistema Operativo": {
+    "en": "What is an operating system?",
+    "ar": "ما هو نظام التشغيل؟"
+  },
+  "Il sistema operativo è il programma più importante del computer. Senza di lui, l'hardware non saprebbe cosa fare. È come un direttore d'orchestra: coordina tutti i pezzi.": {
+    "en": "The operating system is the most important program on the computer. Without it, the hardware would not know what to do. It is like a conductor of an orchestra: it keeps all the parts working together.",
+    "ar": "نظام التشغيل هو أهم برنامج في الكمبيوتر. من دونه لا يعرف الهاردوير ماذا يفعل. هو مثل قائد الفرقة: ينسّق كل القطع معاً."
+  },
+  "I componenti fisici: CPU, RAM, disco, scheda video, tastiera, mouse.": {
+    "en": "The physical parts: CPU, RAM, disk, graphics card, keyboard, mouse.",
+    "ar": "القطع التي يمكن لمسها: المعالج CPU، والرام RAM، والقرص، وكرت الشاشة، ولوحة المفاتيح، والماوس."
+  },
+  "L'hardware è tutto ciò che puoi toccare. Ma da solo non fa nulla di utile.": {
+    "en": "Hardware is everything you can touch. But on its own it does nothing useful.",
+    "ar": "الهاردوير هو كل ما يمكنك لمسه. لكنه وحده لا يفعل شيئاً مفيداً."
+  },
+  "Sistema Operativo": {
+    "en": "Operating system",
+    "ar": "نظام التشغيل"
+  },
+  "Windows, Linux o macOS. Gestisce memoria, file, programmi e dispositivi.": {
+    "en": "Windows, Linux, or macOS. It manages memory, files, programs, and devices.",
+    "ar": "ويندوز Windows، أو لينكس Linux، أو macOS. يدير الذاكرة والملفات والبرامج والأجهزة."
+  },
+  "Il SO è il traduttore tra te e l'hardware. Senza di lui il PC è solo metallo.": {
+    "en": "The OS is the translator between you and the hardware. Without it, the PC is only metal.",
+    "ar": "نظام التشغيل هو المترجم بينك وبين الهاردوير. من دونه الكمبيوتر مجرد معدن."
+  },
+  "Browser, giochi, editor, app. Funzionano grazie al sistema operativo.": {
+    "en": "Browser, games, editors, apps. They work because of the operating system.",
+    "ar": "المتصفح، والألعاب، وبرامج التعديل، والتطبيقات. كلها تعمل بفضل نظام التشغيل."
+  },
+  "Ogni programma chiede al SO di usare RAM, disco e rete in modo ordinato.": {
+    "en": "Every program asks the OS to use the RAM, the disk, and the network in an orderly way.",
+    "ar": "كل برنامج يطلب من نظام التشغيل أن يستخدم الرام RAM والقرص والشبكة بترتيب."
+  },
+  "Tu! Clicchi, scrivi, giochi. Il SO trasforma le tue azioni in comandi.": {
+    "en": "You! You click, you type, you play. The OS turns your actions into commands.",
+    "ar": "أنت! تضغط، وتكتب، وتلعب. نظام التشغيل يحوّل أفعالك إلى أوامر."
+  },
+  "Quando clicchi un'icona, il SO capisce cosa vuoi e lo fa eseguire all'hardware.": {
+    "en": "When you click an icon, the OS understands what you want and makes the hardware do it.",
+    "ar": "عندما تضغط على أيقونة، يفهم نظام التشغيل ماذا تريد ويجعل الهاردوير ينفّذ ذلك."
+  },
+  "Simulazione Boot": {
+    "en": "Boot simulation",
+    "ar": "محاكاة الإقلاع"
+  },
+  "Premi il pulsante": {
+    "en": "Press the button",
+    "ar": "اضغط الزر"
+  },
+  "Il pulsante di accensione invia un segnale elettrico all'alimentatore.": {
+    "en": "The power button sends an electric signal to the power supply.",
+    "ar": "زر التشغيل يرسل إشارة كهربائية إلى مزوّد الطاقة."
+  },
+  "Su alcuni PC moderni basta toccare il tasto di accensione: non serve tenerlo premuto.": {
+    "en": "On some modern PCs you only need to touch the power button: you do not have to hold it down.",
+    "ar": "في بعض الكمبيوترات الحديثة يكفي لمس زر التشغيل: لا حاجة لإبقائه مضغوطاً."
+  },
+  "L'alimentatore distribuisce energia": {
+    "en": "The power supply shares out the power",
+    "ar": "مزوّد الطاقة يوزّع الطاقة"
+  },
+  "L'alimentatore trasforma la corrente di casa in energia per CPU, RAM e tutti i componenti.": {
+    "en": "The power supply turns the electricity from the house into power for the CPU, the RAM, and every part.",
+    "ar": "مزوّد الطاقة يحوّل كهرباء البيت إلى طاقة للمعالج CPU والرام RAM وكل القطع."
+  },
+  "Un PC da gaming può consumare quanto 3-4 frigoriferi quando giri un gioco pesante!": {
+    "en": "A gaming PC can use as much power as 3-4 fridges when you run a heavy game!",
+    "ar": "كمبيوتر الألعاب يمكن أن يستهلك طاقة مثل 3-4 ثلاجات عندما تشغّل لعبة ثقيلة!"
+  },
+  "CPU si avvia": {
+    "en": "The CPU starts up",
+    "ar": "المعالج CPU يبدأ العمل"
+  },
+  "Il processore riceve energia e inizia a eseguire istruzioni dalla memoria.": {
+    "en": "The processor gets power and starts running instructions from the memory.",
+    "ar": "المعالج يأخذ الطاقة ويبدأ تنفيذ التعليمات من الذاكرة."
+  },
+  "La CPU esegue miliardi di operazioni al secondo, anche solo per accendersi.": {
+    "en": "The CPU does billions of operations every second, even just to turn on.",
+    "ar": "المعالج CPU ينفّذ مليارات العمليات في الثانية، حتى لمجرد التشغيل."
+  },
+  "BIOS/UEFI controlla l'hardware": {
+    "en": "BIOS/UEFI checks the hardware",
+    "ar": "BIOS/UEFI يفحص الهاردوير"
+  },
+  "Il firmware sulla scheda madre verifica che RAM, disco e tastiera funzionino.": {
+    "en": "The firmware on the motherboard checks that the RAM, the disk, and the keyboard work.",
+    "ar": "البرنامج المحفوظ على اللوحة الأم يتحقق أن الرام RAM والقرص ولوحة المفاتيح تعمل."
+  },
+  "UEFI è la versione moderna del BIOS. Ha un'interfaccia grafica colorata!": {
+    "en": "UEFI is the modern version of the BIOS. It has a colorful picture screen!",
+    "ar": "UEFI هو النسخة الحديثة من BIOS. فيه شاشة ملونة بالصور!"
+  },
+  "Ricerca disco di avvio": {
+    "en": "Looking for the start disk",
+    "ar": "البحث عن قرص التشغيل"
+  },
+  "Il PC cerca dove è installato il sistema operativo: SSD, HDD o USB.": {
+    "en": "The PC looks for where the operating system is installed: SSD, HDD, or USB.",
+    "ar": "الكمبيوتر يبحث عن مكان نظام التشغيل: SSD أو HDD أو USB."
+  },
+  "Puoi avviare il PC da una chiavetta USB se configuri il BIOS correttamente.": {
+    "en": "You can start the PC from a USB stick if you set the BIOS the right way.",
+    "ar": "يمكنك تشغيل الكمبيوتر من فلاشة USB إذا ضبطت BIOS بشكل صحيح."
+  },
+  "Un piccolo programma carica il sistema operativo nella memoria.": {
+    "en": "A small program loads the operating system into memory.",
+    "ar": "برنامج صغير يحمّل نظام التشغيل إلى الذاكرة."
+  },
+  "Su Linux il bootloader più famoso si chiama GRUB. A volte lo vedi con un menu.": {
+    "en": "On Linux the most famous startup program is called GRUB. Sometimes you see it as a menu.",
+    "ar": "في لينكس Linux أشهر برنامج لبدء التشغيل اسمه GRUB. أحياناً تراه على شكل قائمة."
+  },
+  "Caricamento del sistema operativo": {
+    "en": "Loading the operating system",
+    "ar": "تحميل نظام التشغيل"
+  },
+  "Windows o Linux si caricano in RAM. Appaiono driver, desktop e servizi.": {
+    "en": "Windows or Linux loads into RAM. Drivers, the desktop, and services appear.",
+    "ar": "ويندوز Windows أو لينكس Linux يُحمَّل في الرام RAM. تظهر الدرايفرات وسطح المكتب والخدمات."
+  },
+  "Il caricamento può durare pochi secondi con un SSD, minuti con un HDD vecchio.": {
+    "en": "Loading can take a few seconds with an SSD, or minutes with an old HDD.",
+    "ar": "التحميل قد يأخذ ثواني مع SSD، أو دقائق مع HDD قديم."
+  },
+  "Finalmente vedi icone, sfondo e barra. Il PC è pronto per te!": {
+    "en": "At last you see icons, a background, and a bar. The PC is ready for you!",
+    "ar": "أخيراً ترى الأيقونات والخلفية والشريط. الكمبيوتر جاهز لك!"
+  },
+  "Dietro quel desktop ci sono centinaia di programmi che girano in background.": {
+    "en": "Behind that desktop, hundreds of programs are running in the background.",
+    "ar": "خلف سطح المكتب هناك مئات البرامج تعمل في الخلفية."
+  },
+  "Windows vs Linux": {
+    "en": "Windows vs Linux",
+    "ar": "ويندوز Windows مقابل لينكس Linux"
+  },
+  "Barra in basso con Start, icone sul desktop, tema personalizzabile.": {
+    "en": "A bar at the bottom with Start, icons on the desktop, and a theme you can change.",
+    "ar": "شريط في الأسفل فيه Start، وأيقونات على سطح المكتب، وسمة يمكنك تغييرها."
+  },
+  "Menu Start": {
+    "en": "Start menu",
+    "ar": "قائمة Start"
+  },
+  "Clic su Start per cercare programmi, impostazioni e spegnimento.": {
+    "en": "Click Start to look for programs, settings, and shut down.",
+    "ar": "اضغط Start للبحث عن البرامج والإعدادات وإيقاف التشغيل."
+  },
+  "Esplora file": {
+    "en": "File Explorer",
+    "ar": "مستكشف الملفات"
+  },
+  "Gestisce cartelle e file. Simile a \"Risorse del computer\".": {
+    "en": "It manages folders and files. Similar to \"This PC\".",
+    "ar": "يدير المجلدات والملفات. يشبه «هذا الكمبيوتر»."
+  },
+  "Edge è preinstallato. Puoi installare Chrome, Firefox, ecc.": {
+    "en": "Edge is already installed. You can install Chrome, Firefox, and others.",
+    "ar": "Edge مثبَّت من قبل. يمكنك تثبيت Chrome وFirefox وغيرهما."
+  },
+  "PowerShell o CMD per comandi testuali. Utile per programmatori.": {
+    "en": "PowerShell or CMD for text commands. Useful for programmers.",
+    "ar": "PowerShell أو CMD للأوامر المكتوبة. مفيد للمبرمجين."
+  },
+  "Installazione programmi": {
+    "en": "Installing programs",
+    "ar": "تثبيت البرامج"
+  },
+  "Scarichi .exe dal sito o usi Microsoft Store. Clicca e installa.": {
+    "en": "You download a .exe from the website, or you use the Microsoft Store. Click and install.",
+    "ar": "تنزّل ملف .exe من الموقع، أو تستخدم Microsoft Store. اضغط ثم ثبّت."
+  },
+  "Linux Mint": {
+    "en": "Linux Mint",
+    "ar": "لينكس Linux Mint"
+  },
+  "Cinnamon: barra in basso, menu simile a Windows, molto intuitivo.": {
+    "en": "Cinnamon: a bar at the bottom, a menu similar to Windows, and very easy to understand.",
+    "ar": "Cinnamon: شريط في الأسفل، وقائمة تشبه ويندوز Windows، وسهل الفهم جداً."
+  },
+  "Tasto con logo Linux Mint. Tutti i programmi organizzati per categoria.": {
+    "en": "A button with the Linux Mint logo. All the programs are sorted by category.",
+    "ar": "زر عليه شعار لينكس Linux Mint. كل البرامج مرتبة حسب النوع."
+  },
+  "Gestore file": {
+    "en": "File manager",
+    "ar": "مدير الملفات"
+  },
+  "Nautilus/Nemo: navighi cartelle come su Windows.": {
+    "en": "Nautilus/Nemo: you open folders the same way as on Windows.",
+    "ar": "Nautilus/Nemo: تفتح المجلدات كما في ويندوز Windows."
+  },
+  "Firefox preinstallato. Puoi installare Chrome o Brave.": {
+    "en": "Firefox is already installed. You can install Chrome or Brave.",
+    "ar": "Firefox مثبَّت من قبل. يمكنك تثبيت Chrome أو Brave."
+  },
+  "Bash: potente per programmatori. Molti comandi sono scritti qui.": {
+    "en": "Bash: powerful for programmers. Many commands are typed here.",
+    "ar": "Bash: قوي للمبرمجين. كثير من الأوامر تُكتب هنا."
+  },
+  "Software Manager: cerca, clicca Installa. Gratis e sicuro.": {
+    "en": "Software Manager: search, click Install. Free and safe.",
+    "ar": "Software Manager: ابحث، ثم اضغط ثبّت. مجاني وآمن."
+  },
+  "Facile da usare": {
+    "en": "Easy to use",
+    "ar": "سهل الاستخدام"
+  },
+  "Molto familiare": {
+    "en": "Very familiar",
+    "ar": "مألوف جداً"
+  },
+  "Mint è molto intuitivo": {
+    "en": "Mint is very easy to understand",
+    "ar": "Mint سهل الفهم جداً"
+  },
+  "Open Source": {
+    "en": "Open source",
+    "ar": "مفتوح المصدر"
+  },
+  "Codice chiuso Microsoft": {
+    "en": "Microsoft closed code",
+    "ar": "كود Microsoft مغلق"
+  },
+  "Codice aperto e modificabile": {
+    "en": "Open code you can change",
+    "ar": "كود مفتوح ويمكن تغييره"
+  },
+  "💰 A pagamento": {
+    "en": "💰 Paid",
+    "ar": "💰 مدفوع"
+  },
+  "✅ Gratis": {
+    "en": "✅ Free",
+    "ar": "✅ مجاني"
+  },
+  "Incluso nel PC nuovo": {
+    "en": "Included on a new PC",
+    "ar": "يأتي مع الكمبيوتر الجديد"
+  },
+  "Sempre gratuito": {
+    "en": "Always free",
+    "ar": "مجاني دائماً"
+  },
+  "Quasi tutto funziona subito": {
+    "en": "Almost everything works right away",
+    "ar": "تقريباً كل شيء يعمل من أول مرة"
+  },
+  "Migliorato molto negli ultimi anni": {
+    "en": "Much better in the last few years",
+    "ar": "أصبح أفضل بكثير في السنوات الأخيرة"
+  },
+  "Tutti i giochi": {
+    "en": "All the games",
+    "ar": "كل الألعاب"
+  },
+  "Steam Deck e Proton aiutano molto": {
+    "en": "Steam Deck and Proton help a lot",
+    "ar": "Steam Deck وProton يساعدان كثيراً"
+  },
+  "Ottimo con VS Code": {
+    "en": "Great with VS Code",
+    "ar": "ممتاز مع VS Code"
+  },
+  "Preferito da molti sviluppatori": {
+    "en": "A favorite for many developers",
+    "ar": "مفضّل عند كثير من المطوّرين"
+  },
+  "Usato ma meno comune": {
+    "en": "Used, but less common",
+    "ar": "مستخدم، لكنه أقل انتشاراً"
+  },
+  "Domina internet": {
+    "en": "Rules the internet",
+    "ar": "يسيطر على الإنترنت"
+  },
+  "Telemetria Microsoft": {
+    "en": "Microsoft data tracking",
+    "ar": "تتبّع بيانات Microsoft"
+  },
+  "Tu controlli i dati": {
+    "en": "You control the data",
+    "ar": "أنت تتحكم في البيانات"
+  },
+  "Temi e colori": {
+    "en": "Themes and colors",
+    "ar": "السمات والألوان"
+  },
+  "Cambia tutto: desktop, menu, icone": {
+    "en": "Change everything: the desktop, the menu, the icons",
+    "ar": "غيّر كل شيء: سطح المكتب، والقائمة، والأيقونات"
+  },
+  "I driver sono traduttori tra hardware e sistema operativo. Senza driver, la stampante non stampa e la scheda video non mostra nulla.": {
+    "en": "Drivers are translators between the hardware and the operating system. Without a driver, the printer does not print and the graphics card shows nothing.",
+    "ar": "الدرايفرات مترجمون بين الهاردوير ونظام التشغيل. من دون درايفر، الطابعة لا تطبع وكرت الشاشة لا يُظهر شيئاً."
+  },
+  "Stampante, mouse, scheda video, Wi-Fi...": {
+    "en": "Printer, mouse, graphics card, Wi-Fi...",
+    "ar": "طابعة، وماوس، وكرت الشاشة، وWi-Fi..."
+  },
+  "Programma che spiega al SO come usare quel pezzo.": {
+    "en": "A program that tells the OS how to use that part.",
+    "ar": "برنامج يشرح لنظام التشغيل كيف يستخدم تلك القطعة."
+  },
+  "Riceve le richieste e le passa al driver giusto.": {
+    "en": "It receives the requests and passes them to the right driver.",
+    "ar": "يستلم الطلبات ويمرّرها إلى الدرايفر الصحيح."
+  },
+  "Word, Chrome, un gioco: chiedono al SO di usare l'hardware.": {
+    "en": "Word, Chrome, a game: they ask the OS to use the hardware.",
+    "ar": "Word وChrome ولعبة: يطلبون من نظام التشغيل أن يستخدم الهاردوير."
+  },
+  "Installazione Sistema Operativo": {
+    "en": "Installing the operating system",
+    "ar": "تثبيت نظام التشغيل"
+  },
+  "Scarico ISO": {
+    "en": "I download the ISO",
+    "ar": "أنزّل ملف ISO"
+  },
+  "L'ISO è un file immagine del sistema operativo, come un DVD virtuale.": {
+    "en": "The ISO is a picture file of the operating system, like a virtual DVD.",
+    "ar": "ملف ISO هو نسخة من نظام التشغيل على شكل ملف، مثل DVD على الكمبيوتر."
+  },
+  "Creo USB": {
+    "en": "I make the USB",
+    "ar": "أجهّز فلاشة USB"
+  },
+  "Con Rufus o Balena Etcher copi l'ISO su una chiavetta avviabile.": {
+    "en": "With Rufus or Balena Etcher you copy the ISO onto a USB stick that can start the PC.",
+    "ar": "ببرنامج Rufus أو Balena Etcher تنسخ ISO على فلاشة USB يمكنها تشغيل الكمبيوتر."
+  },
+  "Entri nel BIOS (spesso F2 o DEL) e imposti l'avvio da USB.": {
+    "en": "You enter the BIOS (often with F2 or DEL) and set the start to come from USB.",
+    "ar": "تدخل BIOS (غالباً بمفتاح F2 أو DEL) وتضبط بدء التشغيل من USB."
+  },
+  "Riavvii il PC con la chiavetta inserita. Parte l'installer.": {
+    "en": "You restart the PC with the stick plugged in. The installer starts.",
+    "ar": "تعيد تشغيل الكمبيوتر والفلاشة موصولة. يبدأ برنامج التثبيت."
+  },
+  "Scegli lingua, disco, utente. Attendi 15-30 minuti.": {
+    "en": "Choose the language, the disk, and the user. Wait 15-30 minutes.",
+    "ar": "اختر اللغة، والقرص، والمستخدم. انتظر 15-30 دقيقة."
+  },
+  "Installa driver per Wi-Fi, scheda video e stampante.": {
+    "en": "Install drivers for Wi-Fi, the graphics card, and the printer.",
+    "ar": "ثبّت الدرايفرات لشبكة Wi-Fi وكرت الشاشة والطابعة."
+  },
+  "Windows Update o apt update per patch di sicurezza.": {
+    "en": "Windows Update or apt update for security fixes.",
+    "ar": "Windows Update أو apt update لإصلاحات الأمان."
+  },
+  "Desktop pulito, programmi installati. Il PC è tuo!": {
+    "en": "A clean desktop and the programs installed. The PC is yours!",
+    "ar": "سطح مكتب نظيف والبرامج مثبَّتة. الكمبيوتر صار لك!"
+  },
+  "Linux nel mondo": {
+    "en": "Linux around the world",
+    "ar": "لينكس Linux حول العالم"
+  },
+  "Android usa Linux": {
+    "en": "Android uses Linux",
+    "ar": "أندرويد يستخدم لينكس Linux"
+  },
+  "Il kernel di Android è basato su Linux. Miliardi di telefoni lo usano ogni giorno.": {
+    "en": "The core of Android is based on Linux. Billions of phones use it every day.",
+    "ar": "أساس أندرويد مبني على لينكس Linux. مليارات الهواتف تستخدمه كل يوم."
+  },
+  "Steam Deck usa Linux": {
+    "en": "Steam Deck uses Linux",
+    "ar": "Steam Deck يستخدم لينكس Linux"
+  },
+  "La console portatile di Valve gira SteamOS, una versione di Linux ottimizzata per i giochi.": {
+    "en": "Valve handheld console runs SteamOS, a version of Linux made for games.",
+    "ar": "جهاز Valve الذي يُحمل في اليد يشغّل SteamOS، وهي نسخة من لينكس Linux مُعدّة للألعاب."
+  },
+  "Google usa Linux": {
+    "en": "Google uses Linux",
+    "ar": "Google يستخدم لينكس Linux"
+  },
+  "I server di Google Search, Gmail e YouTube girano su Linux.": {
+    "en": "The servers for Google Search, Gmail, and YouTube run on Linux.",
+    "ar": "خوادم Google Search وGmail وYouTube تعمل على لينكس Linux."
+  },
+  "Amazon usa Linux": {
+    "en": "Amazon uses Linux",
+    "ar": "Amazon يستخدم لينكس Linux"
+  },
+  "AWS e gran parte dell'infrastruttura Amazon Cloud sono Linux.": {
+    "en": "AWS and a large part of Amazon Cloud run on Linux.",
+    "ar": "AWS وجزء كبير من Amazon Cloud يعملان على لينكس Linux."
+  },
+  "NASA usa Linux": {
+    "en": "NASA uses Linux",
+    "ar": "NASA تستخدم لينكس Linux"
+  },
+  "I rover su Marte e le stazioni a terra usano Linux per affidabilità.": {
+    "en": "The rovers on Mars and the stations on the ground use Linux because it is reliable.",
+    "ar": "العربات على كوكب المريخ والمحطات على الأرض تستخدم لينكس Linux لأنه موثوق."
+  },
+  "Supercomputer usano Linux": {
+    "en": "Supercomputers use Linux",
+    "ar": "الحواسيب العملاقة تستخدم لينكس Linux"
+  },
+  "I 500 computer più potenti al mondo? Quasi tutti Linux.": {
+    "en": "The 500 most powerful computers in the world? Almost all of them run Linux.",
+    "ar": "أقوى 500 كمبيوتر في العالم؟ تقريباً كلها تعمل بلينكس Linux."
+  },
+  "Router usano Linux": {
+    "en": "Routers use Linux",
+    "ar": "أجهزة الراوتر تستخدم لينكس Linux"
+  },
+  "Il Wi-Fi di casa spesso ha Linux dentro, anche se non lo vedi.": {
+    "en": "The Wi-Fi at home often has Linux inside, even if you cannot see it.",
+    "ar": "واي فاي البيت غالباً فيه لينكس Linux من الداخل، حتى لو لا تراه."
+  }
+}

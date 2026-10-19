@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { X } from 'lucide-react'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 import SlideImage from '../../SlideImage'
 import SlideImageLightbox from '../../SlideImageLightbox'
@@ -8,6 +9,7 @@ import { resolveSlideImages } from '../../slideImages'
 
 /** Card cliccabili con dettaglio in modal (componenti, troubleshooting, …) */
 export default function DetailCardsSection({ section }) {
+  const { ui } = useLanguage()
   const [activeId, setActiveId] = useState(null)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const active = section.cards?.find((c) => c.id === activeId)
@@ -17,7 +19,7 @@ export default function DetailCardsSection({ section }) {
     <>
       <SlideSectionFrame
         section={section}
-        subtitle={section.hint ?? 'Tocca una card per approfondire.'}
+        subtitle={section.hint ?? ui.slides.tapCard}
       >
         <div className="grid max-h-[min(55vh,480px)] gap-2 overflow-y-auto pr-1 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
           {section.cards?.map((card, index) => (
@@ -88,7 +90,7 @@ export default function DetailCardsSection({ section }) {
                       setLightboxOpen(false)
                     }}
                     className="rounded-lg p-1 text-white/50 hover:bg-white/10 hover:text-white"
-                    aria-label="Chiudi"
+                    aria-label={ui.slides.close}
                   >
                     <X size={20} />
                   </button>
@@ -109,16 +111,16 @@ export default function DetailCardsSection({ section }) {
 
                 <div className="space-y-3">
                   {active.function && (
-                    <DetailRow label="Funzione" text={active.function} />
+                    <DetailRow label={ui.slides.function} text={active.function} />
                   )}
-                  {active.mount && <DetailRow label="Dove si monta" text={active.mount} />}
+                  {active.mount && <DetailRow label={ui.slides.whereItGoes} text={active.mount} />}
                   {active.without && (
-                    <DetailRow label="Se manca o non funziona" text={active.without} />
+                    <DetailRow label={ui.slides.ifMissing} text={active.without} />
                   )}
                   {active.checks?.length > 0 && (
                     <div>
                       <p className="mb-1.5 text-[10px] font-extrabold uppercase tracking-wider text-[#FACC15] sm:text-xs">
-                        Controllare
+                        {ui.slides.check}
                       </p>
                       <ul className="space-y-1.5">
                         {active.checks.map((item) => (
@@ -136,7 +138,7 @@ export default function DetailCardsSection({ section }) {
                   {active.causes?.length > 0 && (
                     <div>
                       <p className="mb-1.5 text-[10px] font-extrabold uppercase tracking-wider text-[#FACC15] sm:text-xs">
-                        Possibili cause
+                        {ui.slides.possibleCauses}
                       </p>
                       <ul className="space-y-1.5">
                         {active.causes.map((item) => (

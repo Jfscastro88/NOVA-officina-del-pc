@@ -1,13 +1,15 @@
 import { useEffect } from 'react'
 import { X, Target, Zap, Gamepad2 } from 'lucide-react'
+import { useLanguage } from '../i18n/useLanguage'
 
 const detailSections = [
-  { key: 'whatWeDo', label: 'Cosa faremo', Icon: Target },
-  { key: 'why', label: 'Perché è utile', Icon: Zap },
-  { key: 'activity', label: 'Attività pratica', Icon: Gamepad2 },
+  { key: 'whatWeDo', labelKey: 'whatWeDo', Icon: Target },
+  { key: 'why', labelKey: 'why', Icon: Zap },
+  { key: 'activity', labelKey: 'activity', Icon: Gamepad2 },
 ]
 
 export default function ActivityModal({ activity, onClose }) {
+  const { ui } = useLanguage()
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'Escape') onClose()
@@ -32,7 +34,7 @@ export default function ActivityModal({ activity, onClose }) {
       <button
         type="button"
         className="absolute inset-0 bg-dark-purple/70 backdrop-blur-sm"
-        aria-label="Chiudi"
+        aria-label={ui.activities.close}
         onClick={onClose}
       />
 
@@ -45,7 +47,7 @@ export default function ActivityModal({ activity, onClose }) {
             type="button"
             onClick={onClose}
             className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border-2 border-white/30 bg-dark-purple/40 text-white transition-colors hover:bg-yellow hover:text-dark-purple"
-            aria-label="Chiudi"
+            aria-label={ui.activities.close}
           >
             <X size={18} strokeWidth={2.5} />
           </button>
@@ -65,7 +67,7 @@ export default function ActivityModal({ activity, onClose }) {
           <p className="mt-3 text-sm leading-relaxed text-primary/75">{activity.intro}</p>
 
           <div className="mt-5 space-y-3">
-            {detailSections.map(({ key, label, Icon }) => (
+            {detailSections.map(({ key, labelKey, Icon }) => (
               <div
                 key={key}
                 className="rounded-2xl border border-primary/10 bg-white p-4 shadow-sm"
@@ -75,7 +77,7 @@ export default function ActivityModal({ activity, onClose }) {
                     <Icon size={15} strokeWidth={2.5} />
                   </span>
                   <h3 className="text-xs font-extrabold uppercase tracking-wider text-primary">
-                    {label}
+                    {ui.activities[labelKey]}
                   </h3>
                 </div>
                 <p className="text-sm leading-relaxed text-primary/80">{activity[key]}</p>
@@ -88,7 +90,7 @@ export default function ActivityModal({ activity, onClose }) {
             onClick={onClose}
             className="mt-6 w-full rounded-full bg-yellow py-3 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-0.5 hover:scale-[1.02]"
           >
-            Chiudi
+            {ui.activities.close}
           </button>
         </div>
       </div>

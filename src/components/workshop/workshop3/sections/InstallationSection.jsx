@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import { useLanguage } from "../../../../i18n/useLanguage";
 import SlideSectionFrame from "../SlideSectionFrame";
 
 export default function InstallationSection({ section }) {
+  const { ui } = useLanguage();
   const [completed, setCompleted] = useState(new Set());
 
   const toggle = (id) => {
@@ -18,7 +20,7 @@ export default function InstallationSection({ section }) {
   return (
     <SlideSectionFrame
       section={section}
-      subtitle="Clicca ogni passaggio per segnarlo come completato nella tua mente."
+      subtitle={ui.slides.installSubtitle}
     >
       <div className="space-y-2">
         {section.steps.map((step, index) => {

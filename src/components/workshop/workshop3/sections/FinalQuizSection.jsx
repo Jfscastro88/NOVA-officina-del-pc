@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { CheckCircle2, XCircle, Trophy } from 'lucide-react'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 export default function FinalQuizSection({ section }) {
+  const { ui } = useLanguage()
   const [currentQ, setCurrentQ] = useState(0)
   const [answers, setAnswers] = useState({})
   const [selected, setSelected] = useState(null)
@@ -32,7 +34,7 @@ export default function FinalQuizSection({ section }) {
   }
 
   return (
-    <SlideSectionFrame section={section} subtitle="Metti alla prova quello che hai imparato!">
+    <SlideSectionFrame section={section} subtitle={ui.slides.quizSubtitle}>
       <div className="mb-3 h-2 overflow-hidden rounded-full bg-white/10">
         <motion.div
           className="h-full rounded-full bg-gradient-to-r from-accent to-[#FACC15]"
@@ -43,7 +45,7 @@ export default function FinalQuizSection({ section }) {
 
       <div className="mb-3 flex items-center justify-between text-xs sm:text-sm">
         <span className="text-white/60">
-          Domanda {currentQ + 1} di {questions.length}
+          {ui.slides.questionOf(currentQ + 1, questions.length)}
         </span>
         <span className="flex items-center gap-1 font-bold text-[#FACC15]">
           <Trophy size={14} />
@@ -116,7 +118,7 @@ export default function FinalQuizSection({ section }) {
               onClick={goNext}
               className="btn-gaming mt-3 rounded-full bg-[#FACC15] px-4 py-2 text-xs font-extrabold text-[#0B1020] transition-transform hover:-translate-y-0.5 sm:text-sm"
             >
-              Prossima domanda
+              {ui.slides.nextQuestion}
             </button>
           )}
         </motion.div>
@@ -127,13 +129,13 @@ export default function FinalQuizSection({ section }) {
           <Trophy size={32} className="mx-auto text-[#FACC15]" />
           <p className="mt-2 font-display text-base text-white sm:text-lg">
             {score === questions.length
-              ? 'Perfetto! Sei un esperto di SO!'
+              ? ui.slides.quizPerfect
               : score >= 3
-                ? 'Ottimo lavoro!'
-                : 'Continua a esplorare!'}
+                ? ui.slides.quizGood
+                : ui.slides.quizKeep}
           </p>
           <p className="mt-1 text-xs text-white/70">
-            {score} corrette su {questions.length}
+            {ui.slides.quizScore(score, questions.length)}
           </p>
         </div>
       )}

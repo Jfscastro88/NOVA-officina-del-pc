@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import { AlertTriangle, Star } from 'lucide-react'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 /** Elenco punti semplici + nota importante */
 export default function PointsNoteSection({ section }) {
+  const { ui } = useLanguage()
   return (
     <SlideSectionFrame section={section}>
       {section.points?.length > 0 && (
@@ -32,7 +34,7 @@ export default function PointsNoteSection({ section }) {
               <Star size={18} className="fill-[#FACC15] text-[#FACC15]" />
             )}
             <h3 className="text-xs font-extrabold uppercase tracking-wider text-[#FACC15] sm:text-sm">
-              {section.noteTitle ?? 'Importante'}
+              {section.noteTitle ?? ui.slides.important}
             </h3>
           </div>
           <p className="text-sm font-semibold leading-relaxed text-white sm:text-base">

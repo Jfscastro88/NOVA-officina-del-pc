@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import './index.css'
+import { LanguageProvider } from './i18n/LanguageContext.jsx'
 import Layout from './components/Layout.jsx'
 import App from './App.jsx'
 import Privacy from './pages/Privacy.jsx'
@@ -13,6 +14,7 @@ import TeacherDay from './pages/TeacherDay.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <LanguageProvider>
       <Layout>
         <Routes>
           <Route path="/" element={<App />} />
@@ -24,6 +26,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/workshop/27-giugno" element={<Navigate to="/workshop/2026-06-27" replace />} />
         </Routes>
       </Layout>
+      </LanguageProvider>
     </BrowserRouter>
     <Analytics />
   </StrictMode>,

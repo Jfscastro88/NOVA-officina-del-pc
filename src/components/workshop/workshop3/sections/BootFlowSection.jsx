@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDown, X } from 'lucide-react'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 /** Flusso verticale con frecce (boot sequence) */
 export default function BootFlowSection({ section }) {
+  const { ui } = useLanguage()
   const [activeId, setActiveId] = useState(null)
   const active = section.steps?.find((s) => s.id === activeId)
 
@@ -12,7 +14,7 @@ export default function BootFlowSection({ section }) {
     <>
       <SlideSectionFrame
         section={section}
-        subtitle={section.hint ?? 'Clicca ogni passaggio del flusso.'}
+        subtitle={section.hint ?? ui.slides.bootFlowHint}
       >
         <div className="mx-auto flex max-h-[min(55vh,500px)] max-w-md flex-col items-stretch overflow-y-auto pr-1">
           {section.steps?.map((step, index) => (
@@ -70,7 +72,7 @@ export default function BootFlowSection({ section }) {
                     type="button"
                     onClick={() => setActiveId(null)}
                     className="rounded-lg p-1 text-white/50 hover:bg-white/10 hover:text-white"
-                    aria-label="Chiudi"
+                    aria-label={ui.slides.close}
                   >
                     <X size={20} />
                   </button>

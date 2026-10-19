@@ -1,4 +1,7 @@
+import { useLanguage } from '../../i18n/useLanguage'
+
 export default function CompatibilityTable({ rows, compact = false }) {
+  const { ui } = useLanguage()
   if (!rows?.length) return null
 
   return (
@@ -10,9 +13,9 @@ export default function CompatibilityTable({ rows, compact = false }) {
       >
         {!compact && (
           <div className="grid grid-cols-3 bg-accent/20 px-3 py-2 text-[10px] font-extrabold uppercase tracking-wider text-[#FACC15] sm:px-4 sm:py-2.5 sm:text-xs">
-            <span>Componente</span>
-            <span>Deve essere compatibile con</span>
-            <span>Esempio reale</span>
+            <span>{ui.slides.part}</span>
+            <span>{ui.slides.mustMatch}</span>
+            <span>{ui.slides.realExample}</span>
           </div>
         )}
         {rows.map((row) => (

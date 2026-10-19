@@ -1,39 +1,22 @@
 import { Link } from 'react-router-dom'
 import { CalendarDays } from 'lucide-react'
+import { useLanguage } from '../i18n/useLanguage'
 import { CircleDoodle, Squiggle } from './Doodles'
 
-const sessions = [
-  {
-    date: '27 GIU',
-    title: 'Dentro il PC',
-    text: 'Componenti e funzioni',
-    accent: 'border-accent',
-    link: '/workshop/2026-06-27',
-  },
-  {
-    date: '4 LUG',
-    title: 'Assemblaggio',
-    text: 'Montiamo e manuteniamo',
-    accent: 'border-yellow',
-    link: '/workshop/2026-07-04',
-  },
-  {
-    date: '11 LUG',
-    title: 'Sistema Operativo',
-    text: 'Installazione e esplorazione',
-    accent: 'border-fuchsia-400',
-    link: '/workshop/2026-07-11',
-  },
-  {
-    date: '18 LUG',
-    title: 'Il PC prende vita',
-    text: 'Ripasso, assemblaggio e uso del PC',
-    accent: 'border-accent',
-    link: '/workshop/2026-07-18',
-  },
+const sessionMeta = [
+  { id: '2026-06-27', accent: 'border-accent', link: '/workshop/2026-06-27' },
+  { id: '2026-07-04', accent: 'border-yellow', link: '/workshop/2026-07-04' },
+  { id: '2026-07-11', accent: 'border-fuchsia-400', link: '/workshop/2026-07-11' },
+  { id: '2026-07-18', accent: 'border-accent', link: '/workshop/2026-07-18' },
 ]
 
 export default function Program() {
+  const { ui } = useLanguage()
+  const sessions = sessionMeta.map((session) => ({
+    ...session,
+    ...ui.program.sessions[session.id],
+  }))
+
   return (
     <section
       id="incontri"
@@ -46,12 +29,12 @@ export default function Program() {
       <div className="relative mx-auto max-w-7xl">
         <div className="mb-14 text-center animate-fade-up">
           <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-yellow">
-            Calendario
+            {ui.program.kicker}
           </span>
           <h2 className="mt-3 font-display text-3xl text-white md:text-5xl lg:text-6xl">
-            4 incontri{' '}
+            {ui.program.titleBefore}{' '}
             <span className="text-yellow">•</span>{' '}
-            8 ore di laboratorio
+            {ui.program.titleAfter}
           </h2>
         </div>
 
@@ -69,7 +52,7 @@ export default function Program() {
                   <p className="mt-1 text-sm text-white/70">{session.text}</p>
                   {session.link && (
                     <span className="mt-3 inline-block text-[11px] font-extrabold uppercase tracking-wide text-yellow opacity-70 transition-all group-hover:opacity-100">
-                      Apri presentazione →
+                      {ui.program.open}
                     </span>
                   )}
                 </>
@@ -98,14 +81,14 @@ export default function Program() {
 
           <aside
             className="card-depth mx-auto w-full max-w-xs rotate-2 rounded-sm bg-yellow p-6 text-dark-purple transition-transform hover:rotate-0 hover:scale-105 lg:mx-0"
-            aria-label="Orario laboratorio"
+            aria-label={ui.program.scheduleAria}
           >
             <span className="text-xs font-extrabold uppercase tracking-widest opacity-60">
-              Orario
+              {ui.program.scheduleLabel}
             </span>
-            <strong className="mt-1 block font-display text-3xl">10:00 – 12:00</strong>
+            <strong className="mt-1 block font-display text-3xl">{ui.program.hours}</strong>
             <p className="mt-2 text-sm font-semibold leading-snug">
-              Ogni sabato mattina — 4 settimane di avventura tech!
+              {ui.program.note}
             </p>
             <div className="mt-4 h-1 w-full rounded bg-dark-purple/20" />
           </aside>

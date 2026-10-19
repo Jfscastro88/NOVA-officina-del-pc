@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 export default function CuriositySection({ section }) {
+  const { ui } = useLanguage()
+
   return (
     <SlideSectionFrame
       section={section}
-      subtitle="Linux è ovunque, anche se non lo vedi."
+      subtitle={ui.slides.curiositySubtitle}
     >
       <div className="grid gap-2 sm:grid-cols-2">
         {section.cards.map((card, index) => (

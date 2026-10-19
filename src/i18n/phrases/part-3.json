@@ -1,0 +1,1295 @@
+{
+  "Inserire la RAM negli slot corretti": {
+    "en": "Put the RAM in the correct slots",
+    "ar": "ضع الرام في الفتحات الصحيحة"
+  },
+  "Guarda la tacca e spingi finché i clip laterali si chiudono.": {
+    "en": "Look at the notch and push until the side clips close.",
+    "ar": "انظر إلى الشق وادفع حتى تغلق الماسكات الجانبية."
+  },
+  "Montare l’SSD NVMe o SATA": {
+    "en": "Install the NVMe or SATA SSD",
+    "ar": "ركّب قرص SSD من نوع NVMe أو SATA"
+  },
+  "Inserisci l’SSD nello slot M.2 o collega i cavi SATA.": {
+    "en": "Put the SSD in the M.2 slot or connect the SATA cables.",
+    "ar": "أدخل قرص SSD في فتحة M.2 أو وصّل كابلات SATA."
+  },
+  "Installare la scheda madre nel case": {
+    "en": "Install the motherboard in the case",
+    "ar": "ركّب اللوحة الأم داخل الصندوق"
+  },
+  "Allinea i fori con i distanziatori e avvita con attenzione.": {
+    "en": "Line up the holes with the small metal stands and screw carefully.",
+    "ar": "طابق الثقوب مع القطع المعدنية الصغيرة واربط البراغي بحذر."
+  },
+  "Montare l’alimentatore": {
+    "en": "Install the power supply",
+    "ar": "ركّب مزوّد الطاقة"
+  },
+  "Fissa l’alimentatore e prepara i cavi principali.": {
+    "en": "Fasten the power supply and get the main cables ready.",
+    "ar": "ثبّت مزوّد الطاقة وجهّز الكابلات الرئيسية."
+  },
+  "Installare la GPU": {
+    "en": "Install the GPU",
+    "ar": "ركّب كرت الشاشة"
+  },
+  "Inseriscila nello slot PCIe e collega l’alimentazione se serve.": {
+    "en": "Put it in the PCIe slot and connect the power if it needs it.",
+    "ar": "أدخله في فتحة PCIe ووصّل الكهرباء إذا احتاجها."
+  },
+  "Collegare i cavi": {
+    "en": "Connect the cables",
+    "ar": "وصّل الكابلات"
+  },
+  "Alimentazione scheda madre, CPU, SSD, ventole e pulsante Power.": {
+    "en": "Power for the motherboard, CPU, SSD, fans, and the Power button.",
+    "ar": "كهرباء اللوحة الأم وCPU وSSD والمراوح وزر Power."
+  },
+  "Controllare tutti i collegamenti": {
+    "en": "Check all the connections",
+    "ar": "افحص كل التوصيلات"
+  },
+  "Verifica che nulla sia allentato o scollegato prima di accendere.": {
+    "en": "Make sure nothing is loose or unplugged before you turn it on.",
+    "ar": "تأكد أن لا شيء مرتخي أو مفصول قبل التشغيل."
+  },
+  "Effettuare il primo avvio": {
+    "en": "Do the first startup",
+    "ar": "قم بأول تشغيل"
+  },
+  "Collega monitor e alimentazione, poi premi il pulsante di accensione.": {
+    "en": "Connect the monitor and the power, then press the power button.",
+    "ar": "وصّل الشاشة والكهرباء، ثم اضغط زر التشغيل."
+  },
+  "Immagine futura: sequenza completa assemblaggio PC": {
+    "en": "Future image: full PC build sequence",
+    "ar": "صورة لاحقة: خطوات تجميع الكمبيوتر كاملة"
+  },
+  "Errori da evitare": {
+    "en": "Mistakes to avoid",
+    "ar": "أخطاء يجب تجنّبها"
+  },
+  "Non forzare i componenti": {
+    "en": "Do not force the parts",
+    "ar": "لا تضغط القطع بقوة"
+  },
+  "Se un componente non entra facilmente, probabilmente non è orientato correttamente.": {
+    "en": "If a part does not go in easily, it is probably facing the wrong way.",
+    "ar": "إذا لم تدخل القطعة بسهولة، فغالباً اتجاهها غير صحيح."
+  },
+  "Toccare una superficie metallica": {
+    "en": "Touch a metal surface",
+    "ar": "المس سطحاً معدنياً"
+  },
+  "Prima di toccare i componenti è utile scaricare l’elettricità statica.": {
+    "en": "Before you touch the parts, it helps to release static electricity.",
+    "ar": "قبل لمس القطع، من المفيد تفريغ الكهرباء الساكنة."
+  },
+  "Controllare il verso della RAM": {
+    "en": "Check which way the RAM goes",
+    "ar": "تحقق من اتجاه الرام"
+  },
+  "La RAM ha una tacca e può entrare solamente nel verso corretto.": {
+    "en": "The RAM has a notch and can only go in the correct way.",
+    "ar": "الرام فيها شق وتدخل فقط بالاتجاه الصحيح."
+  },
+  "Controllare il triangolo della CPU": {
+    "en": "Check the triangle on the CPU",
+    "ar": "تحقق من المثلث على المعالج"
+  },
+  "Il piccolo triangolo sulla CPU deve corrispondere a quello presente sul socket.": {
+    "en": "The small triangle on the CPU must match the one on the socket.",
+    "ar": "المثلث الصغير على المعالج يجب أن يطابق المثلث الموجود على مكان المعالج."
+  },
+  "Collegare la ventola CPU": {
+    "en": "Connect the CPU fan",
+    "ar": "وصّل مروحة المعالج"
+  },
+  "La ventola del dissipatore deve essere collegata al connettore CPU_FAN.": {
+    "en": "The cooler fan must be plugged into the CPU_FAN connector.",
+    "ar": "مروحة المبرّد يجب توصيلها بموصل CPU_FAN."
+  },
+  "Non usare troppa pasta termica": {
+    "en": "Do not use too much thermal paste",
+    "ar": "لا تضع معجوناً حرارياً كثيراً"
+  },
+  "Una piccola quantità è sufficiente.": {
+    "en": "A small amount is enough.",
+    "ar": "كمية صغيرة تكفي."
+  },
+  "Immagine futura: errori comuni durante l’assemblaggio": {
+    "en": "Future image: common mistakes while building",
+    "ar": "صورة لاحقة: أخطاء شائعة أثناء التجميع"
+  },
+  "Cosa succede dentro il PC?": {
+    "en": "What happens inside the PC?",
+    "ar": "ماذا يحدث داخل الكمبيوتر؟"
+  },
+  "Segui il flusso: dal pulsante al desktop.": {
+    "en": "Follow the path: from the button to the desktop.",
+    "ar": "اتبع المسار: من الزر إلى سطح المكتب."
+  },
+  "Pulsante di accensione": {
+    "en": "Power button",
+    "ar": "زر التشغيل"
+  },
+  "Invia il comando di accensione alla scheda madre.": {
+    "en": "It sends the turn-on command to the motherboard.",
+    "ar": "يرسل أمر التشغيل إلى اللوحة الأم."
+  },
+  "Fornisce energia ai componenti.": {
+    "en": "It gives power to the parts.",
+    "ar": "يعطي الطاقة للقطع."
+  },
+  "Avvia il controllo iniziale dell’hardware.": {
+    "en": "It starts the first hardware check.",
+    "ar": "يبدأ الفحص الأول للهاردوير."
+  },
+  "CPU e RAM": {
+    "en": "CPU and RAM",
+    "ar": "المعالج والرام"
+  },
+  "La CPU inizia a lavorare e la RAM viene controllata.": {
+    "en": "The CPU starts working and the RAM is checked.",
+    "ar": "يبدأ المعالج بالعمل ويتم فحص الرام."
+  },
+  "Controlla che i componenti principali siano presenti e funzionanti.": {
+    "en": "It checks that the main parts are there and working.",
+    "ar": "يتأكد أن القطع الرئيسية موجودة وتعمل."
+  },
+  "Il BIOS cerca il dispositivo che contiene il sistema operativo.": {
+    "en": "The BIOS looks for the device that holds the operating system.",
+    "ar": "البيوس يبحث عن الجهاز الذي فيه نظام التشغيل."
+  },
+  "Windows o Linux": {
+    "en": "Windows or Linux",
+    "ar": "ويندوز أو لينكس"
+  },
+  "Windows o Linux vengono caricati.": {
+    "en": "Windows or Linux is loaded.",
+    "ar": "يتم تحميل ويندوز أو لينكس."
+  },
+  "Il computer è pronto per essere utilizzato.": {
+    "en": "The computer is ready to use.",
+    "ar": "الكمبيوتر جاهز للاستخدام."
+  },
+  "Immagine futura: flusso di avvio del computer": {
+    "en": "Future image: how the computer starts",
+    "ar": "صورة لاحقة: مسار تشغيل الكمبيوتر"
+  },
+  "Il primo programma che si avvia": {
+    "en": "The first program that starts",
+    "ar": "أول برنامج يعمل"
+  },
+  "Il BIOS o UEFI controlla l’hardware prima di avviare Windows o Linux.": {
+    "en": "The BIOS or UEFI checks the hardware before starting Windows or Linux.",
+    "ar": "البيوس أو UEFI يفحص الهاردوير قبل تشغيل ويندوز أو لينكس."
+  },
+  "Controlla CPU e RAM": {
+    "en": "Checks the CPU and RAM",
+    "ar": "يفحص المعالج والرام"
+  },
+  "Rileva SSD e dischi": {
+    "en": "Finds the SSD and the disks",
+    "ar": "يكتشف قرص SSD والأقراص"
+  },
+  "Controlla ventole e temperature": {
+    "en": "Checks the fans and the temperatures",
+    "ar": "يفحص المراوح ودرجات الحرارة"
+  },
+  "Sceglie da quale dispositivo avviare il computer": {
+    "en": "Chooses which device starts the computer",
+    "ar": "يختار من أي جهاز يبدأ تشغيل الكمبيوتر"
+  },
+  "Permette di modificare alcune impostazioni hardware": {
+    "en": "It lets you change some hardware settings",
+    "ar": "يسمح بتغيير بعض إعدادات الهاردوير"
+  },
+  "Non modificare impostazioni del BIOS senza sapere cosa fanno.": {
+    "en": "Do not change BIOS settings if you do not know what they do.",
+    "ar": "لا تغيّر إعدادات البيوس إذا كنت لا تعرف ماذا تفعل."
+  },
+  "Immagine futura: schermata BIOS o UEFI": {
+    "en": "Future image: BIOS or UEFI screen",
+    "ar": "صورة لاحقة: شاشة البيوس أو UEFI"
+  },
+  "Il PC non funziona: da dove iniziamo?": {
+    "en": "The PC does not work: where do we start?",
+    "ar": "الكمبيوتر لا يعمل: من أين نبدأ؟"
+  },
+  "Quando un computer non funziona, bisogna controllare una cosa alla volta.": {
+    "en": "When a computer does not work, check one thing at a time.",
+    "ar": "عندما لا يعمل الكمبيوتر، افحص شيئاً واحداً في كل مرة."
+  },
+  "Apri un caso e guarda cosa controllare per primo.": {
+    "en": "Open a problem and see what to check first.",
+    "ar": "افتح مشكلة وانظر ماذا تفحص أولاً."
+  },
+  "Prima di cambiare un componente, controlla sempre cavi e collegamenti.": {
+    "en": "Before you change a part, always check cables and connections.",
+    "ar": "قبل تغيير أي قطعة، افحص دائماً الكابلات والتوصيلات."
+  },
+  "Il PC non si accende": {
+    "en": "The PC does not turn on",
+    "ar": "الكمبيوتر لا يشتغل"
+  },
+  "Niente luci, niente ventole.": {
+    "en": "No lights, no fans.",
+    "ar": "لا أضواء ولا مراوح."
+  },
+  "Cavo di alimentazione": {
+    "en": "Power cable",
+    "ar": "كابل الكهرباء"
+  },
+  "Interruttore dell’alimentatore": {
+    "en": "Power supply switch",
+    "ar": "مفتاح مزوّد الطاقة"
+  },
+  "Cavo del pulsante Power": {
+    "en": "Power button cable",
+    "ar": "كابل زر Power"
+  },
+  "Connettore principale della scheda madre": {
+    "en": "Main motherboard connector",
+    "ar": "الموصل الرئيسي للوحة الأم"
+  },
+  "Cavo di alimentazione CPU": {
+    "en": "CPU power cable",
+    "ar": "كابل كهرباء المعالج"
+  },
+  "Schermo nero": {
+    "en": "Black screen",
+    "ar": "شاشة سوداء"
+  },
+  "Il PC si accende ma non vedi nulla.": {
+    "en": "The PC turns on but you see nothing.",
+    "ar": "الكمبيوتر يشتغل لكنك لا ترى شيئاً."
+  },
+  "Cavo video": {
+    "en": "Video cable",
+    "ar": "كابل الصورة"
+  },
+  "Monitor acceso": {
+    "en": "Monitor on",
+    "ar": "الشاشة مشغّلة"
+  },
+  "RAM inserita correttamente": {
+    "en": "RAM fitted correctly",
+    "ar": "الرام مركّبة بشكل صحيح"
+  },
+  "GPU alimentata": {
+    "en": "GPU has power",
+    "ar": "كرت الشاشة موصول بالكهرباء"
+  },
+  "Cavo collegato alla porta video corretta": {
+    "en": "Cable plugged into the correct video port",
+    "ar": "الكابل موصول بمنفذ الصورة الصحيح"
+  },
+  "Si spegne dopo pochi secondi": {
+    "en": "It turns off after a few seconds",
+    "ar": "ينطفئ بعد ثوانٍ قليلة"
+  },
+  "Si accende e poi si spegne.": {
+    "en": "It turns on and then turns off.",
+    "ar": "يشتغل ثم ينطفئ."
+  },
+  "Dissipatore montato male": {
+    "en": "Cooler fitted badly",
+    "ar": "المبرّد مركّب بشكل خاطئ"
+  },
+  "Ventola CPU scollegata": {
+    "en": "CPU fan unplugged",
+    "ar": "مروحة المعالج مفصولة"
+  },
+  "Temperatura troppo alta": {
+    "en": "Temperature too high",
+    "ar": "الحرارة عالية جداً"
+  },
+  "Alimentatore insufficiente": {
+    "en": "Power supply not strong enough",
+    "ar": "مزوّد الطاقة غير كافٍ"
+  },
+  "Il sistema operativo non parte": {
+    "en": "The operating system does not start",
+    "ar": "نظام التشغيل لا يبدأ"
+  },
+  "Il PC accende ma non arriva al desktop.": {
+    "en": "The PC turns on but does not reach the desktop.",
+    "ar": "الكمبيوتر يشتغل لكنه لا يصل إلى سطح المكتب."
+  },
+  "SSD non rilevato": {
+    "en": "SSD not found",
+    "ar": "قرص SSD غير مكتشف"
+  },
+  "Ordine di avvio errato": {
+    "en": "Wrong startup order",
+    "ar": "ترتيب التشغيل خاطئ"
+  },
+  "Sistema operativo non installato": {
+    "en": "Operating system not installed",
+    "ar": "نظام التشغيل غير مثبّت"
+  },
+  "File di avvio danneggiati": {
+    "en": "Damaged startup files",
+    "ar": "ملفات التشغيل تالفة"
+  },
+  "Il computer è molto lento": {
+    "en": "The computer is very slow",
+    "ar": "الكمبيوتر بطيء جداً"
+  },
+  "Funziona, ma con fatica.": {
+    "en": "It works, but with difficulty.",
+    "ar": "يعمل، لكن بصعوبة."
+  },
+  "Troppi programmi aperti": {
+    "en": "Too many programs open",
+    "ar": "برامج كثيرة مفتوحة"
+  },
+  "Poca RAM": {
+    "en": "Not enough RAM",
+    "ar": "الرام قليلة"
+  },
+  "Spazio sul disco quasi terminato": {
+    "en": "Almost no space left on the disk",
+    "ar": "المساحة على القرص قاربت على الانتهاء"
+  },
+  "Aggiornamenti in esecuzione": {
+    "en": "Updates are running",
+    "ar": "التحديثات تعمل الآن"
+  },
+  "Temperature elevate": {
+    "en": "High temperatures",
+    "ar": "الحرارة مرتفعة"
+  },
+  "Organizziamo file e cartelle": {
+    "en": "Let's organize files and folders",
+    "ar": "لنرتّب الملفات والمجلدات"
+  },
+  "Le cartelle servono per tenere ordinati documenti, immagini, video e progetti.": {
+    "en": "Folders help keep documents, pictures, videos, and projects tidy.",
+    "ar": "المجلدات تساعد على ترتيب المستندات والصور والفيديو والمشاريع."
+  },
+  "Officina del PC\n├── Documenti\n├── Immagini\n├── Video\n└── Progetti": {
+    "en": "Officina del PC\n├── Documents\n├── Pictures\n├── Videos\n└── Projects",
+    "ar": "أوفيتشينا دل بي سي\n├── مستندات\n├── صور\n├── فيديو\n└── مشاريع"
+  },
+  "Un file contiene informazioni, per esempio un’immagine, un video o un documento.": {
+    "en": "A file holds information, for example a picture, a video, or a document.",
+    "ar": "الملف فيه معلومات، مثل صورة أو فيديو أو مستند."
+  },
+  "Una cartella contiene e organizza file e altre cartelle.": {
+    "en": "A folder holds and organizes files and other folders.",
+    "ar": "المجلد يجمع ويرتّب الملفات والمجلدات الأخرى."
+  },
+  "Una cartella creata dentro un’altra cartella.": {
+    "en": "A folder made inside another folder.",
+    "ar": "مجلد يُنشأ داخل مجلد آخر."
+  },
+  "Immagine futura: esempio di cartelle organizzate": {
+    "en": "Future image: example of tidy folders",
+    "ar": "صورة لاحقة: مثال على مجلدات مرتّبة"
+  },
+  "Cosa possiamo fare con un file?": {
+    "en": "What can we do with a file?",
+    "ar": "ماذا يمكننا أن نفعل بالملف؟"
+  },
+  "Creare un nuovo file o una nuova cartella.": {
+    "en": "Make a new file or a new folder.",
+    "ar": "إنشاء ملف جديد أو مجلد جديد."
+  },
+  "Cambiare il nome per riconoscere facilmente il contenuto.": {
+    "en": "Change the name so you can tell what is inside.",
+    "ar": "تغيير الاسم حتى نعرف المحتوى بسهولة."
+  },
+  "Creare una seconda copia del file.": {
+    "en": "Make a second copy of the file.",
+    "ar": "إنشاء نسخة ثانية من الملف."
+  },
+  "Tagliare e spostare": {
+    "en": "Cut and move",
+    "ar": "قص ونقل"
+  },
+  "Spostare il file da una cartella a un’altra.": {
+    "en": "Move the file from one folder to another.",
+    "ar": "نقل الملف من مجلد إلى مجلد آخر."
+  },
+  "Spostare il file nel cestino.": {
+    "en": "Move the file to the recycle bin.",
+    "ar": "نقل الملف إلى سلة المحذوفات."
+  },
+  "Recuperare un file eliminato dal cestino.": {
+    "en": "Get back a file deleted from the recycle bin.",
+    "ar": "استرجاع ملف حُذف من سلة المحذوفات."
+  },
+  "Trovare velocemente un file usando il nome.": {
+    "en": "Find a file quickly by using its name.",
+    "ar": "إيجاد ملف بسرعة باستخدام اسمه."
+  },
+  "Usa nomi chiari come progetto-hardware.pdf invece di documento1.pdf.": {
+    "en": "Use clear names like project-hardware.pdf instead of document1.pdf.",
+    "ar": "استخدم أسماء واضحة مثل مشروع-هاردوير.pdf بدل مستند1.pdf."
+  },
+  "Scorciatoie che fanno risparmiare tempo": {
+    "en": "Shortcuts that save time",
+    "ar": "اختصارات توفّر الوقت"
+  },
+  "Immagine futura: scorciatoie da tastiera": {
+    "en": "Future image: keyboard shortcuts",
+    "ar": "صورة لاحقة: اختصارات لوحة المفاتيح"
+  },
+  "Ctrl + A": {
+    "en": "Ctrl + A",
+    "ar": "Ctrl + A"
+  },
+  "Seleziona tutto": {
+    "en": "Select all",
+    "ar": "تحديد الكل"
+  },
+  "Seleziona tutti i file presenti nella cartella.": {
+    "en": "Selects all the files in the folder.",
+    "ar": "يحدّد كل الملفات الموجودة في المجلد."
+  },
+  "Ctrl + C": {
+    "en": "Ctrl + C",
+    "ar": "Ctrl + C"
+  },
+  "Ctrl + V": {
+    "en": "Ctrl + V",
+    "ar": "Ctrl + V"
+  },
+  "Ctrl + X": {
+    "en": "Ctrl + X",
+    "ar": "Ctrl + X"
+  },
+  "Ctrl + Z": {
+    "en": "Ctrl + Z",
+    "ar": "Ctrl + Z"
+  },
+  "Annulla l’ultima azione": {
+    "en": "Undo the last action",
+    "ar": "تراجع عن آخر عمل"
+  },
+  "Ctrl + Y": {
+    "en": "Ctrl + Y",
+    "ar": "Ctrl + Y"
+  },
+  "Ripristina un’azione annullata": {
+    "en": "Redo an action you undid",
+    "ar": "إعادة عمل تم التراجع عنه"
+  },
+  "Ctrl + S": {
+    "en": "Ctrl + S",
+    "ar": "Ctrl + S"
+  },
+  "Salva il documento": {
+    "en": "Save the document",
+    "ar": "حفظ المستند"
+  },
+  "Ctrl + F": {
+    "en": "Ctrl + F",
+    "ar": "Ctrl + F"
+  },
+  "Cerca una parola, un file o un elemento": {
+    "en": "Search for a word, a file, or an item",
+    "ar": "ابحث عن كلمة أو ملف أو عنصر"
+  },
+  "Ctrl + P": {
+    "en": "Ctrl + P",
+    "ar": "Ctrl + P"
+  },
+  "Apre la finestra di stampa": {
+    "en": "Opens the print window",
+    "ar": "يفتح نافذة الطباعة"
+  },
+  "Ctrl + N": {
+    "en": "Ctrl + N",
+    "ar": "Ctrl + N"
+  },
+  "Crea una nuova finestra o un nuovo documento": {
+    "en": "Makes a new window or a new document",
+    "ar": "ينشئ نافذة جديدة أو مستنداً جديداً"
+  },
+  "Ctrl + T": {
+    "en": "Ctrl + T",
+    "ar": "Ctrl + T"
+  },
+  "Apre una nuova scheda del browser": {
+    "en": "Opens a new browser tab",
+    "ar": "يفتح تبويباً جديداً في المتصفح"
+  },
+  "Ctrl + W": {
+    "en": "Ctrl + W",
+    "ar": "Ctrl + W"
+  },
+  "Chiude la scheda o la finestra attiva": {
+    "en": "Closes the open tab or window",
+    "ar": "يغلق التبويب أو النافذة المفتوحة"
+  },
+  "Alt + Tab": {
+    "en": "Alt + Tab",
+    "ar": "Alt + Tab"
+  },
+  "Passa velocemente da una finestra aperta a un’altra": {
+    "en": "Switches quickly from one open window to another",
+    "ar": "ينتقل بسرعة من نافذة مفتوحة إلى أخرى"
+  },
+  "Windows + D": {
+    "en": "Windows + D",
+    "ar": "Windows + D"
+  },
+  "Mostra il desktop": {
+    "en": "Shows the desktop",
+    "ar": "يُظهر سطح المكتب"
+  },
+  "Windows + E": {
+    "en": "Windows + E",
+    "ar": "Windows + E"
+  },
+  "Apre Esplora file": {
+    "en": "Opens File Explorer",
+    "ar": "يفتح مستكشف الملفات"
+  },
+  "Rinomina il file o la cartella selezionata": {
+    "en": "Renames the selected file or folder",
+    "ar": "يعيد تسمية الملف أو المجلد المحدد"
+  },
+  "Sposta il file nel cestino": {
+    "en": "Moves the file to the recycle bin",
+    "ar": "ينقل الملف إلى سلة المحذوفات"
+  },
+  "Shift + Delete": {
+    "en": "Shift + Delete",
+    "ar": "Shift + Delete"
+  },
+  "Elimina definitivamente senza passare dal cestino": {
+    "en": "Deletes for good, without the recycle bin",
+    "ar": "يحذف نهائياً من دون المرور بسلة المحذوفات"
+  },
+  "Attenzione: il file potrebbe non essere recuperabile facilmente.": {
+    "en": "Careful: the file may not be easy to get back.",
+    "ar": "انتباه: قد لا يكون استرجاع الملف سهلاً."
+  },
+  "Missione: organizza il tuo PC": {
+    "en": "Mission: organize your PC",
+    "ar": "مهمة: رتّب كمبيوترك"
+  },
+  "Immagine futura: sfida pratica": {
+    "en": "Future image: hands-on challenge",
+    "ar": "صورة لاحقة: تحدٍّ عملي"
+  },
+  "Segna ogni passaggio quando lo hai fatto. Non c’è punteggio: prova ogni operazione.": {
+    "en": "Mark each step when you have done it. There is no score: try every action.",
+    "ar": "ضع علامة على كل خطوة عندما تنجزها. لا توجد نقاط: جرّب كل عملية."
+  },
+  "Crea la cartella principale": {
+    "en": "Make the main folder",
+    "ar": "أنشئ المجلد الرئيسي"
+  },
+  "Crea una cartella chiamata “Officina del PC”.": {
+    "en": "Make a folder called “Officina del PC”.",
+    "ar": "أنشئ مجلداً اسمه «أوفيتشينا دل بي سي»."
+  },
+  "Crea le sottocartelle": {
+    "en": "Make the folders inside",
+    "ar": "أنشئ المجلدات الداخلية"
+  },
+  "Dentro crea: Documenti, Immagini, Video, Progetti.": {
+    "en": "Inside, make: Documents, Pictures, Videos, Projects.",
+    "ar": "في الداخل أنشئ: مستندات، صور، فيديو، مشاريع."
+  },
+  "Crea un file di testo": {
+    "en": "Make a text file",
+    "ar": "أنشئ ملف نص"
+  },
+  "Crea un nuovo file di testo.": {
+    "en": "Make a new text file.",
+    "ar": "أنشئ ملف نص جديداً."
+  },
+  "Rinomina il file": {
+    "en": "Rename the file",
+    "ar": "أعد تسمية الملف"
+  },
+  "Rinomina il file: componenti-pc": {
+    "en": "Rename the file: pc-parts",
+    "ar": "أعد تسمية الملف: قطع-الكمبيوتر"
+  },
+  "Sposta il file": {
+    "en": "Move the file",
+    "ar": "انقل الملف"
+  },
+  "Sposta il file nella cartella Documenti.": {
+    "en": "Move the file into the Documents folder.",
+    "ar": "انقل الملف إلى مجلد المستندات."
+  },
+  "Crea una copia": {
+    "en": "Make a copy",
+    "ar": "أنشئ نسخة"
+  },
+  "Crea una copia del file.": {
+    "en": "Make a copy of the file.",
+    "ar": "أنشئ نسخة من الملف."
+  },
+  "Ctrl + C  ·  Ctrl + V": {
+    "en": "Ctrl + C  ·  Ctrl + V",
+    "ar": "Ctrl + C  ·  Ctrl + V"
+  },
+  "Seleziona tutti i file.": {
+    "en": "Select all the files.",
+    "ar": "حدّد كل الملفات."
+  },
+  "Rinomina un file": {
+    "en": "Rename a file",
+    "ar": "أعد تسمية ملف"
+  },
+  "Rinomina uno dei file.": {
+    "en": "Rename one of the files.",
+    "ar": "أعد تسمية أحد الملفات."
+  },
+  "Elimina e recupera": {
+    "en": "Delete and get it back",
+    "ar": "احذف واسترجع"
+  },
+  "Elimina un file e recuperalo dal cestino.": {
+    "en": "Delete a file and get it back from the recycle bin.",
+    "ar": "احذف ملفاً واسترجعه من سلة المحذوفات."
+  },
+  "Annulla un’azione": {
+    "en": "Undo an action",
+    "ar": "تراجع عن عمل"
+  },
+  "Annulla un’azione.": {
+    "en": "Undo an action.",
+    "ar": "تراجع عن عمل."
+  },
+  "Apri Esplora file": {
+    "en": "Open File Explorer",
+    "ar": "افتح مستكشف الملفات"
+  },
+  "Apri Esplora file.": {
+    "en": "Open File Explorer.",
+    "ar": "افتح مستكشف الملفات."
+  },
+  "Dal componente al computer completo": {
+    "en": "From a part to a complete computer",
+    "ar": "من القطعة إلى الكمبيوتر الكامل"
+  },
+  "Abbiamo conosciuto i componenti del PC.": {
+    "en": "We got to know the parts of the PC.",
+    "ar": "تعرّفنا على قطع الكمبيوتر."
+  },
+  "Abbiamo imparato che non tutti i componenti funzionano insieme.": {
+    "en": "We learned that not all parts work together.",
+    "ar": "تعلّمنا أن ليس كل القطع تعمل معاً."
+  },
+  "Abbiamo visto come costruire un computer passo dopo passo.": {
+    "en": "We saw how to build a computer step by step.",
+    "ar": "رأينا كيف نبني الكمبيوتر خطوة بعد خطوة."
+  },
+  "Sistema operativo": {
+    "en": "Operating system",
+    "ar": "نظام التشغيل"
+  },
+  "Abbiamo scoperto Windows, Linux, BIOS e driver.": {
+    "en": "We discovered Windows, Linux, BIOS, and drivers.",
+    "ar": "اكتشفنا ويندوز ولينكس والبيوس والدرايفر."
+  },
+  "Risoluzione dei problemi": {
+    "en": "Fixing problems",
+    "ar": "حل المشاكل"
+  },
+  "Abbiamo imparato a controllare collegamenti, temperature e componenti.": {
+    "en": "We learned to check connections, temperatures, and parts.",
+    "ar": "تعلّمنا فحص التوصيلات والحرارة والقطع."
+  },
+  "Uso quotidiano": {
+    "en": "Everyday use",
+    "ar": "الاستخدام اليومي"
+  },
+  "Abbiamo imparato a organizzare file, cartelle e usare comandi rapidi.": {
+    "en": "We learned to organize files and folders and to use quick commands.",
+    "ar": "تعلّمنا ترتيب الملفات والمجلدات واستخدام الأوامر السريعة."
+  },
+  "Immagine futura: riepilogo completo del percorso": {
+    "en": "Future image: full summary of the path",
+    "ar": "صورة لاحقة: ملخص المسار كاملاً"
+  },
+  "Hai completato il percorso Officina del PC.": {
+    "en": "You have finished the Officina del PC path.",
+    "ar": "أنهيت مسار أوفيتشينا دل بي سي."
+  },
+  "Ora conosci meglio ciò che si trova dentro un computer, come viene assemblato, come si avvia e come utilizzarlo in modo più organizzato.": {
+    "en": "Now you know more about what is inside a computer, how it is built, how it starts, and how to use it in a tidier way.",
+    "ar": "الآن تعرف أكثر ما يوجد داخل الكمبيوتر، وكيف يُجمَّع، وكيف يشتغل، وكيف تستخدمه بطريقة أكثر ترتيباً."
+  },
+  "Qual è stato il tuo argomento preferito?": {
+    "en": "What was your favorite topic?",
+    "ar": "ما كان موضوعك المفضّل؟"
+  },
+  "Quale componente ti è sembrato più interessante?": {
+    "en": "Which part seemed the most interesting to you?",
+    "ar": "أي قطعة بدت لك الأكثر إثارة؟"
+  },
+  "Quale comando da tastiera userai di più?": {
+    "en": "Which keyboard command will you use the most?",
+    "ar": "أي أمر من لوحة المفاتيح ستستخدمه أكثر؟"
+  },
+  "Ti piacerebbe assemblare un PC completo?": {
+    "en": "Would you like to build a complete PC?",
+    "ar": "هل تحب أن تجمّع كمبيوتراً كاملاً؟"
+  },
+  "Immagine futura: ragazzi davanti a un PC assemblato": {
+    "en": "Future image: kids in front of a built PC",
+    "ar": "صورة لاحقة: أطفال أمام كمبيوتر مجمّع"
+  },
+  "ripassare hardware, software, componenti e compatibilità": {
+    "en": "review hardware, software, parts, and which ones work together",
+    "ar": "مراجعة الهاردوير والسوفتوير والقطع وأيها يعمل معاً"
+  },
+  "richiamare l’ordine corretto di assemblaggio": {
+    "en": "go over the correct build order",
+    "ar": "تذكير ترتيب التجميع الصحيح"
+  },
+  "collegare accensione, BIOS e sistema operativo": {
+    "en": "link turning on, BIOS, and the operating system",
+    "ar": "ربط التشغيل والبيوس ونظام التشغيل"
+  },
+  "introdurre un metodo semplice di risoluzione problemi": {
+    "en": "introduce a simple way to fix problems",
+    "ar": "تقديم طريقة بسيطة لحل المشاكل"
+  },
+  "far praticare file, cartelle e scorciatoie da tastiera": {
+    "en": "let them practice files, folders, and keyboard shortcuts",
+    "ar": "جعلهم يتدربون على الملفات والمجلدات واختصارات لوحة المفاتيح"
+  },
+  "circa 2 ore (10:00 – 12:00)": {
+    "en": "about 2 hours (10:00 – 12:00)",
+    "ar": "حوالي ساعتين (10:00 – 12:00)"
+  },
+  "Grande ripasso di tutto il percorso": {
+    "en": "Big review of the whole path",
+    "ar": "مراجعة كبيرة لكل المسار"
+  },
+  "30 min": {
+    "en": "30 minutes",
+    "ar": "30 دقيقة"
+  },
+  "Aiutare i ragazzi a collegare gli argomenti dei workshop precedenti.": {
+    "en": "Help the kids connect the topics from the earlier workshops.",
+    "ar": "ساعد الأطفال على ربط مواضيع الورش السابقة."
+  },
+  "Mostra le slide e fai domande brevi. Evita spiegazioni troppo lunghe. Lascia ai ragazzi alcuni secondi per rispondere. Collega ogni risposta a un componente reale sul tavolo.": {
+    "en": "Show the slides and ask short questions. Avoid explanations that are too long. Give the kids a few seconds to answer. Link each answer to a real part on the table.",
+    "ar": "اعرض الشرائح واسأل أسئلة قصيرة. تجنّب الشروحات الطويلة جداً. اترك للأطفال بضع ثوانٍ ليجيبوا. اربط كل جواب بقطعة حقيقية على الطاولة."
+  },
+  "Qual è la differenza tra hardware e software?": {
+    "en": "What is the difference between hardware and software?",
+    "ar": "ما الفرق بين الهاردوير والسوفتوير؟"
+  },
+  "Quale componente viene chiamato cervello del computer?": {
+    "en": "Which part is called the brain of the computer?",
+    "ar": "أي قطعة تُسمّى دماغ الكمبيوتر؟"
+  },
+  "Dove vengono salvati i file?": {
+    "en": "Where are files saved?",
+    "ar": "أين تُحفظ الملفات؟"
+  },
+  "A cosa serve la RAM?": {
+    "en": "What is the RAM for?",
+    "ar": "ما فائدة الرام؟"
+  },
+  "Cosa collega tutti i componenti?": {
+    "en": "What connects all the parts?",
+    "ar": "ما الذي يربط كل القطع؟"
+  },
+  "A cosa serve l’alimentatore?": {
+    "en": "What is the power supply for?",
+    "ar": "ما فائدة مزوّد الطاقة؟"
+  },
+  "Perché serve il dissipatore?": {
+    "en": "Why do we need the cooler?",
+    "ar": "لماذا نحتاج المبرّد؟"
+  },
+  "Qual è la differenza tra SSD e RAM?": {
+    "en": "What is the difference between an SSD and RAM?",
+    "ar": "ما الفرق بين SSD والرام؟"
+  },
+  "Cosa controlla il BIOS?": {
+    "en": "What does the BIOS check?",
+    "ar": "ماذا يفحص البيوس؟"
+  },
+  "Windows e Linux sono hardware o software?": {
+    "en": "Are Windows and Linux hardware or software?",
+    "ar": "هل ويندوز ولينكس هاردوير أم سوفتوير؟"
+  },
+  "Mostra un’immagine di un PC aperto e chiedi di riconoscere i componenti.": {
+    "en": "Show a picture of an open PC and ask them to name the parts.",
+    "ar": "اعرض صورة لكمبيوتر مفتوح واطلب منهم التعرّف على القطع."
+  },
+  "Passa tra i banchi componenti reali mentre rispondono.": {
+    "en": "Walk between the desks with real parts while they answer.",
+    "ar": "مرّ بين الطاولات ومعك قطع حقيقية بينما يجيبون."
+  },
+  "PC aperto oppure immagini": {
+    "en": "An open PC or pictures",
+    "ar": "كمبيوتر مفتوح أو صور"
+  },
+  "Alterna domande facili e medie per coinvolgere tutti.": {
+    "en": "Mix easy and medium questions so everyone can join in.",
+    "ar": "نوّع بين أسئلة سهلة ومتوسطة حتى يشارك الجميع."
+  },
+  "Se qualcuno non sa rispondere, passa al vicino e poi torna sul concetto.": {
+    "en": "If someone does not know the answer, ask the person next to them, then come back to the idea.",
+    "ar": "إذا لم يعرف أحد الجواب، اسأل الذي بجانبه ثم عُد إلى الفكرة."
+  },
+  "Confusione tra RAM e SSD": {
+    "en": "Mixing up RAM and SSD",
+    "ar": "الخلط بين الرام وSSD"
+  },
+  "Pensare che Windows sia un pezzo fisico": {
+    "en": "Thinking that Windows is a physical part",
+    "ar": "الاعتقاد أن ويندوز قطعة ملموسة"
+  },
+  "Difficoltà a ricordare dove si monta ogni componente": {
+    "en": "Trouble remembering where each part is installed",
+    "ar": "صعوبة تذكّر مكان تركيب كل قطعة"
+  },
+  "Assemblaggio completo": {
+    "en": "Full assembly",
+    "ar": "التجميع الكامل"
+  },
+  "Ripassare l’ordine corretto dell’assemblaggio.": {
+    "en": "Review the correct build order.",
+    "ar": "مراجعة ترتيب التجميع الصحيح."
+  },
+  "Mostra un componente alla volta. Chiedi ai ragazzi dove deve essere montato. Non trasformare la spiegazione in una lezione solo teorica.": {
+    "en": "Show one part at a time. Ask the kids where it should be installed. Do not turn the explanation into a lesson that is only talk.",
+    "ar": "اعرض قطعة واحدة في كل مرة. اسأل الأطفال أين يجب تركيبها. لا تحوّل الشرح إلى درس نظري فقط."
+  },
+  "1. Preparazione del case": {
+    "en": "1. Getting the case ready",
+    "ar": "1. تجهيز الصندوق"
+  },
+  "2. CPU": {
+    "en": "2. CPU",
+    "ar": "2. المعالج"
+  },
+  "3. Pasta termica": {
+    "en": "3. Thermal paste",
+    "ar": "3. المعجون الحراري"
+  },
+  "4. Dissipatore": {
+    "en": "4. Cooler",
+    "ar": "4. المبرّد"
+  },
+  "5. RAM": {
+    "en": "5. RAM",
+    "ar": "5. الرام"
+  },
+  "6. SSD": {
+    "en": "6. SSD",
+    "ar": "6. SSD"
+  },
+  "7. Scheda madre": {
+    "en": "7. Motherboard",
+    "ar": "7. اللوحة الأم"
+  },
+  "8. Alimentatore": {
+    "en": "8. Power supply",
+    "ar": "8. مزوّد الطاقة"
+  },
+  "10. Cavi": {
+    "en": "10. Cables",
+    "ar": "10. الكابلات"
+  },
+  "Perché la CPU ha un verso?": {
+    "en": "Why does the CPU have a correct way to face?",
+    "ar": "لماذا للمعالج اتجاه صحيح؟"
+  },
+  "Come capiamo il verso corretto della RAM?": {
+    "en": "How do we know the correct way for the RAM?",
+    "ar": "كيف نعرف الاتجاه الصحيح للرام؟"
+  },
+  "Perché non dobbiamo forzare i componenti?": {
+    "en": "Why must we not force the parts?",
+    "ar": "لماذا يجب ألا نضغط القطع بقوة؟"
+  },
+  "Dove si collega la ventola CPU?": {
+    "en": "Where does the CPU fan plug in?",
+    "ar": "أين تُوصَّل مروحة المعالج؟"
+  },
+  "Perché serve la pasta termica?": {
+    "en": "Why do we need thermal paste?",
+    "ar": "لماذا نحتاج المعجون الحراري؟"
+  },
+  "Quali cavi dobbiamo controllare prima dell’accensione?": {
+    "en": "Which cables should we check before turning it on?",
+    "ar": "أي كابلات يجب أن نفحصها قبل التشغيل؟"
+  },
+  "Far ordinare ai ragazzi alcune immagini dei passaggi di assemblaggio.": {
+    "en": "Have the kids put some pictures of the build steps in order.",
+    "ar": "اجعل الأطفال يرتّبون بعض صور خطوات التجميع."
+  },
+  "Immagini stampate o digitali": {
+    "en": "Printed or on-screen pictures",
+    "ar": "صور مطبوعة أو على الشاشة"
+  },
+  "Computer scollegato dalla corrente": {
+    "en": "Computer unplugged from the power",
+    "ar": "كمبيوتر مفصول عن الكهرباء"
+  },
+  "Evitare di toccare i contatti": {
+    "en": "Avoid touching the metal contacts",
+    "ar": "تجنّب لمس الملامسات المعدنية"
+  },
+  "Gestire con attenzione CPU e socket": {
+    "en": "Handle the CPU and the socket with care",
+    "ar": "تعامل بحذر مع المعالج ومكانه"
+  },
+  "Non permettere attività pericolose senza supervisione": {
+    "en": "Do not allow dangerous activities without a supervisor",
+    "ar": "لا تسمح بأنشطة خطرة من دون إشراف"
+  },
+  "Lavora a gruppi piccoli intorno al tavolo componenti.": {
+    "en": "Work in small groups around the parts table.",
+    "ar": "اعمل في مجموعات صغيرة حول طاولة القطع."
+  },
+  "Ripeti ad alta voce la regola: se non entra, non forzare.": {
+    "en": "Say the rule out loud: if it does not go in, do not force it.",
+    "ar": "كرّر القاعدة بصوت عالٍ: إذا لم تدخل، لا تضغطها بقوة."
+  },
+  "Spiegare il collegamento tra hardware, BIOS e sistema operativo.": {
+    "en": "Explain the link between hardware, BIOS, and the operating system.",
+    "ar": "اشرح الرابط بين الهاردوير والبيوس ونظام التشغيل."
+  },
+  "Segui il flusso della slide con frecce. Collega ogni fase a un componente già visto. Non entrare troppo nei dettagli tecnici del POST: usa un linguaggio semplice.": {
+    "en": "Follow the arrows on the slide. Link each step to a part you already saw. Do not go too deep into the technical details of POST: use simple words.",
+    "ar": "اتبع الأسهم في الشريحة. اربط كل مرحلة بقطعة رأيناها من قبل. لا تدخل كثيراً في تفاصيل POST التقنية: استخدم كلاماً بسيطاً."
+  },
+  "Quale componente riceve per primo l’energia?": {
+    "en": "Which part gets the power first?",
+    "ar": "أي قطعة تصلها الطاقة أولاً؟"
+  },
+  "Dove si trova Windows o Linux?": {
+    "en": "Where are Windows or Linux?",
+    "ar": "أين يوجد ويندوز أو لينكس؟"
+  },
+  "La RAM conserva i dati quando il PC è spento?": {
+    "en": "Does RAM keep the data when the PC is off?",
+    "ar": "هل تحتفظ الرام بالبيانات عندما يكون الكمبيوتر مطفأ؟"
+  },
+  "Cosa succede se il BIOS non trova l’SSD?": {
+    "en": "What happens if the BIOS does not find the SSD?",
+    "ar": "ماذا يحدث إذا لم يجد البيوس قرص SSD؟"
+  },
+  "Controllo hardware": {
+    "en": "Hardware check",
+    "ar": "فحص الهاردوير"
+  },
+  "POST (in modo semplice)": {
+    "en": "POST (in a simple way)",
+    "ar": "POST (بطريقة بسيطة)"
+  },
+  "BIOS o UEFI": {
+    "en": "BIOS or UEFI",
+    "ar": "البيوس أو UEFI"
+  },
+  "Dispositivo di avvio": {
+    "en": "Startup device",
+    "ar": "جهاز بدء التشغيل"
+  },
+  "Fai cliccare ai ragazzi i passaggi del flusso uno alla volta.": {
+    "en": "Have the kids click the steps of the path one at a time.",
+    "ar": "اجعل الأطفال يضغطون خطوات المسار واحدة تلو الأخرى."
+  },
+  "Se il tempo stringe, salta curiosità e resta sul flusso principale.": {
+    "en": "If time is short, skip the extra facts and stay on the main path.",
+    "ar": "إذا ضاق الوقت، تجاوز المعلومات الإضافية وابقَ على المسار الرئيسي."
+  },
+  "Insegnare un metodo semplice e ordinato per trovare un problema.": {
+    "en": "Teach a simple, orderly way to find a problem.",
+    "ar": "علّم طريقة بسيطة ومرتّبة لإيجاد المشكلة."
+  },
+  "Regola principale: controllare una cosa alla volta, partendo dalle cause più semplici. Premia il metodo di ragionamento, non risposte troppo tecniche.": {
+    "en": "Main rule: check one thing at a time, starting with the simplest causes. Praise the way they think, not answers that are too technical.",
+    "ar": "القاعدة الأساسية: افحص شيئاً واحداً في كل مرة، وابدأ بالأسباب الأسهل. شجّع طريقة التفكير، لا الإجابات التقنية جداً."
+  },
+  "Il cavo è collegato?": {
+    "en": "Is the cable plugged in?",
+    "ar": "هل الكابل موصول؟"
+  },
+  "L’alimentatore è acceso?": {
+    "en": "Is the power supply turned on?",
+    "ar": "هل مزوّد الطاقة شغّال؟"
+  },
+  "Il monitor è acceso?": {
+    "en": "Is the monitor on?",
+    "ar": "هل الشاشة مشغّلة؟"
+  },
+  "Il cavo video è nella porta corretta?": {
+    "en": "Is the video cable in the correct port?",
+    "ar": "هل كابل الصورة في المنفذ الصحيح؟"
+  },
+  "La RAM è inserita completamente?": {
+    "en": "Is the RAM pushed in all the way?",
+    "ar": "هل الرام مدخلة بالكامل؟"
+  },
+  "La GPU ha il cavo di alimentazione?": {
+    "en": "Does the GPU have its power cable?",
+    "ar": "هل لكرت الشاشة كابل كهرباء؟"
+  },
+  "Il dissipatore è montato correttamente?": {
+    "en": "Is the cooler installed correctly?",
+    "ar": "هل المبرّد مركّب بشكل صحيح؟"
+  },
+  "PC spento": {
+    "en": "PC turned off",
+    "ar": "الكمبيوتر مطفأ"
+  },
+  "RAM inserita male": {
+    "en": "RAM fitted the wrong way",
+    "ar": "الرام مركّبة بشكل خاطئ"
+  },
+  "Cavo CPU scollegato": {
+    "en": "CPU cable unplugged",
+    "ar": "كابل المعالج مفصول"
+  },
+  "Mostra una situazione e chiedi: “Qual è la prima cosa che controlleresti?”": {
+    "en": "Show a situation and ask: “What is the first thing you would check?”",
+    "ar": "اعرض حالة واسأل: «ما أول شيء ستفحصه؟»"
+  },
+  "Usa casi concreti e veloci, 1-2 minuti ciascuno.": {
+    "en": "Use real, quick examples, 1-2 minutes each.",
+    "ar": "استخدم أمثلة حقيقية وسريعة، 1-2 دقيقة لكل واحدة."
+  },
+  "Se un ragazzo propone di cambiare subito un pezzo, riporta l’attenzione ai cavi.": {
+    "en": "If a kid suggests changing a part right away, bring the attention back to the cables.",
+    "ar": "إذا اقترح أحدهم تغيير قطعة فوراً، أعد الانتباه إلى الكابلات."
+  },
+  "Attività pratica: usare meglio il computer": {
+    "en": "Hands-on activity: use the computer better",
+    "ar": "نشاط عملي: استخدام الكمبيوتر بشكل أفضل"
+  },
+  "Far utilizzare concretamente cartelle, file e comandi da tastiera.": {
+    "en": "Have them really use folders, files, and keyboard commands.",
+    "ar": "اجعلهم يستخدمون فعلاً المجلدات والملفات وأوامر لوحة المفاتيح."
+  },
+  "Ogni ragazzo o gruppo esegue la sfida pratica. Mostra una fase alla volta. Non mostrare immediatamente tutte le soluzioni.": {
+    "en": "Each kid or group does the hands-on challenge. Show one step at a time. Do not show all the answers right away.",
+    "ar": "كل طفل أو مجموعة ينفّذ التحدّي العملي. اعرض مرحلة واحدة في كل مرة. لا تُظهر كل الحلول فوراً."
+  },
+  "File, cartella, sottocartella": {
+    "en": "File, folder, folder inside a folder",
+    "ar": "ملف، مجلد، مجلد داخلي"
+  },
+  "Copia, incolla, taglia, rinomina": {
+    "en": "Copy, paste, cut, rename",
+    "ar": "نسخ، لصق، قص، إعادة تسمية"
+  },
+  "Elimina, cestino, ricerca, salvataggio": {
+    "en": "Delete, recycle bin, search, save",
+    "ar": "حذف، سلة المحذوفات، بحث، حفظ"
+  },
+  "Qual è la differenza tra copiare e spostare?": {
+    "en": "What is the difference between copying and moving?",
+    "ar": "ما الفرق بين النسخ والنقل؟"
+  },
+  "Cosa fa Ctrl + Z?": {
+    "en": "What does Ctrl + Z do?",
+    "ar": "ماذا يفعل Ctrl + Z؟"
+  },
+  "Come rinomini un file senza il mouse?": {
+    "en": "How do you rename a file without the mouse?",
+    "ar": "كيف تعيد تسمية ملف من دون الماوس؟"
+  },
+  "Un computer ogni ragazzo o ogni piccolo gruppo": {
+    "en": "One computer for each kid or each small group",
+    "ar": "كمبيوتر لكل طفل أو لكل مجموعة صغيرة"
+  },
+  "Windows oppure Linux": {
+    "en": "Windows or Linux",
+    "ar": "ويندوز أو لينكس"
+  },
+  "Mouse e tastiera": {
+    "en": "Mouse and keyboard",
+    "ar": "ماوس ولوحة مفاتيح"
+  },
+  "Cartella di prova": {
+    "en": "Practice folder",
+    "ar": "مجلد للتجربة"
+  },
+  "Alcuni file non importanti": {
+    "en": "Some files that are not important",
+    "ar": "بعض الملفات غير المهمة"
+  },
+  "Ragazzi con livelli diversi": {
+    "en": "Kids at different levels",
+    "ar": "أطفال بمستويات مختلفة"
+  },
+  "Difficoltà nell’uso della tastiera": {
+    "en": "Trouble using the keyboard",
+    "ar": "صعوبة في استخدام لوحة المفاتيح"
+  },
+  "Differenze tra Windows e Linux": {
+    "en": "Differences between Windows and Linux",
+    "ar": "اختلافات بين ويندوز ولينكس"
+  },
+  "Confusione tra copiare e spostare": {
+    "en": "Mixing up copying and moving",
+    "ar": "الخلط بين النسخ والنقل"
+  },
+  "Eliminazione accidentale di file": {
+    "en": "Deleting files by accident",
+    "ar": "حذف الملفات بالخطأ"
+  },
+  "Usare solamente file creati appositamente per l’attività.": {
+    "en": "Use only files made specially for the activity.",
+    "ar": "استخدم فقط ملفات أُنشئت خصيصاً للنشاط."
+  },
+  "Non utilizzare documenti personali o importanti.": {
+    "en": "Do not use personal or important documents.",
+    "ar": "لا تستخدم مستندات شخصية أو مهمة."
+  },
+  "Far lavorare insieme i ragazzi più esperti e quelli meno esperti.": {
+    "en": "Have the more experienced kids work with the less experienced ones.",
+    "ar": "اجعل الأطفال الأكثر خبرة يعملون مع الأقل خبرة."
+  },
+  "Spiegare chiaramente che Shift + Delete può eliminare senza cestino.": {
+    "en": "Explain clearly that Shift + Delete can delete without the recycle bin.",
+    "ar": "اشرح بوضوح أن Shift + Delete يمكن أن يحذف من دون سلة المحذوفات."
+  },
+  "Usare Shift + Delete senza capire la differenza con Delete": {
+    "en": "Using Shift + Delete without understanding how it differs from Delete",
+    "ar": "استخدام Shift + Delete من دون فهم الفرق عن Delete"
+  },
+  "Salvare file sul Desktop senza cartelle": {
+    "en": "Saving files on the Desktop without folders",
+    "ar": "حفظ الملفات على سطح المكتب من دون مجلدات"
+  },
+  "Nomi file poco chiari (documento1, nuova cartella)": {
+    "en": "Unclear file names (document1, new folder)",
+    "ar": "أسماء ملفات غير واضحة (مستند1، مجلد جديد)"
+  },
+  "Conclusione del percorso": {
+    "en": "End of the path",
+    "ar": "ختام المسار"
+  },
+  "Chiudere il percorso e valorizzare ciò che è stato imparato.": {
+    "en": "Close the path and highlight what was learned.",
+    "ar": "اختم المسار وأبرز ما تم تعلّمه."
+  },
+  "Raccogli 3-4 risposte rapide alle domande finali. Chiudi con un messaggio chiaro e positivo sul percorso.": {
+    "en": "Collect 3-4 quick answers to the final questions. Close with a clear, positive message about the path.",
+    "ar": "اجمع 3-4 إجابات سريعة على الأسئلة الأخيرة. اختم برسالة واضحة وإيجابية عن المسار."
+  },
+  "Quale argomento ti è piaciuto di più?": {
+    "en": "Which topic did you like the most?",
+    "ar": "أي موضوع أعجبك أكثر؟"
+  },
+  "Quale componente ricordi meglio?": {
+    "en": "Which part do you remember best?",
+    "ar": "أي قطعة تتذكّرها أكثر؟"
+  },
+  "Quale problema sapresti controllare?": {
+    "en": "Which problem would you know how to check?",
+    "ar": "أي مشكلة تعرف كيف تفحصها؟"
+  },
+  "Quale comando userai più spesso?": {
+    "en": "Which command will you use most often?",
+    "ar": "أي أمر ستستخدمه أكثر؟"
+  },
+  "Ti piacerebbe continuare a studiare informatica?": {
+    "en": "Would you like to keep learning about computers?",
+    "ar": "هل تحب أن تواصل تعلّم الكمبيوتر؟"
+  },
+  "Ora sapete che un computer non è una scatola magica. È formato da componenti che lavorano insieme, da programmi che li controllano e da persone che imparano a usarli e risolvere i problemi.": {
+    "en": "Now you know a computer is not a magic box. It is made of parts that work together, programs that control them, and people who learn to use them and fix problems.",
+    "ar": "الآن تعرفون أن الكمبيوتر ليس صندوقاً سحرياً. هو مصنوع من قطع تعمل معاً، ومن برامج تتحكم بها، ومن أشخاص يتعلّمون استخدامها وحل المشاكل."
+  },
+  "Se il tempo finisce, fai solo due domande e leggi la conclusione suggerita.": {
+    "en": "If time runs out, ask only two questions and read the suggested ending.",
+    "ar": "إذا انتهى الوقت، اسأل سؤالين فقط واقرأ الخاتمة المقترحة."
+  },
+  "Ringrazia il gruppo e ricorda i punti forti della giornata.": {
+    "en": "Thank the group and remind them of the best parts of the day.",
+    "ar": "اشكر المجموعة وذكّرهم بأقوى نقاط اليوم."
+  },
+  "Componenti reali pronti sul tavolo": {
+    "en": "Real parts ready on the table",
+    "ar": "قطع حقيقية جاهزة على الطاولة"
+  },
+  "PC dimostrativo o immagini di assemblaggio": {
+    "en": "A demo PC or pictures of the build",
+    "ar": "كمبيوتر للعرض أو صور التجميع"
+  },
+  "Computer per l’attività file/cartelle": {
+    "en": "Computers for the files and folders activity",
+    "ar": "كمبيوترات لنشاط الملفات والمجلدات"
+  },
+  "Cartelle e file di prova già creati": {
+    "en": "Practice folders and files already made",
+    "ar": "مجلدات وملفات تجربة جاهزة مسبقاً"
+  },
+  "Slide studenti aperte sul proiettore": {
+    "en": "Student slides open on the projector",
+    "ar": "شرائح الطلاب مفتوحة على جهاز العرض"
+  },
+  "Guida docenti aperta su un secondo schermo": {
+    "en": "Teacher guide open on a second screen",
+    "ar": "دليل المعلّمين مفتوح على شاشة ثانية"
+  },
+  "Ripasso": { "en": "Review", "ar": "مراجعة" },
+  "Assemblaggio": { "en": "Building", "ar": "التجميع" },
+  "Alimentatore": { "en": "Power supply", "ar": "مزود الطاقة" },
+  "Case": { "en": "Case", "ar": "الصندوق" },
+  "Dissipatore": { "en": "Cooler", "ar": "المبرد" },
+  "Monitor": { "en": "Monitor", "ar": "الشاشة" },
+  "Ventole": { "en": "Fans", "ar": "المراوح" },
+  "Costo": { "en": "Cost", "ar": "التكلفة" },
+  "Programmazione": { "en": "Programming", "ar": "البرمجة" },
+  "Personalizzazione": { "en": "Customization", "ar": "التخصيص" },
+  "Programmi": { "en": "Programs", "ar": "البرامج" },
+  "Utente": { "en": "User", "ar": "المستخدم" },
+  "Terminale": { "en": "Terminal", "ar": "الطرفية" },
+  "Menu": { "en": "Menu", "ar": "القائمة" },
+  "Confronto": { "en": "Comparison", "ar": "المقارنة" },
+  "Programma": { "en": "Program", "ar": "برنامج" },
+  "Installazione": { "en": "Installation", "ar": "التثبيت" },
+  "Aggiornamenti": { "en": "Updates", "ar": "التحديثات" },
+  "Pronto": { "en": "Ready", "ar": "جاهز" },
+  "Entrambi": { "en": "Both", "ar": "الاثنان" },
+  "Conclusione": { "en": "Closing", "ar": "الخاتمة" },
+  "Riepilogo": { "en": "Recap", "ar": "الخلاصة" },
+  "Introduzione": { "en": "Introduction", "ar": "المقدمة" },
+  "Proiettore": { "en": "Projector", "ar": "جهاز العرض" },
+  "Tastiera": { "en": "Keyboard", "ar": "لوحة المفاتيح" },
+  "Videogiochi": { "en": "Video games", "ar": "ألعاب الفيديو" },
+  "Applicazioni": { "en": "Apps", "ar": "التطبيقات" },
+  "Attenzione": { "en": "Careful", "ar": "انتبه" },
+  "File": { "en": "File", "ar": "ملف" },
+  "Cartella": { "en": "Folder", "ar": "مجلد" },
+  "Sottocartella": { "en": "Subfolder", "ar": "مجلد فرعي" },
+  "Creare": { "en": "Create", "ar": "إنشاء" },
+  "Rinominare": { "en": "Rename", "ar": "إعادة التسمية" },
+  "Copiare": { "en": "Copy", "ar": "نسخ" },
+  "Eliminare": { "en": "Delete", "ar": "حذف" },
+  "Ripristinare": { "en": "Restore", "ar": "استعادة" },
+  "Cercare": { "en": "Search", "ar": "بحث" },
+  "Copia": { "en": "Copy", "ar": "نسخ" },
+  "Incolla": { "en": "Paste", "ar": "لصق" },
+  "Taglia": { "en": "Cut", "ar": "قص" },
+  "Complimenti!": { "en": "Well done!", "ar": "أحسنت!" },
+  "Cacciavite": { "en": "Screwdriver", "ar": "مفك" },
+  "Alimentazione": { "en": "Power", "ar": "الكهرباء" },
+  "resto": { "en": "the rest", "ar": "الباقي" },
+  "Quiz": { "en": "Quiz", "ar": "اختبار" },
+  "2 ore": { "en": "2 hours", "ar": "ساعتان" },
+  "15 min": { "en": "15 min", "ar": "15 دقيقة" },
+  "20 min": { "en": "20 min", "ar": "20 دقيقة" },
+  "10 min": { "en": "10 min", "ar": "10 دقائق" },
+  "30 min": { "en": "30 min", "ar": "30 دقيقة" },
+  "5 min": { "en": "5 min", "ar": "5 دقائق" },
+  "circa 2 ore": { "en": "about 2 hours", "ar": "حوالي ساعتين" },
+  "circa 2 ore (10:00 – 12:00)": { "en": "about 2 hours (10:00 – 12:00)", "ar": "حوالي ساعتين (10:00 – 12:00)" }
+}

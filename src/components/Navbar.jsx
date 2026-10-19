@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { workshopDays } from '../data/workshops'
+import { useLanguage } from '../i18n/useLanguage'
+import LanguageMenu from './LanguageMenu'
 import NavDropdown from './NavDropdown'
 
-const anchorLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Incontri', href: '#incontri' },
-  { label: 'Hardware', href: '#hardware' },
+const anchorHrefs = [
+  { key: 'home', href: '#home' },
+  { key: 'meetings', href: '#incontri' },
+  { key: 'hardware', href: '#hardware' },
 ]
 
 function SectionLink({ href, className, children }) {
@@ -29,12 +31,13 @@ function SectionLink({ href, className, children }) {
 
 export default function Navbar() {
   const [workshopOpen, setWorkshopOpen] = useState(false)
+  const { ui } = useLanguage()
   const { pathname } = useLocation()
   const isHome = pathname === '/'
   const onOpenDay = pathname === '/open-day'
 
   const workshopItems = workshopDays.map((day) => ({
-    label: day.label,
+    label: ui.days[day.id],
     href: day.studentPath,
   }))
 
@@ -59,20 +62,20 @@ export default function Navbar() {
 
         <nav
           className="order-3 flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-2 lg:order-none lg:w-auto lg:flex-1 lg:justify-center"
-          aria-label="Navigazione principale"
+          aria-label={ui.nav.mainNav}
         >
-          {anchorLinks.map((link) => (
+          {anchorHrefs.map((link) => (
             <SectionLink
               key={link.href}
               href={link.href}
               className="text-sm font-semibold text-white/70 transition-colors hover:text-yellow"
             >
-              {link.label}
+              {ui.nav[link.key]}
             </SectionLink>
           ))}
 
           <NavDropdown
-            label="Workshop"
+            label={ui.nav.workshop}
             accent
             isOpen={workshopOpen}
             onToggle={() => setWorkshopOpen((open) => !open)}
@@ -87,16 +90,19 @@ export default function Navbar() {
               onOpenDay ? 'text-yellow' : 'text-white/70'
             }`}
           >
-            Open Day
+            {ui.nav.openDay}
           </Link>
         </nav>
 
-        <SectionLink
-          href="#incontri"
-          className="ml-auto rounded-full bg-yellow px-5 py-2 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-0.5 lg:ml-0"
-        >
-          Calendario
-        </SectionLink>
+        <div className="ms-auto flex items-center gap-3 lg:ms-0">
+          <LanguageMenu />
+          <SectionLink
+            href="#incontri"
+            className="rounded-full bg-yellow px-5 py-2 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-0.5"
+          >
+            {ui.nav.calendar}
+          </SectionLink>
+        </div>
       </div>
     </header>
   )

@@ -1,10 +1,13 @@
+import { useLanguage } from '../../i18n/useLanguage'
+
 export default function WorkshopProgress({ current, total, time }) {
+  const { ui } = useLanguage()
   const percent = total > 0 ? Math.round((current / total) * 100) : 0
 
   return (
     <div className="w-full">
       <div className="mb-2 flex items-center justify-between gap-3 text-sm font-semibold">
-        <span className="text-white/60">Progresso</span>
+        <span className="text-white/60">{ui.slides.progress}</span>
         <div className="flex items-center gap-3">
           {time && (
             <span className="hidden text-xs text-white/40 sm:inline">{time}</span>
@@ -20,7 +23,7 @@ export default function WorkshopProgress({ current, total, time }) {
         aria-valuenow={current}
         aria-valuemin={1}
         aria-valuemax={total}
-        aria-label={`Slide ${current} di ${total}`}
+        aria-label={ui.slides.counter(current, total)}
       >
         <div
           className="h-full rounded-full bg-gradient-to-r from-accent to-[#FACC15] transition-all duration-500 ease-out"

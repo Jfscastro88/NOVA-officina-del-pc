@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Spark, Star } from "./Doodles";
 import WaveDivider from "./WaveDivider";
 import HardwareModal from "./HardwareModal";
-import { hardwareComponents } from "../data/hardwareComponents";
+import { useLanguage } from "../i18n/useLanguage";
 
 export default function Hardware() {
   const [selected, setSelected] = useState(null);
+  const { ui, hardware } = useLanguage();
 
   return (
     <>
@@ -18,18 +19,19 @@ export default function Hardware() {
         <div className="relative mx-auto max-w-7xl">
           <div className="mb-14 text-center animate-fade-up">
             <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-accent">
-              Componenti
+              {ui.hardware.kicker}
             </span>
             <h2 className="mt-3 font-display text-3xl text-dark-purple md:text-5xl">
-              Alcuni componenti che <span className="highlight-brush text-primary">scopriremo</span>
+              {ui.hardware.titleBefore}{" "}
+              <span className="highlight-brush text-primary">{ui.hardware.titleHighlight}</span>
             </h2>
             <p className="mx-auto mt-4 max-w-md text-sm text-primary/70">
-              Clicca su una card per scoprire di più
+              {ui.hardware.hint}
             </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {hardwareComponents.map((item, i) => (
+            {hardware.map((item, i) => (
               <button
                 key={item.id}
                 type="button"
@@ -45,7 +47,7 @@ export default function Hardware() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-purple/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <span className="absolute bottom-2 right-2 rounded-full bg-yellow px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-dark-purple opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-1">
-                    Scopri →
+                    {ui.hardware.discover}
                   </span>
                 </div>
                 <h3 className="font-display text-xl text-dark-purple">{item.name}</h3>

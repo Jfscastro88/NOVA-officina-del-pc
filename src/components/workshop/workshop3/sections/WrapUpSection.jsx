@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 /** Conclusione con domande finali (senza quiz/punteggio) */
 export default function WrapUpSection({ section }) {
+  const { ui } = useLanguage()
   return (
     <SlideSectionFrame
       section={section}
@@ -24,7 +26,7 @@ export default function WrapUpSection({ section }) {
       {section.questions?.length > 0 && (
         <div className="space-y-2">
           <p className="mb-1 text-xs font-extrabold uppercase tracking-wider text-[#FACC15] sm:text-sm">
-            Domande finali
+            {ui.slides.finalQuestions}
           </p>
           {section.questions.map((q, index) => (
             <motion.div

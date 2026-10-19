@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { Star, Squiggle, BrushStroke } from "./Doodles";
 import { workshopDays } from "../data/workshops";
+import { useLanguage } from "../i18n/useLanguage";
 import NavDropdown from "./NavDropdown";
-
-const badges = ["Pratico", "Divertente", "Istruttivo", "Collaborativo"];
 
 export default function Footer() {
   const [docentiOpen, setDocentiOpen] = useState(false);
+  const { ui } = useLanguage();
 
   const docentiItems = workshopDays.map((day) => ({
-    label: day.label,
+    label: ui.days[day.id],
     href: day.teacherPath,
   }));
 
@@ -23,13 +23,13 @@ export default function Footer() {
 
       <div className="relative mx-auto max-w-3xl text-center animate-fade-up">
         <h2 className="font-display text-4xl text-white poster-shadow md:text-5xl lg:text-6xl">
-          Pronto a metterti <span className="text-yellow">all&apos;opera?</span>
+          {ui.footer.ready} <span className="text-yellow">{ui.footer.highlight}</span>
         </h2>
 
         <BrushStroke className="mx-auto mt-4 h-4 w-48 text-accent/60" />
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          {badges.map((badge) => (
+          {ui.footer.badges.map((badge) => (
             <span
               key={badge}
               className="rounded-full border-2 border-white/25 bg-white/10 px-5 py-2 text-sm font-bold text-white transition-all hover:scale-105 hover:border-yellow hover:bg-yellow hover:text-dark-purple"
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-8 text-lg text-white/75 md:text-xl">
-          Segui il laboratorio e porta la tua curiosità!
+          {ui.footer.follow}
         </p>
       </div>
 
@@ -48,10 +48,10 @@ export default function Footer() {
         <span className="font-display text-sm tracking-wide text-white">OFFICINA DEL PC</span>
         <nav
           className="flex flex-wrap items-center justify-center gap-6"
-          aria-label="Collegamenti rapidi"
+          aria-label={ui.footer.quickLinks}
         >
           <NavDropdown
-            label="Docenti"
+            label={ui.footer.teachers}
             variant="footer"
             isOpen={docentiOpen}
             onToggle={() => setDocentiOpen((open) => !open)}

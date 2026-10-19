@@ -1,7 +1,13 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Home, Presentation } from "lucide-react";
-import { getWorkshopDay, getStudentWorkshop, getInteractiveWorkshop, isInteractiveWorkshop } from "../data/workshops";
+import { getWorkshopDay, getStudentWorkshop, getSharedWorkshop, getInteractiveWorkshop, isInteractiveWorkshop } from "../data/workshops";
+import { toStudentWorkshop } from "../data/workshops/adapters";
+import { useLanguage } from "../i18n/useLanguage";
+import { localizeWorkshop } from "../i18n/localizeWorkshop";
+import { applyPhrases } from "../i18n/applyPhrases";
+import { day1Student } from "../i18n/day1";
+import LanguageMenu from "../components/LanguageMenu";
 import Workshop3Student from "../components/workshop/workshop3/Workshop3Student";
 import WorkshopSlides from "../components/workshop/WorkshopSlides";
 import SlideProgress from "../components/workshop/SlideProgress";
@@ -11,7 +17,9 @@ import PresentationMenu from "../components/workshop/PresentationMenu";
 import WorkshopComingSoon from "../components/workshop/WorkshopComingSoon";
 
 function StudentPresentation({ day, workshop }) {
+  const { ui } = useLanguage();
   const { meta, slides } = workshop;
+  const dayLabel = ui.days[day.id] ?? day.label;
   const [currentIndex, setCurrentIndex] = useState(0);
   const topicsRef = useRef(null);
   const total = slides.length;
@@ -76,12 +84,12 @@ function StudentPresentation({ day, workshop }) {
             className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white/70 transition-colors hover:border-accent hover:text-[#FACC15]"
           >
             <Home size={18} />
-            <span className="hidden sm:inline">Home</span>
+            <span className="hidden sm:inline">{ui.slides.home}</span>
           </Link>
 
           <div className="min-w-0 flex-1 text-center">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#FACC15] sm:text-xs sm:tracking-[0.2em]">
-              Presentazione
+              {ui.slides.presentation}
             </p>
             <h1 className="truncate font-display text-xs tracking-wide text-white sm:text-base">
               {meta.title}
@@ -91,6 +99,7 @@ function StudentPresentation({ day, workshop }) {
             </p>
           </div>
 
+          <LanguageMenu />
           <PresentationMenu
             audience="student"
             currentDayId={day.id}
@@ -103,7 +112,7 @@ function StudentPresentation({ day, workshop }) {
         <div className="mb-3 flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/10 px-3 py-2 sm:mb-5 sm:gap-3 sm:rounded-2xl sm:px-4 sm:py-3 lg:mb-6">
           <Presentation size={16} className="shrink-0 text-[#FACC15] sm:h-[18px] sm:w-[18px]" />
           <p className="min-w-0 text-xs font-semibold leading-snug text-white/80 sm:text-sm">
-            {day.label} — presentazione visibile agli studenti
+            {ui.slides.studentBanner(dayLabel)}
           </p>
         </div>
 
@@ -121,10 +130,10 @@ function StudentPresentation({ day, workshop }) {
 
         <nav
           className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-md sm:mt-8 sm:rounded-3xl sm:p-4 lg:mt-10"
-          aria-label="Argomenti del workshop"
+          aria-label={ui.slides.topicsNav}
         >
           <h2 className="mb-2 text-center text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#FACC15] sm:mb-3 sm:text-xs sm:tracking-[0.2em]">
-            Argomenti
+            {ui.slides.topics}
           </h2>
           <div
             ref={topicsRef}
@@ -150,15 +159,26 @@ function StudentPresentation({ day, workshop }) {
 
 export default function WorkshopDay() {
   const { workshopId } = useParams();
+  const { lang } = useLanguage();
   const day = getWorkshopDay(workshopId);
-  const workshop = getStudentWorkshop(workshopId);
+  const source = getStudentWorkshop(workshopId);
+  const shared = getSharedWorkshop(workshopId);
+  const interactiveSource = getInteractiveWorkshop(workshopId);
+  const workshop = useMemo(() => {
+    if (workshopId === "2026-06-27") return localizeWorkshop(source, day1Student[lang]);
+    if (shared) return toStudentWorkshop(applyPhrases(shared, lang));
+    return source;
+  }, [workshopId, source, shared, lang]);
+  const interactive = useMemo(
+    () => applyPhrases(interactiveSource, lang),
+    [interactiveSource, lang],
+  );
 
   if (!day) {
     return <Navigate to="/" replace />;
   }
 
   if (isInteractiveWorkshop(workshopId)) {
-    const interactive = getInteractiveWorkshop(workshopId);
     return <Workshop3Student day={day} workshop={interactive} />;
   }
 

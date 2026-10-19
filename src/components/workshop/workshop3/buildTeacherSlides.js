@@ -1,4 +1,4 @@
-export function buildTeacherSlides(workshop) {
+export function buildTeacherSlides(workshop, labels = {}) {
   const { teacher } = workshop
 
   return [
@@ -17,9 +17,9 @@ export function buildTeacherSlides(workshop) {
     {
       id: 'checklist',
       type: 'checklist',
-      title: 'Materiale docente',
+      title: labels.teacherMaterials ?? 'Materiale docente',
       emoji: '✅',
-      time: 'Prima della lezione',
+      time: labels.beforeLesson ?? 'Prima della lezione',
       checklist: teacher.checklist,
       checklistKey: teacher.checklistKey,
     },

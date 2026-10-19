@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -6,30 +5,11 @@ import BackToTopButton from '../components/workshop/BackToTopButton'
 import WaveDivider from '../components/WaveDivider'
 import { ArrowScribble, BrushStroke, Spark, Squiggle, Star } from '../components/Doodles'
 import MeetingCarousel from '../components/open-day/MeetingCarousel'
-import {
-  OPEN_DAY_DESCRIPTION,
-  OPEN_DAY_TITLE,
-  learningOutcomes,
-} from '../data/openDay'
-
-function useOpenDayMetadata() {
-  useEffect(() => {
-    const previousTitle = document.title
-    const meta = document.querySelector('meta[name="description"]')
-    const previousDescription = meta?.getAttribute('content') ?? ''
-
-    document.title = OPEN_DAY_TITLE
-    if (meta) meta.setAttribute('content', OPEN_DAY_DESCRIPTION)
-
-    return () => {
-      document.title = previousTitle
-      if (meta) meta.setAttribute('content', previousDescription)
-    }
-  }, [])
-}
+import { useLanguage, usePageMeta } from '../i18n/useLanguage'
 
 export default function OpenDay() {
-  useOpenDayMetadata()
+  const { ui, outcomes } = useLanguage()
+  usePageMeta(ui.openDay.metaTitle, ui.openDay.metaDescription)
 
   return (
     <>
@@ -49,7 +29,7 @@ export default function OpenDay() {
 
           <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center lg:px-10 lg:py-28">
             <span className="inline-block rounded-full border-2 border-yellow/30 bg-yellow px-4 py-1.5 text-xs font-extrabold tracking-widest text-dark-purple shadow-[0_3px_0_#e6bf00]">
-              Open Day
+              {ui.openDay.badge}
             </span>
 
             <h1 className="mt-6 font-display text-[clamp(2.15rem,10vw,5.5rem)] leading-[0.95] tracking-tight poster-shadow">
@@ -58,13 +38,11 @@ export default function OpenDay() {
             </h1>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg font-semibold leading-snug text-yellow/95 sm:text-xl md:text-2xl">
-              Scopri cosa c&apos;è davvero dentro un computer e come prende vita.
+              {ui.openDay.lead}
             </p>
 
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
-              Un percorso pratico per conoscere l&apos;hardware, assemblare un PC, scoprire come
-              funziona un sistema operativo e capire cosa succede dietro le tecnologie che
-              utilizziamo ogni giorno.
+              {ui.openDay.body}
             </p>
 
             <div className="mt-8">
@@ -72,7 +50,7 @@ export default function OpenDay() {
                 href="#percorso"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-yellow px-7 py-3.5 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-1 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                Scopri il percorso
+                {ui.openDay.cta}
               </a>
             </div>
 
@@ -93,19 +71,18 @@ export default function OpenDay() {
           <div className="relative mx-auto max-w-7xl">
             <div className="mb-12 text-center animate-fade-up motion-reduce:animate-none sm:mb-14">
               <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-accent">
-                Il percorso
+                {ui.openDay.pathKicker}
               </span>
               <h2
                 id="percorso-title"
                 className="mt-3 font-display text-[clamp(1.9rem,6vw,3.75rem)] leading-[1.05] text-dark-purple"
               >
-                5 incontri.{' '}
-                <span className="highlight-brush text-primary">Un PC da scoprire.</span>
+                {ui.openDay.pathTitleBefore}{' '}
+                <span className="highlight-brush text-primary">{ui.openDay.pathTitleHighlight}</span>
               </h2>
               <BrushStroke className="mx-auto mt-2 h-4 w-40 text-yellow" />
               <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-primary/80 md:text-lg">
-                Dai componenti hardware all&apos;intelligenza artificiale, un percorso pratico per
-                capire come funziona davvero la tecnologia.
+                {ui.openDay.pathText}
               </p>
             </div>
 
@@ -125,19 +102,20 @@ export default function OpenDay() {
           <div className="relative mx-auto max-w-7xl">
             <div className="mb-12 text-center animate-fade-up motion-reduce:animate-none">
               <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-accent">
-                In laboratorio
+                {ui.openDay.learnKicker}
               </span>
               <h2
                 id="imparerai-title"
                 className="mt-3 font-display text-[clamp(1.9rem,6vw,3.75rem)] leading-[1.05] text-dark-purple"
               >
-                Cosa <span className="highlight-brush text-primary">imparerai</span>
+                {ui.openDay.learnTitleBefore}{' '}
+                <span className="highlight-brush text-primary">{ui.openDay.learnTitleHighlight}</span>
               </h2>
               <BrushStroke className="mx-auto mt-2 h-4 w-40 text-yellow" />
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {learningOutcomes.map((item, itemIndex) => (
+              {outcomes.map((item, itemIndex) => (
                 <article
                   key={item.title}
                   className={`card-depth animate-fade-up motion-reduce:animate-none rounded-3xl border-2 border-white bg-white p-5 transition-transform duration-300 hover:-translate-y-1 sm:p-6 ${item.rotate}`}
@@ -172,17 +150,17 @@ export default function OpenDay() {
               id="chiusura-title"
               className="font-display text-[clamp(1.8rem,5vw,3.25rem)] leading-[1.1] text-white poster-shadow"
             >
-              Dall&apos;hardware <span className="text-yellow">all&apos;intelligenza artificiale.</span>
+              {ui.openDay.closeTitleBefore}{' '}
+              <span className="text-yellow">{ui.openDay.closeTitleHighlight}</span>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-              Un percorso per capire non solo come usare un computer, ma cosa succede davvero al
-              suo interno.
+              {ui.openDay.closeText}
             </p>
             <Link
               to="/"
               className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-yellow px-7 py-3.5 text-sm font-extrabold text-dark-purple btn-gaming transition-transform hover:-translate-y-1 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              Scopri l&apos;Officina del PC
+              {ui.openDay.closeCta}
             </Link>
           </div>
         </section>

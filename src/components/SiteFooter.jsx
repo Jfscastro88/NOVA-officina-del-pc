@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../i18n/useLanguage'
 
 const linkClass =
   'transition-colors duration-200 hover:text-white/75 focus-visible:outline-none focus-visible:text-white/75'
 
 export default function SiteFooter() {
+  const { ui } = useLanguage()
+
   return (
     <footer className="border-t border-white/10 bg-[#0B1020] px-5 py-4 text-center text-xs leading-relaxed text-white/45 sm:py-5 sm:text-[13px]">
       <p>© 2026 NOVA - Officina del PC</p>
       <nav
         className="mt-1.5 flex flex-wrap items-center justify-center gap-x-2 gap-y-1"
-        aria-label="Collegamenti legali e social"
+        aria-label={ui.siteFooter.legal}
       >
         <Link to="/privacy" className={linkClass}>
-          Privacy
+          {ui.siteFooter.privacy}
         </Link>
         <span className="text-white/25" aria-hidden="true">
           •

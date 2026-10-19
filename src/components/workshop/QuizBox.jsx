@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { CheckCircle2, XCircle, HelpCircle } from 'lucide-react'
+import { useLanguage } from '../../i18n/useLanguage'
 
 export default function QuizBox({ quiz }) {
+  const { ui } = useLanguage()
   const [selected, setSelected] = useState(null)
 
   if (!quiz) return null
@@ -13,7 +15,7 @@ export default function QuizBox({ quiz }) {
       <div className="mb-3 flex items-center gap-2">
         <HelpCircle size={18} className="text-[#FACC15]" />
         <h3 className="text-sm font-extrabold uppercase tracking-wider text-[#FACC15]">
-          Mini quiz
+          {ui.slides.quiz}
         </h3>
       </div>
       <p className="mb-4 text-base font-semibold text-white">{quiz.question}</p>
@@ -62,12 +64,12 @@ export default function QuizBox({ quiz }) {
           {isCorrect ? (
             <>
               <CheckCircle2 size={18} />
-              Esatto! La risposta è {quiz.correct}.
+              {ui.slides.quizRight(quiz.correct)}
             </>
           ) : (
             <>
               <XCircle size={18} />
-              Non proprio! La risposta corretta è {quiz.correct}.
+              {ui.slides.quizWrong(quiz.correct)}
             </>
           )}
         </div>

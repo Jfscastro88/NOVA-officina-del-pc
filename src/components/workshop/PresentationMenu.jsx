@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CalendarDays, ChevronRight, MoreVertical, Presentation, SkipBack } from 'lucide-react'
 import { workshopDays } from '../../data/workshops'
+import { useLanguage } from '../../i18n/useLanguage'
 
 export default function PresentationMenu({
   audience = 'student',
@@ -9,6 +10,7 @@ export default function PresentationMenu({
   onGoToFirst,
   studentPath,
 }) {
+  const { ui } = useLanguage()
   const [open, setOpen] = useState(false)
   const [daysOpen, setDaysOpen] = useState(false)
   const menuRef = useRef(null)
@@ -60,7 +62,7 @@ export default function PresentationMenu({
         }}
         aria-expanded={open}
         aria-haspopup="menu"
-        aria-label="Menu presentazione"
+        aria-label={ui.slides.menu}
         className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:border-accent hover:text-[#FACC15]"
       >
         <MoreVertical size={20} />
@@ -69,17 +71,17 @@ export default function PresentationMenu({
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-50 mt-2 min-w-[220px] overflow-hidden rounded-2xl border border-white/10 bg-[#0B1020]/95 py-1 shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl"
+          className="absolute end-0 top-full z-50 mt-2 min-w-[220px] overflow-hidden rounded-2xl border border-white/10 bg-[#0B1020]/95 py-1 shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl"
         >
           {onGoToFirst && (
             <button
               type="button"
               role="menuitem"
               onClick={handleGoToFirst}
-              className="flex w-full items-center gap-2.5 px-3.5 py-2.5 text-left text-sm font-semibold text-white/80 transition-colors hover:bg-accent/20 hover:text-[#FACC15]"
+              className="flex w-full items-center gap-2.5 px-3.5 py-2.5 text-start text-sm font-semibold text-white/80 transition-colors hover:bg-accent/20 hover:text-[#FACC15]"
             >
-              <SkipBack size={16} className="shrink-0" />
-              Prima slide
+              <SkipBack size={16} className="shrink-0 rtl:rotate-180" />
+              {ui.slides.first}
             </button>
           )}
 
@@ -88,10 +90,10 @@ export default function PresentationMenu({
               role="menuitem"
               to={studentPath}
               onClick={close}
-              className="flex w-full items-center gap-2.5 px-3.5 py-2.5 text-left text-sm font-semibold text-white/80 transition-colors hover:bg-accent/20 hover:text-[#FACC15]"
+              className="flex w-full items-center gap-2.5 px-3.5 py-2.5 text-start text-sm font-semibold text-white/80 transition-colors hover:bg-accent/20 hover:text-[#FACC15]"
             >
               <Presentation size={16} className="shrink-0" />
-              Presentazione ragazzi
+              {ui.slides.studentView}
             </Link>
           )}
 
@@ -104,10 +106,10 @@ export default function PresentationMenu({
             role="menuitem"
             aria-expanded={daysOpen}
             onClick={() => setDaysOpen((value) => !value)}
-            className="flex w-full items-center gap-2.5 px-3.5 py-2.5 text-left text-sm font-semibold text-white/80 transition-colors hover:bg-accent/20 hover:text-[#FACC15]"
+            className="flex w-full items-center gap-2.5 px-3.5 py-2.5 text-start text-sm font-semibold text-white/80 transition-colors hover:bg-accent/20 hover:text-[#FACC15]"
           >
             <CalendarDays size={16} className="shrink-0" />
-            <span className="flex-1">Cambia giorno</span>
+            <span className="flex-1">{ui.slides.changeDay}</span>
             <ChevronRight
               size={14}
               className={`shrink-0 transition-transform ${daysOpen ? 'rotate-90' : ''}`}
@@ -124,18 +126,18 @@ export default function PresentationMenu({
                       <span
                         role="menuitem"
                         aria-current="page"
-                        className="block px-3.5 py-2 pl-10 text-sm font-semibold text-[#FACC15]"
+                        className="block px-3.5 py-2 ps-10 text-sm font-semibold text-[#FACC15]"
                       >
-                        {day.label}
+                        {ui.days[day.id] ?? day.label}
                       </span>
                     ) : (
                       <Link
                         role="menuitem"
                         to={day[dayPathKey]}
                         onClick={close}
-                        className="block px-3.5 py-2 pl-10 text-sm font-semibold text-white/70 transition-colors hover:bg-accent/20 hover:text-[#FACC15]"
+                        className="block px-3.5 py-2 ps-10 text-sm font-semibold text-white/70 transition-colors hover:bg-accent/20 hover:text-[#FACC15]"
                       >
-                        {day.label}
+                        {ui.days[day.id] ?? day.label}
                       </Link>
                     )}
                   </li>

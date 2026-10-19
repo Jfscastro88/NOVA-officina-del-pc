@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Lightbulb, X } from "lucide-react";
+import { useLanguage } from "../../../../i18n/useLanguage";
 import SlideSectionFrame from "../SlideSectionFrame";
 
 export default function BootSection({ section }) {
+  const { ui } = useLanguage();
   const [activeStep, setActiveStep] = useState(null);
   const step = section.steps.find((s) => s.id === activeStep);
 
@@ -11,7 +13,7 @@ export default function BootSection({ section }) {
     <>
       <SlideSectionFrame
         section={section}
-        subtitle="Clicca ogni passaggio per scoprire cosa succede dentro il tuo PC."
+        subtitle={ui.slides.bootSubtitle}
       >
         <div className="relative max-h-[min(50vh,420px)] overflow-y-auto pr-1">
           <div className="space-y-2 sm:space-y-2.5">
@@ -78,7 +80,7 @@ export default function BootSection({ section }) {
                     type="button"
                     onClick={() => setActiveStep(null)}
                     className="rounded-lg p-1 text-white/50 hover:bg-white/10 hover:text-white"
-                    aria-label="Chiudi"
+                    aria-label={ui.slides.close}
                   >
                     <X size={20} />
                   </button>

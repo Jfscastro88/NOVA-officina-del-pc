@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { CheckCircle2 } from 'lucide-react'
+import { useLanguage } from '../../../i18n/useLanguage'
 import TeacherSlideFrame from './TeacherSlideFrame'
 import TeacherSlideContent from './TeacherSlideContent'
 
@@ -27,13 +28,14 @@ function ChecklistItem({ label, checked, onToggle }) {
 }
 
 function IntroSlide({ slide }) {
+  const { ui } = useLanguage()
   const { intro } = slide
   return (
     <TeacherSlideFrame slide={slide}>
       <p className="mb-3 text-sm font-semibold text-[#FACC15]">
-        Tempo previsto: {intro.duration}
+        {ui.slides.plannedTime(intro.duration)}
       </p>
-      <p className="mb-2 text-sm text-white/80">I ragazzi dovranno capire:</p>
+      <p className="mb-2 text-sm text-white/80">{ui.slides.studentsShould}</p>
       <ul className="space-y-1.5">
         {intro.objectives.map((obj) => (
           <li key={obj} className="flex items-start gap-2 text-sm text-white/85">

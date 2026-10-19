@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Home, Presentation } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useLanguage } from '../../../i18n/useLanguage'
+import LanguageMenu from '../../LanguageMenu'
 import HardwareTopicCard from '../HardwareTopicCard'
 import PresentationMenu from '../PresentationMenu'
 import SlideProgress from '../SlideProgress'
@@ -9,7 +11,9 @@ import SlideNavigation from '../SlideNavigation'
 import SectionRenderer from './SectionRenderer'
 
 export default function Workshop3Student({ day, workshop }) {
+  const { ui } = useLanguage()
   const { meta, sections } = workshop
+  const dayLabel = ui.days[day.id] ?? day.label
   const [currentIndex, setCurrentIndex] = useState(0)
   const topicsRef = useRef(null)
   const total = sections.length
@@ -71,12 +75,12 @@ export default function Workshop3Student({ day, workshop }) {
             className="flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white/70 transition-colors hover:border-accent hover:text-[#FACC15]"
           >
             <Home size={18} />
-            <span className="hidden sm:inline">Home</span>
+            <span className="hidden sm:inline">{ui.slides.home}</span>
           </Link>
 
           <div className="min-w-0 flex-1 text-center">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#FACC15] sm:text-xs sm:tracking-[0.2em]">
-              Presentazione
+              {ui.slides.presentation}
             </p>
             <h1 className="truncate font-display text-xs tracking-wide text-white sm:text-base">
               {meta.title}
@@ -86,6 +90,7 @@ export default function Workshop3Student({ day, workshop }) {
             </p>
           </div>
 
+          <LanguageMenu />
           <PresentationMenu
             audience="student"
             currentDayId={day.id}
@@ -98,7 +103,7 @@ export default function Workshop3Student({ day, workshop }) {
         <div className="mb-3 flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/10 px-3 py-2 sm:mb-5 sm:gap-3 sm:rounded-2xl sm:px-4 sm:py-3 lg:mb-6">
           <Presentation size={16} className="shrink-0 text-[#FACC15] sm:h-[18px] sm:w-[18px]" />
           <p className="min-w-0 text-xs font-semibold leading-snug text-white/80 sm:text-sm">
-            {day.label} — presentazione visibile agli studenti
+            {ui.slides.studentBanner(dayLabel)}
           </p>
         </div>
 
@@ -131,10 +136,10 @@ export default function Workshop3Student({ day, workshop }) {
 
         <nav
           className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-md sm:mt-8 sm:rounded-3xl sm:p-4 lg:mt-10"
-          aria-label="Argomenti del workshop"
+          aria-label={ui.slides.topicsNav}
         >
           <h2 className="mb-2 text-center text-[10px] font-extrabold uppercase tracking-[0.15em] text-[#FACC15] sm:mb-3 sm:text-xs sm:tracking-[0.2em]">
-            Argomenti
+            {ui.slides.topics}
           </h2>
           <div
             ref={topicsRef}

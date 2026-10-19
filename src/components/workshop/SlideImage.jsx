@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { ZoomIn } from 'lucide-react'
+import { useLanguage } from '../../i18n/useLanguage'
 import ImagePlaceholder from './ImagePlaceholder'
 
 export default function SlideImage({ src, alt, emoji, galleryCount, onOpen, placeholder }) {
+  const { ui } = useLanguage()
   const [failed, setFailed] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const hasGallery = galleryCount > 1
@@ -43,7 +45,7 @@ export default function SlideImage({ src, alt, emoji, galleryCount, onOpen, plac
       type="button"
       onClick={onOpen}
       className="group relative w-full cursor-pointer text-left transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FACC15] hover:shadow-[0_12px_36px_rgba(124,58,237,0.28)]"
-      aria-label={`Ingrandisci immagine: ${alt}${hasGallery ? ` (${galleryCount} foto)` : ''}`}
+      aria-label={ui.slides.zoom(alt, hasGallery ? galleryCount : 0)}
     >
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-accent/25 bg-black/20 shadow-[0_8px_24px_rgba(124,58,237,0.15)] transition-colors duration-300 group-hover:border-accent/45 group-focus-visible:border-accent/45">
         {!loaded && (
@@ -69,7 +71,7 @@ export default function SlideImage({ src, alt, emoji, galleryCount, onOpen, plac
       </div>
       <span className="absolute bottom-2 right-2 flex min-h-8 items-center gap-1 rounded-full border border-white/15 bg-black/65 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur-sm transition-colors group-hover:border-[#FACC15]/40 group-hover:bg-black/75 sm:bottom-3 sm:right-3 sm:min-h-0 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs">
         <ZoomIn size={14} />
-        {hasGallery ? `${galleryCount} foto` : 'Ingrandisci'}
+        {hasGallery ? ui.slides.photos(galleryCount) : ui.slides.enlarge}
       </span>
     </button>
   )

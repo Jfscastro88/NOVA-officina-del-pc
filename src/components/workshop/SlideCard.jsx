@@ -12,6 +12,7 @@ import {
   Wrench,
   XCircle,
 } from 'lucide-react'
+import { useLanguage } from '../../i18n/useLanguage'
 import QuizBox from './QuizBox'
 import CompatibilityTable from './CompatibilityTable'
 import QuickQuizReveal from './QuickQuizReveal'
@@ -45,6 +46,8 @@ function BulletList({ items, bulletColor = 'bg-[#FACC15]' }) {
 }
 
 export default function SlideCard({ slide, slideKey }) {
+  const { ui } = useLanguage()
+
   return (
     <article
       key={slideKey}
@@ -80,7 +83,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.objective && (
         <TeacherSection
           icon={Target}
-          title="Obiettivo"
+          title={ui.slides.objective}
           color="border-accent/30 bg-accent/10 text-accent"
         >
           <p className="text-sm leading-relaxed text-white/90">{slide.objective}</p>
@@ -90,7 +93,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.explanation && (
         <TeacherSection
           icon={ListChecks}
-          title="Spiegazione"
+          title={ui.slides.explanation}
           color="border-white/10 bg-white/5 text-white/70"
         >
           <p className="text-base leading-relaxed text-white/80">{slide.explanation}</p>
@@ -100,7 +103,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.compatibilityTable?.length > 0 && (
         <TeacherSection
           icon={ListChecks}
-          title="Tabella compatibilità"
+          title={ui.slides.compatibility}
           color="border-accent/30 bg-accent/10 text-accent"
         >
           <CompatibilityTable rows={slide.compatibilityTable} />
@@ -110,7 +113,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.points?.length > 0 && (
         <TeacherSection
           icon={ListChecks}
-          title="Punti principali"
+          title={ui.slides.points}
           color="border-white/10 bg-white/5 text-accent"
         >
           <BulletList items={slide.points} />
@@ -120,7 +123,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.components?.length > 0 && (
         <TeacherSection
           icon={Wrench}
-          title="Mini gioco — componenti"
+          title={ui.slides.miniGame}
           color="border-green-400/20 bg-green-500/5 text-green-400"
         >
           <ul className="space-y-3">
@@ -131,11 +134,11 @@ export default function SlideCard({ slide, slideKey }) {
               >
                 <p className="font-bold text-white">{component.name}</p>
                 <p className="mt-2">
-                  <span className="font-semibold text-accent">Funzione: </span>
+                  <span className="font-semibold text-accent">{ui.slides.function}: </span>
                   {component.funzione}
                 </p>
                 <p className="mt-1">
-                  <span className="font-semibold text-accent">Posizione: </span>
+                  <span className="font-semibold text-accent">{ui.slides.position}: </span>
                   {component.posizione}
                 </p>
               </li>
@@ -147,7 +150,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.errorCompare?.length > 0 && (
         <TeacherSection
           icon={AlertTriangle}
-          title="Errore vs Corretto"
+          title={ui.slides.errorVsCorrect}
           color="border-red-400/20 bg-red-500/5 text-red-400"
         >
           <div className="grid gap-3 sm:grid-cols-2">
@@ -173,7 +176,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.examples?.length > 0 && (
         <TeacherSection
           icon={Wrench}
-          title="Esempi pratici"
+          title={ui.slides.examples}
           color="border-green-400/20 bg-green-500/5 text-green-400"
         >
           <BulletList items={slide.examples} bulletColor="bg-green-400" />
@@ -183,7 +186,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.questions?.length > 0 && (
         <TeacherSection
           icon={MessageCircle}
-          title="Domande da fare ai ragazzi"
+          title={ui.slides.askStudents}
           color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]"
         >
           <BulletList items={slide.questions} />
@@ -193,7 +196,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.commonErrors?.length > 0 && (
         <TeacherSection
           icon={AlertTriangle}
-          title="Errori comuni"
+          title={ui.slides.errors}
           color="border-red-400/20 bg-red-500/5 text-red-400"
         >
           <BulletList items={slide.commonErrors} bulletColor="bg-red-400" />
@@ -203,7 +206,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.curiosity && (
         <TeacherSection
           icon={Lightbulb}
-          title="Curiosità"
+          title={ui.slides.curiosity}
           color="border-[#FACC15]/20 bg-[#FACC15]/5 text-[#FACC15]"
         >
           <p className="text-sm leading-relaxed text-white/75">{slide.curiosity}</p>
@@ -213,7 +216,7 @@ export default function SlideCard({ slide, slideKey }) {
       {slide.material?.length > 0 && (
         <TeacherSection
           icon={Package}
-          title="Materiale da mostrare"
+          title={ui.slides.showMaterial}
           color="border-white/10 bg-white/5 text-white/60"
         >
           <ul className="grid gap-2 sm:grid-cols-2">
@@ -248,7 +251,7 @@ export default function SlideCard({ slide, slideKey }) {
             <HelpCircle size={18} />
             Quiz interattivo
           </div>
-          <QuizBox key={slideKey} quiz={slide.quiz} />
+          <QuizBox key={`${slideKey}-${slide.quiz.question}`} quiz={slide.quiz} />
         </div>
       )}
     </article>

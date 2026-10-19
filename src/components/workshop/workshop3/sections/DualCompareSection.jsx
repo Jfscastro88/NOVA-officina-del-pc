@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { HelpCircle } from 'lucide-react'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 /** Due colonne a confronto (es. hardware vs software) + domanda */
 export default function DualCompareSection({ section }) {
+  const { ui } = useLanguage()
   const [revealed, setRevealed] = useState(false)
 
   return (
@@ -44,7 +46,7 @@ export default function DualCompareSection({ section }) {
             {card.examples?.length > 0 && (
               <div className="rounded-xl border border-white/10 bg-black/20 p-2.5 sm:p-3">
                 <p className="mb-1.5 text-[10px] font-extrabold uppercase tracking-wider text-white/50 sm:text-xs">
-                  Esempi
+                  {ui.slides.examplesShort}
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {card.examples.map((ex) => (
@@ -74,7 +76,7 @@ export default function DualCompareSection({ section }) {
                   onClick={() => setRevealed((v) => !v)}
                   className="mt-2 text-xs font-extrabold uppercase tracking-wider text-[#FACC15] hover:underline sm:text-sm"
                 >
-                  {revealed ? 'Nascondi risposta' : 'Mostra risposta'}
+                  {revealed ? ui.slides.hideAnswer : ui.slides.showAnswer}
                 </button>
               )}
               {revealed && section.answer && (

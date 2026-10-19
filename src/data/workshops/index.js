@@ -19,25 +19,25 @@ import { toStudentWorkshop, toTeacherWorkshop } from './adapters'
 export const workshopDays = [
   {
     id: '2026-06-27',
-    label: '27 Giugno 2026',
+    label: 'Giorno 1',
     studentPath: '/workshop/2026-06-27',
     teacherPath: '/docenti/2026-06-27',
   },
   {
     id: '2026-07-04',
-    label: '04 Luglio 2026',
+    label: 'Giorno 2',
     studentPath: '/workshop/2026-07-04',
     teacherPath: '/docenti/2026-07-04',
   },
   {
     id: '2026-07-11',
-    label: '11 Luglio 2026',
+    label: 'Giorno 3',
     studentPath: '/workshop/2026-07-11',
     teacherPath: '/docenti/2026-07-11',
   },
   {
     id: '2026-07-18',
-    label: '18 Luglio 2026',
+    label: 'Giorno 4',
     studentPath: '/workshop/2026-07-18',
     teacherPath: '/docenti/2026-07-18',
   },
@@ -45,6 +45,10 @@ export const workshopDays = [
 
 const workshopContent = {
   '2026-07-04': content20260704,
+}
+
+export function getSharedWorkshop(id) {
+  return workshopContent[id] ?? null
 }
 
 const interactiveWorkshops = {

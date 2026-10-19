@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
+import { useLanguage } from '../../../../i18n/useLanguage'
 import SlideSectionFrame from '../SlideSectionFrame'
 
 /** Sfida pratica con checklist e barra di avanzamento (senza punteggio) */
 export default function ChallengeSection({ section }) {
+  const { ui } = useLanguage()
   const [completed, setCompleted] = useState(new Set())
   const total = section.steps?.length ?? 0
   const done = completed.size
@@ -23,14 +25,13 @@ export default function ChallengeSection({ section }) {
     <SlideSectionFrame
       section={section}
       subtitle={
-        section.hint ??
-        'Segna ogni passaggio quando lo hai completato sul computer. Non c’è un punteggio: l’importante è provare.'
+        section.hint ?? ui.slides.challengeSubtitle
       }
     >
       <div className="mb-4 sm:mb-5">
         <div className="mb-1.5 flex items-center justify-between text-xs font-semibold text-white/60 sm:text-sm">
           <span>
-            Completati {done} di {total}
+            {ui.slides.completedOf(done, total)}
           </span>
           <span className="text-[#FACC15]">{progress}%</span>
         </div>

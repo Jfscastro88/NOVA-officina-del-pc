@@ -1,6 +1,8 @@
+import { useLanguage } from "../../../../i18n/useLanguage";
 import SlideSectionFrame from "../SlideSectionFrame";
 
 export default function HeroSection({ section }) {
+  const { ui } = useLanguage();
   return (
     <SlideSectionFrame
       section={section}
@@ -10,7 +12,7 @@ export default function HeroSection({ section }) {
             &ldquo;{section.tagline}&rdquo;
           </span>
           <span className="mt-4 block text-sm text-white/50">
-            Scorri le slide in basso. Clicca le immagini per ingrandirle.
+            {ui.slides.heroHint}
           </span>
         </>
       }

@@ -1,58 +1,63 @@
+import { useLanguage } from "../i18n/useLanguage";
+
 const floatingParts = [
   {
-    label: "PROCESSORE",
+    id: "processor",
     image: "/components/processor2.jpg",
     className:
-      "flex left-2 top-[8%] sm:-left-[14%] sm:top-[5%] animate-float [--rot:-4deg]",
+      "flex start-2 top-[8%] sm:-start-[14%] sm:top-[5%] animate-float [--rot:-4deg]",
     ring: "ring-accent/60",
   },
   {
-    label: "MEMORIA RAM",
+    id: "ram",
     image: "/components/ram.jpg",
     className:
-      "flex right-2 top-[8%] sm:-right-[14%] sm:top-[3%] animate-float-delayed [--rot:3deg]",
+      "flex end-2 top-[8%] sm:-end-[14%] sm:top-[3%] animate-float-delayed [--rot:3deg]",
     ring: "ring-yellow/70",
   },
   {
-    label: "SCHEDA MADRE",
+    id: "motherboard",
     image: "/components/motherboard.jpg",
-    className: "hidden sm:flex top-[28%] -left-[18%] animate-float-delayed [--rot:-6deg]",
+    className: "hidden sm:flex top-[28%] -start-[18%] animate-float-delayed [--rot:-6deg]",
     ring: "ring-emerald-400/60",
   },
   {
-    label: "DISSIPATORI",
+    id: "coolers",
     image: "/components/wathercooler.jpg",
-    className: "hidden sm:flex top-[26%] -right-[18%] animate-wiggle [--rot:7deg]",
+    className: "hidden sm:flex top-[26%] -end-[18%] animate-wiggle [--rot:7deg]",
     ring: "ring-cyan-400/60",
   },
   {
-    label: "HARD DISK / SSD",
+    id: "storage",
     image: "/components/ssd-nvme.jpg",
-    className: "hidden sm:flex top-[51%] -left-[14%] animate-float [--rot:5deg]",
+    className: "hidden sm:flex top-[51%] -start-[14%] animate-float [--rot:5deg]",
     ring: "ring-violet-400/60",
   },
   {
-    label: "ALIMENTATORI",
+    id: "psu",
     image: "/components/powersupply1.jpg",
-    className: "hidden sm:flex top-[49%] -right-[14%] animate-float [--rot:4deg]",
+    className: "hidden sm:flex top-[49%] -end-[14%] animate-float [--rot:4deg]",
     ring: "ring-orange-400/60",
   },
   {
-    label: "STRUMENTI",
+    id: "tools",
     image: "/components/tools.jpg",
-    className: "hidden sm:flex top-[74%] -left-[16%] animate-wiggle [--rot:8deg]",
+    className: "hidden sm:flex top-[74%] -start-[16%] animate-wiggle [--rot:8deg]",
     ring: "ring-yellow/60",
   },
   {
-    label: "SCHEDE VIDEO",
+    id: "gpu",
     image: "/components/gpu.jpg",
     className:
-      "flex bottom-12 right-2 top-auto left-auto sm:bottom-auto sm:left-auto sm:-right-[12%] sm:top-[72%] animate-float-delayed [--rot:-3deg]",
+      "flex bottom-12 end-2 top-auto start-auto sm:bottom-auto sm:start-auto sm:-end-[12%] sm:top-[72%] animate-float-delayed [--rot:-3deg]",
     ring: "ring-fuchsia-400/60",
   },
 ];
 
 export default function GamingPcVisual() {
+  const { ui } = useLanguage();
+  const labels = ui.hero.parts;
+
   return (
     <div
       className="relative mx-auto w-full max-w-[520px] sm:max-w-[560px] lg:max-w-[640px] xl:max-w-[760px] 2xl:max-w-[860px]"
@@ -95,8 +100,8 @@ export default function GamingPcVisual() {
         />
 
         {/* Desk mat label */}
-        <div className="pointer-events-none absolute bottom-4 left-4 z-10 rounded-full border border-white/20 bg-dark-purple/60 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-white/80 backdrop-blur-sm">
-          Setup reale
+        <div className="pointer-events-none absolute bottom-4 start-4 z-10 rounded-full border border-white/20 bg-dark-purple/60 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-white/80 backdrop-blur-sm">
+          {ui.hero.setup}
         </div>
       </div>
 
@@ -104,10 +109,10 @@ export default function GamingPcVisual() {
       <div className="pointer-events-none absolute -inset-px rounded-3xl bg-gradient-to-br from-accent/40 via-transparent to-yellow/25 opacity-70 blur-md" />
 
       {/* Floating component cards with real photos */}
-      {floatingParts.map(({ label, image, className, ring }) => (
+      {floatingParts.map(({ id, image, className, ring }) => (
         <div
-          key={label}
-          className={`absolute z-30 max-w-[calc(100%-1rem)] items-center gap-2.5 rounded-2xl border-2 border-white/25 bg-white/95 p-2 pr-3.5 card-depth backdrop-blur-sm transition-transform hover:scale-105 max-sm:gap-1.5 max-sm:p-1.5 max-sm:pr-2.5 sm:max-w-none ${className}`}
+          key={id}
+          className={`absolute z-30 max-w-[calc(100%-1rem)] items-center gap-2.5 rounded-2xl border-2 border-white/25 bg-white/95 p-2 pe-3.5 card-depth backdrop-blur-sm transition-transform hover:scale-105 max-sm:gap-1.5 max-sm:p-1.5 max-sm:pe-2.5 sm:max-w-none ${className}`}
         >
           <div
             className={`h-14 w-14 shrink-0 overflow-hidden rounded-xl ring-2 max-sm:h-10 max-sm:w-10 ${ring}`}
@@ -115,7 +120,7 @@ export default function GamingPcVisual() {
             <img src={image} alt="" className="h-full w-full object-cover" loading="lazy" />
           </div>
           <span className="text-[11px] font-extrabold uppercase tracking-wider text-dark-purple max-sm:text-[8px] max-sm:leading-tight max-sm:tracking-wide">
-            {label}
+            {labels[id]}
           </span>
         </div>
       ))}

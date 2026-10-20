@@ -19,25 +19,25 @@ import { toStudentWorkshop, toTeacherWorkshop } from './adapters'
 export const workshopDays = [
   {
     id: '2026-06-27',
-    label: 'Giorno 1',
+    label: '17 ottobre',
     studentPath: '/workshop/2026-06-27',
     teacherPath: '/docenti/2026-06-27',
   },
   {
     id: '2026-07-04',
-    label: 'Giorno 2',
+    label: '31 ottobre',
     studentPath: '/workshop/2026-07-04',
     teacherPath: '/docenti/2026-07-04',
   },
   {
     id: '2026-07-11',
-    label: 'Giorno 3',
+    label: '14 novembre',
     studentPath: '/workshop/2026-07-11',
     teacherPath: '/docenti/2026-07-11',
   },
   {
     id: '2026-07-18',
-    label: 'Giorno 4',
+    label: '28 novembre',
     studentPath: '/workshop/2026-07-18',
     teacherPath: '/docenti/2026-07-18',
   },

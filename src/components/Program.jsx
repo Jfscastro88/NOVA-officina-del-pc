@@ -8,6 +8,7 @@ const sessionMeta = [
   { id: '2026-07-04', accent: 'border-yellow', link: '/workshop/2026-07-04' },
   { id: '2026-07-11', accent: 'border-fuchsia-400', link: '/workshop/2026-07-11' },
   { id: '2026-07-18', accent: 'border-accent', link: '/workshop/2026-07-18' },
+  { id: '2026-12-12', accent: 'border-yellow' },
 ]
 
 export default function Program() {
@@ -41,7 +42,8 @@ export default function Program() {
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_auto]">
           <div className="grid gap-5 sm:grid-cols-2">
             {sessions.map((session, i) => {
-              const cardClass = `group card-depth rounded-3xl border-l-[6px] ${session.accent} bg-white/10 p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/15 animate-fade-up`
+              const spansRow = sessions.length % 2 === 1 && i === sessions.length - 1
+              const cardClass = `group card-depth rounded-3xl border-l-[6px] ${session.accent} bg-white/10 p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/15 animate-fade-up${spansRow ? ' sm:col-span-2' : ''}`
               const cardContent = (
                 <>
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/30 px-3 py-1 text-xs font-extrabold text-yellow">
